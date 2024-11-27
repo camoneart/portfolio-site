@@ -44,10 +44,5 @@
 
 ### フロント
 - Next.js 15.0.3
-- React 19
+- React 18.2.0
 - typescript 5
-
-
-<h2 id="reference-article">参考記事</h2>
-https://note.com/ryohei_wada/n/n2e3e7a66e758?magazine_key=mabaf121fec11
-https://www.youtube.com/watch?v=ekUQ043k2TQ
