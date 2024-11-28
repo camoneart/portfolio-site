@@ -1,0 +1,10 @@
+.gnav__link {
+  transition: color 0.15s ease-in-out;
+
+  &:hover {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(108deg, #ffc508, #ff5a2e 70%, #ff9004);;
+  }
+}

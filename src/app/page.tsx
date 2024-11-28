@@ -1,9 +1,13 @@
-import MovieTheater from './features/3D/components/MovieTheater'
+import Hero from "./components/layouts/Hero/Hero";
+
 
 export default function Home() {
   return (
     <>
-      <MovieTheater />
+      {/* <div> */}
+        {/* <Scene /> */}
+        <Hero />
+      {/* </div> */}
     </>
   );
 }
