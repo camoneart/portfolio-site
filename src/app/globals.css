@@ -19,6 +19,8 @@ body,
   --color-primary-white: #fff;
   --color-primary-black: #000;
   --color-primary-gray: #262626;
+  --color-primary-orange: rgb(255, 116, 27);
+  --text-gradient-primary: linear-gradient(108deg, #ffc508, #ff5a2e 70%, #ff9004);
 
   /* font weight */
   --font-weight-normal: 400;
@@ -40,10 +42,11 @@ body {
   display: block grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100svh;
-  color: #fff;
+  color: var(--color-primary-white);
   background: var(--bg-color-body);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   /* font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; */
+  overflow: hidden;
 }
 
 main {
@@ -51,4 +54,8 @@ main {
   margin-inline: auto;
   padding-block: 1rem;
   padding-inline: 1.5rem;
+}
+
+canvas {
+  display: block;
 }

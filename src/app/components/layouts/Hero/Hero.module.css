@@ -2,6 +2,6 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  /* background-image: linear-gradient(108deg, #0894ff, #ff2e54 70%, #ff9004); */
-  background-image: linear-gradient(108deg, #ffc508, #ff5a2e 70%, #ff9004);;
+  background-image: var(--text-gradient-primary);
+  padding-inline: 4px;
 }
