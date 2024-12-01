@@ -4,16 +4,16 @@ import styles from "./Navigation.module.css";
 
 const Navigation = () => {
   return (
-    <nav className={styles["gnav"]}>
+    <nav className={`${styles["gnav"]}`}>
       <ul className={`flex items-center gap-5 font-black ${styles["gnav__list"]}`}>
-        <li className={styles["gnav__item"]}>
-          <Link className={styles["gnav__link"]} href="/about">About</Link>
+        <li className={`z-20 ${styles["gnav__item"]}`}>
+          <Link className={`${styles["gnav__link"]}`} href="/about">About</Link>
         </li>
-        <li className={styles["gnav__item"]}>
-          <Link className={styles["gnav__link"]} href="/skills">Skills</Link>
+        <li className={`z-20 ${styles["gnav__item"]}`}>
+          <Link className={`${styles["gnav__link"]}`} href="/skills">Skills</Link>
         </li>
-        <li className={styles["gnav__item"]}>
-          <Link className={styles["gnav__link"]} href="/works">Works</Link>
+        <li className={`z-20 ${styles["gnav__item"]}`}>
+          <Link className={`${styles["gnav__link"]}`} href="/works">Works</Link>
         </li>
       </ul>
     </nav>

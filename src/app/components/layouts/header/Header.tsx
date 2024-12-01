@@ -5,11 +5,11 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className={`w-full mx-auto max-w-screen-2xl ${`w-full h-auto py-8 px-6 ${styles["header"]}`}`}>
+    <header className={`font-russo w-full mx-auto max-w-screen-2xl select-none ${`w-full h-auto py-8 px-6 ${styles["header"]}`}`}>
       <div className={`flex items-center justify-between ${styles["header__container"]}`}>
-        <div className={`font-black ${styles["header__title"]}`}>
+        <div className={`z-20 text-2xl font-black ${styles["header__title"]}`}>
           <Link href="/">
-            Blue <span className={styles["text-gradient"]}>Walker</span>
+            <span className={`${styles["text-gradient"]}`}>Aoyama</span>
           </Link>
         </div>
         <Navigation />
