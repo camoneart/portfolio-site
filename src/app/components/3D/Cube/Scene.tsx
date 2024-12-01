@@ -17,8 +17,8 @@ const Scene = () => {
     }
 
     // カメラの動き
-    camera.position.x += (pointer.x * 0.5 - camera.position.x) * 0.017;
-    camera.position.y += (-pointer.y * 0.5 - camera.position.y) * 0.02;
+    camera.position.x += (pointer.x * 0.5 - camera.position.x) * 0.015;
+    camera.position.y += (-pointer.y * 0.5 - camera.position.y) * 0.015;
     camera.lookAt(0, 0, 0);
   })
 
