@@ -1,7 +1,7 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber';
-import Scene from "./Scece";
+import Scene from "./Scene";
 
 const ElegantFloatingCubes = () => {
   return (
