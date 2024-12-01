@@ -101,14 +101,10 @@ const NetworkBackground = () => {
     animate();
 
     // ランダムアニメーションを開始する
-    const startRandomAnimation = gsap.context(() => {
-      const interval = setInterval(() => {
-        const randomIndex = Math.floor(Math.random() * (positions.length / 3));
-        animatePoint(randomIndex);
-      }, 50);
-
-      return () => clearInterval(interval);
-    });
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * (positions.length / 3));
+      animatePoint(randomIndex);
+    }, 50);
 
     // ウィンドウのサイズ変更を処理する
     const handleResize = () => {
@@ -121,13 +117,13 @@ const NetworkBackground = () => {
 
     window.addEventListener('resize', handleResize);
 
-    // クリーンアップはuseGSAPで自動的に処理する
+    // クリーンアップ
     return () => {
+      clearInterval(interval);
       window.removeEventListener('resize', handleResize);
       if (containerRef.current && rendererRef.current) {
         containerRef.current.removeChild(rendererRef.current.domElement);
       }
-      startRandomAnimation.revert(); // Cleanup GSAP animations
     };
   }, { scope: containerRef });
 
