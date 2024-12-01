@@ -16,7 +16,7 @@ const Scene = () => {
       groupRef.current.rotation.y += 0.0008;
     }
 
-    // Camera movement
+    // カメラの動き
     camera.position.x += (pointer.x * 0.5 - camera.position.x) * 0.02;
     camera.position.y += (-pointer.y * 0.5 - camera.position.y) * 0.02;
     camera.lookAt(0, 0, 0);
@@ -26,7 +26,7 @@ const Scene = () => {
     <>
       <PerspectiveCamera
         makeDefault
-        position={[35, 5, 35]}
+        position={[45, 35, 35]}
         fov={50}
       />
       <ambientLight intensity={0.3} />
