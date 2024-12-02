@@ -10,7 +10,6 @@ import { createPointsSystem, findNeighbors } from './helpers';
 
 gsap.registerPlugin(CustomEase, useGSAP);
 
-// より自然な動きを実現するカスタムイージー
 CustomEase.create('custom', 'M0,0 C0.126,0.382 0.282,0.674 0.44,0.822 0.632,1.002 0.818,1.001 1,1');
 
 const GRID_CONFIG = {
@@ -18,17 +17,34 @@ const GRID_CONFIG = {
   spacing: 1.5
 };
 
+// アクティブポイントの数を定義
+const ACTIVE_POINTS_COUNT = 1800;
+
 function Points() {
   const pointsRef = useRef<THREE.Points>(null);
   const { camera } = useThree();
   
-  // ポイントシステムの作成
+  // アクティブなポイントのインデックスを保持する参照を作成
+  const activePointsRef = useRef<Set<number>>(new Set());
+  
   const { geometry, points, positions, originalPositions } = React.useMemo(
     () => createPointsSystem(GRID_CONFIG),
     []
   );
 
-  // アニメーション関数
+  // 初期のアクティブポイントをランダムに生成する関数
+  const generateInitialActivePoints = React.useCallback(() => {
+    const totalPoints = positions.length / 3;
+    const activePoints = new Set<number>();
+
+    while (activePoints.size < ACTIVE_POINTS_COUNT) {
+      const randomIndex = Math.floor(Math.random() * totalPoints);
+      activePoints.add(randomIndex);
+    }
+
+    return activePoints;
+  }, [positions.length]);
+
   const animatePoint = React.useCallback((index: number) => {
     if (!geometry) return;
     
@@ -36,7 +52,7 @@ function Points() {
     
     gsap.timeline()
       .to({}, {
-        duration: 2, // activeポイントの拡大アニメーション時間
+        duration: 1.5, // activeポイントの拡大アニメーション時間
         ease: 'custom',
         onUpdate: function() {
           scaleAttribute.array[index] = 1 + this.progress();
@@ -44,33 +60,39 @@ function Points() {
         }
       })
       .to({}, {
-        duration: 2, // activeポイントの縮小アニメーション時間
+        duration: 8, // activeポイントの縮小アニメーション時間
         ease: 'custom',
         onUpdate: function() {
           scaleAttribute.array[index] = 2 - this.progress();
           scaleAttribute.needsUpdate = true;
         },
         onComplete: function() {
-          const neighbors = findNeighbors(index, originalPositions, GRID_CONFIG.spacing);
-          if (neighbors.length > 0) {
-            const nextIndex = neighbors[Math.floor(Math.random() * neighbors.length)];
-            setTimeout(() => animatePoint(nextIndex), 100);
-          }
+          // アニメーション完了後、同じポイントで再度アニメーションを開始
+          setTimeout(() => {
+            if (activePointsRef.current.has(index)) {
+              animatePoint(index);
+            }
+          }, 1);
         }
       });
-  }, [geometry, originalPositions]);
+  }, [geometry]);
 
-  // ランダムアニメーションの開始
+  // 初期アクティブポイントの設定と開始
   React.useEffect(() => {
-    const interval = setInterval(() => {
-      const randomIndex = Math.floor(Math.random() * (positions.length / 3));
-      animatePoint(randomIndex);
-    }, 25); // 25ミリ秒ごとに新しいポイントをアクティブ化
+    const activePoints = generateInitialActivePoints();
+    activePointsRef.current = activePoints;
 
-    return () => clearInterval(interval);
-  }, [animatePoint, positions.length]);
+    // 各アクティブポイントのアニメーションを開始
+    activePoints.forEach(index => {
+      animatePoint(index);
+    });
 
-  // カメラアニメーション
+    // クリーンアップ時にアクティブポイントをクリア
+    return () => {
+      activePointsRef.current.clear();
+    };
+  }, [animatePoint, generateInitialActivePoints]);
+
   useFrame(() => {
     camera.position.x = Math.sin(Date.now() * 0.0002) * 5;
     camera.position.y = Math.cos(Date.now() * 0.0002) * 5;
@@ -83,7 +105,7 @@ function Points() {
 const NetworkBackground = () => {
   return (
     <div 
-      className="fixed inset-0 -z-10"
+      className="fixed inset-0 z-10"
       style={{ backgroundColor: '#131315' }}
     >
       <Canvas
