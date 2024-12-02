@@ -18,7 +18,7 @@ const GRID_CONFIG = {
 };
 
 // アクティブポイントの数を定義
-const ACTIVE_POINTS_COUNT = 1800;
+const ACTIVE_POINTS_COUNT = 1000;
 
 function Points() {
   const pointsRef = useRef<THREE.Points>(null);
@@ -52,7 +52,7 @@ function Points() {
     
     gsap.timeline()
       .to({}, {
-        duration: 1.5, // activeポイントの拡大アニメーション時間
+        duration: 2, // activeポイントの拡大アニメーション時間
         ease: 'custom',
         onUpdate: function() {
           scaleAttribute.array[index] = 1 + this.progress();
@@ -72,7 +72,7 @@ function Points() {
             if (activePointsRef.current.has(index)) {
               animatePoint(index);
             }
-          }, 1);
+          }, 0.01);
         }
       });
   }, [geometry]);
