@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { gsap } from 'gsap';
 import { CustomEase } from 'gsap/CustomEase';
@@ -17,122 +18,81 @@ const GRID_CONFIG = {
   spacing: 1.5
 };
 
-const NetworkBackground = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const sceneRef = useRef<THREE.Scene | null>(null);
-  const pointsRef = useRef<THREE.Points | null>(null);
-  const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
-  const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
+function Points() {
+  const pointsRef = useRef<THREE.Points>(null);
+  const { camera } = useThree();
+  
+  // ポイントシステムの作成
+  const { geometry, points, positions, originalPositions } = React.useMemo(
+    () => createPointsSystem(GRID_CONFIG),
+    []
+  );
 
-  useGSAP(() => {
-    if (!containerRef.current) return;
-
-    // シーンの設定
-    const scene = new THREE.Scene();
-    sceneRef.current = scene;
-
-    // カメラの設定
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
-    );
-    camera.position.z = 50;
-    cameraRef.current = camera;
-
-    // レンダラーの設定
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setClearColor('#131315', 1);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    containerRef.current.appendChild(renderer.domElement);
-    rendererRef.current = renderer;
-
-    // ポイントシステムを作成
-    const { geometry, points, positions, originalPositions } = createPointsSystem(GRID_CONFIG);
-    scene.add(points);
-    pointsRef.current = points;
-
-    // アニメーション関数
-    const animatePoint = (index: number) => {
-      const scaleAttribute = geometry.attributes.scale;
-      
-      gsap.timeline()
-        .to({}, {
-          duration: 2,
-          ease: 'custom',
-          onUpdate: function() {
-            scaleAttribute.array[index] = 1 + this.progress();
-            scaleAttribute.needsUpdate = true;
+  // アニメーション関数
+  const animatePoint = React.useCallback((index: number) => {
+    if (!geometry) return;
+    
+    const scaleAttribute = geometry.attributes.scale;
+    
+    gsap.timeline()
+      .to({}, {
+        duration: 2, // activeポイントの拡大アニメーション時間
+        ease: 'custom',
+        onUpdate: function() {
+          scaleAttribute.array[index] = 1 + this.progress();
+          scaleAttribute.needsUpdate = true;
+        }
+      })
+      .to({}, {
+        duration: 2, // activeポイントの縮小アニメーション時間
+        ease: 'custom',
+        onUpdate: function() {
+          scaleAttribute.array[index] = 2 - this.progress();
+          scaleAttribute.needsUpdate = true;
+        },
+        onComplete: function() {
+          const neighbors = findNeighbors(index, originalPositions, GRID_CONFIG.spacing);
+          if (neighbors.length > 0) {
+            const nextIndex = neighbors[Math.floor(Math.random() * neighbors.length)];
+            setTimeout(() => animatePoint(nextIndex), 100);
           }
-        })
-        .to({}, {
-          duration: 2,
-          ease: 'custom',
-          onUpdate: function() {
-            scaleAttribute.array[index] = 2 - this.progress();
-            scaleAttribute.needsUpdate = true;
-          },
-          onComplete: function() {
-            const neighbors = findNeighbors(index, originalPositions, GRID_CONFIG.spacing);
-            if (neighbors.length > 0) {
-              const nextIndex = neighbors[Math.floor(Math.random() * neighbors.length)];
-              setTimeout(() => animatePoint(nextIndex), 100);
-            }
-          }
-        });
-    };
+        }
+      });
+  }, [geometry, originalPositions]);
 
-    // アニメーションのループ処理
-    const animate = () => {
-      const animationId = requestAnimationFrame(animate);
-      
-      if (camera && scene) {
-        camera.position.x = Math.sin(Date.now() * 0.0002) * 5;
-        camera.position.y = Math.cos(Date.now() * 0.0002) * 5;
-        camera.lookAt(scene.position);
-        
-        renderer.render(scene, camera);
-      }
-
-      return () => cancelAnimationFrame(animationId);
-    };
-
-    animate();
-
-    // ランダムアニメーションを開始する
+  // ランダムアニメーションの開始
+  React.useEffect(() => {
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * (positions.length / 3));
       animatePoint(randomIndex);
-    }, 50);
+    }, 25); // 25ミリ秒ごとに新しいポイントをアクティブ化
 
-    // ウィンドウのサイズ変更を処理する
-    const handleResize = () => {
-      if (cameraRef.current && rendererRef.current) {
-        cameraRef.current.aspect = window.innerWidth / window.innerHeight;
-        cameraRef.current.updateProjectionMatrix();
-        rendererRef.current.setSize(window.innerWidth, window.innerHeight);
-      }
-    };
+    return () => clearInterval(interval);
+  }, [animatePoint, positions.length]);
 
-    window.addEventListener('resize', handleResize);
+  // カメラアニメーション
+  useFrame(() => {
+    camera.position.x = Math.sin(Date.now() * 0.0002) * 5;
+    camera.position.y = Math.cos(Date.now() * 0.0002) * 5;
+    camera.lookAt(0, 0, 0);
+  });
 
-    // クリーンアップ
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('resize', handleResize);
-      if (containerRef.current && rendererRef.current) {
-        containerRef.current.removeChild(rendererRef.current.domElement);
-      }
-    };
-  }, { scope: containerRef });
+  return <primitive object={points} ref={pointsRef} />;
+}
 
+const NetworkBackground = () => {
   return (
     <div 
-      ref={containerRef} 
       className="fixed inset-0 -z-10"
       style={{ backgroundColor: '#131315' }}
-    />
+    >
+      <Canvas
+        camera={{ position: [0, 0, 50], fov: 75, near: 0.1, far: 1000 }}
+        gl={{ antialias: true, alpha: true }}
+      >
+        <Points />
+      </Canvas>
+    </div>
   );
 };
 
