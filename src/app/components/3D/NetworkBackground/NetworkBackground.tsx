@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { gsap } from 'gsap';
 import { CustomEase } from 'gsap/CustomEase';
 import { useGSAP } from '@gsap/react';
-import { createPointsSystem, findNeighbors } from './helpers';
+import { createPointsSystem } from './helpers';
 import styles from './NetworkBackground.module.css';
 gsap.registerPlugin(CustomEase, useGSAP);
 
@@ -27,7 +27,7 @@ function Points() {
   // アクティブなポイントのインデックスを保持する参照を作成
   const activePointsRef = useRef<Set<number>>(new Set());
   
-  const { geometry, points, positions, originalPositions } = React.useMemo(
+  const { geometry, points, positions } = React.useMemo(
     () => createPointsSystem(GRID_CONFIG),
     []
   );
