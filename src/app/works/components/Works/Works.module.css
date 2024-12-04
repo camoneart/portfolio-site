@@ -1,3 +1,9 @@
+@media (width < 1536px) {
+  .works-title {
+    margin-block-start: 0.75rem;
+  }
+}
+
 @media (width <= 1024px) {
   .works-title {
     font-size: 4rem;
