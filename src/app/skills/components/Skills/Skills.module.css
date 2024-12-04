@@ -1,0 +1,12 @@
+@media (width <= 1024px) {
+  .skills-title {
+    font-size: 4rem;
+  }
+}
+
+@media (width <= 640px) {
+  .skills-title {
+    font-size: 2rem;
+    margin-block-end: 2.5rem;
+  }
+}
