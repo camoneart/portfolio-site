@@ -1,0 +1,39 @@
+.cards-content {
+  width: 100%;
+  height: 100%;
+  display: block grid;
+  place-content: center;
+  transform-style: preserve-3d;
+}
+
+@media (1280px <= width < 1536px) {
+  .cards-content {
+    padding-inline: 7rem;
+  }
+}
+
+@media (1280px <= width) {
+  .cards-content {
+    padding-block-start: 4rem;
+  }
+}
+
+.cards {
+  display: block grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  perspective: 1000px;
+}
+
+@media (1280px <= width < 1536px) {
+  .cards {
+    gap: 0;
+  }
+}
+
+@media (1536px <= width) {
+  .cards {
+    gap: 4rem;
+  }
+}

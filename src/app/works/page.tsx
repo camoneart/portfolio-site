@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 const WorksPage = () => {
   return (
     <>
-      <Works />
+      <div className="font-russo common-container">
+        <Works />
+      </div>
     </>
   );
 };
