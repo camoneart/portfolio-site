@@ -2,6 +2,6 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: var(--text-gradient ;
+  background-image: var(--text-gradient-primary);
   padding-inline: 4px;
 }
