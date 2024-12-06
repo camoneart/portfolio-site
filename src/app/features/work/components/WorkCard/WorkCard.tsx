@@ -192,7 +192,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
       } else {
         // アニメーション前に既存のトランスフォームをクリア
         gsap.set(card, {
-          clearProps: 'all'
+          clearProps: 'transform'
         });
 
         // 初期状態を設定
@@ -252,7 +252,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
       window.removeEventListener('resize', resizeHandler);
       clearTimeout(resizeTimer);
       gsap.set(card, {
-        clearProps: 'all'
+        clearProps: 'transform'
       });
     };
   }, [id]);
