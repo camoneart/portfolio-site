@@ -198,12 +198,15 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
         // 初期状態を設定
         gsap.set(card, settings.initial);
 
+        // タイトルのアニメーション後に開始するための基本遅延
+        const baseDelay = 0.65;
+
         // アニメーションを実行
         gsap.to(card, {
           ...settings.animate,
           duration: 1.2,
           ease: "power3.out",
-          delay: (id - 1) * 0.2,
+          delay: baseDelay + (id - 1) * 0.2,
           clearProps: "transform" // アニメーション後にtransformプロパティをクリア
         });
       }
