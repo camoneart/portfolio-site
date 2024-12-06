@@ -88,7 +88,7 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
     const time = clock.getElapsedTime()
     material.uniforms.time.value = time
 
-    // ホバー値のスムーズな遷移
+    // ホバー時のインタラクション
     const hoverSpeed = 0.1; // キューブが膨らむ速度。この値を小さくすると遅く、大きくすると速くなります
     currentHoverValue.current += (hoverRef.current - currentHoverValue.current) * hoverSpeed;
     material.uniforms.hover.value = currentHoverValue.current;
@@ -106,9 +106,9 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
       meshRef.current.rotation.x += scatter.rotationSpeed.x * 0.01;
       meshRef.current.rotation.y += scatter.rotationSpeed.y * 0.01;
       meshRef.current.rotation.z += scatter.rotationSpeed.z * 0.01;
-    } else if (currentHoverValue.current > 0.01) {  // ホバー値がある程度大きい時のみ適用
+    } else if (currentHoverValue.current > 0.01) {  // ホバー中の動き
       velocityRef.current.add(scatter.direction.clone().multiplyScalar(scatter.speed * 0.01));
-      velocityRef.current.y += Math.sin(time) * 0.001;
+      velocityRef.current.y += Math.sin(time) * 0.001; // 中心に集まるキューブが元の位置に戻る速度
       velocityRef.current.multiplyScalar(0.99);
 
       meshRef.current.position.add(velocityRef.current);
@@ -122,7 +122,7 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
         velocityRef.current.multiplyScalar(-0.5);
       }
     } else {
-      meshRef.current.position.lerp(floatPosition, 0.02);
+      meshRef.current.position.lerp(floatPosition, 0.01);
       velocityRef.current.multiplyScalar(0.95);
     }
   });

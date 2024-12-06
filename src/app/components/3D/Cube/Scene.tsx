@@ -12,13 +12,13 @@ const Scene = () => {
 
   useFrame(({ pointer }) => {
     if (groupRef.current) {
-      groupRef.current.rotation.x += 0.0005;
-      groupRef.current.rotation.y += 0.0008;
+      groupRef.current.rotation.x += 0.001;
+      groupRef.current.rotation.y += -0.001;
     }
 
     // カメラの動き
-    camera.position.x += (pointer.x * 0.5 - camera.position.x) * 0.015;
-    camera.position.y += (-pointer.y * 0.5 - camera.position.y) * 0.015;
+    camera.position.x += (pointer.x * 0.5 - camera.position.x) * 0.015; // マウスのX座標に応じてカメラを滑らかに左右移動
+    camera.position.y += (-pointer.y * 0.5 - camera.position.y) * 0.015; // マウスのY座標に応じてカメラを滑らかに上下移動（反転）
     camera.lookAt(0, 0, 0);
   })
 
