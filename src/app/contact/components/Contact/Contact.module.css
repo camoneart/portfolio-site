@@ -1,0 +1,22 @@
+.contact-section {
+  width: 100%;
+}
+
+@media (width < 1536px) {
+  .contact-title {
+    margin-block-start: 0.75rem;
+  }
+}
+
+@media (width <= 1024px) {
+  .contact-title {
+    font-size: 4rem;
+  }
+}
+
+@media (width <= 640px) {
+  .contact-title {
+    font-size: 2rem;
+    margin-block-end: 2.5rem;
+  }
+}
