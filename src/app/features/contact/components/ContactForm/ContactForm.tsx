@@ -29,6 +29,7 @@ import {
 
 import toast, { Toaster } from 'react-hot-toast';
 
+// toast UI
 // const notify = () => toast.success('送信に成功しました！');
 const notify = () => toast.custom((t) => (
   <div
@@ -81,7 +82,7 @@ const ContactForm = () => {
         <Toaster position="top-center" reverseOrder={false} />
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className={`container xl:max-w-screen-lg mx-auto flex flex-col gap-4 ${styles["contact-form"]}`}
+          className={`container xl:max-w-screen-md mx-auto flex flex-col gap-5 ${styles["contact-form"]}`}
         >
           <FormField
             control={form.control}
@@ -93,7 +94,7 @@ const ContactForm = () => {
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Input placeholder="First & Last Name" {...field} />
+                        <Input placeholder="First & Last Name" {...field} className="px-3 py-6 md:text-sm" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>お名前を入力してください</p>
@@ -115,7 +116,7 @@ const ContactForm = () => {
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Input placeholder="Your email address" {...field} />
+                        <Input placeholder="Your email address" {...field} className="px-3 py-6 md:text-sm" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>メールアドレスを入力してください</p>
@@ -137,7 +138,7 @@ const ContactForm = () => {
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Input placeholder="Subject" {...field} />
+                        <Input placeholder="Subject" {...field} className="px-3 py-6 md:text-sm" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>件名を入力してください</p>
@@ -192,7 +193,7 @@ const ContactForm = () => {
                           onChange={(event) => {
                             onChange(event.target.files);
                           }}
-                          className="cursor-pointer"
+                          className="cursor-pointer px-2 py-2"
                         />
                       </TooltipTrigger>
                       <TooltipContent>
