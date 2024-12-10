@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./components/layouts/header/Header";
-import Footer from "./components/layouts/footer/Footer";
-import NetworkBackground from "./components/3D/BackGround/NetworkBackground";
-import { Russo_One } from 'next/font/google'
+import Header from "./components/layouts/Header/Header";
+import Footer from "./components/layouts/Footer/Footer";
+import NetworkBackground from "./components/3D/NetworkBackground/NetworkBackground";
+import { Russo_One } from "next/font/google";
+import { ViewTransitions } from 'next-view-transitions'
 
 const russoOne = Russo_One({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-russo-one',
-})
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-russo-one",
+});
 
 export const metadata: Metadata = {
   title: {
     default: "Aoyama｜Creative Web Developer",
-    template: "%s｜Aoyama"
+    template: "%s｜Aoyama",
   },
   description: "Kaishu Aoyamaのポートフォリオサイトです。",
-  robots: "noindex, nofollow"
+  robots: "noindex, nofollow",
 };
 
 export default function RootLayout({
@@ -27,13 +28,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${russoOne.variable}`}>
-      <body>
-        <NetworkBackground />
-        <Header />
-        <main className={`mx-auto max-w-screen-xl`}>{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="ja" className={`${russoOne.variable}`}>
+        <body>
+          <NetworkBackground />
+          <Header />
+          <main className={`z-20`}>{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
