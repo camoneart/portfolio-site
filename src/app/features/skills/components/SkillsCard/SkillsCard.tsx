@@ -63,18 +63,18 @@ const SkillsCard = ({ id, skillTitle, skillLogo, label, index }: CardProps) => {
 
   return (
     <article ref={cardRef} id="card" className={styles["skills-card"]}>
-      <Link href={`/skills/${skillTitle}`} rel="noopener noreferrer" className={styles["skills-card-link"]}>
-          <div className={styles["skills-card-content"]}>
-            <div className={styles["skills-logo-wrapper"]}>
-              <div className={styles["skills-logo-bg"]}>
-                <Image src={skillLogo} alt={skillTitle} className={styles["skills-logo"]} width={156} height={156} />
-              </div>
-            </div>
-            <div className={styles["skills-info"]}>
-              <h2 className={styles["skills-title"]}>{skillTitle}</h2>
-              <div className={styles["skills-label"]}>{label}</div>
+      <Link href={`/skills/${skillTitle.toLowerCase()}`} rel="noopener noreferrer" className={styles["skills-card-link"]}>
+        <div className={styles["skills-card-content"]}>
+          <div className={styles["skills-logo-wrapper"]}>
+            <div className={styles["skills-logo-bg"]}>
+              <Image src={skillLogo} alt={skillTitle} className={styles["skills-logo"]} width={156} height={156} />
             </div>
           </div>
+          <div className={styles["skills-info"]}>
+            <h2 className={styles["skills-title"]}>{skillTitle}</h2>
+            <div className={styles["skills-label"]}>{label}</div>
+          </div>
+        </div>
       </Link>
     </article>
   )
