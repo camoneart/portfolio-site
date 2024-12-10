@@ -1,20 +1,21 @@
 'use client'
 
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from 'next-view-transitions'
 import styles from './WorkCard.module.css'
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 
-interface CardProps {
+interface CardData {
   id: number;
   image: string;
-  title: string;
+  workTitle: string;
   description: string;
   labels: { no: string; value: string }[];
 }
 
-const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
+const WorkCard = ({ id, image, workTitle, description, labels }: CardData) => {
   const cardRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -58,7 +59,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
           scale: 0.8,
           y: 30,
           x: 0,
-          perspective: 0,
+          // perspective: 0,
           duration: 0.8
         },
         animate: {
@@ -68,7 +69,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
           scale: 1,
           y: 0,
           x: 0,
-          perspective: 0,
+          // perspective: 0,
           duration: 0.8,
           clearProps: 'transform,perspective'  // トランスフォーム関連プロパティをクリア
         }
@@ -103,7 +104,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
               scale: 0.7,
               y: 50,
               x: 20,
-              perspective: 3000,
+              // perspective: 3000,
               duration: 0.8
             },
             animate: {
@@ -113,7 +114,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
               scale: 0.85,
               y: 0,
               x: 0,
-              perspective: 3000,
+              // perspective: 3000,
               duration: 0.8,
               clearProps: 'transform,perspective'
             }
@@ -127,7 +128,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
               scale: 0.6,
               y: 50,
               x: 0,
-              perspective: 3000,
+              // perspective: 3000,
               duration: 0.8
             },
             animate: {
@@ -137,7 +138,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
               scale: 0.75,
               y: 0,
               x: 0,
-              perspective: 3000,
+              // perspective: 3000,
               duration: 0.8,
               clearProps: 'transform,perspective'
             }
@@ -151,7 +152,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
               scale: 0.7,
               y: 50,
               x: -20,
-              perspective: 3000,
+              // perspective: 3000,
               duration: 0.8
             },
             animate: {
@@ -161,7 +162,7 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
               scale: 0.85,
               y: 0,
               x: 0,
-              perspective: 3000,
+              // perspective: 3000,
               duration: 0.8,
               clearProps: 'transform,perspective'
             }
@@ -266,17 +267,17 @@ const WorkCard = ({ id, image, title, description, labels }: CardProps) => {
       id="card" 
       className={`${styles["card"]} ${styles[`card-no-${id}`]}`}
     >
-      <Link href={`/works/${id}`} className={styles["card-content-link"]}>
+      <Link href={`/works/${id}`} rel="noopener noreferrer" className={styles["card-content-link"]}>
         <figure className={styles["card-figure"]}>
           <Image
             src={image}
-            alt={title}
+            alt={workTitle}
             width={800}
             height={450}
             className={styles["card-img"]}
           />
         </figure>
-        <h2 className={styles["card-title"]}>{title}</h2>
+        <h2 className={styles["card-title"]}>{workTitle}</h2>
         <p className={styles["card-description"]}>{description}</p>
         <div className={styles["card-footer"]}>
           {labels.map((label, index) => (
