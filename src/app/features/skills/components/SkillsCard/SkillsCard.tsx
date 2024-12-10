@@ -1,13 +1,46 @@
 "use client";
 
-import React, { useEffect } from 'react'
-import Link from 'next/link';
+import React, { useEffect, useRef } from 'react'
+// import Link from 'next/link';
+import { Link } from 'next-view-transitions'
 import Image from 'next/image';
 import styles from './SkillsCard.module.css';
-import { skillsItemDate } from '../SkillsItemsList/SkillsItemList';
+import gsap from 'gsap';
 
-const SkillsCard = ({ skillItem }: { skillItem: typeof skillsItemDate[number] }) => {
+interface CardProps {
+  id: number;
+  skillTitle: string;
+  skillLogo: string;
+  label: string;
+  link: string;
+  index: number;
+}
+
+const SkillsCard = ({ id, skillTitle, skillLogo, label, index }: CardProps) => {
+  const cardRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return; // cardRef.currentがnullの場合は処理を中断
+    const initialDelay = 0.65; // タイトルアニメーション後の初期遅延
+
+    // カードの初期状態を設定
+    gsap.set(card, {
+      opacity: 0,
+      y: 100,
+    });
+
+    // カードのアニメーション
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.out",
+      delay: initialDelay + (0.1 * index), // 初期遅延 + インデックスベースの遅延
+      clearProps: "transform" // アニメーション後にtransformプロパティをクリア
+    });
+
+    // マウスムーブエフェクト
     const handleMouseMove = (e: MouseEvent) => {
       const cards = document.querySelectorAll(`#card`);
       for (let i = 0; i < cards.length; i++) {
@@ -26,24 +59,24 @@ const SkillsCard = ({ skillItem }: { skillItem: typeof skillsItemDate[number] })
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [index]);
 
   return (
-    <Link key={skillItem.id} href={`${skillItem.link}`} target="_blank" rel="noopener noreferrer" className={styles["skills-card-link"]}>
-      <div id="card" className={styles["skills-card"]}>
-        <div className={styles["skills-card-content"]}>
-          <div className={styles["skills-logo-wrapper"]}>
-            <div className={styles["skills-logo-bg"]}>
-              <Image src={skillItem.skillLogo} alt={skillItem.skillTitle} className={styles["skills-logo"]} width={156} height={156} />
+    <article ref={cardRef} id="card" className={styles["skills-card"]}>
+      <Link href={`/skills/${skillTitle}`} rel="noopener noreferrer" className={styles["skills-card-link"]}>
+          <div className={styles["skills-card-content"]}>
+            <div className={styles["skills-logo-wrapper"]}>
+              <div className={styles["skills-logo-bg"]}>
+                <Image src={skillLogo} alt={skillTitle} className={styles["skills-logo"]} width={156} height={156} />
+              </div>
+            </div>
+            <div className={styles["skills-info"]}>
+              <h2 className={styles["skills-title"]}>{skillTitle}</h2>
+              <div className={styles["skills-label"]}>{label}</div>
             </div>
           </div>
-          <div className={styles["skills-info"]}>
-            <h2 className={styles["skills-title"]}>{skillItem.skillTitle}</h2>
-            <div className={styles["skills-label"]}>{skillItem.label}</div>
-          </div>
-        </div>
-      </div>
-    </Link>
+      </Link>
+    </article>
   )
 }
 
