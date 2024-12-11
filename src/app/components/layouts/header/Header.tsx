@@ -4,7 +4,6 @@ import React from "react";
 import styles from "./Header.module.css";
 import AudioPlayer from "../../AudioPlayer/AudioPlayer";
 import Gnav from "../Gnav/Gnav";
-// import Link from "next/link";
 import { Link } from 'next-view-transitions'
 import { motion } from "framer-motion";
 

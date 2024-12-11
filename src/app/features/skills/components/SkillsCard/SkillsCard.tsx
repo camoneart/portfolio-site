@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from 'react'
-// import Link from 'next/link';
-import { Link } from 'next-view-transitions'
+import { Link, useTransitionRouter } from 'next-view-transitions'
 import Image from 'next/image';
 import styles from './SkillsCard.module.css';
 import gsap from 'gsap';
@@ -17,8 +16,10 @@ interface CardProps {
 }
 
 const SkillsCard = ({ id, skillTitle, skillLogo, label, index }: CardProps) => {
+  const router = useTransitionRouter()
   const cardRef = useRef<HTMLElement>(null);
 
+  // GSAPを使用したカードアニメーション
   useEffect(() => {
     const card = cardRef.current;
     if (!card) return; // cardRef.currentがnullの場合は処理を中断
@@ -62,12 +63,13 @@ const SkillsCard = ({ id, skillTitle, skillLogo, label, index }: CardProps) => {
   }, [index]);
 
   return (
-    <article ref={cardRef} id="card" className={styles["skills-card"]}>
-      <Link href={`/skills/${skillTitle.toLowerCase()}`} rel="noopener noreferrer" className={styles["skills-card-link"]}>
+    <>
+    <article  ref={cardRef} id="card" className={styles["skills-card"]}>
+      <Link href="/about" rel="noopener noreferrer" className={`${styles["skills-card-link"]} ${styles["open"]}`}>
         <div className={styles["skills-card-content"]}>
           <div className={styles["skills-logo-wrapper"]}>
             <div className={styles["skills-logo-bg"]}>
-              <Image src={skillLogo} alt={skillTitle} className={styles["skills-logo"]} width={156} height={156} />
+              <Image src={skillLogo} alt={skillTitle} className={`${styles["skills-logo"]} view-transition-img`} width={156} height={156} />
             </div>
           </div>
           <div className={styles["skills-info"]}>
@@ -77,6 +79,7 @@ const SkillsCard = ({ id, skillTitle, skillLogo, label, index }: CardProps) => {
         </div>
       </Link>
     </article>
+      </>
   )
 }
 

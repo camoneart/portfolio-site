@@ -1,13 +1,12 @@
 'use client'
 
-// import Link from 'next/link';
 import { Link } from 'next-view-transitions'
 import styles from './WorkCard.module.css'
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 
-interface CardData {
+interface CardDataProps {
   id: number;
   image: string;
   workTitle: string;
@@ -15,7 +14,7 @@ interface CardData {
   labels: { no: string; value: string }[];
 }
 
-const WorkCard = ({ id, image, workTitle, description, labels }: CardData) => {
+const WorkCard = ({ id, image, workTitle, description, labels }: CardDataProps) => {
   const cardRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -275,6 +274,7 @@ const WorkCard = ({ id, image, workTitle, description, labels }: CardData) => {
             width={800}
             height={450}
             className={styles["card-img"]}
+            priority
           />
         </figure>
         <h2 className={styles["card-title"]}>{workTitle}</h2>
