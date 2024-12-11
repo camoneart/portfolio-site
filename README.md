@@ -43,6 +43,6 @@
 - npm v10.8.3
 
 ### フロント
-- Next.js 15.0.3
-- React 18.2.0
+- Next.js 14.2.20
+- React 18.3.1
 - typescript 5
