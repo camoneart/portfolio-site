@@ -23,19 +23,25 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
   return (
     <div className="common-container">
       <div className={styles["skill-info-container"]}>
-        <Image
-          src={skill.skillLogo}
-          alt={skill.skillTitle}
-          className={`${styles["skill-logo"]} ${skill.viewTransitionImage}`}
-          width={100}
-          height={100}
-          priority
-        />
-        <h1 className={`${styles["skills-title"]} ${skill.viewTransitionName} text-5xl`} >
-          {skill.skillTitle}
-        </h1>
-        <p className={styles["skill-description"]}>{skill.description}</p>
-        <SkillsViewTransitionsButton />
+        <div className={`${styles["skill-content"]} ${skill.viewTransitionBg}`}>
+          <div className={styles["skill-logo-wrapper"]}>
+            <div className={styles["skill-logo-bg"]}>
+              <Image
+                src={skill.skillLogo}
+                alt={skill.skillTitle}
+                className={`${styles["skill-logo"]} ${skill.viewTransitionImage}`}
+                width={100}
+                height={100}
+                priority
+              />
+            </div>
+          </div>
+          <h1 className={`${styles["skills-title"]} ${skill.viewTransitionName} text-5xl`} >
+            {skill.skillTitle}
+          </h1>
+          <p className={styles["skill-description"]}>{skill.description}</p>
+          <SkillsViewTransitionsButton />
+        </div>
       </div>
     </div>
   );

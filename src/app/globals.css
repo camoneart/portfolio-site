@@ -249,9 +249,76 @@ canvas {
   width: fit-content;
 }
 
-.demo {
-  view-transition-name: demo-title;
-  width: fit-content;
+.view-transition-bg-html {
+  view-transition-name: view-transition-bg-html;
+}
+
+.view-transition-bg-css {
+  view-transition-name: view-transition-bg-css;
+}
+
+.view-transition-bg-sass {
+  view-transition-name: view-transition-bg-sass;
+}
+
+.view-transition-bg-javascript {
+  view-transition-name: view-transition-bg-javascript;
+}
+
+.view-transition-bg-typescript {
+  view-transition-name: view-transition-bg-typescript;
+}
+
+.view-transition-bg-php {
+  view-transition-name: view-transition-bg-php;
+}
+
+.view-transition-bg-wordpress {
+  view-transition-name: view-transition-bg-wordpress;
+}
+
+.view-transition-bg-react {
+  view-transition-name: view-transition-bg-react;
+}
+
+.view-transition-bg-nextjs {
+  view-transition-name: view-transition-bg-nextjs;
+}
+
+.view-transition-bg-astro {
+  view-transition-name: view-transition-bg-astro;
+}
+
+.view-transition-bg-tailwindcss {
+  view-transition-name: view-transition-bg-tailwindcss;
+}
+
+.view-transition-bg-gsap {
+  view-transition-name: view-transition-bg-gsap;
+}
+
+.view-transition-bg-threejs {
+  view-transition-name: view-transition-bg-threejs;
+}
+
+.view-transition-bg-react-hook-form {
+  view-transition-name: view-transition-bg-react-hook-form;
+}
+
+.view-transition-bg-zod {
+  view-transition-name: view-transition-bg-zod;
+}
+
+.view-transition-bg-webpack {
+  view-transition-name: view-transition-bg-webpack;
+}
+
+.view-transition-bg-git {
+  view-transition-name: view-transition-bg-git;
+}
+
+.view-transition-bg-adobe-premiere-pro {
+  view-transition-name: view-transition-bg-adobe-premiere-pro;
 }
 
 @layer base {

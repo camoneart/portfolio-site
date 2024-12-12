@@ -16,9 +16,10 @@ interface CardProps {
   index: number;
   viewTransitionName: string;
   viewTransitionImage: string;
+  viewTransitionBg: string;
 }
 
-const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTransitionName, viewTransitionImage }: CardProps) => {
+const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTransitionName, viewTransitionImage, viewTransitionBg }: CardProps) => {
 
   const cardRef = useRef<HTMLElement>(null);
 
@@ -67,7 +68,9 @@ const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTr
 
   return (
     <>
-    <article  ref={cardRef} id="card" className={styles["skills-card"]}>
+    <article  ref={cardRef} id="card" className={`${styles["skills-card"]} ${
+      
+    }`}>
       <Link href={`/skills/${skillLink}`} rel="noopener noreferrer" className={`${styles["skills-card-link"]}`}>
         <div className={styles["skills-card-content"]}>
           <div className={styles["skills-logo-wrapper"]}>
