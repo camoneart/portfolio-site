@@ -39,7 +39,7 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
           <h1 className={`${styles["skills-title"]} ${skill.viewTransitionName} text-5xl`} >
             {skill.skillTitle}
           </h1>
-          <div className={styles["skill-label"]}>{skill.label}</div>
+          <div className={`${styles["skill-label"]} ${skill.viewTransitionLabel}`}>{skill.label}</div>
           <p className={styles["skill-description"]}>{skill.description}</p>
           <SkillsViewTransitionsButton />
         </div>
