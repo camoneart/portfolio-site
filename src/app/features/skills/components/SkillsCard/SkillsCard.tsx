@@ -17,9 +17,10 @@ interface CardProps {
   viewTransitionName: string;
   viewTransitionImage: string;
   viewTransitionBg: string;
+  viewTransitionLabel: string;
 }
 
-const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTransitionName, viewTransitionImage, viewTransitionBg }: CardProps) => {
+const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTransitionName, viewTransitionImage, viewTransitionBg, viewTransitionLabel }: CardProps) => {
 
   const cardRef = useRef<HTMLElement>(null);
 
@@ -68,9 +69,7 @@ const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTr
 
   return (
     <>
-    <article  ref={cardRef} id="card" className={`${styles["skills-card"]} ${
-      
-    }`}>
+    <article  ref={cardRef} id="card" className={`${styles["skills-card"]} ${viewTransitionBg}`}>
       <Link href={`/skills/${skillLink}`} rel="noopener noreferrer" className={`${styles["skills-card-link"]}`}>
         <div className={styles["skills-card-content"]}>
           <div className={styles["skills-logo-wrapper"]}>
@@ -80,7 +79,7 @@ const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTr
           </div>
           <div className={styles["skills-info"]}>
             <h2 className={`${styles["skills-title"]} ${viewTransitionName}`}>{skillTitle}</h2>
-            <div className={styles["skills-label"]}>{label}</div>
+            <div className={`${styles["skills-label"]} ${viewTransitionLabel}`}>{label}</div>
           </div>
         </div>
       </Link>

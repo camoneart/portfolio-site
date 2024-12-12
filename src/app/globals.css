@@ -321,6 +321,78 @@ canvas {
   view-transition-name: view-transition-bg-adobe-premiere-pro;
 }
 
+.view-transition-label-html {
+  view-transition-name: view-transition-label-html;
+}
+
+.view-transition-label-css {
+  view-transition-name: view-transition-label-css;
+}
+
+.view-transition-label-sass {
+  view-transition-name: view-transition-label-sass;
+}
+
+.view-transition-label-javascript {
+  view-transition-name: view-transition-label-javascript;
+}
+
+.view-transition-label-typescript {
+  view-transition-name: view-transition-label-typescript;
+}
+
+.view-transition-label-php {
+  view-transition-name: view-transition-label-php;
+}
+
+.view-transition-label-wordpress {
+  view-transition-name: view-transition-label-wordpress;
+}
+
+.view-transition-label-react {
+  view-transition-name: view-transition-label-react;
+}
+
+.view-transition-label-nextjs {
+  view-transition-name: view-transition-label-nextjs;
+}
+
+.view-transition-label-astro {
+  view-transition-name: view-transition-label-astro;
+}
+
+.view-transition-label-tailwindcss {
+  view-transition-name: view-transition-label-tailwindcss;
+}
+
+.view-transition-label-gsap {
+  view-transition-name: view-transition-label-gsap;
+}
+
+.view-transition-label-threejs {
+  view-transition-name: view-transition-label-threejs;
+}
+
+.view-transition-label-react-hook-form {
+  view-transition-name: view-transition-label-react-hook-form;
+}
+
+.view-transition-label-zod {
+  view-transition-name: view-transition-label-zod;
+}
+
+.view-transition-label-webpack {
+  view-transition-name: view-transition-label-webpack;
+}
+
+.view-transition-label-git {
+  view-transition-name: view-transition-label-git;
+}
+
+.view-transition-label-adobe-premiere-pro {
+  view-transition-name: view-transition-label-adobe-premiere-pro;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
