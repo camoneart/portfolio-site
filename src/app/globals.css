@@ -2,25 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html,
-body,
-#root {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-} */
-
 :root {
   /* color */
-  --bg-color-body: #131315;
+  --bg-color-gray: #131315;
   --color-primary-white: #fff;
   --color-primary-black: #000;
   --color-primary-gray: #262626;
-  --color-primary-orange: rgb(255, 116, 27);
+  --color-primary-orange: #ff6b4a;
   --text-gradient-primary: linear-gradient(108deg, #ffc508, #ff5a2e 70%, #ff9004);
+  --label-bg-color: rgb(246 119 77 / 25%);
+  --label-border-color: rgb(231 153 79 / 75%);
+  --logo-bg-color: rgb(38 38 38 / 0.8);
+  --card-bg-color: rgb(255 255 255 / 0.1);
+  --card-border-color: rgb(255 255 255 / 0.1);
+  
+  /* shadow */
+  --logo-bg-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.1), 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 255 255 / 0.1);
+  --card-default-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.1), 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.1);
+  --card-hover-shadow: 0 25px 35px -5px rgb(0 0 0 / 0.3), 0 15px 15px -5px rgb(0 0 0 / 0.1), 0 0 0 1px rgb(255 255 255 / 0.2), 0 0 60px rgb(255 107 74 / 0.3);
+  --hover-text-shadow: 0 0 15px var(--color-primary-orange);
 
   /* font weight */
   --font-weight-normal: 400;
@@ -43,19 +43,278 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100svh;
   color: var(--color-primary-white);
-  background: var(--bg-color-body);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  /* font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; */
-  overflow: hidden;
+  background: var(--bg-color-gray);
+  font-family: var(--font-russo-one), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 main {
   width: 100%;
-  margin-inline: auto;
-  padding-block: 1rem;
-  padding-inline: 1.5rem;
 }
 
 canvas {
   display: block;
+}
+
+.common-container {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+}
+
+:focus-visible {
+  outline: 1px solid #ff5a2e;
+}
+
+/* View Transitions API｜next-view-transitions */
+.view-transition-img-html {
+  view-transition-name: view-transition-img-html;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-css {
+  view-transition-name: view-transition-img-css;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-sass {
+  view-transition-name: view-transition-img-sass;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-javascript {
+  view-transition-name: view-transition-img-javascript;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-typescript {
+  view-transition-name: view-transition-img-typescript;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-php {
+  view-transition-name: view-transition-img-php;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-wordpress {
+  view-transition-name: view-transition-img-wordpress;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-react {
+  view-transition-name: view-transition-img-react;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-nextjs {
+  view-transition-name: view-transition-img-nextjs;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-astro {
+  view-transition-name: view-transition-img-astro;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-tailwindcss {
+  view-transition-name: view-transition-img-tailwindcss;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-gsap {
+  view-transition-name: view-transition-img-gsap;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-threejs {
+  view-transition-name: view-transition-img-threejs;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-react-hook-form {
+  view-transition-name: view-transition-img-react-hook-form;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-zod {
+  view-transition-name: view-transition-img-zod;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-webpack {
+  view-transition-name: view-transition-img-webpack;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-git {
+  view-transition-name: view-transition-img-git;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-adobe-premiere-pro {
+  view-transition-name: view-transition-img-adobe-premiere-pro;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-title-html {
+  view-transition-name: view-transition-title-html;
+  width: fit-content;
+}
+
+.view-transition-title-css {
+  view-transition-name: view-transition-title-css;
+  width: fit-content;
+}
+
+.view-transition-title-sass {
+  view-transition-name: view-transition-title-sass;
+  width: fit-content;
+}
+
+.view-transition-title-javascript {
+  view-transition-name: view-transition-title-javascript;
+  width: fit-content;
+}
+
+.view-transition-title-typescript {
+  view-transition-name: view-transition-title-typescript;
+  width: fit-content;
+}
+
+.view-transition-title-php {
+  view-transition-name: view-transition-title-php;
+  width: fit-content;
+}
+
+.view-transition-title-wordpress {
+  view-transition-name: view-transition-title-wordpress;
+  width: fit-content;
+}
+
+.view-transition-title-react {
+  view-transition-name: view-transition-title-react;
+  width: fit-content;
+}
+
+.view-transition-title-nextjs {
+  view-transition-name: view-transition-title-nextjs;
+  width: fit-content;
+}
+
+.view-transition-title-astro {
+  view-transition-name: view-transition-title-astro;
+  width: fit-content;
+}
+
+.view-transition-title-tailwindcss {
+  view-transition-name: view-transition-title-tailwindcss;
+  width: fit-content;
+}
+
+.view-transition-title-gsap {
+  view-transition-name: view-transition-title-gsap;
+  width: fit-content;
+}
+
+.view-transition-title-threejs {
+  view-transition-name: view-transition-title-threejs;
+  width: fit-content;
+}
+
+.view-transition-title-react-hook-form {
+  view-transition-name: view-transition-title-react-hook-form;
+  width: fit-content;
+}
+
+.view-transition-title-zod {
+  view-transition-name: view-transition-title-zod;
+  width: fit-content;
+}
+
+.view-transition-title-webpack {
+  view-transition-name: view-transition-title-webpack;
+  width: fit-content;
+}
+
+.view-transition-title-git {
+  view-transition-name: view-transition-title-git;
+  width: fit-content;
+}
+
+.view-transition-title-adobe-premiere-pro {
+  view-transition-name: view-transition-title-adobe-premiere-pro;
+  width: fit-content;
+}
+
+.demo {
+  view-transition-name: demo-title;
+  width: fit-content;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 14 100% 59%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

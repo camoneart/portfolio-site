@@ -31,11 +31,10 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
           height={100}
           priority
         />
-        <h1
-          className={`${styles["skills-title"]} ${skill.viewTransitionName} text-5xl`}
-        >
+        <h1 className={`${styles["skills-title"]} ${skill.viewTransitionName} text-5xl`} >
           {skill.skillTitle}
         </h1>
+        <p className={styles["skill-description"]}>{skill.description}</p>
         <SkillsViewTransitionsButton />
       </div>
     </div>
