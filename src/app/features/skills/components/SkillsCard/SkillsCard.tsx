@@ -18,9 +18,11 @@ interface CardProps {
   viewTransitionImage: string;
   viewTransitionBg: string;
   viewTransitionLabel: string;
+  viewTransitionLogoWrapper: string;
+  viewTransitionLogoBg: string;
 }
 
-const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTransitionName, viewTransitionImage, viewTransitionBg, viewTransitionLabel }: CardProps) => {
+const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTransitionName, viewTransitionImage, viewTransitionBg, viewTransitionLabel, viewTransitionLogoWrapper, viewTransitionLogoBg }: CardProps) => {
 
   const cardRef = useRef<HTMLElement>(null);
 
@@ -31,20 +33,20 @@ const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTr
     const initialDelay = 0.65; // タイトルアニメーション後の初期遅延
 
     // カードの初期状態を設定
-    gsap.set(card, {
-      opacity: 0,
-      y: 100,
-    });
+    // gsap.set(card, {
+    //   opacity: 0,
+    //   y: 100,
+    // });
 
-    // カードのアニメーション
-    gsap.to(card, {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: "power2.out",
-      delay: initialDelay + (0.1 * index), // 初期遅延 + インデックスベースの遅延
-      clearProps: "transform" // アニメーション後にtransformプロパティをクリア
-    });
+    // // カードのアニメーション
+    // gsap.to(card, {
+    //   opacity: 1,
+    //   y: 0,
+    //   duration: 1,
+    //   ease: "power2.out",
+    //   delay: initialDelay + (0.1 * index), // 初期遅延 + インデックスベースの遅延
+    //   clearProps: "transform" // アニメーション後にtransformプロパティをクリア
+    // });
 
     // マウスムーブエフェクト
     const handleMouseMove = (e: MouseEvent) => {
@@ -72,8 +74,8 @@ const SkillsCard = ({ id, skillTitle, skillLink, skillLogo, label, index, viewTr
     <article  ref={cardRef} id="card" className={`${styles["skills-card"]} ${viewTransitionBg}`}>
       <Link href={`/skills/${skillLink}`} rel="noopener noreferrer" className={`${styles["skills-card-link"]}`}>
         <div className={styles["skills-card-content"]}>
-          <div className={styles["skills-logo-wrapper"]}>
-            <div className={styles["skills-logo-bg"]}>
+          <div className={`${styles["skills-logo-wrapper"]} ${viewTransitionLogoWrapper}`}>
+            <div className={`${styles["skills-logo-bg"]} ${viewTransitionLogoBg}`}>
               <Image src={skillLogo} alt={skillTitle} className={`${styles["skills-logo"]} ${viewTransitionImage}`} width={156} height={156} />
             </div>
           </div>

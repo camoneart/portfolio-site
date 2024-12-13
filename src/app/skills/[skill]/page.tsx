@@ -24,8 +24,8 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
     <div className="common-container">
       <div className={styles["skill-info-container"]}>
         <div className={`${styles["skill-content"]} ${skill.viewTransitionBg}`}>
-          <div className={styles["skill-logo-wrapper"]}>
-            <div className={styles["skill-logo-bg"]}>
+          <div className={`${styles["skill-logo-wrapper"]} ${skill.viewTransitionLogoWrapper}`}>
+            <div className={`${styles["skill-logo-bg"]} ${skill.viewTransitionLogoBg}`}>
               <Image
                 src={skill.skillLogo}
                 alt={skill.skillTitle}

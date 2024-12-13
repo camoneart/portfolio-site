@@ -69,6 +69,142 @@ canvas {
 }
 
 /* View Transitions API｜next-view-transitions */
+.view-transition-logo-wrapper-html {
+  view-transition-name: view-transition-logo-wrapper-html;
+}
+
+.view-transition-logo-wrapper-css {
+  view-transition-name: view-transition-logo-wrapper-css;
+}
+
+.view-transition-logo-wrapper-sass {
+  view-transition-name: view-transition-logo-wrapper-sass;
+}
+
+.view-transition-logo-wrapper-javascript {
+  view-transition-name: view-transition-logo-wrapper-javascript;
+}
+
+.view-transition-logo-wrapper-typescript {
+  view-transition-name: view-transition-logo-wrapper-typescript;
+}
+
+.view-transition-logo-wrapper-php {
+  view-transition-name: view-transition-logo-wrapper-php;
+}
+
+.view-transition-logo-wrapper-wordpress {
+  view-transition-name: view-transition-logo-wrapper-wordpress;
+}
+
+.view-transition-logo-wrapper-react {
+  view-transition-name: view-transition-logo-wrapper-react;
+}
+
+.view-transition-logo-wrapper-nextjs {
+  view-transition-name: view-transition-logo-wrapper-nextjs;
+}
+
+.view-transition-logo-wrapper-tailwind {
+  view-transition-name: view-transition-logo-wrapper-tailwind;
+}
+
+.view-transition-logo-wrapper-framer-motion {
+  view-transition-name: view-transition-logo-wrapper-framer-motion;
+}
+
+.view-transition-logo-wrapper-gsap {
+  view-transition-name: view-transition-logo-wrapper-gsap;
+}
+
+.view-transition-logo-wrapper-react-hook-form {
+  view-transition-name: view-transition-logo-wrapper-react-hook-form;
+}
+
+.view-transition-logo-wrapper-zod {
+  view-transition-name: view-transition-logo-wrapper-zod;
+}
+
+.view-transition-logo-wrapper-webpack {
+  view-transition-name: view-transition-logo-wrapper-webpack;
+}
+
+.view-transition-logo-wrapper-git {
+  view-transition-name: view-transition-logo-wrapper-git;
+}
+
+.view-transition-logo-wrapper-adobe-premiere-pro {
+  view-transition-name: view-transition-logo-wrapper-adobe-premiere-pro;
+}
+
+.view-transition-logo-bg-html {
+  view-transition-name: view-transition-logo-bg-html;
+}
+
+.view-transition-logo-bg-css {
+  view-transition-name: view-transition-logo-bg-css;
+}
+
+.view-transition-logo-bg-sass {
+  view-transition-name: view-transition-logo-bg-sass;
+}
+
+.view-transition-logo-bg-javascript {
+  view-transition-name: view-transition-logo-bg-javascript;
+}
+
+.view-transition-logo-bg-typescript {
+  view-transition-name: view-transition-logo-bg-typescript;
+}
+
+.view-transition-logo-bg-php {
+  view-transition-name: view-transition-logo-bg-php;
+}
+
+.view-transition-logo-bg-wordpress {
+  view-transition-name: view-transition-logo-bg-wordpress;
+}
+
+.view-transition-logo-bg-react {
+  view-transition-name: view-transition-logo-bg-react;
+}
+
+.view-transition-logo-bg-nextjs {
+  view-transition-name: view-transition-logo-bg-nextjs;
+}
+
+.view-transition-logo-bg-tailwind {
+  view-transition-name: view-transition-logo-bg-tailwind;
+}
+
+.view-transition-logo-bg-framer-motion {
+  view-transition-name: view-transition-logo-bg-framer-motion;
+}
+
+.view-transition-logo-bg-gsap {
+  view-transition-name: view-transition-logo-bg-gsap;
+}
+
+.view-transition-logo-bg-react-hook-form {
+  view-transition-name: view-transition-logo-bg-react-hook-form;
+}
+
+.view-transition-logo-bg-zod {
+  view-transition-name: view-transition-logo-bg-zod;
+}
+
+.view-transition-logo-bg-webpack {
+  view-transition-name: view-transition-logo-bg-webpack;
+}
+
+.view-transition-logo-bg-git {
+  view-transition-name: view-transition-logo-bg-git;
+}
+
+.view-transition-logo-bg-adobe-premiere-pro {
+  view-transition-name: view-transition-logo-bg-adobe-premiere-pro;
+}
+
 .view-transition-img-html {
   view-transition-name: view-transition-img-html;
   aspect-ratio: 1 / 1;

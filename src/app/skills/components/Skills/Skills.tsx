@@ -18,6 +18,8 @@ interface SkillsData {
   viewTransitionImage: string;
   viewTransitionBg: string;
   viewTransitionLabel: string;
+  viewTransitionLogoWrapper: string;
+  viewTransitionLogoBg: string;
 }
 
 export const skillsData: SkillsData[] = [
@@ -32,7 +34,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-html",
     viewTransitionImage: "view-transition-img-html",
     viewTransitionBg: "view-transition-bg-html",
-    viewTransitionLabel: "view-transition-label-html"
+    viewTransitionLabel: "view-transition-label-html",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-html",
+    viewTransitionLogoBg: "view-transition-logo-bg-html"
   },
   {
     id: 2,
@@ -45,7 +49,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-css",
     viewTransitionImage: "view-transition-img-css",
     viewTransitionBg: "view-transition-bg-css",
-    viewTransitionLabel: "view-transition-label-css"
+    viewTransitionLabel: "view-transition-label-css",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-css",
+    viewTransitionLogoBg: "view-transition-logo-bg-css"
   },
   {
     id: 3,
@@ -58,7 +64,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-sass",
     viewTransitionImage: "view-transition-img-sass",
     viewTransitionBg: "view-transition-bg-sass",
-    viewTransitionLabel: "view-transition-label-sass"
+    viewTransitionLabel: "view-transition-label-sass",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-sass",
+    viewTransitionLogoBg: "view-transition-logo-bg-sass"
   },
   {
     id: 4,
@@ -71,7 +79,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-javascript",
     viewTransitionImage: "view-transition-img-javascript",
     viewTransitionBg: "view-transition-bg-javascript",
-    viewTransitionLabel: "view-transition-label-javascript"
+    viewTransitionLabel: "view-transition-label-javascript",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-javascript",
+    viewTransitionLogoBg: "view-transition-logo-bg-javascript"
   },
   {
     id: 5,
@@ -84,7 +94,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-typescript",
     viewTransitionImage: "view-transition-img-typescript",
     viewTransitionBg: "view-transition-bg-typescript",
-    viewTransitionLabel: "view-transition-label-typescript"
+    viewTransitionLabel: "view-transition-label-typescript",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-typescript",
+    viewTransitionLogoBg: "view-transition-logo-bg-typescript"
   },
   {
     id: 6,
@@ -97,7 +109,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-php",
     viewTransitionImage: "view-transition-img-php",
     viewTransitionBg: "view-transition-bg-php",
-    viewTransitionLabel: "view-transition-label-php"
+    viewTransitionLabel: "view-transition-label-php",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-php",
+    viewTransitionLogoBg: "view-transition-logo-bg-php"
   },
   {
     id: 7,
@@ -110,7 +124,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-wordpress",
     viewTransitionImage: "view-transition-img-wordpress",
     viewTransitionBg: "view-transition-bg-wordpress",
-    viewTransitionLabel: "view-transition-label-wordpress"
+    viewTransitionLabel: "view-transition-label-wordpress",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-wordpress",
+    viewTransitionLogoBg: "view-transition-logo-bg-wordpress"
   },
   {
     id: 8,
@@ -123,7 +139,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-react",
     viewTransitionImage: "view-transition-img-react",
     viewTransitionBg: "view-transition-bg-react",
-    viewTransitionLabel: "view-transition-label-react"
+    viewTransitionLabel: "view-transition-label-react",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-react",
+    viewTransitionLogoBg: "view-transition-logo-bg-react"
   },
   {
     id: 9,
@@ -136,7 +154,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-nextjs",
     viewTransitionImage: "view-transition-img-nextjs",
     viewTransitionBg: "view-transition-bg-nextjs",
-    viewTransitionLabel: "view-transition-label-nextjs"
+    viewTransitionLabel: "view-transition-label-nextjs",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-nextjs",
+    viewTransitionLogoBg: "view-transition-logo-bg-nextjs"
   },
   {
     id: 10,
@@ -149,7 +169,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-astro",
     viewTransitionImage: "view-transition-img-astro",
     viewTransitionBg: "view-transition-bg-astro",
-    viewTransitionLabel: "view-transition-label-astro"
+    viewTransitionLabel: "view-transition-label-astro",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-astro",
+    viewTransitionLogoBg: "view-transition-logo-bg-astro"
   },
   {
     id: 11,
@@ -162,7 +184,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-tailwindcss",
     viewTransitionImage: "view-transition-img-tailwindcss",
     viewTransitionBg: "view-transition-bg-tailwindcss",
-    viewTransitionLabel: "view-transition-label-tailwindcss"
+    viewTransitionLabel: "view-transition-label-tailwindcss",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-tailwindcss",
+    viewTransitionLogoBg: "view-transition-logo-bg-tailwindcss"
   },
   {
     id: 12,
@@ -175,7 +199,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-gsap",
     viewTransitionImage: "view-transition-img-gsap",
     viewTransitionBg: "view-transition-bg-gsap",
-    viewTransitionLabel: "view-transition-label-gsap"
+    viewTransitionLabel: "view-transition-label-gsap",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-gsap",
+    viewTransitionLogoBg: "view-transition-logo-bg-gsap"
   },
   {
     id: 13,
@@ -188,7 +214,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-threejs",
     viewTransitionImage: "view-transition-img-threejs",
     viewTransitionBg: "view-transition-bg-threejs",
-    viewTransitionLabel: "view-transition-label-threejs"
+    viewTransitionLabel: "view-transition-label-threejs",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-threejs",
+    viewTransitionLogoBg: "view-transition-logo-bg-threejs"
   },
   {
     id: 14,
@@ -201,7 +229,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-react-hook-form",
     viewTransitionImage: "view-transition-img-react-hook-form",
     viewTransitionBg: "view-transition-bg-react-hook-form",
-    viewTransitionLabel: "view-transition-label-react-hook-form"
+    viewTransitionLabel: "view-transition-label-react-hook-form",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-react-hook-form",
+    viewTransitionLogoBg: "view-transition-logo-bg-react-hook-form"
   },
   {
     id: 15,
@@ -214,7 +244,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-zod",
     viewTransitionImage: "view-transition-img-zod",
     viewTransitionBg: "view-transition-bg-zod",
-    viewTransitionLabel: "view-transition-label-zod"
+    viewTransitionLabel: "view-transition-label-zod",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-zod",
+    viewTransitionLogoBg: "view-transition-logo-bg-zod"
   },
   {
     id: 16,
@@ -227,7 +259,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-webpack",
     viewTransitionImage: "view-transition-img-webpack",
     viewTransitionBg: "view-transition-bg-webpack",
-    viewTransitionLabel: "view-transition-label-webpack"
+    viewTransitionLabel: "view-transition-label-webpack",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-webpack",
+    viewTransitionLogoBg: "view-transition-logo-bg-webpack"
   },
   {
     id: 17,
@@ -240,7 +274,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-git",
     viewTransitionImage: "view-transition-img-git",
     viewTransitionBg: "view-transition-bg-git",
-    viewTransitionLabel: "view-transition-label-git"
+    viewTransitionLabel: "view-transition-label-git",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-git",
+    viewTransitionLogoBg: "view-transition-logo-bg-git"
   },
   {
     id: 18,
@@ -253,7 +289,9 @@ export const skillsData: SkillsData[] = [
     viewTransitionName: "view-transition-title-adobe-premiere-pro",
     viewTransitionImage: "view-transition-img-adobe-premiere-pro",
     viewTransitionBg: "view-transition-bg-adobe-premiere-pro",
-    viewTransitionLabel: "view-transition-label-adobe-premiere-pro"
+    viewTransitionLabel: "view-transition-label-adobe-premiere-pro",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-adobe-premiere-pro",
+    viewTransitionLogoBg: "view-transition-logo-bg-adobe-premiere-pro"
   },
 ];
 
