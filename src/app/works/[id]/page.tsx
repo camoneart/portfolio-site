@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import styles from './WorkDetail.module.css';
@@ -37,11 +37,11 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
               <article className={styles["work__article"]}>
                 <div className={styles["work__mv"]}>
                   <figure className={styles["work__mv-figure"]}>
-                    <Image src={work.image} alt={work.workTitle} style={{ maxWidth: '100%', height: 'auto' }} width={1920} height={1080} className={styles["work__mv-img"]} />
+                    <Image src={work.image} alt={work.workTitle} style={{ maxWidth: '100%', height: 'auto' }} width={1920} height={1080} className={`${styles["work__mv-img"]} ${work.viewTransitionImage}`} />
                   </figure>
                 </div>
                 <div className={styles["work__content"]}>
-                  <h1 className={`${styles["work__title"]}`}>{work.workTitle}</h1>
+                  <h1 className={`${styles["work__title"]} ${work.viewTransitionName}`}>{work.workTitle}</h1>
                   <div className={styles["work__info"]}>
                     <div className={styles["work__url-container"]}>
                       <span className={styles["work__url-label"]}>URL：</span>
@@ -64,21 +64,21 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                       </ul>
                     </div>
                     {work.username && (
-                      <div className={styles["work__role"]}>
-                        <span className={styles["work__role-label"]}>username：</span>
-                        <ul className={styles["work__role-list"]}>
+                      <div className={styles["work__name"]}>
+                        <span className={styles["work__name-label"]}>username：</span>
+                        <ul className={styles["work__name-list"]}>
                           {usernameList.map((username, index) => (
-                            <li key={index} className={styles["work__role-item"]}>{username}</li>
+                            <li key={index} className={styles["work__name-item"]}>{username}</li>
                           ))}
                         </ul>
                       </div>
                     )}
                     {work.password && (
-                      <div className={styles["work__role"]}>
-                        <span className={styles["work__role-label"]}>password：</span>
-                        <ul className={styles["work__role-list"]}>
+                      <div className={styles["work__password"]}>
+                        <span className={styles["work__password-label"]}>password：</span>
+                        <ul className={styles["work__password-list"]}>
                           {passwordList.map((password, index) => (
-                            <li key={index} className={styles["work__role-item"]}>{password}</li>
+                            <li key={index} className={styles["work__password-item"]}>{password}</li>
                           ))}
                         </ul>
                       </div>
@@ -119,10 +119,10 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                             alt={otherWork.workTitle}
                             width={800}
                             height={450}
-                            className={styles["work__sidebar-img"]}
+                            className={`${styles["work__sidebar-img"]} ${otherWork.viewTransitionImage}`}
                           />
                         </figure>
-                        <h3 className={`${styles["work__sidebar-item-title"]}`}>{otherWork.workTitle}</h3>
+                        <h3 className={`${styles["work__sidebar-item-title"]} ${otherWork.viewTransitionName}`}>{otherWork.workTitle}</h3>
                       </Link>
                     </li>
                   ))}
