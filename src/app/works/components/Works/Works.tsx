@@ -25,7 +25,7 @@ interface WorksData {
 export const worksData: WorksData[] = [
   {
     id: 1,
-    image: "/images/works/work-1.jpg",
+    image: "/images/works/work01.jpg",
     workTitle: "CareSend｜有資格介護人材が集まる介護派遣サービス",
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の介護派遣サービスのLPサイト」になります。",
@@ -42,7 +42,7 @@ export const worksData: WorksData[] = [
   },
   {
     id: 2,
-    image: "/images/works/work-2.jpg",
+    image: "/images/works/work02.jpg",
     workTitle:
       "青牡丹工務店｜大阪市北区の住宅建築・リフォーム・公共事業なら青牡丹工務店",
     description:
@@ -60,7 +60,7 @@ export const worksData: WorksData[] = [
   },
   {
     id: 3,
-    image: "/images/works/work-3.jpg",
+    image: "/images/works/work03.jpg",
     workTitle: "採用特設サイト｜株式会社TETOTE",
     description:
       "こちらのサイトは、Figmaで作成されたWordPressオリジナルテーマのデザインカンプを基にコーディングを行った「架空のITコンサルファームの採用サイト」になります。",
@@ -75,6 +75,24 @@ export const worksData: WorksData[] = [
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo03」の入力をお願いいたします。",
     viewTransitionName: "view-transition-title-work-3",
     viewTransitionImage: "view-transition-img-work-3",
+  },
+  {
+    id: 4,
+    image: "/images/works/work04.jpg",
+    workTitle: "Aoyama｜Creative Web Developer",
+    description:
+      "こちらのサイトは、私のポートフォリオサイトになります。",
+    labels: [{ no: "Card No.", value: "004/004" }],
+    skillsList:
+      "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
+    siteUrl: "https://aoyamadev.com",
+    role: "デザイン, コーディング",
+    username: "",
+    password: "",
+    summary:
+      "",
+    viewTransitionName: "view-transition-title-work-4",
+    viewTransitionImage: "view-transition-img-work-4",
   },
 ];
 

@@ -21,6 +21,7 @@
   --card-default-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.3), 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.1);
   --detail-card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.3), 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.2);
   --card-hover-shadow: 0 25px 35px -5px rgb(0 0 0 / 0.3), 0 15px 15px -5px rgb(0 0 0 / 0.1), 0 0 0 1px rgb(255 255 255 / 0.2), 0 0 60px rgb(255 107 74 / 0.3);
+  --sidebar-link-hover-shadow: 0px 0px 20px 0px rgb(255 107 74 / 0.6);
   --hover-text-shadow: 0 0 15px var(--color-primary-orange);
 
   /* font weight */
@@ -82,6 +83,10 @@ canvas {
   view-transition-name: view-transition-title-work-3;
 }
 
+.view-transition-title-work-4 {
+  view-transition-name: view-transition-title-work-4;
+}
+
 .view-transition-img-work-1 {
   view-transition-name: view-transition-img-work-1;
 }
@@ -92,6 +97,10 @@ canvas {
 
 .view-transition-img-work-3 {
   view-transition-name: view-transition-img-work-3;
+}
+
+.view-transition-img-work-4 {
+  view-transition-name: view-transition-img-work-4;
 }
 
 .view-transition-logo-wrapper-html {
