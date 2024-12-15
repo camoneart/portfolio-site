@@ -30,7 +30,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <div className="common-container">
+      <div className={styles["work-detail-container"]}>
         <section className={styles["work"]}>
           <div className={styles["work__container"]}>
             <div className={styles["work__article-container"]}>
