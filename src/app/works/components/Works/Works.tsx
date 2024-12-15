@@ -36,7 +36,7 @@ export const worksData: WorksData[] = [
     username: "demo",
     password: "demo01",
     summary:
-      "こちらのサイトには、BASIC認証をかけています。お手数ですが、サイトのアクセス時には、ユーザーネームに「demo」、パスワードに「demo01」の入力をお願いいたします。",
+      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo01」の入力をお願いいたします。",
     viewTransitionName: "view-transition-title-work-1",
     viewTransitionImage: "view-transition-img-work-1",
   },
@@ -54,7 +54,7 @@ export const worksData: WorksData[] = [
     username: "demo",
     password: "demo02",
     summary:
-      "こちらのサイトには、BASIC認証をかけています。お手数ですが、サイトのアクセス時には、ユーザーネームに「demo」、パスワードに「demo02」の入力をお願いいたします。",
+      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo02」の入力をお願いいたします。",
     viewTransitionName: "view-transition-title-work-2",
     viewTransitionImage: "view-transition-img-work-2",
   },
@@ -72,7 +72,7 @@ export const worksData: WorksData[] = [
     username: "demo",
     password: "demo03",
     summary:
-      "こちらのサイトには、BASIC認証をかけています。お手数ですが、サイトのアクセス時には、ユーザーネームに「demo」、パスワードに「demo03」の入力をお願いいたします。",
+      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo03」の入力をお願いいたします。",
     viewTransitionName: "view-transition-title-work-3",
     viewTransitionImage: "view-transition-img-work-3",
   },
