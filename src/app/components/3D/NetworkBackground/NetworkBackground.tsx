@@ -27,7 +27,7 @@ function Points() {
   // アクティブなポイントのインデックスを保持する参照を作成
   const activePointsRef = useRef<Set<number>>(new Set());
   
-  const { geometry, points, positions } = React.useMemo(
+  const { geometry, points, positions, originalPositions } = React.useMemo(
     () => createPointsSystem(GRID_CONFIG),
     []
   );
@@ -52,7 +52,7 @@ function Points() {
     
     gsap.timeline()
       .to({}, {
-        duration: 2, // activeポイントの拡大アニメーション時間
+        duration: 4, // activeポイントの拡大アニメーション時間
         ease: 'custom',
         onUpdate: function() {
           scaleAttribute.array[index] = 1 + this.progress();
@@ -60,7 +60,7 @@ function Points() {
         }
       })
       .to({}, {
-        duration: 60, // activeポイントの縮小アニメーション時間
+        duration: 4, // activeポイントの縮小アニメーション時間
         ease: 'custom',
         onUpdate: function() {
           scaleAttribute.array[index] = 2 - this.progress();
