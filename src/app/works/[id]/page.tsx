@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from './WorkDetail.module.css';
 import { worksData } from '../components/Works/Works';
 import { generateWorkMetadata } from './metadata';
+import { HovermeButton } from '@/components/eldoraui/hovermebutton';
 
 export async function generateStaticParams() {
   return worksData.map((workData) => ({
@@ -98,7 +99,8 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                     )}
                   </div>
                   <div className={styles["work__return-link-container"]}>
-                    <Link href="/works" className={styles["work__return-link"]}>作品一覧に戻る</Link>
+                    {/* <Link href="/works" className={styles["work__return-link"]}>作品一覧に戻る</Link> */}
+                    <HovermeButton />
                   </div>
                 </div>
                 {/* /.work__content */}
