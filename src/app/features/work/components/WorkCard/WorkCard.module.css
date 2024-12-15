@@ -2,51 +2,65 @@
   display: block grid;
   grid-template-rows: subgrid;
   grid-row: span 4;
-  background: rgb(255 255 255 / 0.1);
+  background: var(--card-bg-color);
   backdrop-filter: blur(10px);
   border-radius: 1.5rem;
-  padding-block: 2rem 1.5rem;
-  padding-inline: 2rem;
   color: var(--color-primary-white);
-  transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  border: 1px solid rgb(255 255 255 / 0.1);
-  box-shadow: 
-    0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -1px rgb(0 0 0 / 0.06),
-    0 0 0 1px rgb(255 255 255 / 0.1),
-    0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 0 40px rgb(255 107 74 / 0.1);
+  transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: 1px solid var(--card-border-color);
+  box-shadow: var(--card-default-shadow);
   position: relative;
   transform-style: preserve-3d;
   cursor: pointer;
   user-select: none;
 }
 
-.card:hover {
+.card:hover,
+.card:active,
+.card:focus,
+.card:focus-visible {
   background: rgb(255 255 255 / 0.2);
-  box-shadow:
-    0 25px 35px -5px rgb(0 0 0 / 0.3),
-    0 15px 15px -5px rgb(0 0 0 / 0.1),
-    0 0 0 1px rgb(255 255 255 / 0.2),
-    0 0 60px rgb(255 107 74 / 0.3);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .card:hover .card-title,
 .card:hover .card-description,
-.card:hover .card-stat-label {
+.card:hover .card-label-no,
+.card:active .card-title,
+.card:active .card-description,
+.card:active .card-label-no,
+.card:focus .card-title,
+.card:focus .card-description,
+.card:focus .card-label-no,
+.card:focus-visible .card-title,
+.card:focus-visible .card-description,
+.card:focus-visible .card-label-no {
   opacity: 0.9;
 }
 
-.card:hover .card-img {
+.card:hover .card-img,
+.card:active .card-img,
+.card:focus .card-img,
+.card:focus-visible .card-img {
   filter: grayscale(0%) opacity(100%);
 }
 
 .card:hover::before,
-.card:hover::after {
+.card:hover::after,
+.card:active::before,
+.card:active::after,
+.card:focus::before,
+.card:focus::after,
+.card:focus-visible::before,
+.card:focus-visible::after {
   opacity: 1;
 }
 
-.card:hover .card-content {
+.card:hover .card-content,
+.card:active .card-content,
+.card:focus .card-content,
+.card:focus-visible .card-content {
   transform: translateZ(30px);
 }
 
@@ -91,124 +105,93 @@
 
 @media screen and (1280px <= width) {
   .card-no-1 {
-    transform:
-    translateZ(0)
-    perspective(3000px)
-    rotateX(-5deg)
-    rotateY(25deg)
-    scale(0.85)
-    ;
+    transform: translateZ(0) perspective(3000px) rotateX(-5deg) rotateY(25deg)
+      scale(0.85);
   }
 
-  .card-no-1:hover {
-    transform: 
-      translateY(-25px) 
-      translateZ(100px) 
-      rotateX(-5deg)
-      rotateY(370deg)
-      scale(0.9);
+  .card-no-1:hover,
+  .card-no-1:active,
+  .card-no-1:focus,
+  .card-no-1:focus-visible {
+    transform: translateY(-25px) translateZ(100px) rotateX(-5deg)
+      rotateY(370deg) scale(0.9);
   }
-  
+
   .card-no-2 {
-    transform:
-    translateZ(0)
-    rotateX(0deg)
-    rotateY(0deg)
-    scale(0.75)
-    ;
+    transform: translateZ(0) rotateX(0deg) rotateY(0deg) scale(0.75);
     transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  .card-no-2:hover {
-    transform: 
-      translateY(-25px) 
-      translateZ(100px) 
-      rotateX(-5deg)
-      rotateY(360deg)
-      scale(0.85);
-  }
-  
-  .card-no-3 {
-    transform:
-    translateZ(0)
-    perspective(3000px)
-    rotateX(-5deg)
-    rotateY(-25deg)
-    scale(0.85)
-    ;
+  .card-no-2:hover,
+  .card-no-2:active,
+  .card-no-2:focus,
+  .card-no-2:focus-visible {
+    transform: translateY(-25px) translateZ(100px) rotateX(-5deg)
+      rotateY(360deg) scale(0.85);
   }
 
-  .card-no-3:hover {
-    transform: 
-      translateY(-25px) 
-      translateZ(100px) 
-      rotateX(-5deg)
-      rotateY(-370deg)
-      scale(0.9);
+  .card-no-3 {
+    transform: translateZ(0) perspective(3000px) rotateX(-5deg) rotateY(-25deg)
+      scale(0.85);
+  }
+
+  .card-no-3:hover,
+  .card-no-3:active,
+  .card-no-3:focus,
+  .card-no-3:focus-visible {
+    transform: translateY(-25px) translateZ(100px) rotateX(-5deg)
+      rotateY(-370deg) scale(0.9);
   }
 }
 
 @media screen and (1536px <= width) {
   .card-no-1 {
-    transform:
-    translateZ(0)
-    perspective(3000px)
-    rotateX(-5deg)
-    rotateY(25deg)
-    scale(0.95);
-  }
-
-  .card-no-1:hover {
-    transform: 
-      translateY(-25px) 
-      translateZ(100px) 
-      rotateX(-5deg)
-      rotateY(370deg)
-      scale(1);
-  }
-
-  .card-no-2 {
-    transform:
-      translateZ(0)
-      rotateX(0deg)
-      rotateY(0deg)
-      scale(0.85);
-  }
-
-  .card-no-2:hover {
-    transform: 
-      translateY(-25px) 
-      translateZ(100px) 
-      rotateX(-5deg)
-      rotateY(360deg)
+    transform: translateZ(0) perspective(3000px) rotateX(-5deg) rotateY(25deg)
       scale(0.95);
   }
 
-  .card-no-3 {
-    transform: 
-    translateZ(0)
-    perspective(3000px)
-    rotateX(-5deg)
-    rotateY(-25deg)
-    scale(0.95);
+  .card-no-1:hover,
+  .card-no-1:active,
+  .card-no-1:focus,
+  .card-no-1:focus-visible {
+    transform: translateY(-25px) translateZ(100px) rotateX(-5deg)
+      rotateY(370deg) scale(1);
   }
 
-  .card-no-3:hover {
-    transform: 
-      translateY(-25px) 
-      translateZ(100px) 
-      rotateX(-5deg)
-      rotateY(-370deg)
-      scale(1);
+  .card-no-2 {
+    transform: translateZ(0) rotateX(0deg) rotateY(0deg) scale(0.85);
+  }
+
+  .card-no-2:hover,
+  .card-no-2:active,
+  .card-no-2:focus,
+  .card-no-2:focus-visible {
+    transform: translateY(-25px) translateZ(100px) rotateX(-5deg)
+      rotateY(360deg) scale(0.95);
+  }
+
+  .card-no-3 {
+    transform: translateZ(0) perspective(3000px) rotateX(-5deg) rotateY(-25deg)
+      scale(0.95);
+  }
+
+  .card-no-3:hover,
+  .card-no-3:active,
+  .card-no-3:focus,
+  .card-no-3:focus-visible {
+    transform: translateY(-25px) translateZ(100px) rotateX(-5deg)
+      rotateY(-370deg) scale(1);
   }
 }
 
-.card-content {
+.card-content-link {
   position: relative;
   display: block grid;
   grid-template-rows: subgrid;
   grid-row: span 4;
   row-gap: 5px;
+  padding-block: 2rem 1.5rem;
+  padding-inline: 2rem;
   z-index: 20;
   transform: translateZ(20px);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -224,6 +207,7 @@
 .card-img {
   position: absolute;
   aspect-ratio: 16 / 9;
+  border-radius: 10px;
   inset: 0;
   width: 100%;
   object-fit: cover;
@@ -284,7 +268,7 @@
 .card-label-value {
   font-weight: bold;
   font-size: 1rem;
-  color: var(--label-color-orange);
+  color: var(--color-primary-orange);
   text-shadow: 0 0 20px rgb(255 107 74 / 0.3);
   margin-block-end: -0.18rem;
 }
