@@ -1,11 +1,34 @@
 "use client";
 
 import { Link } from 'next-view-transitions';
+import { usePathname } from 'next/navigation';
 
 export function HovermeButton() {
+  const pathname = usePathname();
+  
+  const getHrefAndText = () => {
+    if (pathname?.includes('/works/')) {
+      return {
+        href: '/works',
+        text: '作品一覧に戻る'
+      };
+    } else if (pathname?.includes('/skills/')) {
+      return {
+        href: '/skills',
+        text: 'スキル一覧に戻る'
+      };
+    }
+    return {
+      href: '/works',
+      text: '作品一覧に戻る'
+    };
+  };
+
+  const { href, text } = getHrefAndText();
+
   return (
-    <Link href="/works" className="group relative inline-flex h-[calc(48px+8px)] items-center justify-center rounded-full bg-neutral-900 py-1 pl-6 pr-14 font-bold text-neutral-50">
-      <span className="z-10 pr-2">作品一覧に戻る</span>
+    <Link href={href} className="group relative inline-flex h-[calc(48px+8px)] items-center justify-center rounded-full bg-neutral-900 py-1 pl-7 pr-14 font-bold text-neutral-50">
+      <span className="z-10 pr-2">{text}</span>
       <div className="absolute right-1 inline-flex h-12 w-12 items-center justify-end rounded-full bg-neutral-700 transition-[width] duration-300 linear group-hover:w-[calc(100%-8px)]">
         <div className="mr-3.5 flex items-center justify-center">
           <svg
