@@ -38,6 +38,9 @@
   --leading-relaxed: 1.8;
   --leading-loose: 2;
   --leading-wide: 2.5;
+
+  /* border */
+  --border-rounded: 999em;
 }
 
 body {
