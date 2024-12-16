@@ -5,7 +5,7 @@ import Image from 'next/image';
 import styles from './WorkDetail.module.css';
 import { worksData } from '../components/Works/Works';
 import { generateWorkMetadata } from './metadata';
-import { HovermeButton } from '@/components/eldoraui/hovermebutton';
+import { HovermeButton } from '@/components/eldoraui/HovermeButton';
 
 export async function generateStaticParams() {
   return worksData.map((workData) => ({
