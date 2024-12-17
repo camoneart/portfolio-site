@@ -33,7 +33,7 @@ export const worksData: WorksData[] = [
     labels: [{ no: "Card No.", value: "001/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/caresend/",
-    role: "コーディング",
+    role: "Coding",
     username: "demo",
     password: "demo01",
     summary:
@@ -51,7 +51,7 @@ export const worksData: WorksData[] = [
     labels: [{ no: "Card No.", value: "002/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/aobotan/",
-    role: "コーディング",
+    role: "Coding",
     username: "demo",
     password: "demo02",
     summary:
@@ -69,7 +69,7 @@ export const worksData: WorksData[] = [
     skillsList:
       "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/tetote/",
-    role: "コーディング",
+    role: "Coding",
     username: "demo",
     password: "demo03",
     summary:
@@ -87,7 +87,7 @@ export const worksData: WorksData[] = [
     skillsList:
       "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",
     siteUrl: "https://aoyamadev.com",
-    role: "デザイン, コーディング",
+    role: "Design, Coding",
     username: "",
     password: "",
     summary:
