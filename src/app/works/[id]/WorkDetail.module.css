@@ -87,7 +87,7 @@
   width: 100%;
   display: block flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.125rem;
   overflow-wrap: anywhere;
 }
 
@@ -153,8 +153,8 @@
 .work__password-item {
   font-size: 0.75rem;
   line-height: var(--leading-none);
-  background: rgb(255 255 255 / 0.2);
-  box-shadow: 2px 2px 0 0 rgb(0 0 0 / 0.4);
+  background-color: var(--works-item-bg-color);
+  box-shadow: 1.5px 2px 0 0 rgb(0 0 0 / 0.4);
   border-radius: var(--border-rounded);
   padding-block: 6px 5.5px;
   padding-inline: 11px;
