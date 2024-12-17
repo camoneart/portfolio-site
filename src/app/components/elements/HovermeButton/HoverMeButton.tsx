@@ -11,7 +11,7 @@ const HoverMeButton = () => {
     if (pathname?.includes("/works/")) {
       return {
         href: "/works",
-        text: "作品一覧に戻る",
+        text: "実績一覧に戻る",
       };
     } else if (pathname?.includes("/skills/")) {
       return {
@@ -21,7 +21,7 @@ const HoverMeButton = () => {
     }
     return {
       href: "/works",
-      text: "作品一覧に戻る",
+      text: "実績一覧に戻る",
     };
   };
 
