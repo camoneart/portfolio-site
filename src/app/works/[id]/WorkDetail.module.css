@@ -144,7 +144,7 @@
   display: block flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 11px 10px;
+  gap: 12px 10px;
 }
 
 .work__skills-item,
@@ -154,7 +154,7 @@
   font-size: 0.75rem;
   line-height: var(--leading-none);
   background-color: var(--works-item-bg-color);
-  box-shadow: 1.5px 2px 0 0 rgb(0 0 0 / 0.4);
+  box-shadow: 2px 3px 0 0 rgb(0 0 0);
   border-radius: var(--border-rounded);
   padding-block: 6px 5.5px;
   padding-inline: 11px;
