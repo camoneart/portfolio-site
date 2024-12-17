@@ -15,7 +15,9 @@
   --logo-bg-color: rgb(38 38 38 / 0.8);
   --card-bg-color: rgb(255 255 255 / 0.1);
   --card-border-color: rgb(255 255 255 / 0.1);
-  
+  --back-btn-border-orange: rgb(189, 77, 13);
+  --back-btn-bg-orange: rgb(189 77 13 / 0.6);
+
   /* shadow */
   --logo-bg-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.1), 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 255 255 / 0.1);
   --card-default-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.3), 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.1);
@@ -23,6 +25,7 @@
   --card-hover-shadow: 0 25px 35px -5px rgb(0 0 0 / 0.3), 0 15px 15px -5px rgb(0 0 0 / 0.1), 0 0 0 1px rgb(255 255 255 / 0.2), 0 0 60px rgb(255 107 74 / 0.3);
   --sidebar-link-hover-shadow: 0px 0px 20px 0px rgb(255 107 74 / 0.6);
   --hover-text-shadow: 0 0 15px var(--color-primary-orange);
+  --back-btn-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 3px rgb(48, 46, 46), 0 0px 25px -5px rgb(0 0 0 / 0.1), 0 0 15px rgb(255 107 74);
 
   /* font weight */
   --font-weight-normal: 400;

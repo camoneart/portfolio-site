@@ -1,5 +1,4 @@
 .btn-bg {
-  /* border: 1px solid var(--back-btn-primary-orange); */
   border-radius: var(--border-rounded);
   border: 1px solid #302e2e;
   padding-block: 5px;
@@ -7,7 +6,7 @@
 }
 
 .btn-link {
-  border: 1px solid var(--back-btn-primary-orange);
+  border: 1px solid var(--back-btn-border-orange);
   transition: box-shadow 0.2s ease-in-out;
 
   &:hover {
@@ -16,5 +15,5 @@
 }
 
 .arrow-bg {
-  background-color: var(--back-btn-primary-orange);
+  background-color: var(--back-btn-bg-orange);
 }
