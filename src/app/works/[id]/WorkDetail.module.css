@@ -162,13 +162,10 @@
 
 .work__skills-item,
 .work__name-item,
-.work__password-item {
-  font-weight: var(--font-weight-normal);
-  letter-spacing: 0.5px;
-}
-
+.work__password-item,
 .work__role-item {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.6px;
 }
 
 .work__summary {
