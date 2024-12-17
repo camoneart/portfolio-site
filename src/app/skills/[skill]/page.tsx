@@ -3,7 +3,7 @@ import { skillsData } from "../components/Skills/Skills";
 import Image from "next/image";
 import styles from "./SkillDetail.module.css";
 import { generateSkillMetadata } from "./metadata";
-import { HovermeButton } from "@/components/eldoraui/hovermebutton";
+import HoverMeButton from '@/components/eldoraui/HoverMeButton/HoverMeButton';
 
 export async function generateStaticParams() {
   return skillsData.map((skillData) => ({
@@ -41,7 +41,8 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
           </h1>
           <div className={`${styles["skill-label"]} ${skill.viewTransitionLabel}`}>{skill.label}</div>
           <p className={styles["skill-description"]}>{skill.description}</p>
-          <HovermeButton />
+          {/* ここにボタンを配置 */}
+          <HoverMeButton />
         </div>
       </div>
     </div>
