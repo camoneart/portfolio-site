@@ -2,7 +2,6 @@ import React from "react";
 import SkillsCardList from "@/app/features/skills/components/SkillsCardList/SkillsCardList";
 import styles from "./Skills.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
-import { Link } from 'next-view-transitions'
 
 export const skillsTitle = "My Skills List";
 
