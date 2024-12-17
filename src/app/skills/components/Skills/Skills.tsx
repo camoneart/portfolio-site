@@ -42,7 +42,7 @@ export const skillsData: SkillsData[] = [
     id: 2,
     skillTitle: "CSS",
     skillLink: "css",
-    description: "良いCSSとされる「予測できる」「再利用性」「保守性」「拡張性」を意識し、デザインカンプを忠実に再現するコーディングを心がけています。CSS変数で重複して使用する値を1か所で定義し、再利用性を高めています。クラス名は主にBEM記法を採用し、コーディングを行っています。",
+    description: "良いCSSとされる「予測できる」「再利用性」「保守性」「拡張性」を意識し、デザインカンプを忠実に再現するコーディングを心がけています。重複して使用する値がある場合はCSS変数を利用して1か所で定義することで、再利用性を高めています。ピュアなCSSでコーディングする際にはクラス名は主にBEM記法を採用し、コーディングを行っています。",
     skillLogo: "/images/skills/css-logo.svg",
     label: "STYLE",
     link: "https://developer.mozilla.org/ja/docs/Web/CSS",
