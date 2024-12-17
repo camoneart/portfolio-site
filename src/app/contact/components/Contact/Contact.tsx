@@ -5,7 +5,7 @@ import ContactForm from "@/app/features/contact/components/ContactForm/ContactFo
 import styles from "./Contact.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 
-export const contactTitle = "Contact Form";
+export const contactTitle = "Contact";
 export const contactSubTitle = "お問い合わせ";
 
 const Contact = () => {
