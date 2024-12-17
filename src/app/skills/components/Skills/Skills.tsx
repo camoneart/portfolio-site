@@ -3,7 +3,8 @@ import SkillsCardList from "@/app/features/skills/components/SkillsCardList/Skil
 import styles from "./Skills.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 
-export const skillsTitle = "My Skills List";
+export const skillsTitle = "Skills";
+export const skillsSubTitle = "スキル一覧"
 
 interface SkillsData {
   id: number;
@@ -298,7 +299,7 @@ const Skills = () => {
   return (
     <>
       <section className={styles["skills-section"]}>
-        <TitleAnimation title={skillsTitle} />
+        <TitleAnimation title={skillsTitle} subTitle={skillsSubTitle} />
         <SkillsCardList />
       </section>
     </>

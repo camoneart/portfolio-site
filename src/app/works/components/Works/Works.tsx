@@ -4,7 +4,8 @@ import styles from "./Works.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 
 
-export const worksTitle = "My Works List";
+export const worksTitle = "Works";
+export const worksSubTitle = "制作実績"
 
 interface WorksData {
   id: number;
@@ -29,7 +30,7 @@ export const worksData: WorksData[] = [
     workTitle: "CareSend｜有資格介護人材が集まる介護派遣サービス",
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の介護派遣サービスのLPサイト」になります。",
-    labels: [{ no: "Card No.", value: "001/003" }],
+    labels: [{ no: "Card No.", value: "001/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/caresend/",
     role: "コーディング",
@@ -47,7 +48,7 @@ export const worksData: WorksData[] = [
       "青牡丹工務店｜大阪市北区の住宅建築・リフォーム・公共事業なら青牡丹工務店",
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の建築会社のサイト」になります。",
-    labels: [{ no: "Card No.", value: "002/003" }],
+    labels: [{ no: "Card No.", value: "002/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/aobotan/",
     role: "コーディング",
@@ -64,7 +65,7 @@ export const worksData: WorksData[] = [
     workTitle: "採用特設サイト｜株式会社TETOTE",
     description:
       "こちらのサイトは、Figmaで作成されたWordPressオリジナルテーマのデザインカンプを基にコーディングを行った「架空のITコンサルファームの採用サイト」になります。",
-    labels: [{ no: "Card No.", value: "003/003" }],
+    labels: [{ no: "Card No.", value: "003/004" }],
     skillsList:
       "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/tetote/",
@@ -84,13 +85,13 @@ export const worksData: WorksData[] = [
       "こちらのサイトは、私のポートフォリオサイトになります。",
     labels: [{ no: "Card No.", value: "004/004" }],
     skillsList:
-      "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
+      "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",
     siteUrl: "https://aoyamadev.com",
     role: "デザイン, コーディング",
     username: "",
     password: "",
     summary:
-      "",
+      "当ポートフォリオサイトは、サイトデザインを自ら考え、コーディングまで行いました。トップページの3Dコンテンツは「React Tree Fiber」で制作。ドットパターンで表現した背景のアニメーションや、カードの出現アニメーションは「GSAP」で実装。また、カード型UIには「View Transitions API」を利用して、スムーズに流れるような遷移アニメーションを実現しています。ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識してアニメーションを実装いたしました。BGMの再生には、オーディオライブラリ「Howler.js」を使用いたしました。「...」デプロイはVercelで行っています。",
     viewTransitionName: "view-transition-title-work-4",
     viewTransitionImage: "view-transition-img-work-4",
   },
@@ -100,7 +101,7 @@ const Works = () => {
   return (
     <>
       <section className={styles["works-section"]}>
-        <TitleAnimation title={worksTitle} />
+        <TitleAnimation title={worksTitle} subTitle={worksSubTitle} />
         <WorkCardGrid />
       </section>
     </>
