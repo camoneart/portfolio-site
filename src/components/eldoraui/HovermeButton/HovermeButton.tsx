@@ -2,9 +2,9 @@
 
 import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
-import styles from "./HovermeButton.module.css";
+import styles from "./HoverMeButton.module.css";
 
-export function HovermeButton() {
+const HoverMeButton = () => {
   const pathname = usePathname();
 
   const getHrefAndText = () => {
@@ -57,3 +57,5 @@ export function HovermeButton() {
     </div>
   );
 }
+
+export default HoverMeButton;
