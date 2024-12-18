@@ -340,6 +340,8 @@
   text-wrap: wrap;
   inline-size: fit-content;
   margin-inline: auto;
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
 /*----------------------------------------
