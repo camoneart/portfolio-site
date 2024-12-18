@@ -75,6 +75,8 @@
   white-space: normal;
   text-wrap: wrap;
   text-shadow: 3px 2px 1px var(--color-black-02);
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
 .work__info {
@@ -96,6 +98,7 @@
   line-height: var(--leading-x-tight);
   text-shadow: var(--text-outline-shadow-black);
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .work__url {
@@ -144,7 +147,7 @@
   display: block flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 12px 10px;
+  gap: 13px 10px;
 }
 
 .work__skills-item,
@@ -190,17 +193,19 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-normal);
   text-shadow: var(--text-outline-shadow-black);
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
-.work__summary-text {
-  display: block flex;
-  flex-direction: column;
-  row-gap: 10px;
+.work__summary-text,
+.work__basic-authentication {
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-normal);
   text-shadow: var(--text-outline-shadow-black);
   margin-block-start: 5px;
+  text-wrap: pretty;
+  word-break: auto-phrase;
 
   & a {
     text-decoration: underline;
@@ -357,7 +362,7 @@
 
   .work__sidebar-item-title {
     font-size: 1.375rem;
-    padding-inline-start: 10px;
+    padding-inline: 10px;
   }
 }
 
@@ -368,11 +373,6 @@
   .work__title {
     font-size: 1.5rem;
     text-shadow: 2px 2px 1px var(--color-black-02);
-  }
-
-  .work__container {
-    padding-block-start: 150px;
-    padding-inline: 20px;
   }
 
   .work__content {
@@ -448,6 +448,10 @@
     font-size: 0.875rem;
   }
 
+  .work__basic-authentication {
+    font-size: 0.875rem;
+  }
+
   .work__related-link {
     font-size: 0.75rem;
 
@@ -459,5 +463,28 @@
 
   .work__return-link-container {
     margin-block-start: 40px;
+  }
+
+  .work__sidebar {
+    padding-block: 30px;
+    padding-inline: 10px;
+  }
+
+  .work__sidebar-title {
+    font-size: 1.25rem;
+  }
+
+  .work__sidebar-list {
+    margin-block-start: 7.5px;
+    row-gap: 15px;
+  }
+
+  .work__sidebar-link {
+    padding-block: 10px;
+    padding-inline: 10px;
+  }
+
+  .work__sidebar-item-title {
+    font-size: 0.875rem;
   }
 }
