@@ -21,8 +21,8 @@
 @media (width <= 768px) {
   .audio-button {
     position: fixed;
-    top: 105px;
-    right: 25.5px;
+    top: 25px;
+    right: 105px;
     width: 50px;
     height: 50px;
   }
