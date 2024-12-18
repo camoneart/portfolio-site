@@ -12,7 +12,7 @@ const TitleAnimation = ({ title, subTitle }: { title: string, subTitle: string }
         opacity: 1,
         transition: { delay: 0.2, duration: 1.5, ease: "easeIn" },
       }}
-      className="flex flex-col items-center justify-center gap-3 mt-2 mb-12 select-none"
+      className="flex flex-col items-center justify-center gap-3 mt-2 mb-10 sm:mb-12 select-none"
     >
       <h1 className={`order-2 font-black tracking-wider ${styles["title"]} ${styles["motion-title"]}`}>
         {title}

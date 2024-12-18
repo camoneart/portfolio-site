@@ -1,0 +1,15 @@
+.title {
+  font-size: 5rem;
+  line-height: var(--leading-none);
+}
+
+@media (width <= 640px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.sub-title {
+  font-size: 1.125rem;
+  line-height: var(--leading-x-tight);
+}
