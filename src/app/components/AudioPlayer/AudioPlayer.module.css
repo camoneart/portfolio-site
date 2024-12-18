@@ -3,9 +3,10 @@
   height: 37px;
   display: block grid;
   place-items: center;
-  background: rgb(255 255 255 / 0.1);
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  box-shadow: var(--card-default-shadow);
   border-radius: 50%;
-  border: 1px dashed rgb(255 255 255 / 0.5);
   transition: background 0.3s ease-in-out;
 }
 
