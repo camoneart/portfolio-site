@@ -3,7 +3,7 @@ import { skillsData } from "../components/Skills/Skills";
 import Image from "next/image";
 import styles from "./SkillDetail.module.css";
 import { generateSkillMetadata } from "./metadata";
-import HoverMeButton from '@/components/eldoraui/HoverMeButton/HoverMeButton';
+import HoverMeButton from "@/app/components/elements/HovermeButton/HoverMeButton";
 
 export async function generateStaticParams() {
   return skillsData.map((skillData) => ({
@@ -24,8 +24,12 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
     <div className="common-container">
       <div className={styles["skill-info-container"]}>
         <div className={`${styles["skill-content"]} ${skill.viewTransitionBg}`}>
-          <div className={`${styles["skill-logo-wrapper"]} ${skill.viewTransitionLogoWrapper}`}>
-            <div className={`${styles["skill-logo-bg"]} ${skill.viewTransitionLogoBg}`}>
+          <div
+            className={`${styles["skill-logo-wrapper"]} ${skill.viewTransitionLogoWrapper}`}
+          >
+            <div
+              className={`${styles["skill-logo-bg"]} ${skill.viewTransitionLogoBg}`}
+            >
               <Image
                 src={skill.skillLogo}
                 alt={skill.skillTitle}
@@ -36,10 +40,16 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
               />
             </div>
           </div>
-          <h1 className={`${styles["skills-title"]} ${skill.viewTransitionName} text-5xl`} >
+          <h1
+            className={`text-4xl sm:text-5xl ${styles["skills-title"]} ${skill.viewTransitionName}`}
+          >
             {skill.skillTitle}
           </h1>
-          <div className={`${styles["skill-label"]} ${skill.viewTransitionLabel}`}>{skill.label}</div>
+          <div
+            className={`${styles["skill-label"]} ${skill.viewTransitionLabel}`}
+          >
+            {skill.label}
+          </div>
           <p className={styles["skill-description"]}>{skill.description}</p>
           {/* ここにボタンを配置 */}
           <HoverMeButton />
