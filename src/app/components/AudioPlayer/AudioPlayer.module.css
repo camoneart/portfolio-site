@@ -20,8 +20,20 @@
 @media (width <= 768px) {
   .audio-button {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 105px;
+    right: 25.5px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .audio-play {
+    width: 21px;
+    height: 21px;
+  }
+
+  .audio-mute {
+    width: 21px;
+    height: 21px;
   }
 }
 
