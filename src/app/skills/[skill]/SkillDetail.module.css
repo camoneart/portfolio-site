@@ -21,6 +21,11 @@
   transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
   padding-block: 4rem 2.5rem;
   padding-inline: 3rem;
+
+  @media (width <= 640px) {
+    gap: 1.25rem;
+    padding-inline: 1.5rem;
+  }
 }
 
 .skill-description {
@@ -28,6 +33,10 @@
   font-weight: var(--font-weight-normal);
   line-height: var(--leading-normal);
   margin-block-end: 1rem;
+
+  @media (width <= 640px) {
+    font-size: 0.875rem;
+  }
 }
 
 .skill-label {
