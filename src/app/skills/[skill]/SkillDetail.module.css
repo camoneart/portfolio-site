@@ -39,6 +39,8 @@
   font-weight: var(--font-weight-normal);
   line-height: var(--leading-normal);
   margin-block-end: 1rem;
+  text-wrap: pretty;
+  word-break: auto-phrase;
 
   @media (width <= 640px) {
     font-size: 0.875rem;
