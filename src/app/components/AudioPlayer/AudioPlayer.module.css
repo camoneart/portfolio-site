@@ -1,12 +1,15 @@
-.audioButton {
+.audio-button {
+  width: 37px;
+  height: 37px;
+  display: block grid;
+  place-items: center;
   background: rgb(255 255 255 / 0.1);
   border-radius: 50%;
   border: 1px dashed rgb(255 255 255 / 0.5);
-  padding: 9px;
   transition: background 0.3s ease-in-out;
 }
 
-.audioButton:hover {
+.audio-button:hover {
   background: rgba(255, 255, 255, 0.2);
 
   .audio-mute {
@@ -14,23 +17,15 @@
   }
 }
 
+@media (width <= 768px) {
+  .audio-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+}
+
 .audio-mute {
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
 }
-
-/* .audio-play {
-  animation: pulse 4s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
