@@ -1,7 +1,17 @@
+.gnav__list {
+  display: block flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
 .gnav__link {
+  display: block;
   color: var(--color-primary-white);
   padding-inline: 4px;
   transition: color 0.2s linear, text-shadow 0.2s linear;
+  font-size: 1rem;
+  line-height: var(--leading-x-tight);
+  transition: ;
 
   &:hover {
     color: var(--color-primary-white);
@@ -10,41 +20,49 @@
 }
 
 @media (width <= 768px) {
-  /* .gnav {
+  .gnav {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  } */
-
-  /* open用スタイル */
-  .gnav {
-    opacity: 1;
-    visibility: visible;
     position: fixed;
     inset: 0;
     padding-block: 9px;
     padding-inline: 9px;
-    background: linear-gradient(270deg, rgb(1, 1, 1) 0%, rgba(1, 1, 1, 0.6) 98.79%);
     backdrop-filter: blur(12px);
+    /* background: linear-gradient(270deg, rgb(1, 1, 1) 0%, rgb(1 1 1 / 0.6) 98.79%); */
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   }
 
   /* open用スタイル */
+  .gnav--open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  }
+
   .gnav__list {
     width: 100%;
+    max-height: 0;
     height: calc(100dvh - 18px);
-    border: 1px solid var(--card-border-color);
-    box-shadow: var(--card-default-shadow);
     display: block grid;
     place-items: center;
     place-content: center;
     grid-template-columns: 2fr;
     grid-template-rows: repeat(4, 100px);
+    box-shadow: var(--card-default-shadow);
+    border: 1px solid var(--card-border-color);
+    padding-inline: 20px;
+    border-radius: 10px;
+    transition: max-height 0.5s ease-in-out, background 0.5s ease-in-out;
+  }
+
+  /* open用スタイル */
+  .gnav__list--open {
+    max-height: calc(100dvh - 18px);
+    background: rgb(0 0 0 / 0.6);
+    transition: max-height 0.5s ease-in-out, background 0.5s ease-in-out;
   }
 
   .gnav__item {
-    padding-block: 12px;
-    padding-inline: 17px;
     background-color: var(--card-bg-color);
     border: 1px solid var(--card-border-color);
     border-radius: 3px;
@@ -52,7 +70,20 @@
     box-shadow: var(--card-default-shadow);
   }
 
+  .gnav__item--open {
+    
+  }
+
   .gnav__link {
+    width: 230px;
+    height: 60px;
+    display: block grid;
+    place-items: center;
+    font-size: 1.125rem;
     border-radius: 3px;
+  }
+
+  .gnav__link--open {
+    
   }
 }
