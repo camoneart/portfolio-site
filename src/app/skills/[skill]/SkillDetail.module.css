@@ -28,6 +28,12 @@
   }
 }
 
+.skills-title {
+  text-wrap: pretty;
+  word-break: auto-phrase;
+  padding-inline: 10px;
+}
+
 .skill-description {
   font-size: 1rem;
   font-weight: var(--font-weight-normal);
