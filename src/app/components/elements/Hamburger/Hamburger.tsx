@@ -2,7 +2,6 @@
 
 import React, { useEffect } from "react";
 import styles from "./Hamburger.module.css";
-import { usePathname } from "next/navigation";
 
 interface HamburgerProps {
   isOpen: boolean;
@@ -21,8 +20,6 @@ const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggleMenu }) => {
       document.body.style.overflow = "visible";
     };
   }, [isOpen]);
-
-  const pathname = usePathname();
 
   return (
     <>
