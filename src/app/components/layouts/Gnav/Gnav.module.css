@@ -1,0 +1,58 @@
+.gnav__link {
+  color: var(--color-primary-white);
+  padding-inline: 4px;
+  transition: color 0.2s linear, text-shadow 0.2s linear;
+
+  &:hover {
+    color: var(--color-primary-white);
+    text-shadow: var(--hover-text-shadow);
+  }
+}
+
+@media (width <= 768px) {
+  /* .gnav {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  } */
+
+  /* open用スタイル */
+  .gnav {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    inset: 0;
+    padding-block: 9px;
+    padding-inline: 9px;
+    background: linear-gradient(270deg, rgb(1, 1, 1) 0%, rgba(1, 1, 1, 0.6) 98.79%);
+    backdrop-filter: blur(12px);
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  }
+
+  /* open用スタイル */
+  .gnav__list {
+    width: 100%;
+    height: calc(100dvh - 18px);
+    border: 1px solid var(--card-border-color);
+    box-shadow: var(--card-default-shadow);
+    display: block grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: 2fr;
+    grid-template-rows: repeat(4, 100px);
+  }
+
+  .gnav__item {
+    padding-block: 12px;
+    padding-inline: 17px;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 3px;
+    user-select: none;
+    box-shadow: var(--card-default-shadow);
+  }
+
+  .gnav__link {
+    border-radius: 3px;
+  }
+}
