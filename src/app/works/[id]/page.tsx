@@ -179,7 +179,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                           />
                         </figure>
                         <h3
-                          className={`${styles["work__sidebar-item-title"]} ${otherWork.viewTransitionName}`}
+                          className={`font-russo ${styles["work__sidebar-item-title"]} ${otherWork.viewTransitionName}`}
                         >
                           {otherWork.workTitle}
                         </h3>
