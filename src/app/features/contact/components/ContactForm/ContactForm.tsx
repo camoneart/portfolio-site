@@ -6,7 +6,6 @@ import styles from "./ContactForm.module.css";
 
 import useContactForm from "@/app/features/contact/hooks/useContactForm";
 
-// import { ClipLoader } from "react-spinners";
 import { ProgressBar } from "react-loader-spinner";
 
 import { Button } from "@/components/ui/button";
