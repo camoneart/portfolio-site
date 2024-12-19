@@ -9,7 +9,7 @@ interface GnavProps {
 
 const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
   return (
-    <nav className={`${styles["gnav"]} ${isOpen ? styles["gnav--open"] : ""}`}>
+    <nav className={`font-russo ${styles["gnav"]} ${isOpen ? styles["gnav--open"] : ""}`}>
       <ul className={`font-black ${styles["gnav__list"]} ${isOpen ? styles["gnav__list--open"] : ""}`}>
         <li className={`${styles["gnav__item"]} ${isOpen ? styles["gnav__item--open"] : ""}`}>
           <Link className={`${styles["gnav__link"]} ${isOpen ? styles["gnav__link--open"] : ""}`} href="/about" onClick={toggleMenu}>About</Link>

@@ -66,7 +66,7 @@ const SkillsCard = ({
               </div>
             </div>
             <div className={styles["skills-info"]}>
-              <h2 className={`${styles["skills-title"]} ${viewTransitionName}`}>
+              <h2 className={`font-russo ${styles["skills-title"]} ${viewTransitionName}`}>
                 {skillTitle}
               </h2>
               <div

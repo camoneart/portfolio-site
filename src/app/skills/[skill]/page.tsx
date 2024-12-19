@@ -41,7 +41,7 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
             </div>
           </div>
           <h1
-            className={`text-4xl sm:text-5xl ${styles["skills-title"]} ${skill.viewTransitionName}`}
+            className={`font-russo text-4xl sm:text-5xl ${styles["skill-title"]} ${skill.viewTransitionName}`}
           >
             {skill.skillTitle}
           </h1>
@@ -51,7 +51,6 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
             {skill.label}
           </div>
           <p className={styles["skill-description"]}>{skill.description}</p>
-          {/* ここにボタンを配置 */}
           <HoverMeButton />
         </div>
       </div>

@@ -14,7 +14,7 @@ const TitleAnimation = ({ title, subTitle }: { title: string, subTitle: string }
       }}
       className="flex flex-col items-center justify-center gap-3 mt-2 mb-10 sm:mb-12 select-none"
     >
-      <h1 className={`order-2 font-black tracking-wider ${styles["title"]} ${styles["motion-title"]}`}>
+      <h1 className={`font-russo order-2 font-black tracking-wider ${styles["title"]} ${styles["motion-title"]}`}>
         {title}
       </h1>
       <p className={`order-1 font-black tracking-wider ${styles["sub-title"]}`}>{subTitle}</p>

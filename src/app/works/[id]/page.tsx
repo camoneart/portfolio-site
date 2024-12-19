@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'next-view-transitions';
-import ReactMarkdown from 'react-markdown';
-import Image from 'next/image';
-import styles from './WorkDetail.module.css';
-import { worksData } from '../components/Works/Works';
-import { generateWorkMetadata } from './metadata';
-import { HovermeButton } from '@/components/eldoraui/HovermeButton';
+import React from "react";
+import { Link } from "next-view-transitions";
+import ReactMarkdown from "react-markdown";
+import Image from "next/image";
+import styles from "./WorkDetail.module.css";
+import { worksData } from "../components/Works/Works";
+import { generateWorkMetadata } from "./metadata";
+import HoverMeButton from "@/app/components/elements/HovermeButton/HoverMeButton";
 
 export async function generateStaticParams() {
   return worksData.map((workData) => ({
@@ -17,17 +17,17 @@ export const generateMetadata = generateWorkMetadata;
 
 const WorkDetail = ({ params }: { params: { id: string } }) => {
   const workId = parseInt(params.id);
-  const work = worksData.find(w => w.id === workId);
-  const otherWorks = worksData.filter(w => w.id !== workId);
+  const work = worksData.find((w) => w.id === workId);
+  const otherWorks = worksData.filter((w) => w.id !== workId);
 
   if (!work) {
     return <div className={styles.notFound}>Work not found</div>;
   }
 
-  const skillsList = work.skillsList.split(', ') || [];
-  const roleList = work.role?.split(', ') || [];
-  const usernameList = work.username?.split(', ') || [];
-  const passwordList = work.password?.split(', ') || [];
+  const skillsList = work.skillsList.split(", ") || [];
+  const roleList = work.role?.split(", ") || [];
+  const usernameList = work.username?.split(", ") || [];
+  const passwordList = work.password?.split(", ") || [];
 
   return (
     <>
@@ -38,21 +38,46 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
               <article className={styles["work__article"]}>
                 <div className={styles["work__mv"]}>
                   <figure className={styles["work__mv-figure"]}>
-                    <Image src={work.image} alt={work.workTitle} style={{ maxWidth: '100%', height: 'auto' }} width={1920} height={1080} className={`${styles["work__mv-img"]} ${work.viewTransitionImage}`} />
+                    <Image
+                      src={work.image}
+                      alt={work.workTitle}
+                      style={{ maxWidth: "100%", height: "auto" }}
+                      width={1920}
+                      height={1080}
+                      className={`${styles["work__mv-img"]} ${work.viewTransitionImage}`}
+                    />
                   </figure>
                 </div>
                 <div className={styles["work__content"]}>
-                  <h1 className={`${styles["work__title"]} ${work.viewTransitionName}`}>{work.workTitle}</h1>
+                  <h1
+                    className={`font-russo ${styles["work__title"]} ${work.viewTransitionName}`}
+                  >
+                    {work.workTitle}
+                  </h1>
                   <div className={styles["work__info"]}>
-                    <div className={styles["work__url-container"]}>
+                    <div className={`font-russo ${styles["work__url-container"]}`}>
                       <span className={styles["work__url-label"]}>URL：</span>
-                      <a href={work.siteUrl} className={styles["work__url"]} target="_blank" rel="noopener noreferrer">{work.siteUrl}</a>
+                      <a
+                        href={work.siteUrl}
+                        className={styles["work__url"]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {work.siteUrl}
+                      </a>
                     </div>
                     <div className={styles["work__skills"]}>
-                      <span className={styles["work__skills-label"]}>使用技術：</span>
+                      <span className={styles["work__skills-label"]}>
+                        使用技術：
+                      </span>
                       <ul className={styles["work__skills-list"]}>
                         {skillsList.map((skill, index) => (
-                          <li key={index} className={styles["work__skills-item"]}>{skill}</li>
+                          <li
+                            key={index}
+                            className={`font-russo ${styles["work__skills-item"]}`}
+                          >
+                            {skill}
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -60,26 +85,42 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                       <span className={styles["work__role-label"]}>担当：</span>
                       <ul className={styles["work__role-list"]}>
                         {roleList.map((role, index) => (
-                          <li key={index} className={styles["work__role-item"]}>{role}</li>
+                          <li key={index} className={`font-russo ${styles["work__role-item"]}`}>
+                            {role}
+                          </li>
                         ))}
                       </ul>
                     </div>
                     {work.username && (
                       <div className={styles["work__name"]}>
-                        <span className={styles["work__name-label"]}>username：</span>
+                        <span className={styles["work__name-label"]}>
+                          username：
+                        </span>
                         <ul className={styles["work__name-list"]}>
                           {usernameList.map((username, index) => (
-                            <li key={index} className={styles["work__name-item"]}>{username}</li>
+                            <li
+                              key={index}
+                              className={styles["work__name-item"]}
+                            >
+                              {username}
+                            </li>
                           ))}
                         </ul>
                       </div>
                     )}
                     {work.password && (
                       <div className={styles["work__password"]}>
-                        <span className={styles["work__password-label"]}>password：</span>
+                        <span className={styles["work__password-label"]}>
+                          password：
+                        </span>
                         <ul className={styles["work__password-list"]}>
                           {passwordList.map((password, index) => (
-                            <li key={index} className={styles["work__password-item"]}>{password}</li>
+                            <li
+                              key={index}
+                              className={styles["work__password-item"]}
+                            >
+                              {password}
+                            </li>
                           ))}
                         </ul>
                       </div>
@@ -97,10 +138,14 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                         {work.summary}
                       </ReactMarkdown>
                     )}
+                    {work.basicAuthentication && (
+                      <ReactMarkdown className={styles["work__basic-authentication"]}>
+                        {work.basicAuthentication}
+                      </ReactMarkdown>
+                    )}
                   </div>
                   <div className={styles["work__return-link-container"]}>
-                    {/* <Link href="/works" className={styles["work__return-link"]}>作品一覧に戻る</Link> */}
-                    <HovermeButton />
+                    <HoverMeButton />
                   </div>
                 </div>
                 {/* /.work__content */}
@@ -110,11 +155,20 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
             {/* /.work__article-container */}
             <div className={styles["work__sidebar-container"]}>
               <aside className={styles["work__sidebar"]}>
-                <h2 className={`${styles["work__sidebar-title"]}`}>Other Works</h2>
+                <h2 className={`font-russo ${styles["work__sidebar-title"]}`}>
+                  Other Works
+                </h2>
                 <ul className={styles["work__sidebar-list"]}>
-                  {otherWorks.map(otherWork => (
-                    <li key={otherWork.id} className={styles["work__sidebar-item"]}>
-                      <Link href={`/works/${otherWork.id}`} className={styles["work__sidebar-link"]} prefetch>
+                  {otherWorks.map((otherWork) => (
+                    <li
+                      key={otherWork.id}
+                      className={styles["work__sidebar-item"]}
+                    >
+                      <Link
+                        href={`/works/${otherWork.id}`}
+                        className={styles["work__sidebar-link"]}
+                        prefetch
+                      >
                         <figure className={styles["work__sidebar-figure"]}>
                           <Image
                             src={otherWork.image}
@@ -124,7 +178,11 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                             className={`${styles["work__sidebar-img"]} ${otherWork.viewTransitionImage}`}
                           />
                         </figure>
-                        <h3 className={`${styles["work__sidebar-item-title"]} ${otherWork.viewTransitionName}`}>{otherWork.workTitle}</h3>
+                        <h3
+                          className={`${styles["work__sidebar-item-title"]} ${otherWork.viewTransitionName}`}
+                        >
+                          {otherWork.workTitle}
+                        </h3>
                       </Link>
                     </li>
                   ))}
@@ -136,7 +194,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default WorkDetail;
