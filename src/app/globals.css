@@ -53,7 +53,8 @@ body {
   min-height: 100svh;
   color: var(--color-primary-white);
   background: var(--bg-color-gray);
-  font-family: var(--font-russo-one), "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  /* font-family: var(--font-russo-one), "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; */
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
 main {
@@ -71,6 +72,40 @@ canvas {
   padding-block: 1rem;
   padding-inline: 1.5rem;
   margin-inline: auto;
+}
+
+.contact-form-send-btn-container {
+  margin-inline: auto;
+  margin-block-start: 2rem;
+
+  @media (width <= 640px) {
+    margin-block-start: 1rem;
+  }
+}
+
+.contact-form-send-btn-bg {
+  width: fit-content;
+  border-radius: var(--border-rounded);
+  border: 1px solid var(--back-btn-border-orange);
+  padding-block: 5px;
+  padding-inline: 5px;
+}
+
+.contact-form-send-btn {
+  width: 230px;
+  height: 50px;
+  background-color: var(--back-btn-bg-orange);
+  border: 1px solid var(--back-btn-border-orange);
+  border-radius: var(--border-rounded);
+  transition: box-shadow 0.2s ease-in-out;
+
+  @media (width <= 640px) {
+    width: 150px;
+  }
+
+  &:hover {
+    box-shadow: var(--back-btn-shadow);
+  }
 }
 
 :focus-visible {
