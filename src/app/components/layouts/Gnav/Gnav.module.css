@@ -28,7 +28,6 @@
     padding-block: 9px;
     padding-inline: 9px;
     backdrop-filter: blur(12px);
-    /* background: linear-gradient(270deg, rgb(1, 1, 1) 0%, rgb(1 1 1 / 0.6) 98.79%); */
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   }
 
@@ -58,7 +57,7 @@
   /* open用スタイル */
   .gnav__list--open {
     max-height: calc(100dvh - 18px);
-    background: rgb(0 0 0 / 0.6);
+    background: rgb(0 0 0 / 0.7);
     transition: max-height 0.5s ease-in-out, background 0.5s ease-in-out;
   }
 
