@@ -20,7 +20,7 @@
   --logo-bg-color: rgb(38 38 38 / 0.8);
   --card-bg-color: rgb(255 255 255 / 0.1);
   --card-border-color: rgb(255 255 255 / 0.1);
-  --back-btn-border-orange: rgb(189 77 13);
+  --btn-border-orange: rgb(189 77 13);
   --btn-bg-orange: rgb(189 77 13 / 0.6);
   --works-item-bg-color: rgb(202 81 12 / 0.6);
 
@@ -102,7 +102,7 @@ canvas {
 .contact-form-send-btn-bg {
   width: fit-content;
   border-radius: var(--border-rounded);
-  border: 1px solid var(--back-btn-border-orange);
+  border: 1px solid var(--btn-border-orange);
   padding-block: 5px;
   padding-inline: 5px;
 }
@@ -111,7 +111,7 @@ canvas {
   width: 230px;
   height: 48px;
   background-color: var(--btn-bg-orange);
-  border: 1px solid var(--back-btn-border-orange);
+  border: 1px solid var(--btn-border-orange);
   border-radius: var(--border-rounded);
   transition: box-shadow 0.2s ease-in-out;
 
