@@ -74,7 +74,6 @@
   letter-spacing: 1px;
   white-space: normal;
   text-wrap: wrap;
-  text-shadow: 3px 2px 1px var(--color-black-02);
   text-wrap: pretty;
   word-break: auto-phrase;
 }
@@ -96,7 +95,6 @@
 .work__url-label {
   font-weight: var(--font-weight-normal);
   line-height: var(--leading-x-tight);
-  text-shadow: var(--text-outline-shadow-black);
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
@@ -105,7 +103,6 @@
   display: block flow;
   font-weight: var(--font-weight-normal);
   line-height: var(--leading-x-tight);
-  text-shadow: var(--text-outline-shadow-black);
   letter-spacing: 0.5px;
 
   &:hover {
@@ -128,7 +125,6 @@
   white-space: nowrap;
   font-size: 1rem;
   line-height: var(--leading-tight);
-  text-shadow: var(--text-outline-shadow-black);
 }
 
 .work__skills-label,
@@ -187,14 +183,12 @@
   line-height: var(--leading-tight);
   letter-spacing: 2px;
   margin-block-start: 20px;
-  text-shadow: 2px 2px 1px var(--color-black-02);
 }
 
 .work__description {
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-normal);
-  text-shadow: var(--text-outline-shadow-black);
   text-wrap: pretty;
   word-break: auto-phrase;
 }
@@ -204,7 +198,6 @@
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-normal);
-  text-shadow: var(--text-outline-shadow-black);
   margin-block-start: 5px;
   text-wrap: pretty;
   word-break: auto-phrase;
@@ -293,7 +286,6 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-x-tight);
   letter-spacing: 0.5px;
-  text-shadow: 2px 2px 1px var(--color-black-02);
   padding-inline-start: 10px;
 }
 
@@ -336,7 +328,6 @@
   font-size: 0.875rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-tight);
-  text-shadow: var(--text-outline-shadow-black);
   letter-spacing: 0.5px;
   white-space: normal;
   text-wrap: wrap;
@@ -376,7 +367,6 @@
 @media screen and (width <= 768px) {
   .work__title {
     font-size: 1.5rem;
-    text-shadow: 2px 2px 1px var(--color-black-02);
   }
 
   .work__content {
