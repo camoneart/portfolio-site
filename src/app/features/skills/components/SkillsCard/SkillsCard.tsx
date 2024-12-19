@@ -70,7 +70,7 @@ const SkillsCard = ({
                 {skillTitle}
               </h2>
               <div
-                className={`${styles["skills-label"]} ${viewTransitionLabel}`}
+                className={`font-russo ${styles["skills-label"]} ${viewTransitionLabel}`}
               >
                 {label}
               </div>

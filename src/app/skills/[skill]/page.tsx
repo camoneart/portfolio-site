@@ -46,7 +46,7 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
             {skill.skillTitle}
           </h1>
           <div
-            className={`${styles["skill-label"]} ${skill.viewTransitionLabel}`}
+            className={`font-russo ${styles["skill-label"]} ${skill.viewTransitionLabel}`}
           >
             {skill.label}
           </div>

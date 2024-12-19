@@ -19,14 +19,14 @@ interface CardDataProps {
 
 const WorkCard = ({ id, image, workTitle, description, labels, viewTransitionName, viewTransitionImage }: CardDataProps) => {
   const cardRef = useRef<HTMLElement>(null);
-  
+
   useWorkCardMouseEffect();
   useWorkCardAnimation(cardRef, id);
 
   return (
     <article 
       ref={cardRef}
-      id="card" 
+      id="card"
       className={`${styles["card"]} ${styles[`card-no-${id}`]}`}
     >
       <Link href={`/works/${id}`} rel="noopener noreferrer" className={styles["card-content-link"]}>
@@ -44,7 +44,7 @@ const WorkCard = ({ id, image, workTitle, description, labels, viewTransitionNam
         <p className={styles["card-description"]}>{description}</p>
         <div className={styles["card-footer"]}>
           {labels.map((label, index) => (
-            <div key={index} className={styles["card-label"]}>
+            <div key={index} className={`font-russo ${styles["card-label"]}`}>
               <span className={styles["card-label-no"]}>{label.no}</span>
               <span className={styles["card-label-value"]}>{label.value}</span>
             </div>
