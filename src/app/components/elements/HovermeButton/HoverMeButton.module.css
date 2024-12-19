@@ -1,0 +1,19 @@
+.btn-bg {
+  border-radius: var(--border-rounded);
+  border: 1px solid #302e2e;
+  padding-block: 5px;
+  padding-inline: 5px;
+}
+
+.btn-link {
+  border: 1px solid var(--back-btn-border-orange);
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: var(--back-btn-shadow);
+  }
+}
+
+.arrow-bg {
+  background-color: var(--btn-bg-orange);
+}
