@@ -256,6 +256,7 @@
   margin-block-end: 0.5rem;
   font-size: 1.125rem;
   font-weight: bold;
+  line-height: var(--leading-tight);
   letter-spacing: 0.05em;
   transition: opacity 0.3s ease-in-out;
   text-wrap: pretty;
@@ -266,7 +267,7 @@
   opacity: 0.5;
   font-size: 0.875rem;
   font-weight: bold;
-  line-height: 1.6;
+  line-height: var(--leading-normal);
   margin-block-end: 1rem;
   transition: opacity 0.3s ease-in-out;
   text-wrap: pretty;
