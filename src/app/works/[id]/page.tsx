@@ -92,7 +92,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                       </ul>
                     </div>
                     {work.username && (
-                      <div className={styles["work__name"]}>
+                      <div className={`font-russo ${styles["work__name"]}`}>
                         <span className={styles["work__name-label"]}>
                           username：
                         </span>
@@ -109,7 +109,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                       </div>
                     )}
                     {work.password && (
-                      <div className={styles["work__password"]}>
+                      <div className={`font-russo ${styles["work__password"]}`}>
                         <span className={styles["work__password-label"]}>
                           password：
                         </span>
