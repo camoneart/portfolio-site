@@ -112,17 +112,19 @@
 
 .skills-info {
   display: block grid;
-  gap: 0.3rem;
+  gap: 0.5rem;
   z-index: 20;
 }
 
 .skills-title {
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-x-tight);
   letter-spacing: 0.05em;
 }
 
 .skills-label {
+  position: relative;
   width: fit-content;
   display: inline-block;
   font-size: 0.562rem;
