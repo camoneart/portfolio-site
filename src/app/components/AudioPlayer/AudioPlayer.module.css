@@ -38,6 +38,12 @@
   }
 }
 
+@media (width <= 640px) {
+  .audio-button {
+    right: 100px;
+  }
+}
+
 .audio-mute {
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
