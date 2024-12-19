@@ -156,9 +156,11 @@
 .work__password-item {
   font-size: 0.75rem;
   line-height: var(--leading-none);
-  background-color: var(--works-item-bg-color);
-  box-shadow: 2px 3px 0 0 rgb(0 0 0);
-  border-radius: var(--border-rounded);
+  color: var(--color-primary-orange);
+  background-color: var(--label-bg-color);
+  box-shadow: 2px 3px 0 0 rgb(0 0 0 / 0.4);
+  border: 1px solid var(--label-border-color);
+  border-radius: 6px;
   padding-block: 6px 5.5px;
   padding-inline: 11px;
 }
@@ -168,7 +170,7 @@
 .work__password-item,
 .work__role-item {
   font-weight: var(--font-weight-normal);
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
 }
 
 .work__summary {
@@ -306,7 +308,7 @@
   row-gap: 10px;
   padding-block: 15px;
   padding-inline: 15px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: box-shadow 0.3s linear;
 
   &:hover,

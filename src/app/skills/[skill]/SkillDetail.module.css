@@ -28,7 +28,7 @@
   }
 }
 
-.skills-title {
+.skill-title {
   text-wrap: pretty;
   word-break: auto-phrase;
   padding-inline: 10px;
@@ -50,12 +50,13 @@
 .skill-label {
   width: fit-content;
   display: inline-block;
-  font-size: 0.562rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  line-height: 1;
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.5px;
+  line-height: var(--leading-none);
   color: var(--color-primary-orange);
   background-color: var(--label-bg-color);
+  box-shadow: 2px 3px 0 0 rgb(0 0 0 / 0.4);
   border: 1px solid var(--label-border-color);
   border-radius: 4px;
   padding-block: 5px 4.5px;
