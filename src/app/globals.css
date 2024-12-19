@@ -68,7 +68,6 @@ body {
   min-height: 100svh;
   color: var(--color-primary-white);
   background: var(--bg-color-gray);
-  /* font-family: var(--font-russo-one), "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; */
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
 }
@@ -91,10 +90,12 @@ canvas {
 }
 
 .contact-form-send-btn-container {
+  height: 100px;
+  display: block grid;
+  place-items: center;
   margin-inline: auto;
-  margin-block-start: 2rem;
 
-  @media (width <= 640px) {
+  @media (640px <= width) {
     margin-block-start: 1rem;
   }
 }
