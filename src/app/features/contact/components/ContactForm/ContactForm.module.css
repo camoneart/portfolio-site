@@ -1,0 +1,15 @@
+.contact-form-container {
+  max-width: 950px;
+  width: 100%;
+  background-color: var(--card-bg-color);
+  box-shadow: var(--detail-card-shadow);
+  border: 1px solid var(--card-border-color);
+  border-radius: 20px;
+  padding-block: 70px 60px;
+  padding-inline: 20px;
+  margin-inline: auto;
+
+  @media (width <= 768px) {
+    padding-block: 50px 40px;
+  }
+}
