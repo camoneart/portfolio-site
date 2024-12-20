@@ -5,6 +5,7 @@ import Footer from "./components/layouts/Footer/Footer";
 import NetworkBackground from "./components/3D/NetworkBackground/NetworkBackground";
 import { Russo_One } from "next/font/google";
 import { ViewTransitions } from 'next-view-transitions'
+import { ControlViewport } from "./components/layouts/ControlViewport/ControlViewport";
 
 const russoOne = Russo_One({
   weight: "400",
@@ -31,6 +32,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="ja" className={`${russoOne.variable}`}>
         <body>
+          <ControlViewport />
           <NetworkBackground />
           <Header />
           <main className={`z-20`}>{children}</main>
