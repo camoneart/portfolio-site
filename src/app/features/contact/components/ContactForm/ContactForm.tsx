@@ -33,7 +33,7 @@ import toast, { Toaster } from "react-hot-toast";
 const notify = () =>
   toast.success('お問い合わせありがとうございます！', {
     style: {
-      border: '1px solid #bd4d0d',
+      border: '2px solid #bd4d0d',
       padding: '16px',
       color: '#000',
       fontSize: '14px',
@@ -47,10 +47,15 @@ const notify = () =>
 
 const ContactForm = () => {
   const { form, onSubmit } = useContactForm();
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (form.formState.isSubmitSuccessful) {
       notify();
+      // ファイル入力をリセット
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
     }
   }, [form.formState.isSubmitSuccessful]);
 
@@ -173,7 +178,7 @@ const ContactForm = () => {
               name="file"
               render={({ field: { value, onChange, ...field } }) => (
                 <FormItem>
-                  <FormLabel>Picture</FormLabel>
+                  <FormLabel className="font-bold">Picture（任意）</FormLabel>
                   <FormControl>
                     <TooltipProvider>
                       <Tooltip>
