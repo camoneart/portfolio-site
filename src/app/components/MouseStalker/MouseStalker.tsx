@@ -1,12 +1,13 @@
 "use client";
 
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 
 const useMousePosition = () => {
-  const [position, setPosition] = React.useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  React.useEffect(() => {
+  useEffect(() => {
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -22,9 +23,9 @@ const useMousePosition = () => {
 };
 
 const useInteractiveElementHover = () => {
-  const [isHovering, setIsHovering] = React.useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const isInteractiveElement = (element: HTMLElement): boolean => {
       const tagName = element.tagName.toLowerCase();
       const interactiveTags = ['a', 'button', 'input', 'select', 'textarea'];
