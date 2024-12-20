@@ -6,6 +6,7 @@ import NetworkBackground from "./components/3D/NetworkBackground/NetworkBackgrou
 import { Russo_One } from "next/font/google";
 import { ViewTransitions } from 'next-view-transitions'
 import { ControlViewport } from "./components/layouts/ControlViewport/ControlViewport";
+import MouseStalker from "./components/MouseStalker/MouseStalker";
 
 const russoOne = Russo_One({
   weight: "400",
@@ -32,6 +33,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="ja" className={`${russoOne.variable}`}>
         <body>
+          <MouseStalker />
           <ControlViewport />
           <NetworkBackground />
           <Header />
