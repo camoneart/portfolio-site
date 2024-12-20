@@ -27,15 +27,26 @@ const formSchema = z.object({
     .max(4000, { message: "本文は4000文字以内で入力してください。" }),
   file: z
     .custom<FileList>()
+    .optional()
     .refine(
-      (files) => files?.length > 0, "画像ファイルまたはpdfファイルを添付してください。"
+      (files) => {
+        if (!files || files.length === 0) return false;
+        return true;
+      },
+      "画像ファイルまたはpdfファイルを添付してください。"
     )
     .refine(
-      (files) => files?.[0].size <= MAX_FILE_SIZE,
+      (files) => {
+        if (!files || files.length === 0) return false;
+        return files[0].size <= MAX_FILE_SIZE;
+      },
       `ファイルサイズは${MAX_MB}MB以下にしてください。`
     )
     .refine(
-      (files) => ACCEPTED_FILE_TYPES.includes(files?.[0].type),
+      (files) => {
+        if (!files || files.length === 0) return false;
+        return ACCEPTED_FILE_TYPES.includes(files[0].type);
+      },
       "jpeg, png, gif, webp, pdfのみ添付できます。"
     )
 });
