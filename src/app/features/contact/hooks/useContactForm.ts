@@ -9,8 +9,8 @@ const useContactForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: "",
-      subject: "",
       email: "",
+      subject: "",
       content: "",
       file: undefined,
     },
@@ -18,24 +18,28 @@ const useContactForm = () => {
 
   // 関数のメモ化
   const onSubmit = useCallback(async (values: z.infer<typeof formSchema>) => {
-    const { subject, username, email, content, file } = values;
+    const { username, email, subject, content, file } = values;
 
     const formData = new FormData();
     formData.append("username", username);
-    formData.append("subject", subject);
     formData.append("email", email);
+    formData.append("subject", subject);
     formData.append("content", content);
-    formData.append("file", file[0]);
+    // ファイルが存在する場合のみappend
+    if (file && file.length > 0) {
+      formData.append("file", file[0]);
+    }
 
     try {
       await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send`, {
         method: "POST",
         body: formData,
       });
+      form.reset();
     } catch (error) {
       console.error(error);
     }
-  }, []); // 依存配列が空にして、コンポーネントの再レンダリング時にも同じ関数参照を保持
+  }, [form]); // form を依存配列に追加
 
   return { form, onSubmit };
 };
