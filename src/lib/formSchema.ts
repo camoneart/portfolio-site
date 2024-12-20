@@ -28,27 +28,25 @@ const formSchema = z.object({
   file: z
     .custom<FileList>()
     .optional()
-    .refine(
-      (files) => {
-        if (!files || files.length === 0) return false;
-        return true;
-      },
-      "画像ファイルまたはpdfファイルを添付してください。"
-    )
-    .refine(
-      (files) => {
-        if (!files || files.length === 0) return false;
-        return files[0].size <= MAX_FILE_SIZE;
-      },
-      `ファイルサイズは${MAX_MB}MB以下にしてください。`
-    )
-    .refine(
-      (files) => {
-        if (!files || files.length === 0) return false;
-        return ACCEPTED_FILE_TYPES.includes(files[0].type);
-      },
-      "jpeg, png, gif, webp, pdfのみ添付できます。"
-    )
+    .superRefine((files, ctx) => {
+      // ファイルが選択されていない場合は検証をスキップ
+      if (!files || files.length === 0) return;
+
+      // ファイルが選択された場合のみ、以下の検証を実行
+      if (files[0].size > MAX_FILE_SIZE) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `ファイルサイズは${MAX_MB}MB以下にしてください。`,
+        });
+      }
+
+      if (!ACCEPTED_FILE_TYPES.includes(files[0].type)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "jpeg, png, gif, webp, pdfのみ添付できます。",
+        });
+      }
+    })
 });
 
 export default formSchema;
