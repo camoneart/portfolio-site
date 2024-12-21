@@ -25,6 +25,7 @@
   --btn-border-orange: rgb(189 77 13);
   --btn-bg-orange: rgb(189 77 13 / 0.6);
   --works-item-bg-color: rgb(202 81 12 / 0.6);
+  --selection-color: rgb(231 117 79 / 0.75);
 
   /* shadow */
   --logo-bg-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
@@ -134,8 +135,11 @@ canvas {
   outline: 1px solid #ff3d00;
 }
 
-/* View Transitions API｜next-view-transitions */
+::selection {
+  background-color: var(--selection-color);
+}
 
+/* View Transitions API｜next-view-transitions */
 /* work */
 .view-transition-title-work-1 {
   view-transition-name: view-transition-title-work-1;
