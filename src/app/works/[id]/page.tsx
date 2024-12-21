@@ -59,7 +59,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                       <span className={styles["work__url-label"]}>URL：</span>
                       <a
                         href={work.siteUrl}
-                        className={styles["work__url"]}
+                        className={`${styles["work__url"]} ${styles["hover-un"]}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
