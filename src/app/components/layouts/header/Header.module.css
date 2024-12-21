@@ -3,6 +3,7 @@
 }
 
 .header__title-link {
+  display: block;
   transition: scale 0.4s linear;
 
   &:hover {
