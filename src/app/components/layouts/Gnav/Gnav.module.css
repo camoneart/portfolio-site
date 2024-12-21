@@ -5,19 +5,44 @@
 }
 
 .gnav__link {
+  position: relative;
+  z-index: 2;
   display: block;
   color: var(--color-primary-white);
   padding-inline: 4px;
-  transition: color 0.2s linear, text-shadow 0.2s linear;
   font-size: 1rem;
   line-height: var(--leading-x-tight);
-  transition: ;
+  transition: color 0.4s ease-in-out;
 
   &:hover {
-    color: var(--color-primary-white);
-    text-shadow: var(--hover-text-shadow);
+    color: var(--color-primary-orange);
+  }
+
+  &.hover-un {
+    &:hover {
+      &:before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+  
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: calc(100% - 4px);
+      height: 1px;
+      left: 2px;
+      bottom: 0;
+      background-color: currentColor;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: 0.6s transform cubic-bezier(.66,0,.15,1);
+    }
   }
 }
+
+
 
 @media (width <= 768px) {
   .gnav {
