@@ -1,7 +1,26 @@
+.header__title {
+  z-index: 100;
+}
+
+.header__title-link {
+  transition: scale 0.4s linear;
+
+  &:hover {
+    scale: 1.08;
+  }
+}
+
 .text-gradient {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: var(--text-gradient-primary);
   padding-inline: 4px;
+}
+
+.header__items {
+  display: block grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  gap: 2rem;
 }
