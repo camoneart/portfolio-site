@@ -220,6 +220,21 @@ export const skillsData: SkillsData[] = [
   },
   {
     id: 14,
+    skillTitle: "React Spring",
+    skillLink: "react-spring",
+    description: "このポートフォリオサイトのマウスストーカーを「React Spring」で実装いたしました。React Springを利用した物理ベースのアニメーションにより、バネのような自然で滑らかな動きを実現しています。",
+    skillLogo: "/images/skills/react-spring-logo.png",
+    label: "LIBRARY",
+    link: "https://www.react-spring.dev/",
+    viewTransitionName: "view-transition-title-react-spring",
+    viewTransitionImage: "view-transition-img-react-spring",
+    viewTransitionBg: "view-transition-bg-react-spring",
+    viewTransitionLabel: "view-transition-label-react-spring",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-react-spring",
+    viewTransitionLogoBg: "view-transition-logo-bg-react-spring"
+  },
+  {
+    id: 15,
     skillTitle: "React Hook Form",
     skillLink: "react-hook-form",
     description: "このポートフォリオサイトのお問い合わせフォームではReact Hook Formを使用し、「フォームの入力値の状態管理」「送信処理の制御」「エラー表示の管理」など、フォームのパフォーマンス化を行っています。",
@@ -234,7 +249,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-react-hook-form"
   },
   {
-    id: 15,
+    id: 16,
     skillTitle: "Zod",
     skillLink: "zod",
     description: "このポートフォリオサイトのお問い合わせフォームでは、入力値の検証（バリデーション）にZodを使用しています。Zodを使用したスキーマバリデーションを行うことで型安全性が高いバリデーションを実現し、React Hook Formと組み合わせて堅牢なフォームを実装しました。",
@@ -249,7 +264,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-zod"
   },
   {
-    id: 16,
+    id: 17,
     skillTitle: "webpack",
     skillLink: "webpack",
     description: "Works Listに搭載してあるサイトの実装時には、モジュールバンドラのwebpackを使用してモジュールをバンドル（まとめる）することで、ブラウザからのリクエスト数を減らし、ファイル転送の効率化を行いました。",
@@ -264,7 +279,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-webpack"
   },
   {
-    id: 17,
+    id: 18,
     skillTitle: "Git",
     skillLink: "git",
     description: "Gitの基本的なコマンドを理解しています。普段はGitHubでリモートリポジトリとローカルリポジトリを連携し「git add」「git commit」「git push」などのコマンドを使用してファイルのバージョン管理や、変更履歴の追跡を行っています。",
@@ -279,7 +294,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-git"
   },
   {
-    id: 18,
+    id: 19,
     skillTitle: "Adobe Premiere Pro",
     skillLink: "adobe-premiere-pro",
     description: "過去にPremiere Proを使用した動画編集の経験があります。「撮影」「カット」「テロップ入れ」「BGM / 効果音の挿入」などの基本的な操作方法は、全て独学で習得しました。",

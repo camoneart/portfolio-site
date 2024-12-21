@@ -131,10 +131,12 @@ canvas {
 }
 
 :focus-visible {
-  outline: 1px solid #ff5a2e;
+  outline: 1px solid #ff3d00;
 }
 
 /* View Transitions API｜next-view-transitions */
+
+/* work */
 .view-transition-title-work-1 {
   view-transition-name: view-transition-title-work-1;
 }
@@ -167,6 +169,8 @@ canvas {
   view-transition-name: view-transition-img-work-4;
 }
 
+/* skill */
+/* logo-wrapper */
 .view-transition-logo-wrapper-html {
   view-transition-name: view-transition-logo-wrapper-html;
 }
@@ -215,6 +219,14 @@ canvas {
   view-transition-name: view-transition-logo-wrapper-gsap;
 }
 
+.view-transition-logo-wrapper-threejs {
+  view-transition-name: view-transition-logo-wrapper-threejs;
+}
+
+.view-transition-logo-wrapper-react-spring {
+  view-transition-name: view-transition-logo-wrapper-react-spring;
+}
+
 .view-transition-logo-wrapper-react-hook-form {
   view-transition-name: view-transition-logo-wrapper-react-hook-form;
 }
@@ -235,6 +247,7 @@ canvas {
   view-transition-name: view-transition-logo-wrapper-adobe-premiere-pro;
 }
 
+/* logo-bg */
 .view-transition-logo-bg-html {
   view-transition-name: view-transition-logo-bg-html;
 }
@@ -283,6 +296,14 @@ canvas {
   view-transition-name: view-transition-logo-bg-gsap;
 }
 
+.view-transition-logo-bg-threejs {
+  view-transition-name: view-transition-logo-bg-threejs;
+}
+
+.view-transition-logo-bg-react-spring {
+  view-transition-name: view-transition-logo-bg-react-spring;
+}
+
 .view-transition-logo-bg-react-hook-form {
   view-transition-name: view-transition-logo-bg-react-hook-form;
 }
@@ -303,6 +324,7 @@ canvas {
   view-transition-name: view-transition-logo-bg-adobe-premiere-pro;
 }
 
+/* img */
 .view-transition-img-html {
   view-transition-name: view-transition-img-html;
   aspect-ratio: 1 / 1;
@@ -368,6 +390,11 @@ canvas {
   aspect-ratio: 1 / 1;
 }
 
+.view-transition-img-react-spring {
+  view-transition-name: view-transition-img-react-spring;
+  aspect-ratio: 1 / 1;
+}
+
 .view-transition-img-react-hook-form {
   view-transition-name: view-transition-img-react-hook-form;
   aspect-ratio: 1 / 1;
@@ -393,6 +420,7 @@ canvas {
   aspect-ratio: 1 / 1;
 }
 
+/* title */
 .view-transition-title-html {
   view-transition-name: view-transition-title-html;
   width: fit-content;
@@ -458,6 +486,11 @@ canvas {
   width: fit-content;
 }
 
+.view-transition-title-react-spring {
+  view-transition-name: view-transition-title-react-spring;
+  width: fit-content;
+}
+
 .view-transition-title-react-hook-form {
   view-transition-name: view-transition-title-react-hook-form;
   width: fit-content;
@@ -483,6 +516,7 @@ canvas {
   width: fit-content;
 }
 
+/* bg */
 .view-transition-bg-html {
   view-transition-name: view-transition-bg-html;
 }
@@ -535,6 +569,10 @@ canvas {
   view-transition-name: view-transition-bg-threejs;
 }
 
+.view-transition-bg-react-spring {
+  view-transition-name: view-transition-bg-react-spring;
+}
+
 .view-transition-bg-react-hook-form {
   view-transition-name: view-transition-bg-react-hook-form;
 }
@@ -555,6 +593,7 @@ canvas {
   view-transition-name: view-transition-bg-adobe-premiere-pro;
 }
 
+/* label */
 .view-transition-label-html {
   view-transition-name: view-transition-label-html;
 }
@@ -605,6 +644,10 @@ canvas {
 
 .view-transition-label-threejs {
   view-transition-name: view-transition-label-threejs;
+}
+
+.view-transition-label-react-spring {
+  view-transition-name: view-transition-label-react-spring;
 }
 
 .view-transition-label-react-hook-form {
