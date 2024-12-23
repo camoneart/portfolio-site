@@ -74,7 +74,7 @@ const ContactForm = () => {
                 name="username"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Username</FormLabel>
+                    <FormLabel>Username<span className={styles["required"]}>*</span></FormLabel>
                     <FormControl>
                       <TooltipProvider>
                         <Tooltip>
@@ -100,7 +100,7 @@ const ContactForm = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>Email<span className={styles["required"]}>*</span></FormLabel>
                     <FormControl>
                       <TooltipProvider>
                         <Tooltip>
@@ -127,7 +127,7 @@ const ContactForm = () => {
               name="subject"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Subject</FormLabel>
+                  <FormLabel>Subject<span className={styles["required"]}>*</span></FormLabel>
                   <FormControl>
                     <TooltipProvider>
                       <Tooltip>
@@ -153,7 +153,7 @@ const ContactForm = () => {
               name="content"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>Message<span className={styles["required"]}>*</span></FormLabel>
                   <FormControl>
                     <TooltipProvider>
                       <Tooltip>
@@ -178,7 +178,7 @@ const ContactForm = () => {
               name="file"
               render={({ field: { value, onChange, ...field } }) => (
                 <FormItem>
-                  <FormLabel className="font-bold">Picture（任意）</FormLabel>
+                  <FormLabel className="font-bold">Picture</FormLabel>
                   <FormControl>
                     <TooltipProvider>
                       <Tooltip>

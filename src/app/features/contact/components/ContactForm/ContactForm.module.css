@@ -13,3 +13,8 @@
     padding-block: 40px 30px;
   }
 }
+
+.required {
+  margin-inline-start: 4px;
+  color: var(--color-primary-orange);
+}
