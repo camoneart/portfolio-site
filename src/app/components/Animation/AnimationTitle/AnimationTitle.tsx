@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-// import { motion } from "framer-motion";
 import { motion } from "motion/react"
 import styles from "./AnimationTitle.module.css";
 
@@ -15,10 +14,10 @@ const AnimationTitle = ({ title, subTitle }: { title: string, subTitle: string }
       }}
       className={`flex flex-col items-center justify-center gap-2 select-none ${styles["title-group"]}`}
     >
-      <h1 className={`font-russo order-2 font-black tracking-wider ${styles["title"]} ${styles["motion-title"]}`}>
+      <h1 className={`font-russo order-2 font-black ${styles["title"]} ${styles["motion-title"]}`}>
         {title}
       </h1>
-      <p className={`order-1 font-black tracking-wider ${styles["sub-title"]}`}>{subTitle}</p>
+      <p className={`order-1 font-black ${styles["sub-title"]}`}>{subTitle}</p>
     </motion.hgroup>
   );
 };
