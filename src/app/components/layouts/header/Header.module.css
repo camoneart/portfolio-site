@@ -3,11 +3,11 @@
 }
 
 .header__title-link {
-  display: block;
-  transition: scale 0.4s linear;
+  display: block flow;
+  transition: opacity 0.3s ease-in-out;
 
   &:hover {
-    scale: 1.08;
+    opacity: 0.5;
   }
 }
 
