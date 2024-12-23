@@ -4,10 +4,8 @@
   padding-inline: 2rem;
   z-index: 100;
   border-radius: 10px;
-}
 
-@media (width <= 768px) {
-  .skills-card-link {
+  @media (width <= 768px) {
     padding-block: 1.5rem;
     padding-inline: 1.5rem;
   }
@@ -34,10 +32,8 @@
 .skills-card:hover {
   background: rgb(255 255 255 / 0.2);
   box-shadow: var(--card-hover-shadow);
-}
 
-@media screen and (1280px <= width) {
-  .skills-card:hover {
+  @media (1280px <= width) {
     scale: 1.08;
   }
 }
