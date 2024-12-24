@@ -1,10 +1,11 @@
 import React from "react";
 import SkillsCardList from "@/app/features/skills/components/SkillsCardList/SkillsCardList";
 import styles from "./Skills.module.css";
-import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
+import TitleAnimation from "@/app/components/Animation/AnimationTitle/AnimationTitle";
+import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 
 export const skillsTitle = "Skills";
-export const skillsSubTitle = "スキル一覧"
+export const skillsSubTitle = "スキル一覧";
 
 interface SkillsData {
   id: number;
@@ -27,7 +28,8 @@ export const skillsData: SkillsData[] = [
     id: 1,
     skillTitle: "HTML",
     skillLink: "html",
-    description: "HTMLの基本を理解し、セマンティクスを考慮したマークアップを心がけています。適切なタグの選択やアクセシビリティに配慮した実装ができ、実際に制作したサイトのコーディング時にはSEOを意識したマークアップ構造の設計を行いました。また、レスポンシブデザインに対応したマークアップ経験もあります。",
+    description:
+      "HTMLの基本を理解し、セマンティクスを考慮したマークアップを心がけています。適切なタグの選択やアクセシビリティに配慮した実装ができ、実際に制作したサイトのコーディング時にはSEOを意識したマークアップ構造の設計を行いました。また、レスポンシブデザインに対応したマークアップ経験もあります。",
     skillLogo: "/images/skills/html-logo.svg",
     label: "MARKUP",
     link: "https://developer.mozilla.org/ja/docs/Web/HTML",
@@ -36,13 +38,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-html",
     viewTransitionLabel: "view-transition-label-html",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-html",
-    viewTransitionLogoBg: "view-transition-logo-bg-html"
+    viewTransitionLogoBg: "view-transition-logo-bg-html",
   },
   {
     id: 2,
     skillTitle: "CSS",
     skillLink: "css",
-    description: "良いCSSとされる「予測できる」「再利用性」「保守性」「拡張性」を意識し、デザインカンプを忠実に再現するコーディングを心がけています。重複して使用する値がある場合はCSS変数を利用して1か所で定義することで、再利用性を高めています。ピュアなCSSでコーディングする際にはクラス名は主にBEM記法を採用し、コーディングを行っています。",
+    description:
+      "良いCSSとされる「予測できる」「再利用性」「保守性」「拡張性」を意識し、デザインカンプを忠実に再現するコーディングを心がけています。重複して使用する値がある場合はCSS変数を利用して1か所で定義することで、再利用性を高めています。ピュアなCSSでコーディングする際、クラス名は主にBEM記法を採用してコーディングを行っています。",
     skillLogo: "/images/skills/css-logo.svg",
     label: "STYLE",
     link: "https://developer.mozilla.org/ja/docs/Web/CSS",
@@ -51,13 +54,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-css",
     viewTransitionLabel: "view-transition-label-css",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-css",
-    viewTransitionLogoBg: "view-transition-logo-bg-css"
+    viewTransitionLogoBg: "view-transition-logo-bg-css",
   },
   {
     id: 3,
     skillTitle: "Sass",
     skillLink: "sass",
-    description: "SCSS記法を使用したSassが書けます。ファイルを役割ごとに分割するためにパーシャル化し、メンテナンス性・可読性に配慮したコーディングを行うことができます。",
+    description:
+      "SCSS記法を使用したSassが書けます。ファイルを役割ごとに分割するためにパーシャル化し、メンテナンス性・可読性に配慮したコーディングを行うことができます。",
     skillLogo: "/images/skills/sass-logo.svg",
     label: "STYLE",
     link: "https://sass-lang.com/",
@@ -66,13 +70,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-sass",
     viewTransitionLabel: "view-transition-label-sass",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-sass",
-    viewTransitionLogoBg: "view-transition-logo-bg-sass"
+    viewTransitionLogoBg: "view-transition-logo-bg-sass",
   },
   {
     id: 4,
     skillTitle: "JavaScript",
     skillLink: "javascript",
-    description: "Vanilla JSで、「ハンバーガーメニュー」「スライダー」「アコーディオン」「モーダルウィンドウ」「ドロワーメニュー」「ローディング画面」などの基本的なUIパーツの実装経験があります。",
+    description:
+      "Vanilla JSで、「ハンバーガーメニュー」「スライダー」「アコーディオン」「モーダルウィンドウ」「ドロワーメニュー」「ローディング画面」などの基本的なUIパーツの実装経験があります。",
     skillLogo: "/images/skills/javascript-logo.svg",
     label: "PROGRAMMING",
     link: "https://developer.mozilla.org/ja/docs/Web/JavaScript",
@@ -81,13 +86,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-javascript",
     viewTransitionLabel: "view-transition-label-javascript",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-javascript",
-    viewTransitionLogoBg: "view-transition-logo-bg-javascript"
+    viewTransitionLogoBg: "view-transition-logo-bg-javascript",
   },
   {
     id: 5,
     skillTitle: "TypeScript",
     skillLink: "typescript",
-    description: "基本的な型システム「型アノテーション」「interface」「type」や、コードの共通化と型の安全性を両立するための言語機能である「ジェネリクス」などを使用した型定義ができます。",
+    description:
+      "基本的な型システム「型アノテーション」「interface」「type」や、コードの共通化と型の安全性を両立するための言語機能である「ジェネリクス」などを使用した型定義ができます。",
     skillLogo: "/images/skills/ts-logo.svg",
     label: "PROGRAMMING",
     link: "https://www.typescriptlang.org/",
@@ -96,13 +102,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-typescript",
     viewTransitionLabel: "view-transition-label-typescript",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-typescript",
-    viewTransitionLogoBg: "view-transition-logo-bg-typescript"
+    viewTransitionLogoBg: "view-transition-logo-bg-typescript",
   },
   {
     id: 6,
     skillTitle: "PHP",
     skillLink: "php",
-    description: "WordPress化に必要なPHPの基礎知識を学習し、テンプレートタグやループ処理、カスタム投稿タイプの作成などのWordPress特有のPHP実装経験があります。",
+    description:
+      "WordPress化に必要なPHPの基礎知識を学習し、テンプレートタグやループ処理、カスタム投稿タイプの作成などのWordPress特有のPHP実装経験があります。",
     skillLogo: "/images/skills/php-logo.png",
     label: "PROGRAMMING",
     link: "https://www.php.net/",
@@ -111,13 +118,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-php",
     viewTransitionLabel: "view-transition-label-php",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-php",
-    viewTransitionLogoBg: "view-transition-logo-bg-php"
+    viewTransitionLogoBg: "view-transition-logo-bg-php",
   },
   {
     id: 7,
     skillTitle: "WordPress",
     skillLink: "wordpress",
-    description: "WordPressオリジナルテーマのデザインカンプを基にしたコーディング経験があります。「カスタム投稿タイプ」「カスタムタクソノミー」「カスタムフィールド」など。クライアント様の更新コストを低減する実装を行うことができます。",
+    description:
+      "WordPressオリジナルテーマのデザインカンプを基にしたコーディング経験があります。「カスタム投稿タイプ」「カスタムタクソノミー」「カスタムフィールド」など。クライアント様の更新コストを低減する実装を行うことができます。",
     skillLogo: "/images/skills/wordpress-logo-white.png",
     label: "CMS",
     link: "https://ja.wordpress.org/",
@@ -126,13 +134,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-wordpress",
     viewTransitionLabel: "view-transition-label-wordpress",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-wordpress",
-    viewTransitionLogoBg: "view-transition-logo-bg-wordpress"
+    viewTransitionLogoBg: "view-transition-logo-bg-wordpress",
   },
   {
     id: 8,
     skillTitle: "React",
     skillLink: "react",
-    description: "コンポーネント設計、React Hooksを使用した状態管理、RSCの理解、UIライブラリの活用などができ、パフォーマンスと保守性を考慮した実装を心がけます。このポートフォリオサイトの実装にもNext.jsと組み合わせてReactを採用しました。",
+    description:
+      "コンポーネント設計、React Hooksを使用した状態管理、RSCの理解、UIライブラリの活用などができ、パフォーマンスと保守性を考慮した実装を心がけます。このポートフォリオサイトの実装にもNext.jsと組み合わせてReactを採用しました。",
     skillLogo: "/images/skills/react-logo.svg",
     label: "LIBRARY",
     link: "https://ja.react.dev/",
@@ -141,13 +150,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-react",
     viewTransitionLabel: "view-transition-label-react",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-react",
-    viewTransitionLogoBg: "view-transition-logo-bg-react"
+    viewTransitionLogoBg: "view-transition-logo-bg-react",
   },
   {
     id: 9,
     skillTitle: "Next.js",
     skillLink: "nextjs",
-    description: "Next.jsの主要な機能を理解しています。App RouterやServer Componentsなどを活用でき、CSR / SSG / SSR / ISR / RSC などの適切なレンダリング方式の選択とパフォーマンスを考慮した実装を心がけます。このポートフォリオサイトでもNext.jsを採用し、React、TypeScriptやTailwind CSSと組み合わせて実装しています。",
+    description:
+      "Next.jsの主要な機能を理解しています。App RouterやServer Componentsなどを活用でき、CSR / SSG / SSR / ISR / RSC などの適切なレンダリング方式の選択とパフォーマンスを考慮した実装を心がけます。このポートフォリオサイトでもNext.jsを採用し、React、TypeScriptやTailwind CSSと組み合わせて実装しています。",
     skillLogo: "/images/skills/nextjs-logo.svg",
     label: "FRAMEWORK",
     link: "https://nextjs.org/",
@@ -156,13 +166,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-nextjs",
     viewTransitionLabel: "view-transition-label-nextjs",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-nextjs",
-    viewTransitionLogoBg: "view-transition-logo-bg-nextjs"
+    viewTransitionLogoBg: "view-transition-logo-bg-nextjs",
   },
   {
     id: 10,
     skillTitle: "Astro",
     skillLink: "astro",
-    description: "コンテンツフォーカスの高速なWebサイト構築に特化したAstroの理解があります。「アイランドアーキテクチャ」「サーバーファースト」「デフォルトでゼロJS」「コンテンツコレクション」などの主要な機能を学習し理解しています。デプロイはしておりませんが、現在Astroを採用した個人ブログサイトを実装しながら学習を続けています。",
+    description:
+      "コンテンツフォーカスの高速なWebサイト構築に特化したAstroの理解があります。「アイランドアーキテクチャ」「サーバーファースト」「デフォルトでゼロJS」「コンテンツコレクション」などの主要な機能を学習し理解しています。デプロイはしておりませんが、現在Astroを採用した個人ブログサイトを実装しながら学習を続けています。",
     skillLogo: "/images/skills/astro-icon-light-gradient.svg",
     label: "FRAMEWORK",
     link: "https://astro.build/",
@@ -171,13 +182,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-astro",
     viewTransitionLabel: "view-transition-label-astro",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-astro",
-    viewTransitionLogoBg: "view-transition-logo-bg-astro"
+    viewTransitionLogoBg: "view-transition-logo-bg-astro",
   },
   {
     id: 11,
     skillTitle: "Tailwind CSS",
     skillLink: "tailwindcss",
-    description: "Tailwind CSSの基本概念を理解し、ユーティリティファーストの考え方に基づいたスタイリング経験があります。このポートフォリオサイトでも、いくつかのコンポーネントにTailwind CSSを活用してUI構築を行っています。",
+    description:
+      "Tailwind CSSの基本概念を理解し、ユーティリティファーストの考え方に基づいたスタイリング経験があります。このポートフォリオサイトでも、いくつかのコンポーネントにTailwind CSSを活用してUI構築を行っています。",
     skillLogo: "/images/skills/tailwind-css-logo.svg",
     label: "FRAMEWORK",
     link: "https://tailwindcss.com/",
@@ -186,13 +198,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-tailwindcss",
     viewTransitionLabel: "view-transition-label-tailwindcss",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-tailwindcss",
-    viewTransitionLogoBg: "view-transition-logo-bg-tailwindcss"
+    viewTransitionLogoBg: "view-transition-logo-bg-tailwindcss",
   },
   {
     id: 12,
     skillTitle: "GSAP",
     skillLink: "gsap",
-    description: "トゥイーンアニメーションを活用し、スムーズでインタラクティブなアニメーションの実装経験があります。このポートフォリオサイトでもGSAPを活用してアニメーションを実装しています。リッチコンテンツなWebサイトを実装するためにWebアニメーションへの理解を深めたいと思っており、Three.jsなどの3Dコンテンツを制作できるライブラリの学習と並行して、GSAPの学習を継続しています。",
+    description:
+      "トゥイーンアニメーションを活用し、スムーズでインタラクティブなアニメーションの実装経験があります。このポートフォリオサイトでもGSAPを活用してアニメーションを実装しています。リッチコンテンツなWebサイトを実装するためにWebアニメーションへの理解を深めたいと思っており、Three.jsなどの3Dコンテンツを制作できるライブラリの学習と並行して、GSAPの学習を継続しています。",
     skillLogo: "/images/skills/gsap-greensock-logo.svg",
     label: "LIBRARY",
     link: "https://gsap.com/",
@@ -201,13 +214,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-gsap",
     viewTransitionLabel: "view-transition-label-gsap",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-gsap",
-    viewTransitionLogoBg: "view-transition-logo-bg-gsap"
+    viewTransitionLogoBg: "view-transition-logo-bg-gsap",
   },
   {
     id: 13,
     skillTitle: "Three.js",
     skillLink: "threejs",
-    description: "「Scene」「Object（Mesh）」「Camera」「Renderer」などの主要な概念を学び、実際にこのポートフォリオサイトのファーストビューで表示させている3Dモデルを、Three.jsのラッパーライブラリである「React Three Fiber」を使用して実装しました。",
+    description:
+      "「Scene」「Object（Mesh）」「Camera」「Renderer」などの主要な概念を学び、実際にこのポートフォリオサイトのファーストビューで表示させている3Dモデルを、Three.jsのラッパーライブラリである「React Three Fiber」を使用して実装しました。",
     skillLogo: "/images/skills/threejs-logo.svg",
     label: "LIBRARY",
     link: "https://threejs.org/",
@@ -216,13 +230,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-threejs",
     viewTransitionLabel: "view-transition-label-threejs",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-threejs",
-    viewTransitionLogoBg: "view-transition-logo-bg-threejs"
+    viewTransitionLogoBg: "view-transition-logo-bg-threejs",
   },
   {
     id: 14,
     skillTitle: "React Spring",
     skillLink: "react-spring",
-    description: "このポートフォリオサイトのマウスストーカーを「React Spring」で実装いたしました。React Springを利用した物理ベースのアニメーションにより、バネのような自然で滑らかな動きを実現しています。",
+    description:
+      "このポートフォリオサイトのマウスストーカーを「React Spring」で実装いたしました。React Springを利用した物理ベースのアニメーションにより、バネのような自然で滑らかな動きを実現しています。",
     skillLogo: "/images/skills/react-spring-logo.png",
     label: "LIBRARY",
     link: "https://www.react-spring.dev/",
@@ -231,13 +246,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-react-spring",
     viewTransitionLabel: "view-transition-label-react-spring",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-react-spring",
-    viewTransitionLogoBg: "view-transition-logo-bg-react-spring"
+    viewTransitionLogoBg: "view-transition-logo-bg-react-spring",
   },
   {
     id: 15,
     skillTitle: "React Hook Form",
     skillLink: "react-hook-form",
-    description: "このポートフォリオサイトのお問い合わせフォームではReact Hook Formを使用し、「フォームの入力値の状態管理」「送信処理の制御」「エラー表示の管理」など、フォームのパフォーマンス化を行っています。",
+    description:
+      "このポートフォリオサイトのお問い合わせフォームではReact Hook Formを使用し、「フォームの入力値の状態管理」「送信処理の制御」「エラー表示の管理」など、フォームのパフォーマンス化を行っています。",
     skillLogo: "/images/skills/react-hook-form-logo.svg",
     label: "LIBRARY",
     link: "https://react-hook-form.com/",
@@ -246,13 +262,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-react-hook-form",
     viewTransitionLabel: "view-transition-label-react-hook-form",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-react-hook-form",
-    viewTransitionLogoBg: "view-transition-logo-bg-react-hook-form"
+    viewTransitionLogoBg: "view-transition-logo-bg-react-hook-form",
   },
   {
     id: 16,
     skillTitle: "Zod",
     skillLink: "zod",
-    description: "このポートフォリオサイトのお問い合わせフォームでは、入力値の検証（バリデーション）にZodを使用しています。Zodを使用したスキーマバリデーションを行うことで型安全性が高いバリデーションを実現し、React Hook Formと組み合わせて堅牢なフォームを実装しました。",
+    description:
+      "このポートフォリオサイトのお問い合わせフォームでは、入力値の検証（バリデーション）にZodを使用しています。Zodを使用したスキーマバリデーションを行うことで型安全性が高いバリデーションを実現し、React Hook Formと組み合わせて堅牢なフォームを実装しました。",
     skillLogo: "/images/skills/zod-logo.svg",
     label: "LIBRARY",
     link: "https://zod.dev/",
@@ -261,13 +278,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-zod",
     viewTransitionLabel: "view-transition-label-zod",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-zod",
-    viewTransitionLogoBg: "view-transition-logo-bg-zod"
+    viewTransitionLogoBg: "view-transition-logo-bg-zod",
   },
   {
     id: 17,
     skillTitle: "webpack",
     skillLink: "webpack",
-    description: "Works Listに搭載してあるサイトの実装時には、モジュールバンドラのwebpackを使用してモジュールをバンドル（まとめる）することで、ブラウザからのリクエスト数を減らし、ファイル転送の効率化を行いました。",
+    description:
+      "Works Listに搭載してあるサイトの実装時には、モジュールバンドラのwebpackを使用してモジュールをバンドル（まとめる）することで、ブラウザからのリクエスト数を減らし、ファイル転送の効率化を行いました。",
     skillLogo: "/images/skills/webpack-logo.svg",
     label: "MODULE BUNDLER",
     link: "https://webpack.js.org/",
@@ -276,13 +294,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-webpack",
     viewTransitionLabel: "view-transition-label-webpack",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-webpack",
-    viewTransitionLogoBg: "view-transition-logo-bg-webpack"
+    viewTransitionLogoBg: "view-transition-logo-bg-webpack",
   },
   {
     id: 18,
     skillTitle: "Git",
     skillLink: "git",
-    description: "Gitの基本的なコマンドを理解しています。普段はGitHubでリモートリポジトリとローカルリポジトリを連携し「git add」「git commit」「git push」などのコマンドを使用してファイルのバージョン管理や、変更履歴の追跡を行っています。",
+    description:
+      "Gitの基本的なコマンドを理解しています。普段はGitHubでリモートリポジトリとローカルリポジトリを連携し「git add」「git commit」「git push」などのコマンドを使用してファイルのバージョン管理や、変更履歴の追跡を行っています。",
     skillLogo: "/images/skills/git-logo.svg",
     label: "VERSION CONTROL",
     link: "https://git-scm.com/",
@@ -291,13 +310,14 @@ export const skillsData: SkillsData[] = [
     viewTransitionBg: "view-transition-bg-git",
     viewTransitionLabel: "view-transition-label-git",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-git",
-    viewTransitionLogoBg: "view-transition-logo-bg-git"
+    viewTransitionLogoBg: "view-transition-logo-bg-git",
   },
   {
     id: 19,
     skillTitle: "Adobe Premiere Pro",
     skillLink: "adobe-premiere-pro",
-    description: "過去にPremiere Proを使用した動画編集の経験があります。「撮影」「カット」「テロップ入れ」「BGM / 効果音の挿入」などの基本的な操作方法は、全て独学で習得しました。",
+    description:
+      "過去にPremiere Proを使用した動画編集の経験があります。「撮影」「カット」「テロップ入れ」「BGM / 効果音の挿入」などの基本的な操作方法は、全て独学で習得しました。",
     skillLogo: "/images/skills/adobe-premiere-pro-logo.svg",
     label: "VIDEO EDITING",
     link: "https://www.adobe.com/jp/products/premiere.html",
@@ -305,14 +325,16 @@ export const skillsData: SkillsData[] = [
     viewTransitionImage: "view-transition-img-adobe-premiere-pro",
     viewTransitionBg: "view-transition-bg-adobe-premiere-pro",
     viewTransitionLabel: "view-transition-label-adobe-premiere-pro",
-    viewTransitionLogoWrapper: "view-transition-logo-wrapper-adobe-premiere-pro",
-    viewTransitionLogoBg: "view-transition-logo-bg-adobe-premiere-pro"
+    viewTransitionLogoWrapper:
+      "view-transition-logo-wrapper-adobe-premiere-pro",
+    viewTransitionLogoBg: "view-transition-logo-bg-adobe-premiere-pro",
   },
 ];
 
 const Skills = () => {
   return (
     <>
+      <Breadcrumb title={skillsTitle} />
       <section className={styles["skills-section"]}>
         <TitleAnimation title={skillsTitle} subTitle={skillsSubTitle} />
         <SkillsCardList />
