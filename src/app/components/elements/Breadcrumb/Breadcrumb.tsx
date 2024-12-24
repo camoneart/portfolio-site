@@ -27,10 +27,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
 
   return (
     <motion.nav
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 50, translateX: "-50%" }}
       animate={{
         opacity: 1,
-        transition: { delay: 0.5, duration: 1.2, ease: "easeIn" }
+        y: 0,
+        translateX: "-50%",
+        transition: { type: "spring", stiffness: 100, damping: 12, delay: 0.7, duration: 1, ease: "easeInOut" },
       }}
       aria-label="パンくずリスト"
       className={`font-russo ${styles["breadcrumb"]}`}
