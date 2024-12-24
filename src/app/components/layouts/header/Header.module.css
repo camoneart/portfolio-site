@@ -3,12 +3,39 @@
 }
 
 .header__title-link {
-  display: block flow;
-  transition: opacity 0.3s ease-in-out;
+  display: block grid;
 
-  &:hover {
-    opacity: 0.5;
+  @media (640px <= width) {
+    overflow: hidden;
+    perspective: 82.5rem;
+
+    &:hover {
+      .rotate-text01 {
+        opacity: 0;
+        transform: translate3d(0, -25.5961px, -26.0468px) rotateX(91deg);
+      }
+
+      .rotate-text02 {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
   }
+}
+
+.rotate-text01,
+.rotate-text02 {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform-origin: center;
+  transition: transform 0.95s cubic-bezier(.33,1,.68,1), opacity 0.95s cubic-bezier(.33,1,.68,1);
+}
+
+.rotate-text02 {
+  opacity: 0;
+  transform: translate3d(0, 25.5961px, -26.0467px) rotateX(-91deg);
 }
 
 .text-gradient {

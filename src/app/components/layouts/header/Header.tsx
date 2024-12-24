@@ -6,7 +6,7 @@ import AudioPlayer from "../../AudioPlayer/AudioPlayer";
 import Hamburger from "../../elements/Hamburger/Hamburger";
 import Gnav from "../Gnav/Gnav";
 import { Link } from 'next-view-transitions'
-import { motion } from "framer-motion";
+import { motion } from "motion/react"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,8 @@ const Header = () => {
       <div className={`flex items-center justify-between ${styles["header__container"]}`}>
         <div className={`font-russo text-xl md:text-3xl font-black ${styles["header__title"]}`}>
           <Link href="/" className={`${styles["header__title-link"]}`} onClick={() => isOpen && toggleMenu()} >
-            <span className={`${styles["text-gradient"]}`}>Aoyama</span>
+            <span className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}>Aoyama</span>
+            <span className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}>Aoyama</span>
           </Link>
         </div>
         <div className={styles["header__items"]}>
