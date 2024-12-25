@@ -1,6 +1,7 @@
 import React from 'react'
 import About from './components/About/About'
 import { Metadata } from 'next';
+import Stairs from "../components/Animation/StairsTransition/Stairs";
 
 export const metadata: Metadata = {
   title: "About",
@@ -9,7 +10,13 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <About />
+    <>
+      <div className="common-container">
+        <Stairs mode="wait">
+          <About />
+        </Stairs>
+      </div>
+    </>
   )
 }
 

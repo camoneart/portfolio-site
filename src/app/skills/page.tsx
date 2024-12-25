@@ -1,6 +1,7 @@
 import React from "react";
 import Skills from "./components/Skills/Skills";
 import { Metadata } from 'next';
+import Stairs from "../components/Animation/StairsTransition/Stairs";
 
 export const metadata: Metadata = {
   title: "Skills",
@@ -10,8 +11,10 @@ export const metadata: Metadata = {
 const SkillsPage = () => {
   return (
     <>
-      <div className="font-russo common-container">
-        <Skills />
+      <div className="common-container">
+        <Stairs mode="wait">
+          <Skills />
+        </Stairs>
       </div>
     </>
   );
