@@ -7,35 +7,27 @@ interface UseSkillsAnimationProps {
 
 export const useSkillsCardAnimation = ({ index }: UseSkillsAnimationProps) => {
   const cardRef = useRef<HTMLElement>(null);
-
+  // GSAPを使用したカードアニメーション
   useEffect(() => {
     const card = cardRef.current;
-    if (!card) return;
-
-    const initialDelay = 0.65;
-    const hasSeenAnimation = sessionStorage.getItem('hasSeenSkillsAnimation');
+    if (!card) return; // cardRef.currentがnullの場合は処理を中断
+    const initialDelay = 1; // タイトルアニメーション後の初期遅延
 
     // カードの初期状態を設定
     gsap.set(card, {
-      opacity: hasSeenAnimation ? 1 : 0,
-      y: hasSeenAnimation ? 0 : 100,
+      opacity: 0,
+      y: 100,
     });
 
-    // 初回訪問時のみアニメーションを実行
-    if (!hasSeenAnimation) {
-      gsap.to(card, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out",
-        delay: initialDelay + 0.1 * index,
-        clearProps: "transform",
-        onComplete: () => {
-          // アニメーション完了後にセッションストレージに保存
-          sessionStorage.setItem('hasSeenSkillsAnimation', 'true');
-        }
-      });
-    }
+    // カードのアニメーション
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.out",
+      delay: initialDelay + 0.1 * index, // 初期遅延 + インデックスベースの遅延
+      clearProps: "transform", // アニメーション後にtransformプロパティをクリア
+    });
 
     // マウスムーブエフェクト
     const handleMouseMove = (e: MouseEvent) => {
@@ -57,6 +49,5 @@ export const useSkillsCardAnimation = ({ index }: UseSkillsAnimationProps) => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, [index]);
-
   return { cardRef };
 }
