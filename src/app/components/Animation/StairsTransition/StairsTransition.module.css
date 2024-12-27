@@ -1,0 +1,33 @@
+.stairs-transition {
+  height: 100%;
+
+  .stairs-transition-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 9000;
+
+    .stairs-transition-column {
+			position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: var(--stairs-column-color);
+      z-index: 9000;
+    }
+  }
+
+  .stairs-transition-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary-black);
+    z-index: 1000;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+  }
+}
