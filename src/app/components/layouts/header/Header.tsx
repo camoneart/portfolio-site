@@ -46,7 +46,7 @@ const Header = () => {
         opacity: 1,
         transition: { delay: 0.2, duration: 1.5, ease: "easeIn" },
       }}
-      className={`sticky top-0 left-0 z-50 w-full h-auto mx-auto select-none md:py-8 py-5 md:px-8 px-5 ${`${styles["header"]}`}`}
+      className={`sticky top-0 left-0 z-20 w-full h-auto mx-auto select-none md:py-8 py-5 md:px-8 px-5 ${`${styles["header"]}`}`}
     >
       <div className={`flex items-center justify-between ${styles["header__container"]}`}>
         <div className={`font-russo text-xl md:text-3xl font-black ${styles["header__title"]}`}>
