@@ -9,6 +9,7 @@
   --color-primary-black: #000;
   --color-primary-gray: #262626;
   --color-primary-orange: #ff6b4a;
+  --color-secondary-orange: #ff3d00;
   --text-gradient-primary: linear-gradient(
     108deg,
     #ffc508,
@@ -83,7 +84,7 @@ main {
 }
 
 canvas {
-  display: block;
+  display: block flow;
 }
 
 .common-container {
@@ -91,9 +92,13 @@ canvas {
   max-width: 1280px;
   width: 100%;
   height: 100%;
-  padding-block: 1rem;
-  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
+  padding-inline: 1.25rem;
   margin-inline: auto;
+
+  @media (width <= 768px) {
+    padding-block-start: 2.875rem;
+  }
 }
 
 .contact-form-send-btn-container {
@@ -133,7 +138,7 @@ canvas {
 }
 
 :focus-visible {
-  outline: 1px solid #ff3d00;
+  outline: 1px solid var(--color-secondary-orange);
 }
 
 ::selection {
