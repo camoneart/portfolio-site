@@ -1,0 +1,4 @@
+.network-background {
+  background-color: var(--bg-color-gray);
+  z-index: -1;
+}

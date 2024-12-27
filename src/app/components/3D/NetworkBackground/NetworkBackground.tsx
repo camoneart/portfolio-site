@@ -104,7 +104,7 @@ function Points() {
 
 const NetworkBackground = () => {
   return (
-    <div className={`fixed inset-0 z-10 ${styles["network-background"]}`} >
+    <div className={`fixed inset-0 ${styles["network-background"]}`} >
       <Canvas
         camera={{ position: [0, 0, 50], fov: 75, near: 0.1, far: 1000 }}
         gl={{ antialias: true, alpha: true }}
