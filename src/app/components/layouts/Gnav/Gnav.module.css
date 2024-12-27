@@ -4,10 +4,21 @@
   column-gap: 20px;
 }
 
+.gnav__item {
+  background-color: var(--card-bg-color);
+  box-shadow: var(--card-default-shadow);
+  border: 0.5px solid var(--card-border-color);
+  border-radius: 3px;
+  padding-block: 5px;
+  padding-inline: 8px;
+  letter-spacing: 0.02em;
+  z-index: 9999;
+}
+
 .gnav__link {
   position: relative;
   z-index: 2;
-  display: block;
+  display: block flow;
   color: var(--color-primary-white);
   padding-inline: 4px;
   font-size: 1rem;
@@ -29,7 +40,7 @@
     &:before {
       content: "";
       position: absolute;
-      display: block;
+      display: block flow;
       width: calc(100% - 4px);
       height: 1px;
       left: 2px;
@@ -41,8 +52,6 @@
     }
   }
 }
-
-
 
 @media (width <= 768px) {
   .gnav {
@@ -94,10 +103,6 @@
     box-shadow: var(--card-default-shadow);
   }
 
-  .gnav__item--open {
-    
-  }
-
   .gnav__link {
     width: 230px;
     height: 60px;
@@ -105,9 +110,5 @@
     place-items: center;
     font-size: 1.125rem;
     border-radius: 3px;
-  }
-
-  .gnav__link--open {
-    
   }
 }

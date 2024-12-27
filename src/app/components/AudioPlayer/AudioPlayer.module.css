@@ -8,6 +8,19 @@
   box-shadow: var(--card-default-shadow);
   border-radius: 50%;
   transition: background 0.3s ease-in-out;
+  z-index: 9999;
+
+  @media (width <= 768px) {
+    position: fixed;
+    top: 25px;
+    right: 105px;
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (width <= 640px) {
+    right: 100px;
+  }
 }
 
 .audio-button:hover {
@@ -18,33 +31,19 @@
   }
 }
 
-@media (width <= 768px) {
-  .audio-button {
-    position: fixed;
-    top: 25px;
-    right: 105px;
-    width: 50px;
-    height: 50px;
-  }
-
-  .audio-play {
+.audio-play {
+  @media (width <= 768px) {
     width: 21px;
     height: 21px;
-  }
-
-  .audio-mute {
-    width: 21px;
-    height: 21px;
-  }
-}
-
-@media (width <= 640px) {
-  .audio-button {
-    right: 100px;
   }
 }
 
 .audio-mute {
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
+
+  @media (width <= 768px) {
+    width: 21px;
+    height: 21px;
+  }
 }

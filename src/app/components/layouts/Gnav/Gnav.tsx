@@ -11,16 +11,16 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
   return (
     <nav className={`font-russo ${styles["gnav"]} ${isOpen ? styles["gnav--open"] : ""}`}>
       <ul className={`font-black ${styles["gnav__list"]} ${isOpen ? styles["gnav__list--open"] : ""}`}>
-        <li className={`${styles["gnav__item"]} ${isOpen ? styles["gnav__item--open"] : ""}`}>
+        <li className={`sticky inset-0 ${styles["gnav__item"]} ${isOpen ? styles["gnav__item--open"] : ""}`}>
           <Link className={`${styles["gnav__link"]} ${styles["hover-un"]} ${isOpen ? styles["gnav__link--open"] : ""}`} href="/about" onClick={toggleMenu}>About</Link>
         </li>
-        <li className={`${styles["gnav__item"]} ${isOpen ? styles["gnav__item--open"] : ""}`}>
+        <li className={`sticky inset-0 ${styles["gnav__item"]} ${isOpen ? styles["gnav__item--open"] : ""}`}>
           <Link className={`${styles["gnav__link"]} ${styles["hover-un"]} ${isOpen ? styles["gnav__link--open"] : ""}`} href="/skills" onClick={toggleMenu}>Skills</Link>
         </li>
-        <li className={`${styles["gnav__item"]} ${isOpen ? styles["gnav__item--open"] : ""}`}>
+        <li className={`sticky inset-0 ${styles["gnav__item"]} ${isOpen ? styles["gnav__item--open"] : ""}`}>
           <Link className={`${styles["gnav__link"]} ${styles["hover-un"]} ${isOpen ? styles["gnav__link--open"] : ""}`} href="/works" onClick={toggleMenu}>Works</Link>
         </li>
-        <li className={`${styles["gnav__item"]} ${isOpen ? styles["gnav__item--open"] : ""}`}>
+        <li className={`sticky inset-0 ${styles["gnav__item"]} ${isOpen ? styles["gnav__item--open"] : ""}`}>
           <Link className={`${styles["gnav__link"]} ${styles["hover-un"]} ${isOpen ? styles["gnav__link--open"] : ""}`} href="/contact" onClick={toggleMenu}>Contact</Link>
         </li>
       </ul>

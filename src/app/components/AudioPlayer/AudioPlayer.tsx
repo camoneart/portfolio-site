@@ -17,7 +17,7 @@ const AudioPlayer = ({
   src, // 再生する音声ファイルのパス
   size = 24, // デフォルト: 24px
   color = 'currentColor', // デフォルト: 現在のテキスト色
-  className = '', // デフォルト: 空文字
+  className = 'audio-button', // デフォルト: 空文字
   initialVolume = 0.5 // デフォルト: 50%の音量
 }: AudioPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -76,14 +76,14 @@ const AudioPlayer = ({
   return (
     <button 
       onClick={handleClick}
-      className={`${styles.audioButton} ${className}`}
+      className={`sticky inset-0 ${styles["audio-button"]} ${className}`}
       aria-label={isPlaying ? (isMuted ? "Unmute" : "Mute") : "Play"}
     >
       {isMuted || !isPlaying ? (
         <VolumeX size={size} color={color} className={styles['audio-mute']} />
       ) : (
-        <Volume2 
-          size={size} 
+        <Volume2
+          size={size}
           color={color}
           className={styles['audio-play']}
         />
