@@ -1,10 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import styles from "./StairsTransition.module.css";
 
 const StairsTransition = ({ children }: { children: React.ReactNode }) => {
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    if (isAnimating) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }, [isAnimating]);
+
   const anim = (
     variants: {
       initial: { top: number };
@@ -87,13 +101,29 @@ const StairsTransition = ({ children }: { children: React.ReactNode }) => {
     })
   };
 
+  // アニメーション開始時
+  const onAnimationStart = () => {
+    setIsAnimating(true);
+  }
+
+  // アニメーション終了時
+  const onAnimationComplete = () => {
+    setIsAnimating(false);
+  }
+
   // カラム数
   const numOfColumns = 5;
 
   return (
-    <div className={`${styles["stairs-transition"]} ${styles["page"]}`}>
+    <div className={`${styles["stairs-transition"]} ${styles["page"]} ${isAnimating ? styles["no-scroll"] : ""}`}>
       <AnimatePresence mode="wait">
-        <motion.div key="overlay" {...anim(overlay, numOfColumns)} className={styles["stairs-transition-bg"]} />
+        <motion.div 
+          key="overlay" 
+          {...anim(overlay, numOfColumns)} 
+          className={styles["stairs-transition-bg"]}
+          onAnimationStart={onAnimationStart}
+          onAnimationComplete={onAnimationComplete}
+        />
       </AnimatePresence>
       <div className={styles["stairs-transition-container"]}>
         <AnimatePresence mode="wait">
