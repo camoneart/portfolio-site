@@ -10,6 +10,7 @@
   --color-primary-gray: #262626;
   --color-primary-orange: #ff6b4a;
   --color-secondary-orange: #ff3d00;
+  --stairs-column-color: #7c1d00;
   --text-gradient-primary: linear-gradient(
     108deg,
     #ffc508,
@@ -19,10 +20,10 @@
   --label-bg-color: rgb(246 119 77 / 25%);
   --label-border-color: rgb(231 153 79 / 75%);
   --logo-bg-color: rgb(38 38 38 / 0.8);
-  --card-bg-color: rgb(255 255 255 / 0.1);
-  --form-bg-color: rgb(255 255 255 / 0.1);
-  --card-border-color: rgb(255 255 255 / 0.1);
-  --form-border-color: rgb(255 255 255 / 0.1);
+  --cmp-bg-primary-color: rgb(255 255 255 / 0.1);
+  --cmp-bg-secondary-color: rgb(255 255 255 / 0.1);
+  --cmp-border-primary-color: rgb(255 255 255 / 0.1);
+  --cmp-border-secondary-color: rgb(255 255 255 / 0.1);
   --btn-border-orange: rgb(189 77 13);
   --btn-bg-orange: rgb(189 77 13 / 0.6);
   --works-item-bg-color: rgb(202 81 12 / 0.6);
@@ -32,13 +33,13 @@
   --logo-bg-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.1),
     0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 255 255 / 0.1);
-  --card-default-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+  --cmp-primary-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.3),
     0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.1);
-  --detail-card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+  --detail-cmp-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.3),
     0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.2);
-  --form-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+  --cmp-secondary-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.3),
     0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.2);
   --card-hover-shadow: 0 25px 35px -5px rgb(0 0 0 / 0.3),
