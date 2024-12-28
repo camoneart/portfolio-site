@@ -237,7 +237,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Motion",
     skillLink: "motion",
     description:
-      "Motionを使用した",
+      "Motionを使用したアニメーションの実装経験があります。このポートフォリオサイトでは、「各ページのタイトル」「パンくずリスト」の出現アニメーション、ページ遷移時の階段アニメーションをMotionで実装しました。",
     skillLogo: "/images/skills/motion-logo.svg",
     label: "LIBRARY",
     link: "https://motion.dev/",
