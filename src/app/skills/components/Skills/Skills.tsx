@@ -1,7 +1,7 @@
 import React from "react";
 import SkillsCardList from "@/app/features/skills/components/SkillsCardList/SkillsCardList";
 import styles from "./Skills.module.css";
-import TitleAnimation from "@/app/components/Animation/AnimationTitle/AnimationTitle";
+import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 
 export const skillsTitle = "Skills";
@@ -234,6 +234,22 @@ export const skillsData: SkillsData[] = [
   },
   {
     id: 14,
+    skillTitle: "Motion",
+    skillLink: "motion",
+    description:
+      "Motionを使用した",
+    skillLogo: "/images/skills/motion-logo.svg",
+    label: "LIBRARY",
+    link: "https://motion.dev/",
+    viewTransitionName: "view-transition-title-motion",
+    viewTransitionImage: "view-transition-img-motion",
+    viewTransitionBg: "view-transition-bg-motion",
+    viewTransitionLabel: "view-transition-label-motion",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-motion",
+    viewTransitionLogoBg: "view-transition-logo-bg-motion",
+  },
+  {
+    id: 15,
     skillTitle: "React Spring",
     skillLink: "react-spring",
     description:
@@ -249,7 +265,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-react-spring",
   },
   {
-    id: 15,
+    id: 16,
     skillTitle: "React Hook Form",
     skillLink: "react-hook-form",
     description:
@@ -265,7 +281,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-react-hook-form",
   },
   {
-    id: 16,
+    id: 17,
     skillTitle: "Zod",
     skillLink: "zod",
     description:
@@ -281,7 +297,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-zod",
   },
   {
-    id: 17,
+    id: 18,
     skillTitle: "webpack",
     skillLink: "webpack",
     description:
@@ -297,7 +313,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-webpack",
   },
   {
-    id: 18,
+    id: 19,
     skillTitle: "Git",
     skillLink: "git",
     description:
@@ -313,7 +329,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-git",
   },
   {
-    id: 19,
+    id: 20,
     skillTitle: "Adobe Premiere Pro",
     skillLink: "adobe-premiere-pro",
     description:

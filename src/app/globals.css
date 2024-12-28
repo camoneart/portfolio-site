@@ -234,6 +234,10 @@ canvas {
   view-transition-name: view-transition-logo-wrapper-threejs;
 }
 
+.view-transition-logo-wrapper-motion {
+  view-transition-name: view-transition-logo-wrapper-motion;
+}
+
 .view-transition-logo-wrapper-react-spring {
   view-transition-name: view-transition-logo-wrapper-react-spring;
 }
@@ -309,6 +313,10 @@ canvas {
 
 .view-transition-logo-bg-threejs {
   view-transition-name: view-transition-logo-bg-threejs;
+}
+
+.view-transition-logo-bg-motion {
+  view-transition-name: view-transition-logo-bg-motion;
 }
 
 .view-transition-logo-bg-react-spring {
@@ -398,6 +406,11 @@ canvas {
 
 .view-transition-img-threejs {
   view-transition-name: view-transition-img-threejs;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-motion {
+  view-transition-name: view-transition-img-motion;
   aspect-ratio: 1 / 1;
 }
 
@@ -497,6 +510,11 @@ canvas {
   width: fit-content;
 }
 
+.view-transition-title-motion {
+  view-transition-name: view-transition-title-motion;
+  width: fit-content;
+}
+
 .view-transition-title-react-spring {
   view-transition-name: view-transition-title-react-spring;
   width: fit-content;
@@ -580,6 +598,10 @@ canvas {
   view-transition-name: view-transition-bg-threejs;
 }
 
+.view-transition-bg-motion {
+  view-transition-name: view-transition-bg-motion;
+}
+
 .view-transition-bg-react-spring {
   view-transition-name: view-transition-bg-react-spring;
 }
@@ -655,6 +677,10 @@ canvas {
 
 .view-transition-label-threejs {
   view-transition-name: view-transition-label-threejs;
+}
+
+.view-transition-label-motion {
+  view-transition-name: view-transition-label-motion;
 }
 
 .view-transition-label-react-spring {
