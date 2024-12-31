@@ -26,7 +26,7 @@ const Scene = () => {
     <>
       <PerspectiveCamera
         makeDefault
-        position={[45, 35, 35]}
+        position={[90, 35, 35]}
         fov={50}
       />
       <ambientLight intensity={0.3} />
