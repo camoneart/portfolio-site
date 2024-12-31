@@ -14,11 +14,12 @@
   display: block grid;
   gap: 1.5rem;
   place-items: center;
-  background: var(--card-bg-color);
-  border: 1px solid var(--card-border-color);
+  background: var(--cmp-bg-primary-color);
+  border: 1px solid var(--cmp-border-primary-color);
   border-radius: 10px;
-  box-shadow: var(--detail-card-shadow);
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
+  box-shadow: var(--detail-cmp-shadow);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    scale 0.3s ease-in-out;
   padding-block: 4rem 2.5rem;
   padding-inline: 3rem;
 
@@ -32,6 +33,7 @@
   text-wrap: pretty;
   word-break: auto-phrase;
   padding-inline: 10px;
+  letter-spacing: 0.025em;
 }
 
 .skill-description {
@@ -49,7 +51,7 @@
 
 .skill-label {
   width: fit-content;
-  display: inline-block;
+  display: inline flow-root;
   font-size: 0.625rem;
   font-weight: var(--font-weight-normal);
   letter-spacing: 0.5px;
