@@ -2,23 +2,61 @@ import React from "react";
 import WorkCardGrid from "@/app/features/work/components/WorkCardList/WorkCardList";
 import styles from "./Works.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
-
+import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 
 export const worksTitle = "Works";
-export const worksSubTitle = "制作実績"
+export const worksSubTitle = "制作実績";
 
 interface WorksData {
   id: number;
   image: string;
   workTitle: string;
   description: string;
+  specification01?: string;
+  specification02?: string;
+  specification03?: string;
+  specification04?: string;
+  specification05?: string;
+  specification06?: string;
+  detail01?: string;
+  detail02?: string;
+  detail03?: string;
+  detail04?: string;
+  detail05?: string;
+  detail06?: string;
+  detail07?: string;
+  specification01Detail01?: string;
+  specification01Detail02?: string;
+  specification01Detail03?: string;
+  specification01Detail04?: string;
+  specification02Detail01?: string;
+  specification02Detail02?: string;
+  specification02Detail03?: string;
+  specification02Detail04?: string;
+  specification03Detail01?: string;
+  specification03Detail02?: string;
+  specification03Detail03?: string;
+  specification03Detail04?: string;
+  specification04Detail01?: string;
+  specification04Detail02?: string;
+  specification04Detail03?: string;
+  specification04Detail04?: string;
+  specification05Detail01?: string;
+  specification05Detail02?: string;
+  specification05Detail03?: string;
+  specification05Detail04?: string;
+  specification06Detail01?: string;
+  specification06Detail02?: string;
+  specification06Detail03?: string;
+  specification06Detail04?: string;
+  summary?: string;
+  basicAuthentication: string;
   labels: { no: string; value: string }[];
   skillsList: string;
   siteUrl: string;
   role: string;
   username: string;
   password: string;
-  summary: string;
   viewTransitionName: string;
   viewTransitionImage: string;
 }
@@ -30,14 +68,17 @@ export const worksData: WorksData[] = [
     workTitle: "CareSend｜有資格介護人材が集まる介護派遣サービス",
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の介護派遣サービスのLPサイト」になります。",
+    detail01: "GSAPを利用して、要素の出現アニメーションを実装しています。",
+    detail02: "企業ロゴが無限ループするスライダーと、導入事例セクションのカードUIのスライダーはSwiperで実装しています。",
+    detail03: "ダウンロードフォームは、「全項目を入力しないと、送信できないようにする」「フォーム送信後は、サンクスページに遷移」「性と名が分かれている時のオートコンプリートに対応」などの仕様です。実際のダウンロード機能は実装していません。",
+    basicAuthentication:
+      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo01」の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "001/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/caresend/",
     role: "Coding",
     username: "demo",
     password: "demo01",
-    summary:
-      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo01」の入力をお願いいたします。",
     viewTransitionName: "view-transition-title-work-1",
     viewTransitionImage: "view-transition-img-work-1",
   },
@@ -48,14 +89,19 @@ export const worksData: WorksData[] = [
       "青牡丹工務店｜大阪市北区の住宅建築・リフォーム・公共事業なら青牡丹工務店",
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の建築会社のサイト」になります。",
+    detail01: "ローディング画面を実装しています。",
+    detail02: "ファーストビューコピーや見出しの出現アニメーションは、GSAPで実装しています。",
+    detail03: "トップページの横並びの画像箇所は、Swiperでスライダーを実装しています。",
+    detail04: "NEWSセクションのお知らせの内容は、モーダルで出現させる仕様になっています。",
+    detail05: "メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
+    basicAuthentication:
+      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo02」の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "002/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/aobotan/",
     role: "Coding",
     username: "demo",
     password: "demo02",
-    summary:
-      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo02」の入力をお願いいたします。",
     viewTransitionName: "view-transition-title-work-2",
     viewTransitionImage: "view-transition-img-work-2",
   },
@@ -65,6 +111,29 @@ export const worksData: WorksData[] = [
     workTitle: "採用特設サイト｜株式会社TETOTE",
     description:
       "こちらのサイトは、Figmaで作成されたWordPressオリジナルテーマのデザインカンプを基にコーディングを行った「架空のITコンサルファームの採用サイト」になります。",
+    specification01: "トップページの仕様",
+    specification02: "STAFF詳細ページ仕様",
+    specification03: "ブログ一覧ページ仕様",
+    specification04: "ブログ詳細ページ仕様",
+    specification05: "募集要項とFAQページ仕様",
+    specification06: "エントリーフォームページ仕様",
+    specification01Detail01: "トップページの要素をGSAPでふわっと表示させるようにしています。",
+    specification01Detail02: "ファーストビュー直下のスライダーはSwiperで実装しています。",
+    specification01Detail03: "blogはデフォルトの投稿機能を使用。staff一覧はカスタム投稿を使用して管理画面に「スタッフ管理」の項目を追加して、コンテンツ入稿できるようにしています。",
+    specification01Detail04: "「人を知る」セクションでは、カスタム投稿「スタッフ管理」から入稿したコンテンツをスライダーで表示。",
+    specification02Detail01: "「スタッフメッセージ一行目」「スタッフメッセージ二行目」「職種名」「名前」「入社年度」「プロフィール」の内容は、カスタムフィールドの情報を表示させ、スタッフ画像はサムネイルで設定した画像を表示させています。",
+    specification02Detail02: "サイドバーは追従する目次で、PC時のみ常に右側に表示させています。「クリックで該当部分にスクロール」「現在の話題の部分は色の濃いアクティブ表示」「スクロールすることでアクティブ部分はリアルタイムに変化」という仕様になっています。",
+    specification02Detail03: "その他のメンバーはランダムで表示させています。",
+    specification03Detail01: "ブログはWordPressのデフォルト投稿機能を使っています。",
+    specification03Detail02: "ブログ記事は9つ以上用意して、ページネーションが機能するようにしています。",
+    specification04Detail01: "投稿画面からの入稿で、コンテンツを表示させています。",
+    specification05Detail01: "3つのボタンはページ内リンクになっており、クリックすると該当セクションまでスクロールする仕様になっています。",
+    specification06Detail01: "プラグインは、CF7を使用しています。",
+    specification06Detail02: "月選択は1~12の範囲、日は1~31の範囲で選択。",
+    specification06Detail03: "フォームアクセシビリティを考慮して、select、radio、checkboxなどをtabキーでフォーカスが当たるようにし、spaceキーで選択できる仕様にしています。",
+    specification06Detail04: "「送信する」ボタンは、必須項目が全て入力されていないと押せないようにしています。確認画面は実装していません。",
+    basicAuthentication:
+      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo03」の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "003/004" }],
     skillsList:
       "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
@@ -72,17 +141,22 @@ export const worksData: WorksData[] = [
     role: "Coding",
     username: "demo",
     password: "demo03",
-    summary:
-      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo03」の入力をお願いいたします。",
     viewTransitionName: "view-transition-title-work-3",
     viewTransitionImage: "view-transition-img-work-3",
   },
   {
     id: 4,
     image: "/images/works/work04.jpg",
-    workTitle: "Aoyama｜Creative Web Developer",
-    description:
-      "こちらのサイトは、私のポートフォリオサイトになります。",
+    workTitle: "Aoyama｜Creative Web Engineer",
+    description: "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
+    detail01: "このサイトはNext.js + Tailwind CSS + CSS Modules + TypeScriptで制作し、デプロイはVercelで行いました。",
+    detail02: "トップページの3Dコンテンツは「React Tree Fiber」で実装しました。",
+    detail03: "ドットパターンで表現した背景のアニメーションや、カードの出現アニメーションは「GSAP」で実装しています。",
+    detail04: "カード型UIには「View Transitions API」を利用して、スムーズに流れるような遷移アニメーションを実現しています。",
+    detail05: "ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識してアニメーションを実装いたしました。",
+    detail06: "オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
+    detail07: "お問い合わせフォームは、「React Hook Form」でフォームのパフォーマンス化を行い、「Zod」で入力値の検証（バリデーション）を行うことで堅牢なフォームを実装しました。、また、メール送信機能につきましては「Resend」を利用して実装しました。",
+    basicAuthentication: "",
     labels: [{ no: "Card No.", value: "004/004" }],
     skillsList:
       "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",
@@ -90,8 +164,6 @@ export const worksData: WorksData[] = [
     role: "Design, Coding",
     username: "",
     password: "",
-    summary:
-      "当ポートフォリオサイトは、サイトデザインを自ら考え、コーディングまで行いました。トップページの3Dコンテンツは「React Tree Fiber」で制作。ドットパターンで表現した背景のアニメーションや、カードの出現アニメーションは「GSAP」で実装。また、カード型UIには「View Transitions API」を利用して、スムーズに流れるような遷移アニメーションを実現しています。ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識してアニメーションを実装いたしました。BGMの再生には、オーディオライブラリ「Howler.js」を使用いたしました。「...」デプロイはVercelで行っています。",
     viewTransitionName: "view-transition-title-work-4",
     viewTransitionImage: "view-transition-img-work-4",
   },
@@ -100,6 +172,7 @@ export const worksData: WorksData[] = [
 const Works = () => {
   return (
     <>
+      <Breadcrumb title={worksTitle} />
       <section className={styles["works-section"]}>
         <TitleAnimation title={worksTitle} subTitle={worksSubTitle} />
         <WorkCardGrid />

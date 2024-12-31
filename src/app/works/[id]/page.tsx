@@ -55,7 +55,9 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                     {work.workTitle}
                   </h1>
                   <div className={styles["work__info"]}>
-                    <div className={`font-russo ${styles["work__url-container"]}`}>
+                    <div
+                      className={`font-russo ${styles["work__url-container"]}`}
+                    >
                       <span className={styles["work__url-label"]}>URL：</span>
                       <a
                         href={work.siteUrl}
@@ -85,7 +87,10 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                       <span className={styles["work__role-label"]}>担当：</span>
                       <ul className={styles["work__role-list"]}>
                         {roleList.map((role, index) => (
-                          <li key={index} className={`font-russo ${styles["work__role-item"]}`}>
+                          <li
+                            key={index}
+                            className={`font-russo ${styles["work__role-item"]}`}
+                          >
                             {role}
                           </li>
                         ))}
@@ -133,13 +138,218 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                         {work.description}
                       </ReactMarkdown>
                     )}
-                    {work.summary && (
-                      <ReactMarkdown className={styles["work__summary-text"]}>
-                        {work.summary}
-                      </ReactMarkdown>
-                    )}
+                    <div className={styles["work__detail-container"]}>
+                      {work.detail01 && (
+                        <div className={styles["work__detail-content"]}>
+                          {work.detail01 && (
+                            <>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <ReactMarkdown className={styles["work__detail"]}>
+                                {work.detail01}
+                              </ReactMarkdown>
+                            </>
+                          )}
+                          {work.detail02 && (
+                            <>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <ReactMarkdown className={styles["work__detail"]}>
+                                {work.detail02}
+                              </ReactMarkdown>
+                            </>
+                          )}
+                          {work.detail03 && (
+                            <>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <ReactMarkdown className={styles["work__detail"]}>
+                                {work.detail03}
+                              </ReactMarkdown>
+                            </>
+                          )}
+                          {work.detail04 && (
+                            <>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <ReactMarkdown className={styles["work__detail"]}>
+                                {work.detail04}
+                              </ReactMarkdown>
+                            </>
+                          )}
+                          {work.detail05 && (
+                            <>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <ReactMarkdown className={styles["work__detail"]}>
+                                {work.detail05}
+                              </ReactMarkdown>
+                            </>
+                          )}
+                          {work.detail06 && (
+                            <>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <ReactMarkdown className={styles["work__detail"]}>
+                                {work.detail06}
+                              </ReactMarkdown>
+                            </>
+                          )}
+                          {work.detail07 && (
+                            <>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <ReactMarkdown className={styles["work__detail"]}>
+                                {work.detail07}
+                              </ReactMarkdown>
+                            </>
+                          )}
+                        </div>
+                      )}
+                      {work.specification01 && (
+                        <div className={styles["work__specification-content"]}>
+                          {work.specification01 && (
+                            <div className={styles["work__specification"]}>
+                              <ReactMarkdown
+                                className={styles["work__specification-title"]}
+                                components={{
+                                  p: ({children}) => <h3>{children}</h3>
+                                }}
+                              >
+                                {work.specification01}
+                              </ReactMarkdown>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <p className={styles["work__specification-detail"]}>
+                                {work.specification01Detail01}
+                              </p>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <p className={styles["work__specification-detail"]}>
+                                {work.specification01Detail02}
+                              </p>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <p className={styles["work__specification-detail"]}>
+                                {work.specification01Detail03}
+                              </p>
+                              <div className={styles["work__detail-list-marker"]}></div>
+                              <p className={styles["work__specification-detail"]}>
+                                {work.specification01Detail04}
+                              </p>
+                            </div>
+                          )}
+                          {work.specification02 && (
+                            <>
+                              <div className={styles["work__specification"]}>
+                                <ReactMarkdown
+                                  className={styles["work__specification-title"]}
+                                  components={{
+                                    p: ({children}) => <h3>{children}</h3>
+                                  }}
+                                >
+                                  {work.specification02}
+                                </ReactMarkdown>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification02Detail01}
+                                </p>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification02Detail02}
+                                </p>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification02Detail03}
+                                </p>
+                              </div>
+                            </>
+                          )}
+                          {work.specification03 && (
+                            <>
+                              <div className={styles["work__specification"]}>
+                                <ReactMarkdown
+                                  className={styles["work__specification-title"]}
+                                  components={{
+                                    p: ({children}) => <h3>{children}</h3>
+                                  }}
+                                >
+                                  {work.specification03}
+                                </ReactMarkdown>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification03Detail01}
+                                </p>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification03Detail02}
+                                </p>
+                              </div>
+                            </>
+                          )}
+                          {work.specification04 && (
+                            <>
+                              <div className={styles["work__specification"]}>
+                                <ReactMarkdown
+                                  className={styles["work__specification-title"]}
+                                  components={{
+                                    p: ({children}) => <h3>{children}</h3>
+                                  }}
+                                >
+                                  {work.specification04}
+                                </ReactMarkdown>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification04Detail01}
+                                </p>
+                              </div>
+                            </>
+                          )}
+                          {work.specification05 && (
+                            <>
+                              <div className={styles["work__specification"]}>
+                                <ReactMarkdown
+                                  className={styles["work__specification-title"]}
+                                  components={{
+                                    p: ({children}) => <h3>{children}</h3>
+                                  }}
+                                >
+                                  {work.specification05}
+                                </ReactMarkdown>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification05Detail01}
+                                </p>
+                              </div>
+                            </>
+                          )}
+                          {work.specification06 && (
+                            <>
+                              <div className={styles["work__specification"]}>
+                                <ReactMarkdown
+                                  className={styles["work__specification-title"]}
+                                  components={{
+                                    p: ({children}) => <h3>{children}</h3>
+                                  }}
+                                >
+                                  {work.specification06}
+                                </ReactMarkdown>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification06Detail01}
+                                </p>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification06Detail02}
+                                </p>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification06Detail03}
+                                </p>
+                                <div className={styles["work__detail-list-marker"]}></div>
+                                <p className={styles["work__specification-detail"]}>
+                                  {work.specification06Detail04}
+                                </p>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      )}
+                    </div>
                     {work.basicAuthentication && (
-                      <ReactMarkdown className={styles["work__basic-authentication"]}>
+                      <ReactMarkdown
+                        className={styles["work__basic-authentication"]}
+                      >
                         {work.basicAuthentication}
                       </ReactMarkdown>
                     )}
