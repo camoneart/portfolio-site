@@ -2,14 +2,14 @@
   display: block grid;
   grid-template-rows: subgrid;
   grid-row: span 4;
-  background: var(--card-bg-color);
+  background: var(--cmp-bg-primary-color);
   backdrop-filter: blur(10px);
   border-radius: 1.5rem;
   color: var(--color-primary-white);
   transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1),
     background 0.15s linear, box-shadow 0.15s linear;
-  border: 1px solid var(--card-border-color);
-  box-shadow: var(--card-default-shadow);
+  border: 1px solid var(--cmp-border-primary-color);
+  box-shadow: var(--cmp-primary-shadow);
   position: relative;
   transform-style: preserve-3d;
   cursor: pointer;
@@ -98,54 +98,47 @@
 
 @media screen and (1280px <= width) {
   .card-no-1 {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
-    scale(1);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
   }
 
   .card-no-1:hover,
   .card-no-1:active,
   .card-no-1:focus,
   .card-no-1:focus-visible {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
-    scale(1.07);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
   }
 
   .card-no-2 {
-    transform: translateZ(0) rotateX(0deg) rotateY(0deg) scale(1);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
   }
 
   .card-no-2:hover,
   .card-no-2:active,
   .card-no-2:focus,
   .card-no-2:focus-visible {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
-    scale(1.07);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
   }
 
   .card-no-3 {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
-    scale(1);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
   }
 
   .card-no-3:hover,
   .card-no-3:active,
   .card-no-3:focus,
   .card-no-3:focus-visible {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
-    scale(1.07);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
   }
 
   .card-no-4 {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
-    scale(1);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
   }
 
   .card-no-4:hover,
   .card-no-4:active,
   .card-no-4:focus,
   .card-no-4:focus-visible {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
-    scale(1.07);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
   }
 }
 
@@ -179,10 +172,8 @@
   object-position: top;
   filter: grayscale(100%) opacity(45%);
   transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
 
-@media (width < 1280px) {
-  .card-img {
+  @media (width < 1280px) {
     filter: grayscale(0%) opacity(100%);
   }
 }
@@ -198,6 +189,10 @@
   transition: opacity 0.3s ease-in-out;
   text-wrap: pretty;
   word-break: auto-phrase;
+
+  @media (width < 1280px) {
+    opacity: 1;
+  }
 }
 
 .card-description {
@@ -209,30 +204,38 @@
   transition: opacity 0.3s ease-in-out;
   text-wrap: pretty;
   word-break: auto-phrase;
+
+  @media (width < 1280px) {
+    opacity: 1;
+  }
 }
 
 .card-footer {
   padding-block-start: 1.5rem;
   border-block-start: 1px solid rgb(255 255 255 / 0.1);
-  display: flex;
+  display: block flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .card-label {
-  display: flex;
+  display: block flex;
   justify-content: flex-end;
   align-items: flex-end;
   gap: 0.3rem;
 }
 
 .card-label-no {
+  opacity: 0.5;
   font-size: 0.625rem;
   font-weight: bold;
-  opacity: 0.5;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: opacity 0.3s ease-in-out;
+
+  @media (width < 1280px) {
+    opacity: 1;
+  }
 }
 
 .card-label-value {
