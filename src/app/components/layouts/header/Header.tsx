@@ -5,7 +5,6 @@ import styles from "./Header.module.css";
 import AudioPlayer from "../../AudioPlayer/AudioPlayer";
 import Hamburger from "../../elements/Hamburger/Hamburger";
 import Gnav from "../Gnav/Gnav";
-// import { Link } from 'next-view-transitions'
 import Link from "next/link";
 import { motion } from "motion/react"
 
