@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Howl } from 'howler';
 import { Volume2, VolumeX } from 'lucide-react';
 import styles from './AudioPlayer.module.css';
+import { motion } from "motion/react";
 
 interface AudioPlayerProps {
   src: string;
@@ -74,9 +75,15 @@ const AudioPlayer = ({
   };
 
   return (
-    <button 
+    <motion.button 
+      initial={{ opacity: 0, y: 70 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { type: "spring", stiffness: 100, damping: 12, delay: 2.5, duration: 1, ease: "easeInOut" },
+      }}
       onClick={handleClick}
-      className={`sticky inset-0 ${styles["audio-button"]} ${className}`}
+      className={`md:sticky md:inset-0 ${styles["audio-button"]} ${className}`}
       aria-label={isPlaying ? (isMuted ? "Unmute" : "Mute") : "Play"}
     >
       {isMuted || !isPlaying ? (
@@ -88,7 +95,7 @@ const AudioPlayer = ({
           className={styles['audio-play']}
         />
       )}
-    </button>
+    </motion.button>
   );
 };
 
