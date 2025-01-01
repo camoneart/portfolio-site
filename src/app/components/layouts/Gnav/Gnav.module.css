@@ -1,19 +1,100 @@
+.gnav {
+  @media (width <= 768px) {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    padding-block: 9px;
+    padding-inline: 9px;
+    backdrop-filter: blur(12px);
+    z-index: 30;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+  }
+
+  /* open用スタイル */
+  &.gnav--open {
+    @media (width <= 768px) {
+      transform: translate(-100%, 0);
+      opacity: 1;
+      visibility: visible;
+      transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+    }
+  }
+}
+
 .gnav__list {
   display: block flex;
   align-items: center;
   column-gap: 20px;
+
+  @media (width <= 768px) {
+    width: 0;
+    height: calc(100dvh - 18px);
+    display: block grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: 2fr;
+    grid-template-rows: repeat(4, 100px);
+    box-shadow: var(--cmp-primary-shadow);
+    border: 1px solid var(--cmp-border-primary-color);
+    padding-inline: 20px;
+    border-radius: 10px;
+    transition: width 0.7s ease-in-out, background 0.7s ease-in-out;
+  }
+
+  /* open用スタイル */
+  &.gnav__list--open {
+    @media (width <= 768px) {
+      width: 100%;
+      background: rgb(0 0 0 / 0.7);
+      transition: width 0.7s ease-in-out, background 0.7s ease-in-out;
+    }
+  }
 }
 
+
+
 .gnav__item {
-  background-color: var(--card-bg-color);
-  box-shadow: var(--card-default-shadow);
-  border: 0.5px solid var(--card-border-color);
-  border-radius: 3px;
-  padding-block: 5px;
-  padding-inline: 8px;
-  letter-spacing: 0.02em;
   z-index: 9999;
+
+  @media (768px <= width) {
+    background-color: var(--cmp-bg-primary-color);
+    box-shadow: var(--cmp-primary-shadow);
+    border: 0.5px solid var(--cmp-border-primary-color);
+    border-radius: 3px;
+    padding-block: 5px;
+    padding-inline: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  @media (width <= 768px) {
+    max-width: 230px;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--cmp-bg-primary-color);
+    border: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, border 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+  }
+
+  /* open用スタイル */
+  &.gnav__item--open {
+    @media (width <= 768px) {
+      width: 100%;
+      opacity: 1;
+      visibility: visible;
+      border: 1px solid var(--cmp-border-primary-color);
+      box-shadow: var(--cmp-primary-shadow);
+      transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, border 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+    }
+  }
 }
+
+
 
 .gnav__link {
   position: relative;
@@ -36,7 +117,7 @@
         transform: scaleX(1);
       }
     }
-  
+
     &:before {
       content: "";
       position: absolute;
@@ -48,67 +129,29 @@
       background-color: currentColor;
       transform-origin: right;
       transform: scaleX(0);
-      transition: 0.6s transform cubic-bezier(.66,0,.15,1);
+      transition: 0.6s transform cubic-bezier(0.66, 0, 0.15, 1);
     }
   }
-}
 
-@media (width <= 768px) {
-  .gnav {
+  @media (width <= 768px) {
+    max-width: 230px;
+    width: 100%;
     opacity: 0;
     visibility: hidden;
-    position: fixed;
-    inset: 0;
-    padding-block: 9px;
-    padding-inline: 9px;
-    backdrop-filter: blur(12px);
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  }
-
-  /* open用スタイル */
-  .gnav--open {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  }
-
-  .gnav__list {
-    width: 100%;
-    max-height: 0;
-    height: calc(100dvh - 18px);
-    display: block grid;
-    place-items: center;
-    place-content: center;
-    grid-template-columns: 2fr;
-    grid-template-rows: repeat(4, 100px);
-    box-shadow: var(--card-default-shadow);
-    border: 1px solid var(--card-border-color);
-    padding-inline: 20px;
-    border-radius: 10px;
-    transition: max-height 0.5s ease-in-out, background 0.5s ease-in-out;
-  }
-
-  /* open用スタイル */
-  .gnav__list--open {
-    max-height: calc(100dvh - 18px);
-    background: rgb(0 0 0 / 0.7);
-    transition: max-height 0.5s ease-in-out, background 0.5s ease-in-out;
-  }
-
-  .gnav__item {
-    background-color: var(--card-bg-color);
-    border: 1px solid var(--card-border-color);
-    border-radius: 3px;
-    user-select: none;
-    box-shadow: var(--card-default-shadow);
-  }
-
-  .gnav__link {
-    width: 230px;
     height: 60px;
     display: block grid;
     place-items: center;
     font-size: 1.125rem;
     border-radius: 3px;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+
+  /* open用スタイル */
+  &.gnav__link--open {
+    @media (width <= 768px) {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    }
   }
 }
