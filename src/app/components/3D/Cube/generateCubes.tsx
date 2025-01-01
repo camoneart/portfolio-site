@@ -37,9 +37,9 @@ const generateCubes = () => {
   // 散らばったキューブを生成する
   for (let i = 0; i < scatterCount; i++) {
     const randomPosition = new THREE.Vector3(
-      (Math.random() - 0.5) * gridSize * spacing * 10,  // x軸方向の散らばり範囲（横方向）
+      (Math.random() - 0.5) * gridSize * spacing * 12,  // x軸方向の散らばり範囲（横方向）
       (Math.random() - 0.5) * gridSize * spacing * 10,  // y軸方向の散らばり範囲（高さ方向）
-      (Math.random() - 0.5) * gridSize * spacing * 10  // z軸方向の散らばり範囲（奥行き方向）
+      (Math.random() - 0.5) * gridSize * spacing * 12  // z軸方向の散らばり範囲（奥行き方向）
     )
     cubes.push(createCube(randomPosition, true))
   }
