@@ -56,16 +56,14 @@
 
 .gnav__item {
   z-index: 9999;
-
-  @media (768px <= width) {
-    background-color: var(--cmp-bg-primary-color);
-    box-shadow: var(--cmp-primary-shadow);
-    border: 0.5px solid var(--cmp-border-primary-color);
-    border-radius: 3px;
-    padding-block: 5px;
-    padding-inline: 8px;
-    letter-spacing: 0.02em;
-  }
+  background-color: var(--cmp-bg-primary-color);
+  box-shadow: var(--cmp-primary-shadow);
+  border: 0.5px solid var(--cmp-border-primary-color);
+  border-radius: 3px;
+  padding-block: 5px;
+  padding-inline: 8px;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(5px);
 
   @media (width <= 768px) {
     max-width: 230px;
