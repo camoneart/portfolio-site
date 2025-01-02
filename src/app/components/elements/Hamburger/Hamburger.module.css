@@ -44,13 +44,16 @@
 
   .hamburger__line-top {
     top: 0;
+    transform: none;
   }
   .hamburger__line-middle {
     top: 50%;
     transform: translateY(-50%);
+    opacity: 1;
   }
   .hamburger__line-bottom {
     bottom: 0;
+    transform: none;
   }
 
   /*----------------------------------------
@@ -71,16 +74,15 @@
   /*----------------------------------------
     閉じた時のスタイル
   ----------------------------------------*/
-  .hamburger[data-mounted="true"] .hamburger__line-top.hamburger__line--close {
+  .hamburger[data-mounted="true"][data-was-open="true"] .hamburger__line-top.hamburger__line--close {
     animation: 0.3s ease 0s 1 normal forwards running menu-close-top;
   }
 
-  .hamburger[data-mounted="true"] .hamburger__line-middle.hamburger__line--close {
+  .hamburger[data-mounted="true"][data-was-open="true"] .hamburger__line-middle.hamburger__line--close {
     animation: 0.3s ease 0s 1 normal forwards running menu-close-middle;
-    opacity: 1;
   }
 
-  .hamburger[data-mounted="true"] .hamburger__line-bottom.hamburger__line--close {
+  .hamburger[data-mounted="true"][data-was-open="true"] .hamburger__line-bottom.hamburger__line--close {
     animation: 0.3s ease 0s 1 normal forwards running menu-close-bottom;
   }
 
