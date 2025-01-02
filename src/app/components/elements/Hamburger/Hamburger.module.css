@@ -80,6 +80,7 @@
 
   .hamburger[data-mounted="true"][data-was-open="true"] .hamburger__line-middle.hamburger__line--close {
     animation: 0.3s ease 0s 1 normal forwards running menu-close-middle;
+    opacity: 1;
   }
 
   .hamburger[data-mounted="true"][data-was-open="true"] .hamburger__line-bottom.hamburger__line--close {
