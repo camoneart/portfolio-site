@@ -5,3 +5,16 @@
   background-image: var(--text-gradient-primary);
   padding-inline: 4px;
 }
+
+.footer__text {
+  display: block grid;
+  place-items: center;
+  background-color: var(--cmp-bg-primary-color);
+  box-shadow: var(--cmp-primary-shadow);
+  border: 0.5px solid var(--cmp-border-primary-color);
+  border-radius: 5px;
+  padding-block: 5px 4px;
+  padding-inline: 5px;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(5px);
+}
