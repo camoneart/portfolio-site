@@ -5,6 +5,7 @@ import { Howl } from 'howler';
 import { Volume2, VolumeX } from 'lucide-react';
 import styles from './AudioPlayer.module.css';
 import { motion } from "motion/react";
+import useAudioPlayerResponsiveAnimation from '@/app/features/AudioPlayer/hooks/useAudioPlayerResponsiveAnimation';
 
 interface AudioPlayerProps {
   src: string;
@@ -24,6 +25,7 @@ const AudioPlayer = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [sound, setSound] = useState<Howl | null>(null);
+  const { animationProps } = useAudioPlayerResponsiveAnimation();
 
   useEffect(() => {
     // コンポーネントマウント時に音声を読み込む
@@ -75,13 +77,8 @@ const AudioPlayer = ({
   };
 
   return (
-    <motion.button 
-      initial={{ opacity: 0, y: 70 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        transition: { type: "spring", stiffness: 100, damping: 12, delay: 2.5, duration: 1, ease: "easeInOut" },
-      }}
+    <motion.button
+      {...animationProps}
       onClick={handleClick}
       className={`md:sticky md:inset-0 ${styles["audio-button"]} ${className}`}
       aria-label={isPlaying ? (isMuted ? "Unmute" : "Mute") : "Play"}
