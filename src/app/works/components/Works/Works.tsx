@@ -173,7 +173,7 @@ const Works = () => {
   return (
     <>
       <Breadcrumb title={worksTitle} />
-      <section className={styles["works-section"]}>
+      <section className={styles["works"]}>
         <TitleAnimation title={worksTitle} subTitle={worksSubTitle} />
         <WorkCardGrid />
       </section>

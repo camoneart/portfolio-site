@@ -351,7 +351,7 @@ const Skills = () => {
   return (
     <>
       <Breadcrumb title={skillsTitle} />
-      <section className={styles["skills-section"]}>
+      <section className={styles["skills"]}>
         <TitleAnimation title={skillsTitle} subTitle={skillsSubTitle} />
         <SkillsCardList />
       </section>
