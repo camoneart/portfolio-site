@@ -252,7 +252,7 @@
   display: block grid;
   row-gap: 5px;
   margin-block-start: 20px;
-  border-block-start: 3.5px solid rgb(255 255 255 / 0.2);
+  border-block-start: 2.5px solid rgb(255 255 255 / 0.2);
 
   @media (width <= 640px) {
     row-gap: 5px;
