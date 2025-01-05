@@ -1,3 +1,38 @@
+.skills-card {
+  position: relative;
+  display: block grid;
+  background: var(--cmp-bg-primary-color);
+  border: 1px solid var(--cmp-border-primary-color);
+  border-radius: 10px;
+  user-select: none;
+  box-shadow: var(--cmp-primary-shadow);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    scale 0.3s ease-in-out, opacity 0.18s ease-in-out;
+
+  &.scroll-driven-animation {
+    /* scroll driven animation */
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+  }
+}
+
+/* scroll driven animation */
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.25;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .skills-card-link {
   display: block grid;
   padding-block: 2rem;
@@ -9,17 +44,6 @@
     padding-block: 1.5rem;
     padding-inline: 1.5rem;
   }
-}
-
-.skills-card {
-  position: relative;
-  display: block grid;
-  background: var(--card-bg-color);
-  border: 1px solid var(--card-border-color);
-  border-radius: 10px;
-  user-select: none;
-  box-shadow: var(--card-default-shadow);
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
 
 .skills-card-content {
@@ -35,6 +59,19 @@
 
   @media (1280px <= width) {
     scale: 1.08;
+  }
+}
+
+/* scaleアニメーション */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.10);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -122,7 +159,7 @@
 .skills-label {
   position: relative;
   width: fit-content;
-  display: inline-block;
+  display: inline flow-root;
   font-size: 0.562rem;
   font-weight: var(--font-weight-normal);
   letter-spacing: 0.5px;
