@@ -8,8 +8,6 @@
   max-width: 900px;
   width: 100%;
   margin-inline: auto;
-  padding-block: var(--padding);
-  padding-inline: var(--padding);
   border: 1px solid var(--cmp-border-primary-color);
   border-radius: calc(var(--nested-radius) + var(--padding));
   background-color: var(--cmp-bg-primary-color);
@@ -19,13 +17,6 @@
     --padding: 8px;
     --nested-radius: 10px;
   }
-}
-
-.about-bg {
-  width: 100%;
-  border: 1px solid var(--cmp-border-primary-color);
-  border-radius: var(--nested-radius);
-  box-shadow: var(--cmp-primary-shadow);
 }
 
 .about-wrapper {
