@@ -31,20 +31,20 @@ const About = () => {
                 <div className={styles["about-profile-icon"]}>
                   <User size={25} color="#ff6b4a" />
                 </div>
-                <h2 className={`font-russo ${styles["about-title-lv2"]}`}>Profile</h2>
+                <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Profile</h2>
               </div>
               <div className={`${styles["about-content"]} ${styles["about-profile-content"]}`}>
                 <div className={styles["about-content-group"]}>
-                  <h3 className={`${styles["about-title-lv3"]} ${styles["about-title-lv3-en"]}`}>
+                  <h3 className={`${styles["about-title-lv3"]} ${styles["scroll-driven-animation"]} ${styles["about-title-lv3-en"]}`}>
                     <span className={styles["light-effect"]}>Birthday</span>
                   </h3>
-                  <p className={styles["about-description"]}>1999 / 07 / 10</p>
+                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>1999 / 07 / 10</p>
                 </div>
                 <div className={styles["about-content-group"]}>
-                  <h3 className={`${styles["about-title-lv3"]} ${styles["about-title-lv3-en"]}`}>
+                  <h3 className={`${styles["about-title-lv3"]} ${styles["scroll-driven-animation"]} ${styles["about-title-lv3-en"]}`}>
                     <span className={styles["light-effect"]}>Name</span>
                   </h3>
-                  <p className={`${styles["about-description"]}`}>青山 魁修｜Aoyama Kaishu</p>
+                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>青山 魁修｜Aoyama Kaishu</p>
                 </div>
               </div>
             </div>
@@ -55,33 +55,33 @@ const About = () => {
                 <div className={styles["about-hobby-icon"]}>
                   <Flame size={21} color="#ff6b4a" />
                 </div>
-                <h2 className={`font-russo ${styles["about-title-lv2"]}`}>Hobby</h2>
+                <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Hobby</h2>
               </div>
               <div className={`${styles["about-content"]} ${styles["about-hobby-content"]}`}>
                 <dl className={styles["about-hobby-list"]}>
                   <div className={styles["about-content-group"]}>
-                    <dt className={styles["about-hobby-list-title"]}>
+                    <dt className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
                       <span className={styles["light-effect"]}>技術情報のインプット、アウトプット</span>
                     </dt>
-                    <dd className={styles["about-description"]}>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
                       技術力の向上を目的として、日々、情報収集と学習を行っています。特に、興味を持った技術は実際にコードを書いて検証し、実践的な理解を深めることを心がけています。
                     </dd>
                   </div>
 
                   <div className={styles["about-content-group"]}>
-                    <dt className={styles["about-hobby-list-title"]}>
+                    <dt className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
                       <span className={styles["light-effect"]}>ギャラリーサイトの閲覧</span>
                     </dt>
-                    <dd className={styles["about-description"]}>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
                       デザイン、UI/UX、インタラクションの知見を深めるため、国内外のギャラリーサイトを日常的に閲覧しています。また、<em>「心地よく、心躍るようなインタラクションを実装できるエンジニアに成長したい」</em>という想いを実現するため、日々、学習に取り組んでいます。
                     </dd>
                   </div>
 
                   <div className={styles["about-content-group"]}>
-                    <dt className={styles["about-hobby-list-title"]}>
+                    <dt className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
                       <span className={styles["light-effect"]}>読書</span>
                     </dt>
-                    <dd className={styles["about-description"]}>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
                       技術書やビジネス書、ジャンルに囚われず気になった書籍を読むのが好きです。
                       表紙を見て直感で気になった書籍があれば、まず目次に目を通し、気になるトピックがあればとりあえず購入することが多いです。
                       新たな知恵を得たり、自分とは違った考え方や価値観を学ぶことができるため、書籍と向き合う時間を大切にしています。
@@ -98,23 +98,23 @@ const About = () => {
                 <div className={styles["about-vision-icon"]}>
                   <Sparkle size={20} color="#ff6b4a" />
                 </div>
-                <h2 className={`font-russo ${styles["about-title-lv2"]}`}>Vision</h2>
+                <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Vision</h2>
               </div>
               <div className={`${styles["about-content"]} ${styles["about-vision-content"]}`}>
                 <div className={styles["about-content-group"]}>
-                  <h3 className={styles["about-title-lv3"]}>
+                  <h3 className={`${styles["about-title-lv3"]} ${styles["scroll-driven-animation"]}`}>
                     <span className={styles["light-effect"]}>思い出に残るようなエクスペリエンスを提供したい</span>
                   </h3>
-                  <p className={styles["about-description"]}>
+                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
                     <em>「ユーザーの関心を引きつけ、ユーザーの思い出に残る」</em>そんなエクスペリエンスを提供できるようになりたいです。
                     また、エンジニアとして<em>ユーザーに寄り添い、ユーザーの想いを形にする</em>ことを大切にし、ユーザーにとって価値ある体験を創造していきたいと考えています。
                   </p>
                 </div>
                 <div className={styles["about-content-group"]}>
-                  <h3 className={`${styles["about-title-lv3"]}`}>
+                  <h3 className={`${styles["about-title-lv3"]} ${styles["scroll-driven-animation"]}`}>
                     <span className={styles["light-effect"]}>モノとの対話</span>
                   </h3>
-                  <p className={styles["about-description"]}>
+                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
                     <em>こちらの動作に対してプロダクトが反応を返してくれる。</em>そんな「モノとの対話」を表現できるエンジニアを目指しています。
                   </p>
                 </div>
