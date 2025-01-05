@@ -26,13 +26,13 @@ const About = () => {
                 <div className={`${styles["about-content"]} ${styles["about-profile-content"]}`}>
                   <div className={styles["about-content-group"]}>
                     <h3 className={`${styles["about-title-lv3"]} ${styles["about-title-lv3-en"]}`}>
-                      <span className={styles["underline"]}>Birthday</span>
+                      <span className={styles["light-effect"]}>Birthday</span>
                     </h3>
                     <p className={styles["about-description"]}>1999 / 07 / 10</p>
                   </div>
                   <div className={styles["about-content-group"]}>
                     <h3 className={`${styles["about-title-lv3"]} ${styles["about-title-lv3-en"]}`}>
-                      <span className={styles["underline"]}>Name</span>
+                      <span className={styles["light-effect"]}>Name</span>
                     </h3>
                     <p className={`${styles["about-description"]}`}>青山 魁修｜Aoyama Kaishu</p>
                   </div>
@@ -51,7 +51,7 @@ const About = () => {
                   <dl className={styles["about-hobby-list"]}>
                     <div className={styles["about-content-group"]}>
                       <dt className={styles["about-hobby-list-title"]}>
-                        <span className={styles["underline"]}>技術情報のインプット、アウトプット</span>
+                        <span className={styles["light-effect"]}>技術情報のインプット、アウトプット</span>
                       </dt>
                       <dd className={styles["about-description"]}>
                         技術力の向上を目的として、日々、情報収集と学習を行っています。特に、興味を持った技術は実際にコードを書いて検証し、実践的な理解を深めることを心がけています。
@@ -60,7 +60,7 @@ const About = () => {
 
                     <div className={styles["about-content-group"]}>
                       <dt className={styles["about-hobby-list-title"]}>
-                        <span className={styles["underline"]}>ギャラリーサイトの閲覧</span>
+                        <span className={styles["light-effect"]}>ギャラリーサイトの閲覧</span>
                       </dt>
                       <dd className={styles["about-description"]}>
                         デザイン、UI/UX、インタラクションの知見を深めるため、国内外のギャラリーサイトを日常的に閲覧しています。また、<em>「心地よく、心躍るようなインタラクションを実装できるエンジニアに成長したい」</em>という想いを実現するため、日々、学習に取り組んでいます。
@@ -69,7 +69,7 @@ const About = () => {
 
                     <div className={styles["about-content-group"]}>
                       <dt className={styles["about-hobby-list-title"]}>
-                        <span className={styles["underline"]}>読書</span>
+                        <span className={styles["light-effect"]}>読書</span>
                       </dt>
                       <dd className={styles["about-description"]}>
                         技術書やビジネス書、ジャンルに囚われず気になった書籍を読むのが好きです。
@@ -93,7 +93,7 @@ const About = () => {
                 <div className={`${styles["about-content"]} ${styles["about-vision-content"]}`}>
                   <div className={styles["about-content-group"]}>
                     <h3 className={styles["about-title-lv3"]}>
-                      <span className={styles["underline"]}>思い出に残るようなエクスペリエンスを提供したい</span>
+                      <span className={styles["light-effect"]}>思い出に残るようなエクスペリエンスを提供したい</span>
                     </h3>
                     <p className={styles["about-description"]}>
                       <em>「ユーザーの関心を引きつけ、ユーザーの思い出に残る」</em>そんなエクスペリエンスを提供できるようになりたいです。
@@ -102,7 +102,7 @@ const About = () => {
                   </div>
                   <div className={styles["about-content-group"]}>
                     <h3 className={`${styles["about-title-lv3"]}`}>
-                      <span className={styles["underline"]}>モノとの対話</span>
+                      <span className={styles["light-effect"]}>モノとの対話</span>
                     </h3>
                     <p className={styles["about-description"]}>
                       <em>こちらの動作に対してプロダクトが反応を返してくれる。</em>そんな「モノとの対話」を表現できるエンジニアを目指しています。

@@ -32,11 +32,11 @@
   display: block grid;
   grid-template-columns: 1fr;
   row-gap: 50px;
-  padding-block: 70px;
-  padding-inline: 70px;
+  padding-block: 60px;
+  padding-inline: 50px;
 
   @media (width <= 768px) {
-    padding-block: 50px;
+    padding-block: 30px;
     padding-inline: 20px;
   }
 }
@@ -117,7 +117,7 @@
 }
 
 .about-hobby-list-title {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-tight);
   letter-spacing: 0.025em;
@@ -139,20 +139,19 @@
 }
 
 .about-title-lv3 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-tight);
   letter-spacing: 0.025em;
 
   &.about-title-lv3-en {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
   }
 }
 
-.underline {
-  padding-inline: 4px;
-  /* background: linear-gradient(transparent 70%, #ff6b4a 70%); */
-  background: linear-gradient(transparent 70%, #ff3d00 70%);
+.light-effect {
+  text-shadow: 0 0 10px var(--color-secondary-orange);
 }
 
 .about-description {
