@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./TitleAnimation.module.css";
-import { motion } from "framer-motion";
+import { motion } from "motion/react"
 
 const TitleAnimation = ({ title, subTitle }: { title: string, subTitle: string }) => {
   return (
