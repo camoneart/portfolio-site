@@ -5,29 +5,53 @@ import { motion, AnimatePresence, Variants } from "motion/react";
 import styles from "./StairsTransition.module.css";
 
 // アニメーションの遷移プロパティの型定義
-interface TransitionProps {
+type CustomTransition = {
   duration: number;
   delay: number;
   times?: number[];
   ease?: number[];
-}
+};
 
-// バリアントの型定義
-interface AnimationVariants extends Variants {
-  initial: { [key: string]: any };
-  enter: ((custom: any) => { [key: string]: any });
-  exit: ((custom: any) => { [key: string]: any });
-  [key: string]: any;  // インデックスシグネチャを追加
-}
-
-// anim 関数の戻り値の型を定義
 interface AnimProps {
   initial: string;
   animate: string;
   exit: string;
-  variants: AnimationVariants;
+  variants: Variants;
   custom: number;
 }
+
+// バリアントの型定義
+type ExpandVariants = {
+  initial: {
+    top: number;
+    height: string;
+    bottom: string;
+  };
+  enter: (i: number) => {
+    top: (number | string)[];
+    height: string[];
+    bottom: string[];
+    transition: CustomTransition;
+  };
+  exit: (i: number) => {
+    height: string;
+    transition: CustomTransition;
+  };
+};
+
+type OverlayVariants = {
+  initial: {
+    opacity: number;
+  };
+  enter: (i: number) => {
+    opacity: number;
+    transition: CustomTransition;
+  };
+  exit: (i: number) => {
+    opacity: number;
+    transition: CustomTransition;
+  };
+};
 
 const StairsTransition = ({ children }: { children: React.ReactNode }) => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -44,7 +68,7 @@ const StairsTransition = ({ children }: { children: React.ReactNode }) => {
     };
   }, [isAnimating]);
 
-  const anim = (variants: AnimationVariants, custom: number): AnimProps  => {
+  const anim = (variants: Variants, custom: number): AnimProps => {
     return {
       initial: "initial",
       animate: "enter",
@@ -55,7 +79,7 @@ const StairsTransition = ({ children }: { children: React.ReactNode }) => {
   };
 
   // カラム（transition-column）のアニメーション
-  const expand: AnimationVariants = {
+  const expand: ExpandVariants = {
     initial: {
       top: 0,
       height: "0%",
@@ -83,7 +107,7 @@ const StairsTransition = ({ children }: { children: React.ReactNode }) => {
   };
 
   // 背景（transition-bg）のアニメーション
-  const overlay: AnimationVariants = {
+  const overlay: OverlayVariants = {
     initial: {
       opacity: 1
     },
