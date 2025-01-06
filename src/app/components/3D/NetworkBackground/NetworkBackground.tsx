@@ -27,7 +27,7 @@ function Points() {
   // アクティブなポイントのインデックスを保持する参照を作成
   const activePointsRef = useRef<Set<number>>(new Set());
   
-  const { geometry, points, positions, originalPositions } = React.useMemo(
+  const { geometry, points, positions } = React.useMemo(
     () => createPointsSystem(GRID_CONFIG),
     []
   );
