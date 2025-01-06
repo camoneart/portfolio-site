@@ -5,7 +5,7 @@ import styles from "./Footer.module.css";
 import { motion } from "motion/react";
 import useFooterResponsiveAnimation from "@/app/features/footer/hooks/useFooterResponsiveAnimation";
 
-const Footer = () => {
+export default function Footer() {
   const { animationProps } = useFooterResponsiveAnimation();
 
   return (
@@ -26,5 +26,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

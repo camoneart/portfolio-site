@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import Header from "./components/layouts/Header/Header";
 import Header from '@/app/components/layouts/Header/Header'
-// import Footer from "./components/layouts/Footer/Footer";
 import Footer from '@/app/components/layouts/Footer/Footer'
 import NetworkBackground from "./components/3D/NetworkBackground/NetworkBackground";
 import { Russo_One } from "next/font/google";

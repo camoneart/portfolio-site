@@ -9,7 +9,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import useHeaderTitleResponsiveAnimation from "@/app/features/header/components/hooks/useHeaderTitleResponsiveAnimation/useHeaderTitleResponsiveAnimation";
 
-const Header = () => {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isCompactLayout, setIsCompactLayout] = useState(false);
   const { animationProps } = useHeaderTitleResponsiveAnimation();
@@ -66,5 +66,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;
