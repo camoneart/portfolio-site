@@ -25,7 +25,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
           animate={{
             opacity: 1,
             y: 0,
-            transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.7, duration: 1, ease: "easeInOut" },
+            transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.8, duration: 1, ease: "easeInOut" },
           }}
           className={`md:sticky md:inset-0 ${styles["gnav__item"]} ${
             isOpen ? styles["gnav__item--open"] : ""
@@ -46,7 +46,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
           animate={{
             opacity: 1,
             y: 0,
-            transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.9, duration: 1, ease: "easeInOut" },
+            transition: { type: "spring", stiffness: 100, damping: 12, delay: 2, duration: 1, ease: "easeInOut" },
           }}
           className={`md:sticky md:inset-0 ${styles["gnav__item"]} ${
             isOpen ? styles["gnav__item--open"] : ""
@@ -67,7 +67,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
           animate={{
             opacity: 1,
             y: 0,
-            transition: { type: "spring", stiffness: 100, damping: 12, delay: 2.1, duration: 1, ease: "easeInOut" },
+            transition: { type: "spring", stiffness: 100, damping: 12, delay: 2.2, duration: 1, ease: "easeInOut" },
           }}
           className={`md:sticky md:inset-0 ${styles["gnav__item"]} ${
             isOpen ? styles["gnav__item--open"] : ""
@@ -88,7 +88,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
           animate={{
             opacity: 1,
             y: 0,
-            transition: { type: "spring", stiffness: 100, damping: 12, delay: 2.3, duration: 1, ease: "easeInOut" },
+            transition: { type: "spring", stiffness: 100, damping: 12, delay: 2.4, duration: 1, ease: "easeInOut" },
           }}
           className={`md:sticky md:inset-0 ${styles["gnav__item"]} ${
             isOpen ? styles["gnav__item--open"] : ""

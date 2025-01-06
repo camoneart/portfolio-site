@@ -6,11 +6,13 @@ import AudioPlayer from "../../AudioPlayer/AudioPlayer";
 import Hamburger from "../../elements/Hamburger/Hamburger";
 import Gnav from "../Gnav/Gnav";
 import Link from "next/link";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+import useHeaderTitleResponsiveAnimation from "@/app/features/header/components/hooks/useHeaderTitleResponsiveAnimation/useHeaderTitleResponsiveAnimation";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isCompactLayout, setIsCompactLayout] = useState(false);
+  const { animationProps } = useHeaderTitleResponsiveAnimation();
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -40,21 +42,16 @@ const Header = () => {
   };
 
   return (
-    <motion.header
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 1.3, duration: 0.7, ease: "easeInOut" },
-      }}
-      className={`w-full h-auto mx-auto select-none md:py-8 py-[1.75rem] md:px-8 px-[1.75rem] ${`${styles["header"]}`}`}
-    >
+    <header className={`w-full h-auto mx-auto select-none md:py-8 py-[1.75rem] md:px-8 px-[1.75rem] ${`${styles["header"]}`}`}>
       <div className={`flex items-center justify-between ${styles["header__container"]}`}>
-        <div className={`sticky inset-0 font-russo text-xl md:text-3xl font-black ${styles["header__title"]}`}>
+        <motion.div
+        {...animationProps}
+        className={`sticky inset-0 font-russo text-xl md:text-3xl font-black ${styles["header__title"]}`}>
           <Link href="/" className={`${styles["header__title-link"]}`} onClick={() => isOpen && toggleMenu()} >
             <span className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}>Aoyama</span>
             <span className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}>Aoyama</span>
           </Link>
-        </div>
+        </motion.div>
         <div className={styles["header__items"]}>
           <Gnav isOpen={isOpen && isCompactLayout} toggleMenu={toggleMenu} />
           <AudioPlayer
@@ -66,7 +63,7 @@ const Header = () => {
         </div>
         <Hamburger isOpen={isOpen && isCompactLayout} toggleMenu={toggleMenu} />
       </div>
-    </motion.header>
+    </header>
   );
 };
 

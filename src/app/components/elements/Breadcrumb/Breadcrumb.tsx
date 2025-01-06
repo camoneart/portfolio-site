@@ -32,7 +32,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
         opacity: 1,
         y: 0,
         translateX: "-50%",
-        transition: { type: "spring", stiffness: 100, damping: 12, delay: 0.7, duration: 1, ease: "easeInOut" },
+        transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.6, duration: 1, ease: "easeInOut" },
       }}
       aria-label="パンくずリスト"
       className={`font-russo ${styles["breadcrumb"]}`}

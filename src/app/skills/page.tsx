@@ -1,7 +1,7 @@
 import React from "react";
 import Skills from "./components/Skills/Skills";
-import { Metadata } from 'next';
-import Stairs from "../components/Animation/StairsTransition/Stairs";
+import { Metadata } from "next";
+import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";
 
 export const metadata: Metadata = {
   title: "Skills",
@@ -12,9 +12,9 @@ const SkillsPage = () => {
   return (
     <>
       <div className="common-container">
-        <Stairs mode="wait">
+        <StairsTransition>
           <Skills />
-        </Stairs>
+        </StairsTransition>
       </div>
     </>
   );

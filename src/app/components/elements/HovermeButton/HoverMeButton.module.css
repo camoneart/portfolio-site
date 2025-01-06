@@ -6,7 +6,7 @@
 }
 
 .btn-link {
-  border: 1px solid var(--back-btn-border-orange);
+  border: 1px solid var(--btn-border-orange);
   transition: box-shadow 0.2s ease-in-out;
 
   &:hover {

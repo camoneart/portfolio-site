@@ -1,7 +1,22 @@
+.hero {
+  display: block grid;
+  width: 100%;
+  height: 100%;
+}
+
 .text-gradient {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: var(--text-gradient-primary);
   padding-inline: 4px;
+}
+
+.hero__title {
+  font-size: 6rem;
+  line-height: var(--leading-x-tight);
+
+  @media (width <= 768px) {
+    font-size: 3rem;
+  }
 }

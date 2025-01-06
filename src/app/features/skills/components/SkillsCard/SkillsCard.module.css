@@ -6,14 +6,22 @@
   border-radius: 10px;
   user-select: none;
   box-shadow: var(--cmp-primary-shadow);
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
-    scale 0.3s ease-in-out, opacity 0.18s ease-in-out;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.18s ease-in-out, scale 0.3s linear;
 
+  /* scroll driven animation */
   &.scroll-driven-animation {
-    /* scroll driven animation */
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% entry 100%;
+  }
+
+  &:hover {
+    background: rgb(255 255 255 / 0.2);
+    box-shadow: var(--card-hover-shadow);
+    
+    @media (1280px <= width) {
+      scale: 1.08;
+    }
   }
 }
 
@@ -27,6 +35,9 @@
   }
   60% {
     opacity: 0.5;
+  }
+  80% {
+    opacity: 0.75;
   }
   100% {
     opacity: 1;
@@ -51,28 +62,6 @@
   grid-template-columns: auto 1fr;
   place-items: center start;
   gap: 1.5rem;
-}
-
-.skills-card:hover {
-  background: rgb(255 255 255 / 0.2);
-  box-shadow: var(--card-hover-shadow);
-
-  @media (1280px <= width) {
-    scale: 1.08;
-  }
-}
-
-/* scaleアニメーション */
-@keyframes pulsate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.10);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 .skills-card:hover::before,

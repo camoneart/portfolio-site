@@ -7,7 +7,6 @@ import { Russo_One } from "next/font/google";
 import { ViewTransitions } from 'next-view-transitions'
 import { ControlViewport } from "./components/layouts/ControlViewport/ControlViewport";
 import MouseStalker from "./components/MouseStalker/MouseStalker";
-import { AnimatePresence } from "motion/react"
 
 const russoOne = Russo_One({
   weight: "400",
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
     default: "Aoyama｜Creative Web Engineer",
     template: "%s｜Aoyama",
   },
-  description: "Kaishu Aoyamaのポートフォリオサイトです。Web制作を通して「モノとの対話」を表現できるエンジニアを目指しています。",
+  description: "Kaishu Aoyamaのポートフォリオサイトです。「モノとの対話」を表現できるエンジニアを目指しています。",
   robots: "noindex, nofollow",
 };
 
@@ -37,11 +36,9 @@ export default function RootLayout({
           <MouseStalker />
           <ControlViewport />
           <NetworkBackground />
-          {/* <AnimatePresence mode="wait"> */}
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          {/* </AnimatePresence> */}
+          <Header />
+          <main>{children}</main>
+          <Footer />
         </body>
       </html>
     </ViewTransitions>

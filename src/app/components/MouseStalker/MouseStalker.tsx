@@ -83,7 +83,7 @@ const MouseStalker = () => {
         width: '9px',
         height: '9px',
         borderRadius: '50%',
-        backgroundColor: '#ff3d00',
+        backgroundColor: '#ff6b4a',
         pointerEvents: 'none',
         zIndex: 9999,
         transform: springProps.transform,

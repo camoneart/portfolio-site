@@ -1,21 +1,23 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Contact from '@/app/contact/components/Contact/Contact';
-import Stairs from "../components/Animation/StairsTransition/Stairs";
+import React from "react";
+import { Metadata } from "next";
+import Contact from "@/app/contact/components/Contact/Contact";
+import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "このページは、お問い合わせページになります。",
 };
 
-export default function ContactPage() {
+const ContactPage = () => {
   return (
     <>
       <div className="common-container">
-        <Stairs mode="wait">
+        <StairsTransition>
           <Contact />
-        </Stairs>
+        </StairsTransition>
       </div>
     </>
   );
-}
+};
+
+export default ContactPage;

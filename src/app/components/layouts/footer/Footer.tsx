@@ -2,24 +2,29 @@
 
 import React from "react";
 import styles from "./Footer.module.css";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+import useFooterResponsiveAnimation from "@/app/features/footer/hooks/useFooterResponsiveAnimation";
 
 const Footer = () => {
+  const { animationProps } = useFooterResponsiveAnimation();
+
   return (
     <footer className={`font-russo select-none ${styles["footer"]}`}>
-      <div className={`p-5 grid place-items-center ${styles["footer__container"]}`}>
-        <p className={`z-20 ${styles["footer__text"]}`}>
+      <div
+        className={`p-5 grid place-items-center ${styles["footer__container"]}`}
+      >
+        <motion.p
+          {...animationProps}
+          className={`z-20 ${styles["footer__text"]}`}>
           <small className={`text-xs font-bold ${styles["footer__copyright"]}`}>
-            <motion.span initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 0.2, duration: 1.5, ease: "easeIn" },
-      }}className={`${styles["text-gradient"]}`}>&copy; 2024 Aoyama</motion.span>
+            <span className={`${styles["text-gradient"]}`}>
+              &copy; 2024 Aoyama
+            </span>
           </small>
-        </p>
+        </motion.p>
       </div>
     </footer>
-  )
+  );
 };
 
 export default Footer;

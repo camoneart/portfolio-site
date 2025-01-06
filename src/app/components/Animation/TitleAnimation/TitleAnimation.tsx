@@ -1,23 +1,24 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import styles from "./TitleAnimation.module.css";
+import { motion } from "framer-motion";
 
 const TitleAnimation = ({ title, subTitle }: { title: string, subTitle: string }) => {
   return (
     <motion.hgroup
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{
         opacity: 1,
-        transition: { delay: 0.2, duration: 1.5, ease: "easeIn" },
+        y: 0,
+        transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.4, duration: 1, ease: "easeInOut" },
       }}
-      className="flex flex-col items-center justify-center gap-3 mt-2 mb-10 sm:mb-12 select-none"
+      className={`flex flex-col items-center justify-center gap-2 select-none ${styles["title-group"]}`}
     >
-      <h1 className={`font-russo order-2 font-black tracking-wider ${styles["title"]} ${styles["motion-title"]}`}>
+      <h1 className={`font-russo order-2 font-black ${styles["title"]} ${styles["motion-title"]}`}>
         {title}
       </h1>
-      <p className={`order-1 font-black tracking-wider ${styles["sub-title"]}`}>{subTitle}</p>
+      <p className={`order-1 font-black ${styles["sub-title"]}`}>{subTitle}</p>
     </motion.hgroup>
   );
 };

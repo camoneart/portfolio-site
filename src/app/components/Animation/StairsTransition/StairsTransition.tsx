@@ -19,30 +19,25 @@ const StairsTransition = ({ children }: { children: React.ReactNode }) => {
     };
   }, [isAnimating]);
 
-  const anim = (
-    variants: {
-      initial: { top: number };
-      enter: (i: number) => {
-        top: string;
-        transition: {
-          duration: number;
-          delay: number;
-        };
-        transitionEnd?: {
-          top: number;
-          height: number;
-        };
+  const anim = (variants: {
+    initial: { [key: string]: any };
+    enter: (i: number) => {
+      [key: string]: any;
+      transition: {
+        duration: number;
+        delay: number;
+        times?: number[];
+        ease?: number[];
       };
-      exit: (i: number) => {
-        height: string;
-        transition: {
-          duration: number;
-          delay: number;
-        };
+    };
+    exit: (i: number) => {
+      [key: string]: any;
+      transition: {
+        duration: number;
+        delay: number;
       };
-    },
-    custom: number
-  ) => {
+    };
+  }, custom: number) => {
     return {
       initial: "initial",
       animate: "enter",

@@ -150,6 +150,7 @@ canvas {
 /* work */
 .view-transition-title-work-1 {
   view-transition-name: view-transition-title-work-1;
+  width: fit-content;
 }
 
 .view-transition-title-work-2 {
@@ -166,18 +167,22 @@ canvas {
 
 .view-transition-img-work-1 {
   view-transition-name: view-transition-img-work-1;
+  aspect-ratio: 16 / 9;
 }
 
 .view-transition-img-work-2 {
   view-transition-name: view-transition-img-work-2;
+  aspect-ratio: 16 / 9;
 }
 
 .view-transition-img-work-3 {
   view-transition-name: view-transition-img-work-3;
+  aspect-ratio: 16 / 9;
 }
 
 .view-transition-img-work-4 {
   view-transition-name: view-transition-img-work-4;
+  aspect-ratio: 16 / 9;
 }
 
 /* skill */

@@ -34,14 +34,14 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
       const mediaQuery1280 = window.matchMedia('(min-width: 1280px)');
       const mediaQuery1536 = window.matchMedia('(min-width: 1536px)');
 
-      // デフォルトの設定（モバイル用 - 1280px未満）
+      // デフォルトの設定（モバイル用｜1280px未満）
       let settings: AnimationSettings = {
         initial: {
           opacity: 0,
           rotateY: 0,
           rotateX: 0,
           scale: 0.8,
-          y: 30,
+          y: 100,
           x: 0,
           // perspective: 0,
           duration: 0.8
@@ -83,29 +83,20 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
           settings = {
             initial: {
               opacity: 0,
-              // rotateY: 25 - 360,
               rotateY: -360,
-              // rotateX: -5,
               rotateX: 0,
-              // scale: 0.7,
               scale: 0.6,
-              y: 50,
-              // x: 20,
+              y: 100,
               x: 0,
-              // perspective: 3000,
               duration: 0.8
             },
             animate: {
               opacity: 1,
-              // rotateY: 25,
               rotateY: 0,
-              // rotateX: -5,
               rotateX: 0,
-              // scale: 0.85,
               scale: 0.75,
               y: 0,
               x: 0,
-              // perspective: 3000,
               duration: 0.8,
               clearProps: 'transform,perspective'
             }
@@ -117,9 +108,8 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               rotateY: -360,
               rotateX: 0,
               scale: 0.6,
-              y: 50,
+              y: 100,
               x: 0,
-              // perspective: 3000,
               duration: 0.8
             },
             animate: {
@@ -129,7 +119,6 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               scale: 0.75,
               y: 0,
               x: 0,
-              // perspective: 3000,
               duration: 0.8,
               clearProps: 'transform,perspective'
             }
@@ -138,29 +127,20 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
           settings = {
             initial: {
               opacity: 0,
-              // rotateY: -25 - 360,
               rotateY: -360,
-              // rotateX: -5,
               rotateX: 0,
-              // scale: 0.7,
               scale: 0.6,
-              y: 50,
-              // x: -20,
+              y: 100,
               x: 0,
-              // perspective: 3000,
               duration: 0.8
             },
             animate: {
               opacity: 1,
-              // rotateY: -25,
               rotateY: 0,
-              // rotateX: -5,
               rotateX: 0,
-              // scale: 0.85,
               scale: 0.75,
               y: 0,
               x: 0,
-              // perspective: 3000,
               duration: 0.8,
               clearProps: 'transform,perspective'
             }
@@ -174,7 +154,6 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               scale: 0.6,
               y: 50,
               x: 0,
-              // perspective: 3000,
               duration: 0.8
             },
             animate: {
@@ -184,7 +163,6 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               scale: 0.75,
               y: 0,
               x: 0,
-              // perspective: 3000,
               duration: 0.8,
               clearProps: 'transform,perspective'
             }
@@ -195,12 +173,10 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
       // 1536px以上のディスプレイ用の設定
       if (mediaQuery1536.matches) {
         if (id === 1) {
-          // settings.animate.scale = 0.95;
           settings.animate.scale = 0.85;
         } else if (id === 2) {
           settings.animate.scale = 0.85;
         } else if (id === 3) {
-          // settings.animate.scale = 0.95;
           settings.animate.scale = 0.85;
         } else if (id === 4) {
           settings.animate.scale = 0.85;
@@ -225,7 +201,7 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
         gsap.set(card, settings.initial);
 
         // タイトルのアニメーション後に開始するための基本遅延
-        const baseDelay = 1;
+        const baseDelay = 1.8;
 
         // アニメーションを実行
         gsap.to(card, {

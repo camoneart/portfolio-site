@@ -1,9 +1,9 @@
 .contact-form-container {
   max-width: 950px;
   width: 100%;
-  background-color: var(--form-bg-color);
-  box-shadow: var(--form-shadow);
-  border: 1px solid var(--form-border-color);
+  background-color: var(--cmp-bg-secondary-color);
+  box-shadow: var(--cmp-secondary-shadow);
+  border: 1px solid var(--cmp-border-secondary-color);
   border-radius: 20px;
   padding-block: 70px 40px;
   padding-inline: 20px;

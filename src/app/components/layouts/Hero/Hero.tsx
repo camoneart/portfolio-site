@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <section className={`font-russo h-full grid  ${styles["hero"]}`}>
+    <section className={`font-russo ${styles["hero"]}`}>
       <div className={`pt-6 pb-12 flex flex-col items-center justify-end ${styles["hero__container"]}`}>
         <motion.hgroup
           initial={{ y: 200 }}

@@ -35,14 +35,15 @@ const SkillsCard = ({
   viewTransitionLogoBg,
 }: CardProps) => {
 
-  const { cardRef } = useSkillsCardAnimation({ index });
+  const { cardRef, isAnimationComplete } = useSkillsCardAnimation({ index });
 
   return (
     <>
       <article
         ref={cardRef}
         id="card"
-        className={`${styles["skills-card"]} ${viewTransitionBg}`}
+        //ここでstateがtrueのとき、scroll-driven-animationを付与
+        className={`${styles["skills-card"]} ${viewTransitionBg} ${isAnimationComplete ? styles["scroll-driven-animation"] : ""}`}
       >
         <Link
           href={`/skills/${skillLink}`}
@@ -50,12 +51,8 @@ const SkillsCard = ({
           className={`${styles["skills-card-link"]}`}
         >
           <div className={styles["skills-card-content"]}>
-            <div
-              className={`${styles["skills-logo-wrapper"]} ${viewTransitionLogoWrapper}`}
-            >
-              <div
-                className={`${styles["skills-logo-bg"]} ${viewTransitionLogoBg}`}
-              >
+            <div className={`${styles["skills-logo-wrapper"]} ${viewTransitionLogoWrapper}`}>
+              <div className={`${styles["skills-logo-bg"]} ${viewTransitionLogoBg}`} >
                 <Image
                   src={skillLogo}
                   alt={skillTitle}
@@ -69,9 +66,7 @@ const SkillsCard = ({
               <h2 className={`font-russo ${styles["skills-title"]} ${viewTransitionName}`}>
                 {skillTitle}
               </h2>
-              <div
-                className={`font-russo ${styles["skills-label"]} ${viewTransitionLabel}`}
-              >
+              <div className={`font-russo ${styles["skills-label"]} ${viewTransitionLabel}`}>
                 {label}
               </div>
             </div>
