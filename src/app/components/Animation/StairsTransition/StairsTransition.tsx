@@ -1,8 +1,33 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, Variants } from "motion/react";
 import styles from "./StairsTransition.module.css";
+
+// アニメーションの遷移プロパティの型定義
+interface TransitionProps {
+  duration: number;
+  delay: number;
+  times?: number[];
+  ease?: number[];
+}
+
+// バリアントの型定義
+interface AnimationVariants extends Variants {
+  initial: { [key: string]: any };
+  enter: ((custom: any) => { [key: string]: any });
+  exit: ((custom: any) => { [key: string]: any });
+  [key: string]: any;  // インデックスシグネチャを追加
+}
+
+// anim 関数の戻り値の型を定義
+interface AnimProps {
+  initial: string;
+  animate: string;
+  exit: string;
+  variants: AnimationVariants;
+  custom: number;
+}
 
 const StairsTransition = ({ children }: { children: React.ReactNode }) => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -19,25 +44,7 @@ const StairsTransition = ({ children }: { children: React.ReactNode }) => {
     };
   }, [isAnimating]);
 
-  const anim = (variants: {
-    initial: { [key: string]: any };
-    enter: (i: number) => {
-      [key: string]: any;
-      transition: {
-        duration: number;
-        delay: number;
-        times?: number[];
-        ease?: number[];
-      };
-    };
-    exit: (i: number) => {
-      [key: string]: any;
-      transition: {
-        duration: number;
-        delay: number;
-      };
-    };
-  }, custom: number) => {
+  const anim = (variants: AnimationVariants, custom: number): AnimProps  => {
     return {
       initial: "initial",
       animate: "enter",
@@ -48,7 +55,7 @@ const StairsTransition = ({ children }: { children: React.ReactNode }) => {
   };
 
   // カラム（transition-column）のアニメーション
-  const expand = {
+  const expand: AnimationVariants = {
     initial: {
       top: 0,
       height: "0%",
@@ -76,7 +83,7 @@ const StairsTransition = ({ children }: { children: React.ReactNode }) => {
   };
 
   // 背景（transition-bg）のアニメーション
-  const overlay = {
+  const overlay: AnimationVariants = {
     initial: {
       opacity: 1
     },
