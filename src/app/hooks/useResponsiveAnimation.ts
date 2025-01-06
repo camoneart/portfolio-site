@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 type AnimationConfig = {
   mobileDelay?: number;
@@ -11,7 +11,8 @@ const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: Anima
   const MOBILE_BREAKPOINT = 768;
   const DEFAULT_WIDTH = MOBILE_BREAKPOINT + 1;
 
-  const getAnimationProps = (width: number) => {
+  // メモ化
+  const getAnimationProps = useCallback((width: number) => {
     const isMobile = width <= MOBILE_BREAKPOINT;
     return {
       initial: { opacity: 0, y: isMobile ? 40 : 70 },
@@ -28,7 +29,7 @@ const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: Anima
         },
       },
     };
-  };
+  }, [mobileDelay, desktopDelay]);
 
   const [animationProps, setAnimationProps] = useState(() => {
     return getAnimationProps(typeof window !== 'undefined' ? window.innerWidth : DEFAULT_WIDTH);
@@ -42,7 +43,7 @@ const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: Anima
     updateAnimation();
     window.addEventListener("resize", updateAnimation);
     return () => window.removeEventListener("resize", updateAnimation);
-  }, [mobileDelay, desktopDelay]);
+  }, [getAnimationProps]);
 
   return { animationProps };
 };
