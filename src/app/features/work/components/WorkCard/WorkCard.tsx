@@ -27,7 +27,7 @@ const WorkCard = ({ id, image, workTitle, description, labels, viewTransitionNam
     <article 
       ref={cardRef}
       id="card"
-      className={`${styles["card"]} ${styles[`card-no-${id}`]}`}
+      className={`${styles["card"]} ${styles[`card-no-${id}`]} ${styles["scroll-driven-animation"]}`}
     >
       <Link href={`/works/${id}`} rel="noopener noreferrer" className={styles["card-content-link"]}>
         <figure className={styles["card-figure"]}>
