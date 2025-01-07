@@ -67,7 +67,7 @@ const ContactForm = () => {
           y: 0,
           transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.8, duration: 1, ease: "easeInOut" },
         }}
-        className={styles["contact-form-container"]}
+        className={`${styles["contact-form-container"]} ${styles["scroll-driven-animation"]}`}
       >
         <Form {...form}>
           <Toaster position="top-center" reverseOrder={false} />
