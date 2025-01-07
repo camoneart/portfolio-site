@@ -58,6 +58,14 @@ const About = () => {
                 <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Hobby</h2>
               </div>
               <div className={`${styles["about-content"]} ${styles["about-hobby-content"]}`}>
+                <div className={styles["about-content-group"]}>
+                  <em className={`${styles["about-introduction"]} ${styles["scroll-driven-animation"]} ${styles["underline"]}`}>
+                    学ぶことが好きです。
+                  </em>
+                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                    興味を持ったもの、気になったことについて学ぶことが好きです。
+                  </p>
+                </div>
                 <dl className={styles["about-hobby-list"]}>
                   <div className={styles["about-content-group"]}>
                     <dt className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
@@ -74,6 +82,15 @@ const About = () => {
                     </dt>
                     <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
                       デザイン、UI/UX、インタラクションの知見を深めるため、国内外のギャラリーサイトを日常的に閲覧しています。また、<em>「心地よく、心躍るようなインタラクションを実装できるエンジニアに成長したい」</em>という想いを実現するため、日々、学習に取り組んでいます。
+                    </dd>
+                  </div>
+
+                  <div className={styles["about-content-group"]}>
+                    <dt className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
+                      <span className={styles["light-effect"]}>AIについての学習</span>
+                    </dt>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      AIについての学習を行っています。日常的にLLMを利用しています。
                     </dd>
                   </div>
 
