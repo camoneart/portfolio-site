@@ -31,12 +31,22 @@
 }
 
 .about-header {
+  position: relative;
   display: block grid;
   grid-template-columns: repeat(2, min-content);
   column-gap: 15px;
   align-items: center;
   padding-block-end: 12px;
-  border-bottom: 1px solid rgb(255 255 255 / 0.3);
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgb(255 255 255 / 0.3);
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .about-content {
