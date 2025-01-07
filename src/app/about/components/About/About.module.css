@@ -167,13 +167,12 @@
   word-break: auto-phrase;
 
   & em {
-    display: inline-block;
     font-style: normal;
     font-weight: var(--font-weight-bold);
     line-height: var(--leading-x-tight);
     width: fit-content;
-    padding-inline: 3px;
-    background: linear-gradient(transparent 60%, rgb(255 61 0 / 0.75) 60%);
+    padding-inline: 4px;
+    background: linear-gradient(transparent 70%, rgb(255 61 0 / 0.75) 70%);
   }
 }
 
