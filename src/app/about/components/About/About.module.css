@@ -38,9 +38,8 @@
   align-items: center;
   padding-block-end: 12px;
 
-  &::after {
+  .about-border {
     position: absolute;
-    content: "";
     width: 100%;
     height: 1px;
     background-color: rgb(255 255 255 / 0.3);
