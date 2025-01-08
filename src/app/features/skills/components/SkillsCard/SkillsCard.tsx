@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./SkillsCard.module.css";
 import { Link } from "next-view-transitions";
 import { useSkillsCardAnimation } from "@/app/features/skills/hooks/useSkillsCardAnimation";
+import { motion } from "motion/react";
 
 interface CardProps {
   id: number;
@@ -35,15 +36,27 @@ const SkillsCard = ({
   viewTransitionLogoBg,
 }: CardProps) => {
 
-  const { cardRef, isAnimationComplete } = useSkillsCardAnimation({ index });
+  const { cardRef } = useSkillsCardAnimation({ index });
 
   return (
     <>
-      <article
+      <motion.article
+        initial={{ opacity: 0, y: 70 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { 
+            type: "spring", 
+            stiffness: 100, 
+            damping: 12, 
+            delay: 1.8 + (0.1 * index),
+            duration: 1, 
+            ease: "easeInOut" 
+          },
+        }}
         ref={cardRef}
         id="card"
-        //ここでstateがtrueのとき、scroll-driven-animationを付与
-        className={`${styles["skills-card"]} ${viewTransitionBg} ${isAnimationComplete ? styles["scroll-driven-animation"] : ""}`}
+        className={`${styles["skills-card"]} ${viewTransitionBg} ${styles["scroll-driven-animation"]}`}
       >
         <Link
           href={`/skills/${skillLink}`}
@@ -72,7 +85,7 @@ const SkillsCard = ({
             </div>
           </div>
         </Link>
-      </article>
+      </motion.article>
     </>
   );
 };
