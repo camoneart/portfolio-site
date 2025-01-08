@@ -50,14 +50,6 @@
 
 .about-content {
   margin-block-start: 17px;
-
-  &.about-profile-content,
-  &.about-vision-content,
-  &.about-hobby-content {
-    display: block grid;
-    grid-template-columns: 1fr;
-    row-gap: 18px;
-  }
 }
 
 .about-content-group {
@@ -118,12 +110,6 @@
   background: linear-gradient(transparent 70%, rgb(255 61 0 / 0.75) 70%);
 }
 
-.about-hobby-list {
-  display: block grid;
-  grid-template-columns: 1fr;
-  row-gap: 18px;
-}
-
 .about-hobby-list-title {
   font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
@@ -146,13 +132,13 @@
   letter-spacing: 0.05em;
 }
 
-.about-title-lv3 {
+.about-list-title {
   font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-tight);
   letter-spacing: 0.025em;
 
-  &.about-title-lv3-en {
+  &.about-list-title-en {
     font-size: 1.375rem;
     letter-spacing: 0.05em;
   }
@@ -166,6 +152,12 @@
   width: fit-content;
   padding-inline: 4px;
   background: linear-gradient(transparent 70%, rgb(255 61 0 / 0.75) 70%);
+}
+
+.about-list {
+  display: block grid;
+  grid-template-columns: 1fr;
+  row-gap: 18px;
 }
 
 .about-description {
