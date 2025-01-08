@@ -32,6 +32,7 @@ const About = () => {
                   <User size={25} color="#ff6b4a" />
                 </div>
                 <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Profile</h2>
+                <div className={styles["about-border"]}></div>
               </div>
               <div className={`${styles["about-content"]} ${styles["about-profile-content"]}`}>
                 <div className={styles["about-content-group"]}>
@@ -56,6 +57,7 @@ const About = () => {
                   <Flame size={21} color="#ff6b4a" />
                 </div>
                 <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Hobby</h2>
+                <div className={styles["about-border"]}></div>
               </div>
               <div className={`${styles["about-content"]} ${styles["about-hobby-content"]}`}>
                 <div className={styles["about-content-group"]}>
@@ -116,6 +118,7 @@ const About = () => {
                   <Sparkle size={20} color="#ff6b4a" />
                 </div>
                 <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Vision</h2>
+                <div className={styles["about-border"]}></div>
               </div>
               <div className={`${styles["about-content"]} ${styles["about-vision-content"]}`}>
                 <div className={styles["about-content-group"]}>
