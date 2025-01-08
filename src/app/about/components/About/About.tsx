@@ -28,47 +28,89 @@ const About = () => {
           <div className={styles["about-wrapper"]}>
             <div className={`${styles["about-profile"]}`}>
               <div className={styles["about-header"]}>
-                <div className={styles["about-profile-icon"]}>
+                <motion.div 
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
+                  className={styles["about-profile-icon"]}>
                   <User size={25} color="#ff6b4a" />
-                </div>
-                <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Profile</h2>
-                <div className={styles["about-border"]}></div>
+                </motion.div>
+                <motion.h2
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2, duration: 0.7, ease: "easeInOut" }}
+                  className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Profile</motion.h2>
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ delay: 2, duration: 1.3, ease: "easeInOut" }}
+                  className={styles["about-border"]}
+                ></motion.div>
               </div>
-              <div className={`${styles["about-content"]} ${styles["about-profile-content"]}`}>
-                <div className={styles["about-content-group"]}>
-                  <h3 className={`${styles["about-title-lv3"]} ${styles["scroll-driven-animation"]} ${styles["about-title-lv3-en"]}`}>
-                    <span className={styles["light-effect"]}>Birthday</span>
-                  </h3>
-                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>1999 / 07 / 10</p>
-                </div>
-                <div className={styles["about-content-group"]}>
-                  <h3 className={`${styles["about-title-lv3"]} ${styles["scroll-driven-animation"]} ${styles["about-title-lv3-en"]}`}>
-                    <span className={styles["light-effect"]}>Name</span>
-                  </h3>
-                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>青山 魁修｜Aoyama Kaishu</p>
-                </div>
+              <div className={`${styles["about-content"]}`}>
+                <dl className={styles["about-list"]}>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.3, duration: 0.6, ease: "easeInOut" }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}>
+                      <span className={styles["light-effect"]}>Birthday</span>
+                    </motion.dt>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>1999 / 07 / 10</dd>
+                  </div>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.3, duration: 0.6, ease: "easeInOut" }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}>
+                      <span className={styles["light-effect"]}>Name</span>
+                    </motion.dt>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>青山 魁修｜Aoyama Kaishu</dd>
+                  </div>
+                </dl>
+                {/* /.about-list */}
               </div>
+              {/* /.about-content */}
             </div>
             {/* /.about-profile */}
 
             <div className={`${styles["about-hobby"]}`}>
               <div className={styles["about-header"]}>
-                <div className={styles["about-hobby-icon"]}>
+                <motion.div 
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
+                  className={styles["about-hobby-icon"]}>
                   <Flame size={21} color="#ff6b4a" />
-                </div>
-                <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Hobby</h2>
-                <div className={styles["about-border"]}></div>
+                </motion.div>
+                <motion.h2
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
+                  className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Hobby</motion.h2>
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ delay: 2.1, duration: 1.3, ease: "easeInOut" }}
+                  className={styles["about-border"]}
+                ></motion.div>
               </div>
-              <div className={`${styles["about-content"]} ${styles["about-hobby-content"]}`}>
-                <div className={styles["about-content-group"]}>
-                  <em className={`${styles["about-introduction"]} ${styles["scroll-driven-animation"]}`}>
-                    学ぶことが好きです。
-                  </em>
-                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                    興味を持ったもの、気になったことについて学び、自分の知識やスキルアップに繋げます。
-                  </p>
-                </div>
-                <dl className={styles["about-hobby-list"]}>
+              <div className={`${styles["about-content"]}`}>
+                <dl className={styles["about-list"]}>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.3, duration: 0.6, ease: "easeInOut" }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}>
+                      <span className={styles["light-effect"]}>学ぶことが好きです。</span>
+                    </motion.dt>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      興味を持ったもの、気になったことについて学び、自分の知識やスキルアップに繋げます。
+                    </dd>
+                  </div>
                   <div className={styles["about-content-group"]}>
                     <dt className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
                       <span className={styles["light-effect"]}>モダン技術のキャッチアップ</span>
@@ -108,49 +150,80 @@ const About = () => {
                     </dd>
                   </div>
                 </dl>
+                {/* /.about-list */}
               </div>
+              {/* /.about-content */}
             </div>
             {/* /.about-hobby */}
 
             <div className={`${styles["about-vision"]}`}>
               <div className={styles["about-header"]}>
-                <div className={styles["about-vision-icon"]}>
+                <motion.div 
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
+                  className={styles["about-vision-icon"]}>
                   <Sparkle size={20} color="#ff6b4a" />
-                </div>
-                <h2 className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Vision</h2>
-                <div className={styles["about-border"]}></div>
+                </motion.div>
+                <motion.h2
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
+                  className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Vision</motion.h2>
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ delay: 2.1, duration: 1.3, ease: "easeInOut" }}
+                  className={styles["about-border"]}
+                ></motion.div>
               </div>
-              <div className={`${styles["about-content"]} ${styles["about-vision-content"]}`}>
-                <div className={styles["about-content-group"]}>
-                  <h3 className={`${styles["about-title-lv3"]} ${styles["scroll-driven-animation"]}`}>
-                    <span className={styles["light-effect"]}>思い出に残るようなエクスペリエンスを提供したい</span>
-                  </h3>
-                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                    <em>｢ユーザーの関心を引きつけ、ユーザーの思い出に残る｣</em>そんなエクスペリエンスを提供できるようになりたいです。また、エンジニアとして<em>ユーザーに寄り添い、ユーザーの想いを形にする</em>ことを大切にし、ユーザーにとって価値ある体験を創造していきたいと考えています。
-                  </p>
-                </div>
+              <div className={`${styles["about-content"]}`}>
+                <dl className={styles["about-list"]}>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.3, duration: 0.6, ease: "easeInOut" }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}>
+                      <span className={styles["light-effect"]}>思い出に残るようなエクスペリエンスを提供したい</span>
+                    </motion.dt>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      <em>｢ユーザーの関心を引きつけ、ユーザーの思い出に残る｣</em>そんなエクスペリエンスを提供できるようになりたいです。また、エンジニアとして<em>ユーザーに寄り添い、ユーザーの想いを形にする</em>ことを大切にし、ユーザーにとって価値ある体験を創造していきたいと考えています。
+                    </dd>
+                  </div>
 
-                <div className={styles["about-content-group"]}>
-                  <h3 className={`${styles["about-title-lv3"]} ${styles["scroll-driven-animation"]}`}>
-                    <span className={styles["light-effect"]}>モノとの対話</span>
-                  </h3>
-                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                    <em>こちらの動作に対してプロダクトが反応を返してくれる。</em>そんな｢モノとの対話｣を表現できるエンジニアを目指しています。
-                  </p>
-                </div>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.3, duration: 0.6, ease: "easeInOut" }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}>
+                      <span className={styles["light-effect"]}>モノとの対話</span>
+                    </motion.dt>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      <em>こちらの動作に対してプロダクトが反応を返してくれる。</em>そんな｢モノとの対話｣を表現できるエンジニアを目指しています。
+                    </dd>
+                  </div>
 
-                <div className={styles["about-content-group"]}>
-                  <h3 className={`${styles["about-title-lv3"]} ${styles["scroll-driven-animation"]}`}>
-                    <span className={styles["light-effect"]}>常にチャレンジし続ける</span>
-                  </h3>
-                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                    <em>｢変化を恐れず、現状に満足するな｣</em>をモットーとしています。
-                  </p>
-                  <p className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                    地に足をつけ、学びを大切とし、チャレンジし続けることで、<em>｢見たことも無い、想像もできなかった場所へ行ける｣</em>と私は信じています。
-                  </p>
-                </div>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.3, duration: 0.6, ease: "easeInOut" }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}>
+                      <span className={styles["light-effect"]}>常にチャレンジし続ける</span>
+                    </motion.dt>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      <em>｢変化を恐れず、現状に満足するな｣</em>をモットーとしています。
+                    </dd>
+                    <dd className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      地に足をつけ、学びを大切とし、チャレンジし続けることで、<em>｢見たことも無い、想像もできなかった場所へ行ける｣</em>と私は信じています。
+                    </dd>
+                  </div>
+                </dl>
+                {/* /.about-list */}
               </div>
+              {/* /.about-content */}
             </div>
             {/* /.about-vision */}
           </div>
