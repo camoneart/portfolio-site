@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import { useWorkCardMouseEffect } from '../../hooks/useWorkCardMouseEffect';
 import { useWorkCardAnimation } from '../../hooks/useWorkCardAnimation';
+import type { Route } from 'next';
 
 interface CardDataProps {
   id: number;
@@ -29,7 +30,11 @@ const WorkCard = ({ id, image, workTitle, description, labels, viewTransitionNam
       id="card"
       className={`${styles["card"]} ${styles[`card-no-${id}`]} ${styles["scroll-driven-animation"]}`}
     >
-      <Link href={`/works/${id}`} rel="noopener noreferrer" className={styles["card-content-link"]}>
+      <Link 
+        href={`/works/${id}` as Route} 
+        rel="noopener noreferrer" 
+        className={styles["card-content-link"]}
+      >
         <figure className={styles["card-figure"]}>
           <Image
             src={image}
