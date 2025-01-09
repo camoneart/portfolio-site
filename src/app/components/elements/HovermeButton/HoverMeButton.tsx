@@ -1,10 +1,16 @@
 "use client";
 
+import { LinkProps } from 'next/link';
 import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import styles from "./HoverMeButton.module.css";
 
-const HoverMeButton = () => {
+interface HoverMeButtonProps {
+  href: LinkProps<string>['href'];
+  children: React.ReactNode;
+}
+
+const HoverMeButton: React.FC<HoverMeButtonProps> = ({ href }) => {
   const pathname = usePathname();
 
   const getHrefAndText = () => {
@@ -25,12 +31,12 @@ const HoverMeButton = () => {
     };
   };
 
-  const { href, text } = getHrefAndText();
+  const { href: defaultHref, text } = getHrefAndText();
 
   return (
     <div className={styles["btn-bg"]}>
       <Link
-        href={href}
+        href={href || defaultHref}
         className={`group relative inline-flex h-[calc(48px+8px)] items-center justify-center rounded-full bg-transparent py-1 pl-14 pr-7 text-sm sm:text-base font-bold text-white ${styles["btn-link"]}`}
       >
         <div className={`absolute left-1 inline-flex h-12 w-12 items-center justify-start rounded-full transition-[width] duration-300 linear group-hover:w-[calc(100%-8px)] ${styles["arrow-bg"]}`}>
