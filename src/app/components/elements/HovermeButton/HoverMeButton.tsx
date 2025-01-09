@@ -4,10 +4,11 @@ import { LinkProps } from 'next/link';
 import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import styles from "./HoverMeButton.module.css";
+import type { Route } from 'next';
 
 interface HoverMeButtonProps {
-  href: LinkProps<string>['href'];
-  children: React.ReactNode;
+  href?: LinkProps<string>['href'];
+  children?: React.ReactNode;
 }
 
 const HoverMeButton: React.FC<HoverMeButtonProps> = ({ href }) => {
@@ -16,17 +17,17 @@ const HoverMeButton: React.FC<HoverMeButtonProps> = ({ href }) => {
   const getHrefAndText = () => {
     if (pathname?.includes("/works/")) {
       return {
-        href: "/works",
+        href: "/works" as Route,
         text: "実績一覧に戻る",
       };
     } else if (pathname?.includes("/skills/")) {
       return {
-        href: "/skills",
+        href: "/skills" as Route,
         text: "スキル一覧に戻る",
       };
     }
     return {
-      href: "/works",
+      href: "/works" as Route,
       text: "実績一覧に戻る",
     };
   };
@@ -36,7 +37,7 @@ const HoverMeButton: React.FC<HoverMeButtonProps> = ({ href }) => {
   return (
     <div className={styles["btn-bg"]}>
       <Link
-        href={href || defaultHref}
+        href={(href || defaultHref) as Route}
         className={`group relative inline-flex h-[calc(48px+8px)] items-center justify-center rounded-full bg-transparent py-1 pl-14 pr-7 text-sm sm:text-base font-bold text-white ${styles["btn-link"]}`}
       >
         <div className={`absolute left-1 inline-flex h-12 w-12 items-center justify-start rounded-full transition-[width] duration-300 linear group-hover:w-[calc(100%-8px)] ${styles["arrow-bg"]}`}>
