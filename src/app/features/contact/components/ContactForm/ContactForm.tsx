@@ -65,7 +65,14 @@ const ContactForm = () => {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.8, duration: 1, ease: "easeInOut" },
+          transition: {
+            type: "spring",
+            stiffness: 100,
+            damping: 12,
+            delay: 1.8,
+            duration: 1,
+            ease: "easeInOut",
+          },
         }}
         className={`${styles["contact-form-container"]} ${styles["scroll-driven-animation"]}`}
       >
@@ -191,7 +198,7 @@ const ContactForm = () => {
             <FormField
               control={form.control}
               name="file"
-              render={({ field: { value, onChange, ...field } }) => (
+              render={({ field: { onChange, ...field } }) => (
                 <FormItem>
                   <FormLabel className="font-bold">Picture</FormLabel>
                   <FormControl>
@@ -206,6 +213,7 @@ const ContactForm = () => {
                             onChange={(event) => {
                               onChange(event.target.files);
                             }}
+                            value={undefined}
                             className="cursor-pointer px-2 py-2"
                           />
                         </TooltipTrigger>
