@@ -6,6 +6,7 @@ import styles from "./WorkDetail.module.css";
 import { worksData } from "../components/Works/Works";
 import { generateWorkMetadata } from "./metadata";
 import HoverMeButton from "@/app/components/elements/HovermeButton/HoverMeButton";
+import type { Route } from 'next';
 
 export async function generateStaticParams() {
   return worksData.map((workData) => ({
@@ -355,7 +356,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                     )}
                   </div>
                   <div className={styles["work__return-link-container"]}>
-                    <HoverMeButton />
+                    <HoverMeButton href={"/works" as Route} />
                   </div>
                 </div>
                 {/* /.work__content */}
@@ -375,7 +376,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                       className={styles["work__sidebar-item"]}
                     >
                       <Link
-                        href={`/works/${otherWork.id}`}
+                        href={`/works/${otherWork.id}` as Route}
                         className={styles["work__sidebar-link"]}
                         prefetch
                       >
