@@ -298,6 +298,22 @@ export const skillsData: SkillsData[] = [
   },
   {
     id: 18,
+    skillTitle: "Supabase",
+    skillLink: "supabase",
+    description:
+      "Next.jsの学習で「マイクロブログ」を実装した際、SupabaseをDBとして利用しました。具体的には、ブログ記事保存用のテーブル作成や、記事の取得・削除・投稿用のAPIを実装し、実際に呼び出しを行いました。",
+    skillLogo: "/images/skills/supabase-logo.svg",
+    label: "BaaS",
+    link: "https://supabase.com/",
+    viewTransitionName: "view-transition-title-supabase",
+    viewTransitionImage: "view-transition-img-supabase",
+    viewTransitionBg: "view-transition-bg-supabase",
+    viewTransitionLabel: "view-transition-label-supabase",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-supabase",
+    viewTransitionLogoBg: "view-transition-logo-bg-supabase",
+  },
+  {
+    id: 19,
     skillTitle: "webpack",
     skillLink: "webpack",
     description:
@@ -313,7 +329,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-webpack",
   },
   {
-    id: 19,
+    id: 20,
     skillTitle: "Git",
     skillLink: "git",
     description:
@@ -329,7 +345,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-git",
   },
   {
-    id: 20,
+    id: 21,
     skillTitle: "Adobe Premiere Pro",
     skillLink: "adobe-premiere-pro",
     description:

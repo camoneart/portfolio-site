@@ -255,6 +255,10 @@ canvas {
   view-transition-name: view-transition-logo-wrapper-zod;
 }
 
+.view-transition-logo-wrapper-supabase {
+  view-transition-name: view-transition-logo-wrapper-supabase;
+}
+
 .view-transition-logo-wrapper-webpack {
   view-transition-name: view-transition-logo-wrapper-webpack;
 }
@@ -334,6 +338,10 @@ canvas {
 
 .view-transition-logo-bg-zod {
   view-transition-name: view-transition-logo-bg-zod;
+}
+
+.view-transition-logo-bg-supabase {
+  view-transition-name: view-transition-logo-bg-supabase;
 }
 
 .view-transition-logo-bg-webpack {
@@ -431,6 +439,11 @@ canvas {
 
 .view-transition-img-zod {
   view-transition-name: view-transition-img-zod;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-supabase {
+  view-transition-name: view-transition-img-supabase;
   aspect-ratio: 1 / 1;
 }
 
@@ -535,6 +548,11 @@ canvas {
   width: fit-content;
 }
 
+.view-transition-title-supabase {
+  view-transition-name: view-transition-title-supabase;
+  width: fit-content;
+}
+
 .view-transition-title-webpack {
   view-transition-name: view-transition-title-webpack;
   width: fit-content;
@@ -619,6 +637,10 @@ canvas {
   view-transition-name: view-transition-bg-zod;
 }
 
+.view-transition-bg-supabase {
+  view-transition-name: view-transition-bg-supabase;
+}
+
 .view-transition-bg-webpack {
   view-transition-name: view-transition-bg-webpack;
 }
@@ -698,6 +720,10 @@ canvas {
 
 .view-transition-label-zod {
   view-transition-name: view-transition-label-zod;
+}
+
+.view-transition-label-supabase {
+  view-transition-name: view-transition-label-supabase;
 }
 
 .view-transition-label-webpack {
