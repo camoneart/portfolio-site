@@ -5,6 +5,7 @@ import styles from "./SkillsCard.module.css";
 import { Link } from "next-view-transitions";
 import { useSkillsCardAnimation } from "@/app/features/skills/hooks/useSkillsCardAnimation";
 import { motion } from "motion/react";
+import type { Route } from 'next';
 
 interface CardProps {
   id: number;
@@ -59,7 +60,7 @@ const SkillsCard = ({
         className={`${styles["skills-card"]} ${viewTransitionBg} ${styles["scroll-driven-animation"]}`}
       >
         <Link
-          href={`/skills/${skillLink}`}
+          href={`/skills/${skillLink}` as Route}
           rel="noopener noreferrer"
           className={`${styles["skills-card-link"]}`}
         >
