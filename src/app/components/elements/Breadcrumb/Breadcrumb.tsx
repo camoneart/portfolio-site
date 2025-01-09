@@ -4,11 +4,12 @@ import React from "react";
 import Link from "next/link";
 import styles from "./Breadcrumb.module.css";
 import { motion } from "motion/react";
+import { LinkProps } from 'next/link';
 
 interface BreadcrumbProps {
   title: string;
   maxLength?: number;
-  parentPath?: string;
+  parentPath?: LinkProps<string>['href'];
   parentLabel?: string;
 }
 
@@ -32,7 +33,14 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
         opacity: 1,
         y: 0,
         translateX: "-50%",
-        transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.6, duration: 1, ease: "easeInOut" },
+        transition: {
+          type: "spring",
+          stiffness: 100,
+          damping: 12,
+          delay: 1.6,
+          duration: 1,
+          ease: "easeInOut",
+        },
       }}
       aria-label="パンくずリスト"
       className={`font-russo ${styles["breadcrumb"]}`}
