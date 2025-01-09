@@ -45,7 +45,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "CSS",
     skillLink: "css",
     description:
-      "良いCSSとされる「予測できる」「再利用性」「保守性」「拡張性」を意識し、デザインカンプを忠実に再現するコーディングを心がけています。重複して使用する値がある場合はCSS変数を利用して1か所で定義することで、再利用性を高めています。ピュアなCSSでコーディングする際、クラス名は主にBEM記法を採用してコーディングを行っています。",
+      "良いCSSとされる「予測できる」「再利用性」「保守性」「拡張性」を意識し、デザインカンプを忠実に再現するコーディングを心がけています。重複して使用する値がある場合はCSS変数で定義することで再利用性を高めています。ピュアなCSSでコーディングする際、クラス名は主にBEM記法を採用してコーディングを行っています。",
     skillLogo: "/images/skills/css-logo.svg",
     label: "STYLE",
     link: "https://developer.mozilla.org/ja/docs/Web/CSS",
@@ -61,7 +61,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Sass",
     skillLink: "sass",
     description:
-      "SCSS記法を使用したSassが書けます。ファイルを役割ごとに分割するためにパーシャル化し、メンテナンス性・可読性に配慮したコーディングを行うことができます。",
+      "SCSS記法を使用したSassが書けます。ファイルを役割ごとに分割するためにパーシャル化し、メンテナンス性と可読性に配慮したコーディングを行うことができます。ただ、最近ではNative CSSの進化が凄まじく、「変数」や「ネスト」といったSass独自の機能だったものが、Native CSSで使用できるようになったため、Sassの使用頻度は減少しています。",
     skillLogo: "/images/skills/sass-logo.svg",
     label: "STYLE",
     link: "https://sass-lang.com/",
@@ -157,7 +157,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Next.js",
     skillLink: "nextjs",
     description:
-      "Next.jsの主要な機能を理解しています。App RouterやServer Componentsなどを活用でき、CSR / SSG / SSR / ISR / RSC などの適切なレンダリング方式の選択とパフォーマンスを考慮した実装を心がけます。このポートフォリオサイトでもNext.jsを採用し、React、TypeScriptやTailwind CSSと組み合わせて実装しています。",
+      "Next.jsの主要な機能を理解しています。App RouterやServer Componentsなどを活用でき、CSR / SSG / SSR / ISR / RSC などの適切なレンダリング方式の選択とパフォーマンスを考慮した実装を心がけます。このポートフォリオサイトの実装にもNext.jsを採用しています。",
     skillLogo: "/images/skills/nextjs-logo.svg",
     label: "FRAMEWORK",
     link: "https://nextjs.org/",
