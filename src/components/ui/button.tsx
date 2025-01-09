@@ -42,7 +42,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className="font-russo contact-form-send-btn"
+        className={buttonVariants({
+          variant,
+          size,
+          className: `font-russo contact-form-send-btn ${className || ''}`
+        })}
         ref={ref}
         {...props}
       />
