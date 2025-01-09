@@ -258,5 +258,5 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
         clearProps: 'transform'
       });
     };
-  }, [id]);
+  }, [id, cardRef]);
 }; 
