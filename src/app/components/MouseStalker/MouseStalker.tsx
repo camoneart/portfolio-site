@@ -84,7 +84,7 @@ const MouseStalker = () => {
         borderRadius: '50%',
         backgroundColor: '#ff6b4a',
         pointerEvents: 'none',
-        zIndex: 9999,
+        zIndex: 10000,
         transform: springProps.transform,
         opacity: springProps.opacity,
         scale: springProps.scale,
