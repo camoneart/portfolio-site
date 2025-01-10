@@ -7,6 +7,7 @@ import { worksData } from "../components/Works/Works";
 import { generateWorkMetadata } from "./metadata";
 import HoverMeButton from "@/app/components/elements/HovermeButton/HoverMeButton";
 import type { Route } from 'next';
+import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 
 export async function generateStaticParams() {
   return worksData.map((workData) => ({
@@ -32,6 +33,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
+      <Breadcrumb title={work.workTitle} isDetail={true} maxLength={28} />
       <div className={styles["work-detail-container"]}>
         <section className={styles["work"]}>
           <div className={styles["work__container"]}>
