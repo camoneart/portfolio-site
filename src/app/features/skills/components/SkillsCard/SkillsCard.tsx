@@ -5,6 +5,7 @@ import styles from "./SkillsCard.module.css";
 import { Link } from "next-view-transitions";
 import { useSkillsCardAnimation } from "@/app/features/skills/hooks/useSkillsCardAnimation";
 import { motion } from "motion/react";
+import { memo } from "react";
 import type { Route } from 'next';
 
 interface CardProps {
@@ -22,6 +23,14 @@ interface CardProps {
   viewTransitionLogoWrapper: string;
   viewTransitionLogoBg: string;
 }
+
+const arePropsEqual = (prevProps: CardProps, nextProps: CardProps) => {
+  return (
+    prevProps.skillTitle === nextProps.skillTitle &&
+    prevProps.index === nextProps.index &&
+    prevProps.skillLink === nextProps.skillLink
+  );
+};
 
 const SkillsCard = ({
   skillTitle,
@@ -91,4 +100,4 @@ const SkillsCard = ({
   );
 };
 
-export default SkillsCard;
+export default memo(SkillsCard, arePropsEqual);
