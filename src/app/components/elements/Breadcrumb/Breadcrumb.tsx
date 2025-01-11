@@ -36,8 +36,8 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
         transition: {
           type: "spring",
           stiffness: 100,
-          damping: 12,
-          delay: 1.6,
+          damping: parentPath ? 10 : 12,
+          delay: parentPath ? 0 : 1.6,
           duration: 1,
           ease: "easeInOut",
         },
