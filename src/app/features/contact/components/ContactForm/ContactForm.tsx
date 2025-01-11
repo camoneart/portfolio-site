@@ -77,7 +77,7 @@ const ContactForm = () => {
         className={`${styles["contact-form-container"]} ${styles["scroll-driven-animation"]}`}
       >
         <Form {...form}>
-          <Toaster position="top-center" reverseOrder={false} />
+          <Toaster position="bottom-right" reverseOrder={false} />
           <form
             onSubmit={form.handleSubmit(onSubmit)}
             className={`container max-w-screen-md mx-auto flex flex-col gap-5 ${styles["contact-form"]}`}
