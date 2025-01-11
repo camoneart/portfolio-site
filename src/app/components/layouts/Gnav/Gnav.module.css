@@ -60,8 +60,6 @@
   box-shadow: var(--cmp-primary-shadow);
   border: 0.5px solid var(--cmp-border-primary-color);
   border-radius: 3px;
-  padding-block: 5px;
-  padding-inline: 8px;
   letter-spacing: 0.02em;
   backdrop-filter: blur(5px);
 
@@ -99,7 +97,8 @@
   z-index: 2;
   display: block flow;
   color: var(--color-primary-white);
-  padding-inline: 4px;
+  padding-block: 5px;
+  padding-inline: 12px;
   font-size: 1rem;
   line-height: var(--leading-x-tight);
   transition: color 0.4s ease-in-out;
@@ -121,10 +120,10 @@
         content: "";
         position: absolute;
         display: block flow;
-        width: calc(100% - 4px);
+        width: calc(100% - 20px);
         height: 1px;
-        left: 2px;
-        bottom: 0;
+        left: 10px;
+        bottom: 5px;
         background-color: currentColor;
         transform-origin: right;
         transform: scaleX(0);
