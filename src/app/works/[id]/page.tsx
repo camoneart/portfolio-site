@@ -33,7 +33,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <Breadcrumb title={work.workTitle} isDetail={true} maxLength={28} />
+      <Breadcrumb title={work.workTitle} parentPath={"/works"} parentLabel={"Works"} />
       <div className={styles["work-detail-container"]}>
         <section className={styles["work"]}>
           <div className={styles["work__container"]}>

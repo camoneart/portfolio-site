@@ -23,7 +23,7 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
 
   return (
     <>
-      <Breadcrumb title={skill.skillTitle} isDetail={true} maxLength={18} />
+      <Breadcrumb title={skill.skillTitle} parentPath={"/skills"} parentLabel={"Skills"} />
       <div className="common-container">
         <div className={styles["skill-info-container"]}>
           <div className={`${styles["skill-content"]} ${skill.viewTransitionBg}`}>
