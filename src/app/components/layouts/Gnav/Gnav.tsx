@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Gnav.module.css";
 import { motion } from "motion/react";
+import { Route } from "next";
 
 interface GnavProps {
   isOpen: boolean;
@@ -11,6 +12,22 @@ interface GnavProps {
 
 const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
   const pathname = usePathname();
+
+  // リンクコンポーネントを条件付きでレンダリングする関数
+  const renderNavItem = (path: Route, label: string) => {
+    const isActive = pathname === path;
+    const commonClasses = `${styles["gnav__link"]} ${styles["hover-un"]} ${
+      isOpen ? styles["gnav__link--open"] : ""
+    } ${isActive ? styles["active"] : ""}`;
+
+    return isActive ? (
+      <span className={commonClasses}>{label}</span>
+    ) : (
+      <Link className={commonClasses} href={path} onClick={toggleMenu}>
+        {label}
+      </Link>
+    );
+  };
 
   return (
     <nav
@@ -34,15 +51,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
             isOpen ? styles["gnav__item--open"] : ""
           }`}
         >
-          <Link
-            className={`${styles["gnav__link"]} ${styles["hover-un"]} ${
-              isOpen ? styles["gnav__link--open"] : ""
-            } ${pathname === "/about" ? styles["active"] : ""}`}
-            href="/about"
-            onClick={toggleMenu}
-          >
-            About
-          </Link>
+          {renderNavItem("/about" as Route, "About")}
         </motion.li>
         <motion.li
           initial={{ opacity: 0, y: 70 }}
@@ -55,15 +64,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
             isOpen ? styles["gnav__item--open"] : ""
           }`}
         >
-          <Link
-            className={`${styles["gnav__link"]} ${styles["hover-un"]} ${
-              isOpen ? styles["gnav__link--open"] : ""
-            } ${pathname === "/skills" ? styles["active"] : ""}`}
-            href="/skills"
-            onClick={toggleMenu}
-          >
-            Skills
-          </Link>
+          {renderNavItem("/skills" as Route, "Skills")}
         </motion.li>
         <motion.li
           initial={{ opacity: 0, y: 70 }}
@@ -76,15 +77,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
             isOpen ? styles["gnav__item--open"] : ""
           }`}
         >
-          <Link
-            className={`${styles["gnav__link"]} ${styles["hover-un"]} ${
-              isOpen ? styles["gnav__link--open"] : ""
-            } ${pathname === "/works" ? styles["active"] : ""}`}
-            href="/works"
-            onClick={toggleMenu}
-          >
-            Works
-          </Link>
+          {renderNavItem("/works" as Route, "Works")}
         </motion.li>
         <motion.li
           initial={{ opacity: 0, y: 70 }}
@@ -97,15 +90,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
             isOpen ? styles["gnav__item--open"] : ""
           }`}
         >
-          <Link
-            className={`${styles["gnav__link"]} ${styles["hover-un"]} ${
-              isOpen ? styles["gnav__link--open"] : ""
-            } ${pathname === "/contact" ? styles["active"] : ""}`}
-            href="/contact"
-            onClick={toggleMenu}
-          >
-            Contact
-          </Link>
+          {renderNavItem("/contact" as Route, "Contact")}
         </motion.li>
       </ul>
     </nav>
