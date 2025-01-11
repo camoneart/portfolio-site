@@ -108,26 +108,28 @@
     color: var(--color-primary-orange);
   }
 
-  &.hover-un {
-    &:hover {
-      &:before {
-        transform-origin: left;
-        transform: scaleX(1);
+  @media (768px <= width) {
+    &.hover-un {
+      &:hover {
+        &:before {
+          transform-origin: left;
+          transform: scaleX(1);
+        }
       }
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      display: block flow;
-      width: calc(100% - 4px);
-      height: 1px;
-      left: 2px;
-      bottom: 0;
-      background-color: currentColor;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: 0.6s transform cubic-bezier(0.66, 0, 0.15, 1);
+  
+      &:before {
+        content: "";
+        position: absolute;
+        display: block flow;
+        width: calc(100% - 4px);
+        height: 1px;
+        left: 2px;
+        bottom: 0;
+        background-color: currentColor;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: 0.6s transform cubic-bezier(0.66, 0, 0.15, 1);
+      }
     }
   }
 
@@ -141,7 +143,7 @@
     place-items: center;
     font-size: 1.125rem;
     border-radius: 3px;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    transition: color 0.4s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
   }
 
   /* open用スタイル */
@@ -149,7 +151,7 @@
     @media (width <= 768px) {
       opacity: 1;
       visibility: visible;
-      transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+      transition: color 0.4s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
     }
   }
 }
