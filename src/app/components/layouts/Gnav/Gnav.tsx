@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "next-view-transitions";
-import type { Route } from 'next';
+import Link from "next/link";
 import styles from "./Gnav.module.css";
 import { motion } from "motion/react";
 
@@ -36,7 +35,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
             className={`${styles["gnav__link"]} ${styles["hover-un"]} ${
               isOpen ? styles["gnav__link--open"] : ""
             }`}
-            href={"/about" as Route}
+            href="/about"
             onClick={toggleMenu}
           >
             About
@@ -57,7 +56,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
             className={`${styles["gnav__link"]} ${styles["hover-un"]} ${
               isOpen ? styles["gnav__link--open"] : ""
             }`}
-            href={"/skills" as Route}
+            href="/skills"
             onClick={toggleMenu}
           >
             Skills
@@ -78,7 +77,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
             className={`${styles["gnav__link"]} ${styles["hover-un"]} ${
               isOpen ? styles["gnav__link--open"] : ""
             }`}
-            href={"/works" as Route}
+            href="/works"
             onClick={toggleMenu}
           >
             Works
@@ -99,7 +98,7 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
             className={`${styles["gnav__link"]} ${styles["hover-un"]} ${
               isOpen ? styles["gnav__link--open"] : ""
             }`}
-            href={"/contact" as Route}
+            href="/contact"
             onClick={toggleMenu}
           >
             Contact
