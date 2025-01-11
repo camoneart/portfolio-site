@@ -510,10 +510,10 @@
   margin-inline: auto;
   text-wrap: pretty;
   word-break: auto-phrase;
+  padding-inline: 10px;
 
   @media (width <= 1024px) {
     font-size: 1.375rem;
-    padding-inline: 10px;
   }
 
   @media (width <= 768px) {
