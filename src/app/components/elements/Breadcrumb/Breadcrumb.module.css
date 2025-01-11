@@ -10,6 +10,7 @@
   padding-block: 5px;
   padding-inline: 17px;
   border-radius: 5px;
+  z-index: 1000;
 
   @media (width <= 768px) {
     top: 180px;
