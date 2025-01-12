@@ -21,7 +21,7 @@
   padding-block-start: 7rem;
   border-radius: 20px;
 
-  @media (width <= 1024px) {
+  @media (width < 1024px) {
     grid-template-columns: 1fr;
     row-gap: 80px;
   }
@@ -434,7 +434,7 @@
   letter-spacing: 0.5px;
   padding-inline-start: 15px;
 
-  @media (width <= 1024px) {
+  @media (width < 1024px) {
     font-size: 2rem;
   }
 
@@ -474,7 +474,7 @@
   border-radius: 10px;
   overflow: hidden;
 
-  @media (width <= 1024px) {
+  @media (width < 1024px) {
     border-radius: 20px;
   }
 
@@ -490,7 +490,7 @@
   object-fit: cover;
   object-position: top;
 
-  @media (width <= 1024px) {
+  @media (width < 1024px) {
     border-radius: 20px;
   }
 
@@ -512,7 +512,7 @@
   word-break: auto-phrase;
   padding-inline: 10px;
 
-  @media (width <= 1024px) {
+  @media (width < 1024px) {
     font-size: 1.375rem;
   }
 
