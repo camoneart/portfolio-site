@@ -22,7 +22,7 @@
   padding-block: 4rem 2.5rem;
   padding-inline: 3rem;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     gap: 1.25rem;
     padding-inline: 1.5rem;
   }
@@ -43,7 +43,7 @@
   text-wrap: pretty;
   word-break: auto-phrase;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 0.875rem;
   }
 }

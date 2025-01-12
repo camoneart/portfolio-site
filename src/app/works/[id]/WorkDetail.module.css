@@ -43,7 +43,7 @@
   padding-block: 40px 60px;
   padding-inline: 40px;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     padding-block: 20px 40px;
     padding-inline: 20px;
   }
@@ -60,7 +60,7 @@
   border-radius: 20px;
   overflow: hidden;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     border-radius: 10px;
   }
 }
@@ -99,7 +99,7 @@
     font-size: 1.5rem;
   }
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 1.375rem;
   }
 }
@@ -109,7 +109,7 @@
   row-gap: 23px;
   margin-block-start: 20px;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     row-gap: 15px;
     margin-block-start: 15px;
   }
@@ -122,7 +122,7 @@
   font-size: 1.125rem;
   overflow-wrap: anywhere;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 0.75rem;
   }
 }
@@ -191,7 +191,7 @@
 .work__role-label {
   font-weight: var(--font-weight-bold);
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 0.75rem;
   }
 }
@@ -203,7 +203,7 @@
 }
 
 .work__skills-list {
-  @media (width <= 640px) {
+  @media (width < 640px) {
     gap: 10px 7px;
   }
 }
@@ -218,7 +218,7 @@
 
 .work__skills-item,
 .work__role-item {
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 0.625rem;
     padding-block: 4.5px;
   }
@@ -254,7 +254,7 @@
   margin-block-start: 20px;
   border-block-start: 2.5px solid rgb(255 255 255 / 0.2);
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     row-gap: 5px;
     margin-block-start: 15px;
   }
@@ -267,7 +267,7 @@
   letter-spacing: 2px;
   margin-block-start: 20px;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 1.25rem;
     margin-block-start: 15px;
   }
@@ -280,7 +280,7 @@
   text-wrap: pretty;
   word-break: auto-phrase;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 0.875rem;
   }
 }
@@ -359,7 +359,7 @@
   text-wrap: pretty;
   word-break: auto-phrase;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 0.875rem;
   }
 
@@ -375,7 +375,7 @@
   justify-content: center;
   margin-block-start: 60px;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     margin-block-start: 40px;
   }
 }
@@ -421,7 +421,7 @@
   padding-block: 40px;
   padding-inline: 25px;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     padding-block: 30px;
     padding-inline: 20px;
   }
@@ -438,7 +438,7 @@
     font-size: 2rem;
   }
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 1.375rem;
     padding-inline-start: 10px;
   }
@@ -449,7 +449,7 @@
   row-gap: 30px;
   margin-block-start: 20px;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     row-gap: 25px;
   }
 }
@@ -478,7 +478,7 @@
     border-radius: 20px;
   }
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     border-radius: 10px;
   }
 }
@@ -494,7 +494,7 @@
     border-radius: 20px;
   }
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     border-radius: 10px;
   }
 }
@@ -520,7 +520,7 @@
     font-size: 1rem;
   }
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     font-size: 0.875rem;
   }
 }

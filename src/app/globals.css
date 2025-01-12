@@ -125,7 +125,7 @@ canvas {
   border-radius: var(--border-rounded);
   transition: box-shadow 0.2s ease-in-out;
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     width: 150px;
   }
 

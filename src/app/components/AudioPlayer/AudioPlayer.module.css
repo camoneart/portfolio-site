@@ -19,7 +19,7 @@
     height: 50px;
   }
 
-  @media (width <= 640px) {
+  @media (width < 640px) {
     right: 100px;
   }
 }

@@ -13,16 +13,13 @@
   z-index: 10;
 
   @media (width < 768px) {
-    top: 180px;
-  }
-
-  @media (width <= 640px) {
-    top: 138px;
+    top: 125px;
   }
 }
 
 .breadcrumb__list {
   display: block flex;
+  white-space: nowrap;
 
   & li {
     font-size: 0.75rem;
