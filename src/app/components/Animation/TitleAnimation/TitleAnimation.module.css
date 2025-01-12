@@ -14,7 +14,7 @@
   letter-spacing: 0.05em;
   text-shadow: 0 0 13px var(--color-secondary-orange);
 
-  @media (width < 640px) {
+  @media (width < 768px) {
     font-size: 4.875rem;
     letter-spacing: 0.025em;
   }
@@ -30,7 +30,7 @@
   line-height: var(--leading-x-tight);
   letter-spacing: 0.05em;
 
-  @media (width < 640px) {
+  @media (width < 768px) {
     font-size: 1.375rem;
     letter-spacing: 0.025em;
   }
