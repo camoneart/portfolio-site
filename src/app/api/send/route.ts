@@ -12,17 +12,10 @@ const formData = await request.formData();
   const subject = formData.get("subject") as string;
   const email = formData.get("email") as string;
   const content = formData.get("content") as string;
-  const file = formData.get("file") as File | null;
 
   if (!username || !subject || !email || !content) {
     return Response.json({ error: "Missing required fields" }, { status: 400 });
   }
-
-  // ファイルが存在する場合のみ添付
-  const attachments = file ? [{
-    filename: file.name,
-    content: Buffer.from(await file.arrayBuffer()).toString('base64')
-  }] : [];
 
   try {
     // 管理者向けメール送信
@@ -35,7 +28,6 @@ const formData = await request.formData();
         email,
         content,
       }) as React.ReactElement,
-      attachments,
     });
 
     if (adminMailError) {
