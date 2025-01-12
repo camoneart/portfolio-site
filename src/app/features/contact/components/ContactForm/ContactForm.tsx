@@ -46,15 +46,10 @@ const notify = () =>
 
 const ContactForm = () => {
   const { form, onSubmit } = useContactForm();
-  const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (form.formState.isSubmitSuccessful) {
       notify();
-      // ファイル入力をリセット
-      if (fileInputRef.current) {
-        fileInputRef.current.value = "";
-      }
     }
   }, [form.formState.isSubmitSuccessful]);
 
@@ -187,38 +182,6 @@ const ContactForm = () => {
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>お問い合わせ内容を入力してください</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="file"
-              render={({ field: { onChange, ...field } }) => (
-                <FormItem>
-                  <FormLabel className="font-bold">Picture</FormLabel>
-                  <FormControl>
-                    <TooltipProvider>
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <Input
-                            accept="image/*,.pdf"
-                            placeholder="Picture or PDF"
-                            type="file"
-                            {...field}
-                            onChange={(event) => {
-                              onChange(event.target.files);
-                            }}
-                            value={undefined}
-                            className="cursor-pointer px-2 py-2"
-                          />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>画像またはPDFをアップロードできます</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
