@@ -9,7 +9,7 @@
   padding-inline: 20px;
   margin-inline: auto;
 
-  @media (width <= 768px) {
+  @media (width < 768px) {
     padding-block: 40px 30px;
   }
 }

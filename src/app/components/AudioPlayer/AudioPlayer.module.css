@@ -11,7 +11,7 @@
   z-index: 9999;
   transition: background 0.3s ease-in-out;
 
-  @media (width <= 768px) {
+  @media (width < 768px) {
     position: fixed;
     top: 25px;
     right: 105px;
@@ -33,7 +33,7 @@
 }
 
 .audio-play {
-  @media (width <= 768px) {
+  @media (width < 768px) {
     width: 21px;
     height: 21px;
   }
@@ -43,7 +43,7 @@
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
 
-  @media (width <= 768px) {
+  @media (width < 768px) {
     width: 21px;
     height: 21px;
   }

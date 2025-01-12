@@ -5,7 +5,7 @@
 /*----------------------------------------
 	viewport：768px以下のスタイル
 ----------------------------------------*/
-@media (width <= 768px) {
+@media (width < 768px) {
   .hamburger {
     display: block flow;
     position: fixed;

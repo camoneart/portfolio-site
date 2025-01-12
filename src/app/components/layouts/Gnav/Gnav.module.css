@@ -1,5 +1,5 @@
 .gnav {
-  @media (width <= 768px) {
+  @media (width < 768px) {
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -13,7 +13,7 @@
 
   /* open用スタイル */
   &.gnav--open {
-    @media (width <= 768px) {
+    @media (width < 768px) {
       transform: translate(-100%, 0);
       opacity: 1;
       visibility: visible;
@@ -27,7 +27,7 @@
   align-items: center;
   column-gap: 20px;
 
-  @media (width <= 768px) {
+  @media (width < 768px) {
     width: 0;
     height: calc(100dvh - 18px);
     display: block grid;
@@ -44,7 +44,7 @@
 
   /* open用スタイル */
   &.gnav__list--open {
-    @media (width <= 768px) {
+    @media (width < 768px) {
       width: 100%;
       background: rgb(0 0 0 / 0.7);
       transition: width 0.7s ease-in-out, background 0.7s ease-in-out;
@@ -63,7 +63,7 @@
   letter-spacing: 0.02em;
   backdrop-filter: blur(5px);
 
-  @media (width <= 768px) {
+  @media (width < 768px) {
     max-width: 230px;
     width: 0;
     opacity: 0;
@@ -78,7 +78,7 @@
 
   /* open用スタイル */
   &.gnav__item--open {
-    @media (width <= 768px) {
+    @media (width < 768px) {
       width: 100%;
       opacity: 1;
       visibility: visible;
@@ -133,7 +133,7 @@
     }
   }
 
-  @media (width <= 768px) {
+  @media (width < 768px) {
     max-width: 230px;
     width: 100%;
     opacity: 0;
@@ -148,7 +148,7 @@
 
   /* open用スタイル */
   &.gnav__link--open {
-    @media (width <= 768px) {
+    @media (width < 768px) {
       opacity: 1;
       visibility: visible;
       transition: color 0.4s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
