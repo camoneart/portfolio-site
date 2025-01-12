@@ -13,7 +13,7 @@ const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: Anima
 
   // メモ化
   const getAnimationProps = useCallback((width: number) => {
-    const isMobile = width <= MOBILE_BREAKPOINT;
+    const isMobile = width < MOBILE_BREAKPOINT;
     return {
       initial: { opacity: 0, y: isMobile ? 40 : 70 },
       animate: {
