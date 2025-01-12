@@ -3,7 +3,7 @@
   margin-block-end: 115px;
 
   @media (width < 768px) {
-    margin-block-end: 90px;
+    margin-block-end: 100px;
   }
 }
 
