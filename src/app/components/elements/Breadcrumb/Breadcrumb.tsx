@@ -52,7 +52,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
 }) => {
   const isMobile = useMediaQuery("(max-width: 640px)");
   const isTablet = useMediaQuery("(max-width: 767px)");
-  const effectiveMaxLength = isMobile ? 10 : isTablet ? 15 : defaultMaxLength;
+  const effectiveMaxLength = isMobile ? 8 : isTablet ? 15 : defaultMaxLength;
   const truncatedTitle = truncateText(title, effectiveMaxLength);
 
   return (
