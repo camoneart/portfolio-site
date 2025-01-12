@@ -98,7 +98,7 @@ canvas {
   margin-inline: auto;
 
   @media (width < 768px) {
-    padding-block-start: 2.875rem;
+    padding-block-start: 2rem;
   }
 }
 
