@@ -2,7 +2,7 @@
   position: relative;
   margin-block-end: 115px;
 
-  @media (width < 640px) {
+  @media (width < 768px) {
     margin-block-end: 90px;
   }
 }
