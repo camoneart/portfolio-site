@@ -107,10 +107,6 @@ canvas {
   display: block grid;
   place-items: center;
   margin-inline: auto;
-
-  @media (640px <= width) {
-    margin-block-start: 1rem;
-  }
 }
 
 .contact-form-send-btn-bg {
