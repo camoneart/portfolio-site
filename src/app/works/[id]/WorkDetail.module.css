@@ -197,15 +197,15 @@
   white-space: nowrap;
   font-size: 1rem;
   line-height: var(--leading-tight);
+
+  @media (width < 640px) {
+    font-size: 0.75rem;
+  }
 }
 
 .work__skills-label,
 .work__role-label {
   font-weight: var(--font-weight-bold);
-
-  @media (width < 640px) {
-    font-size: 0.75rem;
-  }
 }
 
 .work__name-label,
@@ -229,18 +229,12 @@
 }
 
 .work__skills-item,
-.work__role-item {
-  @media (width < 640px) {
-    font-size: 0.625rem;
-    padding-block: 4.5px;
-  }
-}
-
-.work__skills-item,
 .work__role-item,
 .work__name-item,
 .work__password-item {
   font-size: 0.75rem;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.5px;
   line-height: var(--leading-none);
   color: var(--color-primary-orange);
   background-color: var(--label-bg-color);
@@ -249,14 +243,13 @@
   border-radius: 6px;
   padding-block: 6px 5.5px;
   padding-inline: 11px;
-}
 
-.work__skills-item,
-.work__name-item,
-.work__password-item,
-.work__role-item {
-  font-weight: var(--font-weight-normal);
-  letter-spacing: 0.5px;
+  @media (width < 640px) {
+    font-size: 0.625rem;
+    padding-block: 3.5px 2.5px;
+    padding-inline: 7px;
+    border-radius: 3px;
+  }
 }
 
 .work__summary {
