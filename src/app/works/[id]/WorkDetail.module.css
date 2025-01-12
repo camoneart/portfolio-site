@@ -31,7 +31,7 @@
   }
 
   @media (width < 640px) {
-    padding-block-start: 5rem;
+    padding-block-start: 5.5rem;
   }
 }
 
