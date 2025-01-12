@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Breadcrumb.module.css";
 import { motion } from "motion/react";
@@ -18,13 +18,42 @@ const truncateText = (text: string, maxLength: number): string => {
   return text.slice(0, maxLength) + "...";
 };
 
+// カスタムフック: useMediaQuery
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    // SSRでのハイドレーション時の不一致を防ぐため、
+    // 初期値はfalseとし、クライアントサイドでのみ更新
+    const media = window.matchMedia(query);
+    
+    const updateMatch = () => {
+      setMatches(media.matches);
+    };
+
+    // 初期値を設定
+    updateMatch();
+    
+    // リスナーを追加
+    media.addEventListener("change", updateMatch);
+    
+    // クリーンアップ
+    return () => media.removeEventListener("change", updateMatch);
+  }, [query]);
+
+  return matches;
+};
+
 const Breadcrumb: React.FC<BreadcrumbProps> = ({
   title,
-  maxLength = 28,
+  maxLength: defaultMaxLength = 28,
   parentPath,
   parentLabel,
 }) => {
-  const truncatedTitle = truncateText(title, maxLength);
+  const isMobile = useMediaQuery("(max-width: 640px)");
+  const isTablet = useMediaQuery("(max-width: 767px)");
+  const effectiveMaxLength = isMobile ? 10 : isTablet ? 15 : defaultMaxLength;
+  const truncatedTitle = truncateText(title, effectiveMaxLength);
 
   return (
     <motion.nav
