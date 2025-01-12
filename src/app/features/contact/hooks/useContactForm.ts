@@ -12,23 +12,18 @@ const useContactForm = () => {
       email: "",
       subject: "",
       content: "",
-      file: undefined,
     },
   });
 
   // 関数のメモ化
   const onSubmit = useCallback(async (values: z.infer<typeof formSchema>) => {
-    const { username, email, subject, content, file } = values;
+    const { username, email, subject, content } = values;
 
     const formData = new FormData();
     formData.append("username", username);
     formData.append("email", email);
     formData.append("subject", subject);
     formData.append("content", content);
-    // ファイルが存在する場合のみappend
-    if (file && file.length > 0) {
-      formData.append("file", file[0]);
-    }
 
     try {
       await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send`, {
