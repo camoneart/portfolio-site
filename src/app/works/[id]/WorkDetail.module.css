@@ -29,6 +29,10 @@
   @media (width < 768px) {
     padding-block-start: 6rem;
   }
+
+  @media (width < 640px) {
+    padding-block-start: 5rem;
+  }
 }
 
 .work__article-container {
