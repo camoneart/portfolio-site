@@ -25,6 +25,10 @@
     grid-template-columns: 1fr;
     row-gap: 80px;
   }
+
+  @media (width < 768px) {
+    padding-block-start: 6rem;
+  }
 }
 
 .work__article-container {
