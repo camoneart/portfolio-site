@@ -249,6 +249,7 @@
     padding-block: 3.5px 2.5px;
     padding-inline: 7px;
     border-radius: 3px;
+    box-shadow: 1.5px 2px 0 0 rgb(0 0 0 / 0.4);
   }
 }
 
