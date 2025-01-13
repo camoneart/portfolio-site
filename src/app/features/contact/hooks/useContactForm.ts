@@ -26,10 +26,17 @@ const useContactForm = () => {
     formData.append("content", content);
 
     try {
-      await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send`, {
+      // const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send`, {
+      const response = await fetch('/api/send', {
         method: "POST",
         body: formData,
       });
+
+      // レスポンスの詳細を確認するためのデバッグを追加
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       form.reset();
     } catch (error) {
       console.error(error);
