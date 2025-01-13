@@ -1,0 +1,24 @@
+.dot-marker {
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    /* 中央揃え */
+    top: 8.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block flow;
+    width: 8px;
+    height: 8px;
+    background-color: var(--label-bg-color);
+    border-radius: var(--border-rounded);
+    border: 1px solid var(--label-border-color);
+
+    @media (width < 640px) {
+      width: 7px;
+      height: 7px;
+    }
+  }
+}
