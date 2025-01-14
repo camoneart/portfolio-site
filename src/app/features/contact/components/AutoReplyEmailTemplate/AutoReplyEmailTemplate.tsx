@@ -12,7 +12,7 @@ export const AutoReplyEmailTemplate: React.FC<AutoReplyEmailTemplateProps> = ({
     
     <p>{username} 様</p>
     
-    <p>この度は、お問い合わせいただき、誠にありがとうございます。</p>
+    <p>この度は、Aoyama｜Creative Web Engineerサイトからお問い合わせいただき、誠にありがとうございます。</p>
 
     <div>
       <p>いただいたお問い合わせ内容は以下になります。</p>
