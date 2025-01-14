@@ -317,7 +317,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "webpack",
     skillLink: "webpack",
     description:
-      "Works Listに搭載してあるサイトの実装時には、モジュールバンドラのwebpackを使用してモジュールをバンドル（まとめる）することで、ブラウザからのリクエスト数を減らし、ファイル転送の効率化を行いました。",
+      "Works Listに搭載してあるサイトの実装時には、モジュールバンドラのwebpackを使用しました。モジュールをバンドル（まとめる）することで、ブラウザからのリクエスト数を減らし、ファイル転送の効率化を行いました。",
     skillLogo: "/images/skills/webpack-logo.svg",
     label: "MODULE BUNDLER",
     link: "https://webpack.js.org/",
