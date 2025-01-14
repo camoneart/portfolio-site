@@ -8,11 +8,10 @@ export const AutoReplyEmailTemplate: React.FC<AutoReplyEmailTemplateProps> = ({
   content,
 }) => (
   <div>
-    <h1>お問い合わせありがとうございます。</h1>
+    <h3>{username} 様</h3>
+    <h3>お問い合わせありがとうございます。</h3>
     
-    <p>{username} 様</p>
-    
-    <p>この度は、Aoyama｜Creative Web Engineerサイトからお問い合わせいただき、誠にありがとうございます。</p>
+    <p>この度は「Aoyama｜Creative Web Engineer」からお問い合わせいただき、誠にありがとうございます。</p>
 
     <div>
       <p>いただいたお問い合わせ内容は以下になります。</p>
