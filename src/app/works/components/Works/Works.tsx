@@ -159,7 +159,7 @@ export const worksData: WorksData[] = [
     basicAuthentication: "",
     labels: [{ no: "Card No.", value: "004/004" }],
     skillsList:
-      "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",
+      "Next.js, React, TypeScript, CSS, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",
     siteUrl: "https://aoyamadev.com/",
     role: "Design, Coding",
     username: "",
