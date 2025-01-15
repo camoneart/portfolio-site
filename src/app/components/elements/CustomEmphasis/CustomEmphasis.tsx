@@ -2,7 +2,7 @@ import React from 'react';
 import { Components } from 'react-markdown';
 import styles from './CustomEmphasis.module.css';
 
-export const CustomEmphasis: Components['p'] = ({ children, node, ...props }) => {
+export const CustomEmphasis: Components['p'] = ({ children, ...props }) => {
   if (typeof children === 'string') {
     // "demo" と "demo01", "demo02", "demo03" を検出して強調表示
     const text = children.replace(
