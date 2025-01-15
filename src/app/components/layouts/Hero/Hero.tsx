@@ -15,10 +15,10 @@ const Hero = () => {
             transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.3, duration: 1, ease: "easeInOut" },
           }}
           className={`text-center flex flex-col gap-1 md:gap-3 select-none ${styles["hero__hgroup"]}`}>
-          <h1 className={`z-20 tracking-wide font-black ${styles["hero__title"]}`}>
+          <h1 className={`z-20 md:tracking-wide font-black ${styles["hero__title"]}`}>
             <span className={`${styles["text-gradient"]}`}>Aoyama</span>
           </h1>
-          <p className={`z-20 text-xl md:text-2xl tracking-wider font-black ${styles["hero__description"]}`}>
+          <p className={`z-20 text-xl md:text-2xl md:tracking-wider font-black ${styles["hero__description"]}`}>
             Creative Web Engineer
           </p>
         </motion.hgroup>
