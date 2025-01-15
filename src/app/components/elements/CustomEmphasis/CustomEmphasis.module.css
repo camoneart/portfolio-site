@@ -1,0 +1,6 @@
+.emphasis-value {
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-x-tight);
+  background: linear-gradient(transparent 65%, rgb(255 61 0 / 0.75) 65%);
+}
