@@ -9,6 +9,7 @@ import HoverMeButton from "@/app/components/elements/HovermeButton/HoverMeButton
 import type { Route } from 'next';
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 import { CustomParagraph } from "@/app/components/elements/CustomParagraph/CustomParagraph";
+import { CustomEmphasis } from "@/app/components/elements/CustomEmphasis/CustomEmphasis";
 
 export async function generateStaticParams() {
   return worksData.map((workData) => ({
@@ -388,7 +389,12 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                       )}
                     </div>
                     {work.basicAuthentication && (
-                      <ReactMarkdown className={styles["work__basic-authentication"]}>
+                      <ReactMarkdown 
+                        className={styles["work__basic-authentication"]}
+                        components={{
+                          p: CustomEmphasis
+                        }}
+                      >
                         {work.basicAuthentication}
                       </ReactMarkdown>
                     )}
