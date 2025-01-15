@@ -49,6 +49,11 @@
       background: rgb(0 0 0 / 0.7);
       transition: width 0.7s ease-in-out, background 0.7s ease-in-out;
     }
+
+    @media (width < 640px) {
+      background: rgb(0 0 0 / 0.95);
+      transition: width 0.7s ease-in-out, background 0.7s ease-in-out;
+    }
   }
 }
 
