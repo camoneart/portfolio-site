@@ -6,6 +6,10 @@
   place-content: center;
   padding-block-start: 7rem;
   margin-inline: auto;
+
+  @media (width < 768px) {
+    padding-block-start: 4.5rem;
+  }
 }
 
 .skill-content {

@@ -2,9 +2,13 @@
   max-width: 1440px;
   width: 100%;
   height: 100%;
-  padding-block: 1rem;
-  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
+  padding-inline: 1.25rem;
   margin-inline: auto;
+
+  @media (width < 768px) {
+    padding-block-start: 2rem;
+  }
 }
 
 .work {
@@ -27,11 +31,7 @@
   }
 
   @media (width < 768px) {
-    padding-block-start: 6rem;
-  }
-
-  @media (width < 640px) {
-    padding-block-start: 5.5rem;
+    padding-block-start: 4.5rem;
   }
 }
 
