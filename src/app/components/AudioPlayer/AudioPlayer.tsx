@@ -26,6 +26,23 @@ const AudioPlayer = ({
   const [isMuted, setIsMuted] = useState(false);
   const [sound, setSound] = useState<Howl | null>(null);
   const { animationProps } = useAudioPlayerResponsiveAnimation();
+  const [isVisible, setIsVisible] = useState(true);
+  const MOBILE_BREAKPOINT = 768;
+
+  useEffect(() => {
+    const updateVisibility = () => {
+      setIsVisible(window.innerWidth >= MOBILE_BREAKPOINT);
+    };
+
+    // 初期表示時に実行
+    updateVisibility();
+
+    // リサイズイベントのリスナーを追加
+    window.addEventListener('resize', updateVisibility);
+
+    // クリーンアップ
+    return () => window.removeEventListener('resize', updateVisibility);
+  }, []);
 
   useEffect(() => {
     // コンポーネントマウント時に音声を読み込む
@@ -75,6 +92,11 @@ const AudioPlayer = ({
       sound.volume(isMuted ? initialVolume : 0);
     }
   };
+
+  // 非表示の場合は早期リターン
+  if (!isVisible) {
+    return null;
+  }
 
   return (
     <motion.button
