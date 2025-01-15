@@ -40,8 +40,13 @@ const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: Anima
       setAnimationProps(getAnimationProps(window.innerWidth));
     };
 
+    // 初期表示時に実行
     updateAnimation();
+
+    // リサイズイベントのリスナーを追加
     window.addEventListener("resize", updateAnimation);
+
+    // クリーンアップ
     return () => window.removeEventListener("resize", updateAnimation);
   }, [getAnimationProps]);
 
