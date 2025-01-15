@@ -72,7 +72,7 @@ export const worksData: WorksData[] = [
     detail02: "　企業ロゴが無限ループするスライダーと、導入事例セクションのカードUIのスライダーはSwiperで実装しています。",
     detail03: "　ダウンロードフォームは、「全項目を入力しないと、送信できないようにする」「フォーム送信後は、サンクスページに遷移」「性と名が分かれている時のオートコンプリートに対応」などの仕様です。実際のダウンロード機能は実装していません。",
     basicAuthentication:
-      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo01」の入力をお願いいたします。",
+      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo01の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "001/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/caresend/",
@@ -95,7 +95,7 @@ export const worksData: WorksData[] = [
     detail04: "　NEWSセクションのお知らせの内容は、モーダルで出現させる仕様になっています。",
     detail05: "　メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
     basicAuthentication:
-      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo02」の入力をお願いいたします。",
+      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo02の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "002/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/aobotan/",
@@ -133,7 +133,7 @@ export const worksData: WorksData[] = [
     specification06Detail03: "　フォームアクセシビリティを考慮して、select、radio、checkboxなどをtabキーでフォーカスが当たるようにし、spaceキーで選択できる仕様にしています。",
     specification06Detail04: "　「送信する」ボタンは、必須項目が全て入力されていないと押せないようにしています。確認画面は実装していません。",
     basicAuthentication:
-      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム「demo」、パスワード「demo03」の入力をお願いいたします。",
+      "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo03の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "003/004" }],
     skillsList:
       "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
