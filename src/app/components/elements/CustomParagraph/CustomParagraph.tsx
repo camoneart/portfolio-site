@@ -1,9 +1,8 @@
-// CustomParagraph.tsx
 import React from 'react';
 import { Components } from 'react-markdown';
 import styles from './CustomParagraph.module.css';
 
-export const CustomParagraph: Components['p'] = ({ children, ...props }) => {
+export const CustomParagraph: Components['p'] = ({ children, node, ...props }) => {
   if (typeof children === 'string') {
     // 文字列の先頭に"空白"があるかチェック
     const match = children.match(/^(　)(.*)/);
