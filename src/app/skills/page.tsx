@@ -5,7 +5,7 @@ import StairsTransition from "../components/Animation/StairsTransition/StairsTra
 
 export const metadata: Metadata = {
   title: "Skills",
-  description: "このページでは、Kaishu Aoyamaのスキル一覧をご紹介いたします。",
+  description: "このページでは、Kaishu Aoyamaのスキルセットをご紹介いたします。",
 };
 
 const SkillsPage = () => {
