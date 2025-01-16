@@ -36,7 +36,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggleMenu }) => {
       animate={{
         opacity: 1,
         y: 0,
-        transition: { type: "spring", stiffness: 100, damping: 12, delay: 2.0, duration: 1, ease: "easeInOut" },
+        transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.8, duration: 1, ease: "easeInOut" },
       }}
       type="button"
       className={`${styles["hamburger"]} ${isOpen ? styles["hamburger--open"] : ""}`}
