@@ -8,7 +8,7 @@ type AnimationConfig = {
 };
 
 const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: AnimationConfig = {}) => {
-  const MOBILE_BREAKPOINT = 768;
+  const MOBILE_BREAKPOINT = 767;
   const DEFAULT_WIDTH = MOBILE_BREAKPOINT + 1;
 
   // メモ化
