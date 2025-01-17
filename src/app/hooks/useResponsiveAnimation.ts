@@ -14,8 +14,11 @@ const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: Anima
   // メモ化
   const getAnimationProps = useCallback((width: number) => {
     const isMobile = width < MOBILE_BREAKPOINT;
+    const currentDelay = isMobile ? mobileDelay : desktopDelay;
+    const currentY = isMobile ? 40 : 70;
+    
     return {
-      initial: { opacity: 0, y: isMobile ? 40 : 70 },
+      initial: { opacity: 0, y: currentY },
       animate: {
         opacity: 1,
         y: 0,
@@ -23,7 +26,7 @@ const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: Anima
           type: "spring",
           stiffness: 100,
           damping: 12,
-          delay: isMobile ? mobileDelay : desktopDelay,
+          delay: currentDelay,
           duration: 1,
           ease: "easeInOut",
         },
