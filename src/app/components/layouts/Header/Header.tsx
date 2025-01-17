@@ -16,10 +16,10 @@ export default function Header() {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      const newIsCompactLayout = window.innerWidth <= 768; // 768px以下ならtrue
+      const newIsCompactLayout = window.innerWidth < 768; // 768px未満ならtrue
       setIsCompactLayout(newIsCompactLayout); // isCompactLayoutを更新
 
-      // ビューポート幅が769px以上になった時、メニューを閉じる
+      // ビューポート幅が768px以上になった時、メニューを閉じる
       if (!newIsCompactLayout && isOpen) {
         setIsOpen(false);
       }
