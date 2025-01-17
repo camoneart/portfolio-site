@@ -7,7 +7,7 @@ import Hamburger from "../../elements/Hamburger/Hamburger";
 import Gnav from "../Gnav/Gnav";
 import Link from "next/link";
 import { motion } from "motion/react";
-import useHeaderTitleResponsiveAnimation from "@/app/features/header/components/hooks/useHeaderTitleResponsiveAnimation/useHeaderTitleResponsiveAnimation";
+import useHeaderTitleResponsiveAnimation from "@/app/features/header/hooks/useHeaderTitleResponsiveAnimation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
