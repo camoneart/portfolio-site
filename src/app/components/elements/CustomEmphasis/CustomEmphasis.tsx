@@ -4,8 +4,8 @@ import styles from './CustomEmphasis.module.css';
 
 export const CustomEmphasis: Components['p'] = ({ children, ...props }) => {
   if (typeof children === 'string') {
-    // "demo" と "demo01", "demo02", "demo03" を検出して強調表示
-    const text = children.replace(
+    // 最初に "demo" パターンを処理
+    let text = children.replace(
       /(demo)([0-9]{2})?/g,
       (match, demo, number) => {
         if (number) {
@@ -13,6 +13,12 @@ export const CustomEmphasis: Components['p'] = ({ children, ...props }) => {
         }
         return `<em class="${styles["emphasis-value"]}">${demo}</em>`;
       }
+    );
+
+    // 次に特定の文章パターンを処理
+    text = text.replace(
+      /(noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。)/g,
+      `<em class="${styles["emphasis-value"]}">$1</em>`
     );
 
     return (
