@@ -50,7 +50,7 @@ interface WorksData {
   specification06Detail03?: string;
   specification06Detail04?: string;
   summary?: string;
-  basicAuthentication: string;
+  accessDescription: string;
   labels: { no: string; value: string }[];
   skillsList: string;
   siteUrl: string;
@@ -71,7 +71,7 @@ export const worksData: WorksData[] = [
     detail01: "　GSAPを利用して、要素の出現アニメーションを実装しています。",
     detail02: "　企業ロゴが無限ループするスライダーと、導入事例セクションのカードUIのスライダーはSwiperで実装しています。",
     detail03: "　ダウンロードフォームは、「全項目を入力しないと、送信できないようにする」「フォーム送信後は、サンクスページに遷移」「性と名が分かれている時のオートコンプリートに対応」などの仕様です。実際のダウンロード機能は実装していません。",
-    basicAuthentication:
+    accessDescription:
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo01の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "001/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
@@ -94,7 +94,7 @@ export const worksData: WorksData[] = [
     detail03: "　トップページの横並びの画像箇所は、Swiperでスライダーを実装しています。",
     detail04: "　NEWSセクションのお知らせの内容は、モーダルで出現させる仕様になっています。",
     detail05: "　メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
-    basicAuthentication:
+    accessDescription:
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo02の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "002/004" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
@@ -132,7 +132,7 @@ export const worksData: WorksData[] = [
     specification06Detail02: "　月選択は1~12の範囲、日は1~31の範囲で選択。",
     specification06Detail03: "　フォームアクセシビリティを考慮して、select、radio、checkboxなどをtabキーでフォーカスが当たるようにし、spaceキーで選択できる仕様にしています。",
     specification06Detail04: "　「送信する」ボタンは、必須項目が全て入力されていないと押せないようにしています。確認画面は実装していません。",
-    basicAuthentication:
+    accessDescription:
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo03の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "003/004" }],
     skillsList:
@@ -156,7 +156,7 @@ export const worksData: WorksData[] = [
     detail05: "　ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識したアニメーションを実装しています。",
     detail06: "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
     detail07: "　お問い合わせフォームは、「React Hook Form」でフォームのパフォーマンス化を行い、「Zod」で入力値の検証（バリデーション）を行うことで堅牢なフォームを実装しました。また、メール送信機能につきましては「Resend」を利用して実装しました。",
-    basicAuthentication: "",
+    accessDescription: "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "004/004" }],
     skillsList:
       "Next.js, React, TypeScript, CSS, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",

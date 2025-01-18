@@ -388,14 +388,14 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                         </div>
                       )}
                     </div>
-                    {work.basicAuthentication && (
+                    {work.accessDescription && (
                       <ReactMarkdown 
                         className={styles["work__basic-authentication"]}
                         components={{
                           p: CustomEmphasis
                         }}
                       >
-                        {work.basicAuthentication}
+                        {work.accessDescription}
                       </ReactMarkdown>
                     )}
                   </div>
