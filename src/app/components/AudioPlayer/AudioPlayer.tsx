@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback, memo } from 'react';
 import { Howl } from 'howler';
 import { Volume2, VolumeX } from 'lucide-react';
 import styles from './AudioPlayer.module.css';
@@ -15,66 +15,48 @@ interface AudioPlayerProps {
   initialVolume?: number;
 }
 
-const AudioPlayer = ({
-  src, // 再生する音声ファイルのパス
-  size = 24, // デフォルト: 24px
-  color = 'currentColor', // デフォルト: 現在のテキスト色
-  className = 'audio-button', // デフォルト: 空文字
-  initialVolume = 0.5 // デフォルト: 50%の音量
+const AudioPlayer = memo(({
+  src,
+  size = 24,
+  color = 'currentColor',
+  className = 'audio-button',
+  initialVolume = 0.5
 }: AudioPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [sound, setSound] = useState<Howl | null>(null);
   const { animationProps } = useAudioPlayerResponsiveAnimation();
 
+  // handleClickをメモ化
+  const handleClick = useCallback(() => {
+    if (!sound) return;
+
+    if (!isPlaying) {
+      sound.volume(isMuted ? 0 : initialVolume);
+      sound.play();
+    } else {
+      setIsMuted(!isMuted);
+      sound.volume(isMuted ? initialVolume : 0);
+    }
+  }, [sound, isPlaying, isMuted, initialVolume]);
+
   useEffect(() => {
-    // コンポーネントマウント時に音声を読み込む
     const newSound = new Howl({
       src: [src],
       volume: initialVolume,
       html5: true,
       autoplay: false,
       loop: true,
-      onplay: () => {
-        setIsPlaying(true);
-      },
-      onpause: () => {
-        setIsPlaying(false);
-      },
-      onstop: () => {
-        setIsPlaying(false);
-      },
-      onloaderror: (id, error) => {
-        console.error('Error loading audio:', error);
-      },
-      onplayerror: (id, error) => {
-        console.error('Error playing audio:', error);
-      }
+      onplay: () => setIsPlaying(true),
+      onpause: () => setIsPlaying(false),
+      onstop: () => setIsPlaying(false),
+      onloaderror: (_, error) => console.error('Error loading audio:', error),
+      onplayerror: (_, error) => console.error('Error playing audio:', error)
     });
 
     setSound(newSound);
-
-    // クリーンアップ
-    return () => {
-      if (newSound) {
-        newSound.unload();
-      }
-    };
+    return () => { newSound.unload(); };
   }, [src, initialVolume]);
-
-  const handleClick = () => {
-    if (!sound) return;
-
-    if (!isPlaying) {
-      // 再生開始
-      sound.volume(isMuted ? 0 : initialVolume);
-      sound.play();
-    } else {
-      // ミュート/アンミュート切り替え
-      setIsMuted(!isMuted);
-      sound.volume(isMuted ? initialVolume : 0);
-    }
-  };
 
   return (
     <motion.button
@@ -86,14 +68,12 @@ const AudioPlayer = ({
       {isMuted || !isPlaying ? (
         <VolumeX size={size} color={color} className={styles['audio-mute']} />
       ) : (
-        <Volume2
-          size={size}
-          color={color}
-          className={styles['audio-play']}
-        />
+        <Volume2 size={size} color={color} className={styles['audio-play']} />
       )}
     </motion.button>
   );
-};
+});
+
+AudioPlayer.displayName = 'AudioPlayer';
 
 export default AudioPlayer;
