@@ -3,7 +3,6 @@ import styles from "./SkillCardList.module.css";
 import SkillCard from "../SkillCard/SkillCard";
 import { skillsData } from "@/app/skills/components/Skills/Skills";
 
-
 const SkillCardList = () => {
   return (
     <>
