@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./SkillsCard.module.css";
+import styles from "./SkillCard.module.css";
 import { Link } from "next-view-transitions";
-import { useSkillsCardAnimation } from "@/app/features/skills/hooks/useSkillsCardAnimation";
+import { useSkillCardAnimation } from "@/app/features/skills/hooks/useSkillCardAnimation";
 import { motion } from "motion/react";
 import { memo } from "react";
 import type { Route } from 'next';
@@ -32,7 +32,7 @@ const arePropsEqual = (prevProps: CardProps, nextProps: CardProps) => {
   );
 };
 
-const SkillsCard = ({
+const SkillCard = ({
   skillTitle,
   skillLink,
   skillLogo,
@@ -46,7 +46,7 @@ const SkillsCard = ({
   viewTransitionLogoBg,
 }: CardProps) => {
 
-  const { cardRef } = useSkillsCardAnimation({ index });
+  const { cardRef } = useSkillCardAnimation({ index });
 
   return (
     <>
@@ -66,30 +66,30 @@ const SkillsCard = ({
         }}
         ref={cardRef}
         id="card"
-        className={`${styles["skills-card"]} ${viewTransitionBg} ${styles["scroll-driven-animation"]}`}
+        className={`${styles["skill-card"]} ${viewTransitionBg} ${styles["scroll-driven-animation"]}`}
       >
         <Link
           href={`/skills/${skillLink}` as Route}
           rel="noopener noreferrer"
-          className={`${styles["skills-card-link"]}`}
+          className={`${styles["skill-card-link"]}`}
         >
-          <div className={styles["skills-card-content"]}>
-            <div className={`${styles["skills-logo-wrapper"]} ${viewTransitionLogoWrapper}`}>
-              <div className={`${styles["skills-logo-bg"]} ${viewTransitionLogoBg}`} >
+          <div className={styles["skill-card-content"]}>
+            <div className={`${styles["skill-logo-wrapper"]} ${viewTransitionLogoWrapper}`}>
+              <div className={`${styles["skill-logo-bg"]} ${viewTransitionLogoBg}`} >
                 <Image
                   src={skillLogo}
                   alt={skillTitle}
-                  className={`${styles["skills-logo"]} ${viewTransitionImage}`}
+                  className={`${styles["skill-logo"]} ${viewTransitionImage}`}
                   width={156}
                   height={156}
                 />
               </div>
             </div>
-            <div className={styles["skills-info"]}>
-              <h2 className={`font-russo ${styles["skills-title"]} ${viewTransitionName}`}>
+            <div className={styles["skill-info"]}>
+              <h2 className={`font-russo ${styles["skill-title"]} ${viewTransitionName}`}>
                 {skillTitle}
               </h2>
-              <div className={`font-russo ${styles["skills-label"]} ${viewTransitionLabel}`}>
+              <div className={`font-russo ${styles["skill-label"]} ${viewTransitionLabel}`}>
                 {label}
               </div>
             </div>
@@ -100,4 +100,4 @@ const SkillsCard = ({
   );
 };
 
-export default memo(SkillsCard, arePropsEqual);
+export default memo(SkillCard, arePropsEqual);

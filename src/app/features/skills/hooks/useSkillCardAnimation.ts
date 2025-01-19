@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react'
 
-interface UseSkillsAnimationProps {
+interface UseSkillAnimationProps {
   index: number;
 }
 
-export const useSkillsCardAnimation = ({ index }: UseSkillsAnimationProps) => {
+export const useSkillCardAnimation = ({ index }: UseSkillAnimationProps) => {
   const cardRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
