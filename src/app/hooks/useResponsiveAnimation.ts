@@ -1,40 +1,38 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 
 type AnimationConfig = {
   mobileDelay?: number;
   desktopDelay?: number;
 };
 
-const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: AnimationConfig = {}) => {
-  const MOBILE_BREAKPOINT = 768;
+type AnimationProps = {
+  initial: { opacity: number; y: number };
+  animate: {
+    opacity: number;
+    y: number;
+    transition: {
+      type: string;
+      stiffness: number;
+      damping: number;
+      delay: number;
+      duration: number;
+      ease: string;
+    };
+  };
+};
 
-  // 初期状態をサーバー・クライアント共通の値に設定
-  const [animationProps, setAnimationProps] = useState({
-    initial: { opacity: 0, y: 70 }, // デフォルト値を統一
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12,
-        delay: desktopDelay,
-        duration: 1,
-        ease: "easeInOut",
-      },
-    },
-  });
+const MOBILE_BREAKPOINT = 768;
 
-  // メモ化したgetAnimationProps
-  const getAnimationProps = useCallback((width: number) => {
-    const isMobile = width < MOBILE_BREAKPOINT;
-    const currentDelay = isMobile ? mobileDelay : desktopDelay;
-    const currentY = isMobile ? 40 : 70;
-    
-    return {
-      initial: { opacity: 0, y: currentY },
+const useResponsiveAnimation = ({
+  mobileDelay = 1.6,
+  desktopDelay = 1.6,
+}: AnimationConfig = {}) => {
+  // 初期状態をメモ化
+  const initialAnimationState = useMemo<AnimationProps>(
+    () => ({
+      initial: { opacity: 0, y: 70 },
       animate: {
         opacity: 1,
         y: 0,
@@ -42,29 +40,69 @@ const useResponsiveAnimation = ({ mobileDelay = 1.6, desktopDelay = 1.6 }: Anima
           type: "spring",
           stiffness: 100,
           damping: 12,
-          delay: currentDelay,
+          delay: desktopDelay,
           duration: 1,
           ease: "easeInOut",
         },
       },
-    };
-  }, [mobileDelay, desktopDelay]);
+    }),
+    [desktopDelay]
+  );
+
+  const [animationProps, setAnimationProps] = useState<AnimationProps>(
+    initialAnimationState
+  );
+
+  // アニメーションプロパティの生成をメモ化
+  const getAnimationProps = useCallback(
+    (width: number): AnimationProps => {
+      const isMobile = width < MOBILE_BREAKPOINT;
+      return {
+        initial: {
+          opacity: 0,
+          y: isMobile ? 40 : 70,
+        },
+        animate: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: "spring",
+            stiffness: 100,
+            damping: 12,
+            delay: isMobile ? mobileDelay : desktopDelay,
+            duration: 1,
+            ease: "easeInOut",
+          },
+        },
+      };
+    },
+    [mobileDelay, desktopDelay]
+  );
+
+  // リサイズハンドラーをメモ化
+  const handleResize = useCallback(() => {
+    const width = window.innerWidth;
+    setAnimationProps(getAnimationProps(width));
+  }, [getAnimationProps]);
 
   useEffect(() => {
-    // クライアントサイドでのみ実行される
-    const updateAnimation = () => {
-      const width = window.innerWidth;
-      setAnimationProps(getAnimationProps(width));
+    // 初期設定
+    handleResize();
+
+    // デバウンスされたリサイズハンドラー
+    let resizeTimer: NodeJS.Timeout;
+    const debouncedResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(handleResize, 100);
     };
 
-    // 初期表示時に実行
-    updateAnimation();
+    window.addEventListener("resize", debouncedResize);
 
-    // リサイズイベントのリスナーを追加
-    window.addEventListener("resize", updateAnimation);
-
-    return () => window.removeEventListener("resize", updateAnimation);
-  }, [getAnimationProps]);
+    return () => {
+      window.removeEventListener("resize", debouncedResize);
+      clearTimeout(resizeTimer);
+    };
+  }, [handleResize]);
 
   return { animationProps };
 };
