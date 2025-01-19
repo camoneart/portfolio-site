@@ -1,5 +1,5 @@
 import React from "react";
-import SkillsCardList from "@/app/features/skills/components/SkillsCardList/SkillsCardList";
+import SkillCardList from "@/app/features/skills/components/SkillCardList/SkillCardList";
 import styles from "./Skills.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
@@ -369,7 +369,7 @@ const Skills = () => {
       <Breadcrumb title={skillsTitle} />
       <section className={styles["skills"]}>
         <TitleAnimation title={skillsTitle} subTitle={skillsSubTitle} />
-        <SkillsCardList />
+        <SkillCardList />
       </section>
     </>
   );

@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./SkillsCardList.module.css";
+import styles from "./SkillCardList.module.css";
 import SkillCard from "../SkillCard/SkillCard";
 import { skillsData } from "@/app/skills/components/Skills/Skills";
 
 
-const SkillsCardList = () => {
+const SkillCardList = () => {
   return (
     <>
       <div className={styles["skills-layout"]}>
@@ -16,4 +16,4 @@ const SkillsCardList = () => {
   );
 };
 
-export default SkillsCardList;
+export default SkillCardList;
