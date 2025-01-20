@@ -1,24 +1,18 @@
 "use client";
 
-import React, { useState, useEffect, useCallback, memo } from "react";
+import React, { useState, useEffect, useCallback, memo, useMemo } from "react";
 import { motion, AnimatePresence, Variants } from "motion/react";
 import styles from "./StairsTransition.module.css";
 
-// 定数定義
-const NUM_OF_COLUMNS = 5;
-const ANIMATION_DURATION = 1.3;
-const ANIMATION_DELAY_MULTIPLIER = 0.07;
-const ANIMATION_EASE = [0.645, 0.045, 0.355, 1.0];
+// 定数をオブジェクトにまとめて最適化
+const ANIMATION_CONFIG = {
+  COLUMNS: 5,
+  DURATION: 1.3,
+  DELAY_MULTIPLIER: 0.07,
+  EASE: [0.645, 0.045, 0.355, 1.0],
+} as const;
 
-interface AnimProps {
-  initial: string;
-  animate: string;
-  exit: string;
-  variants: Variants;
-  custom: number;
-}
-
-// バリアントの定義をメモ化
+// バリアントの最適化
 const expandVariants: Variants = {
   initial: {
     top: 0,
@@ -30,81 +24,90 @@ const expandVariants: Variants = {
     height: ["0%", "100%", "100%", "0%"],
     bottom: ["unset", "unset", "0%", "0%"],
     transition: {
-      duration: ANIMATION_DURATION,
-      delay: ANIMATION_DELAY_MULTIPLIER * i,
+      duration: ANIMATION_CONFIG.DURATION,
+      delay: ANIMATION_CONFIG.DELAY_MULTIPLIER * i,
       times: [0, 0.2, 0.6, 1],
-      ease: ANIMATION_EASE,
+      ease: ANIMATION_CONFIG.EASE,
     },
   }),
   exit: (i: number) => ({
     height: "0%",
     transition: {
       duration: 0.6,
-      delay: ANIMATION_DELAY_MULTIPLIER * i,
-      ease: ANIMATION_EASE,
+      delay: ANIMATION_CONFIG.DELAY_MULTIPLIER * i,
+      ease: ANIMATION_CONFIG.EASE,
     },
   }),
 };
 
 const overlayVariants: Variants = {
-  initial: {
-    opacity: 1,
-  },
+  initial: { opacity: 1 },
   enter: (i: number) => ({
     opacity: 0,
     transition: {
       duration: 0.5,
-      delay: 0.8 + ANIMATION_DELAY_MULTIPLIER * i,
+      delay: 0.8 + ANIMATION_CONFIG.DELAY_MULTIPLIER * i,
     },
   }),
   exit: (i: number) => ({
     opacity: 1,
     transition: {
       duration: 0.5,
-      delay: ANIMATION_DELAY_MULTIPLIER * i,
+      delay: ANIMATION_CONFIG.DELAY_MULTIPLIER * i,
     },
   }),
 };
 
-// アニメーションプロップス生成関数をメモ化
-const createAnimProps = (variants: Variants, custom: number): AnimProps => ({
-  initial: "initial",
-  animate: "enter",
-  exit: "exit",
-  variants,
-  custom,
-});
+// 階段カラムコンポーネントを分離
+const StairColumn = memo(({ custom }: { custom: number }) => (
+  <motion.div
+    key={`stair-${custom}`}
+    initial="initial"
+    animate="enter"
+    exit="exit"
+    variants={expandVariants}
+    custom={custom}
+    className={styles["stairs-transition-column"]}
+  />
+));
+
+// デバッグ用のdisplayName設定
+StairColumn.displayName = 'StairColumn';
 
 const StairsTransitionContent = memo(({ children }: { children: React.ReactNode }) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // アニメーションハンドラーをメモ化
-  const handleAnimationStart = useCallback(() => {
-    setIsAnimating(true);
-  }, []);
+  const handleAnimationStart = useCallback(() => setIsAnimating(true), []);
+  const handleAnimationComplete = useCallback(() => setIsAnimating(false), []);
 
-  const handleAnimationComplete = useCallback(() => {
-    setIsAnimating(false);
-  }, []);
+  const overlayAnimProps = useMemo(() => ({
+    initial: "initial",
+    animate: "enter",
+    exit: "exit",
+    variants: overlayVariants,
+    custom: ANIMATION_CONFIG.COLUMNS,
+  }), []);
 
   useEffect(() => {
-    if (isAnimating) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "visible";
-    }
-
+    document.body.style.overflow = isAnimating ? "hidden" : "visible";
     return () => {
       document.body.style.overflow = "visible";
     };
   }, [isAnimating]);
 
+  const columns = useMemo(
+    () => Array.from({ length: ANIMATION_CONFIG.COLUMNS }, (_, i) => 
+      ANIMATION_CONFIG.COLUMNS - i
+    ),
+    []
+  );
+
   return (
     <div className={`${styles["stairs-transition"]} ${styles["page"]} ${isAnimating ? styles["no-scroll"] : ""}`}>
       <AnimatePresence mode="wait">
-        <motion.div 
-          key="overlay" 
-          {...createAnimProps(overlayVariants, NUM_OF_COLUMNS)} 
+        <motion.div
+          key="overlay"
+          {...overlayAnimProps}
           className={styles["stairs-transition-bg"]}
           onAnimationStart={handleAnimationStart}
           onAnimationComplete={handleAnimationComplete}
@@ -112,12 +115,8 @@ const StairsTransitionContent = memo(({ children }: { children: React.ReactNode 
       </AnimatePresence>
       <div className={styles["stairs-transition-container"]}>
         <AnimatePresence mode="wait">
-          {Array.from({ length: NUM_OF_COLUMNS }).map((_, i) => (
-            <motion.div 
-              {...createAnimProps(expandVariants, NUM_OF_COLUMNS - i)} 
-              key={`stair-${i}`} 
-              className={styles["stairs-transition-column"]} 
-            />
+          {columns.map((custom) => (
+            <StairColumn key={`stair-${custom}`} custom={custom} />
           ))}
         </AnimatePresence>
       </div>
@@ -126,9 +125,9 @@ const StairsTransitionContent = memo(({ children }: { children: React.ReactNode 
   );
 });
 
-const StairsTransition = memo(({ children }: { children: React.ReactNode }) => {
-  return <StairsTransitionContent>{children}</StairsTransitionContent>;
-});
+const StairsTransition = memo(({ children }: { children: React.ReactNode }) => (
+  <StairsTransitionContent>{children}</StairsTransitionContent>
+));
 
 // デバッグ用のdisplayName設定
 StairsTransitionContent.displayName = 'StairsTransitionContent';
