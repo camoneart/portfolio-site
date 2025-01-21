@@ -4,6 +4,10 @@
   height: 100%;
 }
 
+.hero__container {
+  width: 100%;
+}
+
 .text-gradient {
   color: transparent;
   -webkit-background-clip: text;
