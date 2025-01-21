@@ -1,5 +1,5 @@
 import React from "react";
-import Works from "./components/Works/Works";
+import * as Work from "@/app/features/works/components/index";
 import { Metadata } from "next";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";
 
@@ -13,7 +13,7 @@ const WorksPage = () => {
     <>
       <div className="common-container">
         <StairsTransition>
-          <Works />
+          <Work.WorksSection />
         </StairsTransition>
       </div>
     </>

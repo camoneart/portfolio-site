@@ -1,6 +1,6 @@
 import React from "react";
-import * as Work from "@/app/features/work/components/index";
-import styles from "./Works.module.css";
+import * as Work from "@/app/features/works/components/index";
+import styles from "./WorksSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 
@@ -69,8 +69,10 @@ export const worksData: WorksData[] = [
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の介護派遣サービスのLPサイト」になります。",
     detail01: "　GSAPを利用して、要素の出現アニメーションを実装しています。",
-    detail02: "　企業ロゴが無限ループするスライダーと、導入事例セクションのカードUIのスライダーはSwiperで実装しています。",
-    detail03: "　ダウンロードフォームは、「全項目を入力しないと、送信できないようにする」「フォーム送信後は、サンクスページに遷移」「性と名が分かれている時のオートコンプリートに対応」などの仕様です。実際のダウンロード機能は実装していません。",
+    detail02:
+      "　企業ロゴが無限ループするスライダーと、導入事例セクションのカードUIのスライダーはSwiperで実装しています。",
+    detail03:
+      "　ダウンロードフォームは、「全項目を入力しないと、送信できないようにする」「フォーム送信後は、サンクスページに遷移」「性と名が分かれている時のオートコンプリートに対応」などの仕様です。実際のダウンロード機能は実装していません。",
     accessDescription:
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo01の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "001/004" }],
@@ -90,10 +92,14 @@ export const worksData: WorksData[] = [
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の建築会社のサイト」になります。",
     detail01: "　ローディング画面を実装しています。",
-    detail02: "　ファーストビューコピーや見出しの出現アニメーションは、GSAPで実装しています。",
-    detail03: "　トップページの横並びの画像箇所は、Swiperでスライダーを実装しています。",
-    detail04: "　NEWSセクションのお知らせの内容は、モーダルで出現させる仕様になっています。",
-    detail05: "　メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
+    detail02:
+      "　ファーストビューコピーや見出しの出現アニメーションは、GSAPで実装しています。",
+    detail03:
+      "　トップページの横並びの画像箇所は、Swiperでスライダーを実装しています。",
+    detail04:
+      "　NEWSセクションのお知らせの内容は、モーダルで出現させる仕様になっています。",
+    detail05:
+      "　メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
     accessDescription:
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo02の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "002/004" }],
@@ -117,21 +123,33 @@ export const worksData: WorksData[] = [
     specification04: "ブログ詳細ページ仕様",
     specification05: "募集要項とFAQページ仕様",
     specification06: "エントリーフォームページ仕様",
-    specification01Detail01: "　トップページの要素をGSAPでふわっと表示させるようにしています。",
-    specification01Detail02: "　ファーストビュー直下のスライダーはSwiperで実装しています。",
-    specification01Detail03: "　blogはデフォルトの投稿機能を使用。staff一覧はカスタム投稿を使用して管理画面に「スタッフ管理」の項目を追加して、コンテンツ入稿できるようにしています。",
-    specification01Detail04: "　「人を知る」セクションでは、カスタム投稿「スタッフ管理」から入稿したコンテンツをスライダーで表示。",
-    specification02Detail01: "　「スタッフメッセージ一行目」「スタッフメッセージ二行目」「職種名」「名前」「入社年度」「プロフィール」の内容は、カスタムフィールドの情報を表示させ、スタッフ画像はサムネイルで設定した画像を表示させています。",
-    specification02Detail02: "　サイドバーは追従する目次で、PC時のみ常に右側に表示させています。「クリックで該当部分にスクロール」「現在の話題の部分は色の濃いアクティブ表示」「スクロールすることでアクティブ部分はリアルタイムに変化」という仕様になっています。",
+    specification01Detail01:
+      "　トップページの要素をGSAPでふわっと表示させるようにしています。",
+    specification01Detail02:
+      "　ファーストビュー直下のスライダーはSwiperで実装しています。",
+    specification01Detail03:
+      "　blogはデフォルトの投稿機能を使用。staff一覧はカスタム投稿を使用して管理画面に「スタッフ管理」の項目を追加して、コンテンツ入稿できるようにしています。",
+    specification01Detail04:
+      "　「人を知る」セクションでは、カスタム投稿「スタッフ管理」から入稿したコンテンツをスライダーで表示。",
+    specification02Detail01:
+      "　「スタッフメッセージ一行目」「スタッフメッセージ二行目」「職種名」「名前」「入社年度」「プロフィール」の内容は、カスタムフィールドの情報を表示させ、スタッフ画像はサムネイルで設定した画像を表示させています。",
+    specification02Detail02:
+      "　サイドバーは追従する目次で、PC時のみ常に右側に表示させています。「クリックで該当部分にスクロール」「現在の話題の部分は色の濃いアクティブ表示」「スクロールすることでアクティブ部分はリアルタイムに変化」という仕様になっています。",
     specification02Detail03: "　その他のメンバーはランダムで表示させています。",
-    specification03Detail01: "　ブログはWordPressのデフォルト投稿機能を使っています。",
-    specification03Detail02: "　ブログ記事は9つ以上用意して、ページネーションが機能するようにしています。",
-    specification04Detail01: "　投稿画面からの入稿で、コンテンツを表示させています。",
-    specification05Detail01: "　3つのボタンはページ内リンクになっており、クリックすると該当セクションまでスクロールする仕様になっています。",
+    specification03Detail01:
+      "　ブログはWordPressのデフォルト投稿機能を使っています。",
+    specification03Detail02:
+      "　ブログ記事は9つ以上用意して、ページネーションが機能するようにしています。",
+    specification04Detail01:
+      "　投稿画面からの入稿で、コンテンツを表示させています。",
+    specification05Detail01:
+      "　3つのボタンはページ内リンクになっており、クリックすると該当セクションまでスクロールする仕様になっています。",
     specification06Detail01: "　プラグインは、CF7を使用しています。",
     specification06Detail02: "　月選択は1~12の範囲、日は1~31の範囲で選択。",
-    specification06Detail03: "　フォームアクセシビリティを考慮して、select、radio、checkboxなどをtabキーでフォーカスが当たるようにし、spaceキーで選択できる仕様にしています。",
-    specification06Detail04: "　「送信する」ボタンは、必須項目が全て入力されていないと押せないようにしています。確認画面は実装していません。",
+    specification06Detail03:
+      "　フォームアクセシビリティを考慮して、select、radio、checkboxなどをtabキーでフォーカスが当たるようにし、spaceキーで選択できる仕様にしています。",
+    specification06Detail04:
+      "　「送信する」ボタンは、必須項目が全て入力されていないと押せないようにしています。確認画面は実装していません。",
     accessDescription:
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo03の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "003/004" }],
@@ -148,15 +166,24 @@ export const worksData: WorksData[] = [
     id: 4,
     image: "/images/works/work04.jpg",
     workTitle: "Aoyama｜Creative Web Engineer",
-    description: "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
-    detail01: "　このサイトはNext.js + Tailwind CSS + CSS Modules + TypeScriptで制作し、デプロイはVercelで行いました。",
-    detail02: "　トップページの3Dコンテンツは「React Tree Fiber」で実装しています。",
-    detail03: "　ドットパターンで表現した背景のアニメーションや、カードの出現アニメーションは「GSAP」で実装しています。",
-    detail04: "　カード型UIには「View Transitions API」を利用し、スムーズに流れるような遷移アニメーションを実装しています。",
-    detail05: "　ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識したアニメーションを実装しています。",
-    detail06: "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
-    detail07: "　お問い合わせフォームは、「React Hook Form」でフォームのパフォーマンス化を行い、「Zod」で入力値の検証（バリデーション）を行うことで堅牢なフォームを実装しました。また、メール送信機能につきましては「Resend」を利用して実装しました。",
-    accessDescription: "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
+    description:
+      "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
+    detail01:
+      "　このサイトはNext.js + Tailwind CSS + CSS Modules + TypeScriptで制作し、デプロイはVercelで行いました。",
+    detail02:
+      "　トップページの3Dコンテンツは「React Tree Fiber」で実装しています。",
+    detail03:
+      "　ドットパターンで表現した背景のアニメーションや、カードの出現アニメーションは「GSAP」で実装しています。",
+    detail04:
+      "　カード型UIには「View Transitions API」を利用し、スムーズに流れるような遷移アニメーションを実装しています。",
+    detail05:
+      "　ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識したアニメーションを実装しています。",
+    detail06:
+      "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
+    detail07:
+      "　お問い合わせフォームは、「React Hook Form」でフォームのパフォーマンス化を行い、「Zod」で入力値の検証（バリデーション）を行うことで堅牢なフォームを実装しました。また、メール送信機能につきましては「Resend」を利用して実装しました。",
+    accessDescription:
+      "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "004/004" }],
     skillsList:
       "Next.js, React, TypeScript, CSS, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",

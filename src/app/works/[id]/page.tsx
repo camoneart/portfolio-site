@@ -3,10 +3,10 @@ import { Link } from "next-view-transitions";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import styles from "./WorkDetail.module.css";
-import { worksData } from "../components/Works/Works";
+import { worksData } from "../../features/works/components/WorksSection/WorksSection";
 import { generateWorkMetadata } from "./metadata";
 import HoverMeButton from "@/app/components/elements/HovermeButton/HoverMeButton";
-import type { Route } from 'next';
+import type { Route } from "next";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 import { CustomParagraph } from "@/app/components/elements/CustomParagraph/CustomParagraph";
 import { CustomEmphasis } from "@/app/components/elements/CustomEmphasis/CustomEmphasis";
@@ -35,7 +35,11 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <Breadcrumb title={work.workTitle} parentPath={"/works"} parentLabel={"Works"} />
+      <Breadcrumb
+        title={work.workTitle}
+        parentPath={"/works"}
+        parentLabel={"Works"}
+      />
       <div className={styles["work-detail-container"]}>
         <section className={styles["work"]}>
           <div className={styles["work__container"]}>
@@ -151,7 +155,7 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                               <ReactMarkdown
                                 className={styles["work__detail"]}
                                 components={{
-                                  p: CustomParagraph
+                                  p: CustomParagraph,
                                 }}
                               >
                                 {work.detail01}
@@ -160,9 +164,10 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                           )}
                           {work.detail02 && (
                             <>
-                              <ReactMarkdown className={styles["work__detail"]}
+                              <ReactMarkdown
+                                className={styles["work__detail"]}
                                 components={{
-                                  p: CustomParagraph
+                                  p: CustomParagraph,
                                 }}
                               >
                                 {work.detail02}
@@ -171,9 +176,10 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                           )}
                           {work.detail03 && (
                             <>
-                              <ReactMarkdown className={styles["work__detail"]}
+                              <ReactMarkdown
+                                className={styles["work__detail"]}
                                 components={{
-                                  p: CustomParagraph
+                                  p: CustomParagraph,
                                 }}
                               >
                                 {work.detail03}
@@ -182,9 +188,10 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                           )}
                           {work.detail04 && (
                             <>
-                              <ReactMarkdown className={styles["work__detail"]}
+                              <ReactMarkdown
+                                className={styles["work__detail"]}
                                 components={{
-                                  p: CustomParagraph
+                                  p: CustomParagraph,
                                 }}
                               >
                                 {work.detail04}
@@ -193,9 +200,10 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                           )}
                           {work.detail05 && (
                             <>
-                              <ReactMarkdown className={styles["work__detail"]}
+                              <ReactMarkdown
+                                className={styles["work__detail"]}
                                 components={{
-                                  p: CustomParagraph
+                                  p: CustomParagraph,
                                 }}
                               >
                                 {work.detail05}
@@ -204,9 +212,10 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                           )}
                           {work.detail06 && (
                             <>
-                              <ReactMarkdown className={styles["work__detail"]}
+                              <ReactMarkdown
+                                className={styles["work__detail"]}
                                 components={{
-                                  p: CustomParagraph
+                                  p: CustomParagraph,
                                 }}
                               >
                                 {work.detail06}
@@ -215,9 +224,10 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                           )}
                           {work.detail07 && (
                             <>
-                              <ReactMarkdown className={styles["work__detail"]}
+                              <ReactMarkdown
+                                className={styles["work__detail"]}
                                 components={{
-                                  p: CustomParagraph
+                                  p: CustomParagraph,
                                 }}
                               >
                                 {work.detail07}
@@ -233,28 +243,44 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                               <ReactMarkdown
                                 className={styles["work__specification-title"]}
                                 components={{
-                                  p: ({children}) => <h3>{children}</h3>
+                                  p: ({ children }) => <h3>{children}</h3>,
                                 }}
                               >
                                 {work.specification01}
                               </ReactMarkdown>
-                              <div className={styles["work__specification-detail"]}>
-                                <ReactMarkdown components={{ p: CustomParagraph }}>
+                              <div
+                                className={styles["work__specification-detail"]}
+                              >
+                                <ReactMarkdown
+                                  components={{ p: CustomParagraph }}
+                                >
                                   {work.specification01Detail01}
                                 </ReactMarkdown>
                               </div>
-                              <div className={styles["work__specification-detail"]}>
-                                <ReactMarkdown components={{ p: CustomParagraph }}>
+                              <div
+                                className={styles["work__specification-detail"]}
+                              >
+                                <ReactMarkdown
+                                  components={{ p: CustomParagraph }}
+                                >
                                   {work.specification01Detail02}
                                 </ReactMarkdown>
                               </div>
-                              <div className={styles["work__specification-detail"]}>
-                                <ReactMarkdown components={{ p: CustomParagraph }}>
+                              <div
+                                className={styles["work__specification-detail"]}
+                              >
+                                <ReactMarkdown
+                                  components={{ p: CustomParagraph }}
+                                >
                                   {work.specification01Detail03}
                                 </ReactMarkdown>
                               </div>
-                              <div className={styles["work__specification-detail"]}>
-                                <ReactMarkdown components={{ p: CustomParagraph }}>
+                              <div
+                                className={styles["work__specification-detail"]}
+                              >
+                                <ReactMarkdown
+                                  components={{ p: CustomParagraph }}
+                                >
                                   {work.specification01Detail04}
                                 </ReactMarkdown>
                               </div>
@@ -264,25 +290,45 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                             <>
                               <div className={styles["work__specification"]}>
                                 <ReactMarkdown
-                                  className={styles["work__specification-title"]}
+                                  className={
+                                    styles["work__specification-title"]
+                                  }
                                   components={{
-                                    p: ({children}) => <h3>{children}</h3>
+                                    p: ({ children }) => <h3>{children}</h3>,
                                   }}
                                 >
                                   {work.specification02}
                                 </ReactMarkdown>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification02Detail01}
                                   </ReactMarkdown>
                                 </div>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification02Detail02}
                                   </ReactMarkdown>
                                 </div>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification02Detail03}
                                   </ReactMarkdown>
                                 </div>
@@ -293,20 +339,34 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                             <>
                               <div className={styles["work__specification"]}>
                                 <ReactMarkdown
-                                  className={styles["work__specification-title"]}
+                                  className={
+                                    styles["work__specification-title"]
+                                  }
                                   components={{
-                                    p: ({children}) => <h3>{children}</h3>
+                                    p: ({ children }) => <h3>{children}</h3>,
                                   }}
                                 >
                                   {work.specification03}
                                 </ReactMarkdown>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
-                                      {work.specification03Detail01}
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
+                                    {work.specification03Detail01}
                                   </ReactMarkdown>
                                 </div>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification03Detail02}
                                   </ReactMarkdown>
                                 </div>
@@ -317,15 +377,23 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                             <>
                               <div className={styles["work__specification"]}>
                                 <ReactMarkdown
-                                  className={styles["work__specification-title"]}
+                                  className={
+                                    styles["work__specification-title"]
+                                  }
                                   components={{
-                                    p: ({children}) => <h3>{children}</h3>
+                                    p: ({ children }) => <h3>{children}</h3>,
                                   }}
                                 >
                                   {work.specification04}
                                 </ReactMarkdown>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification04Detail01}
                                   </ReactMarkdown>
                                 </div>
@@ -336,15 +404,23 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                             <>
                               <div className={styles["work__specification"]}>
                                 <ReactMarkdown
-                                  className={styles["work__specification-title"]}
+                                  className={
+                                    styles["work__specification-title"]
+                                  }
                                   components={{
-                                    p: ({children}) => <h3>{children}</h3>
+                                    p: ({ children }) => <h3>{children}</h3>,
                                   }}
                                 >
                                   {work.specification05}
                                 </ReactMarkdown>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification05Detail01}
                                   </ReactMarkdown>
                                 </div>
@@ -355,30 +431,56 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                             <>
                               <div className={styles["work__specification"]}>
                                 <ReactMarkdown
-                                  className={styles["work__specification-title"]}
+                                  className={
+                                    styles["work__specification-title"]
+                                  }
                                   components={{
-                                    p: ({children}) => <h3>{children}</h3>
+                                    p: ({ children }) => <h3>{children}</h3>,
                                   }}
                                 >
                                   {work.specification06}
                                 </ReactMarkdown>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification06Detail01}
                                   </ReactMarkdown>
                                 </div>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification06Detail02}
                                   </ReactMarkdown>
                                 </div>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification06Detail03}
                                   </ReactMarkdown>
                                 </div>
-                                <div className={styles["work__specification-detail"]}>
-                                  <ReactMarkdown components={{ p: CustomParagraph }}>
+                                <div
+                                  className={
+                                    styles["work__specification-detail"]
+                                  }
+                                >
+                                  <ReactMarkdown
+                                    components={{ p: CustomParagraph }}
+                                  >
                                     {work.specification06Detail04}
                                   </ReactMarkdown>
                                 </div>
@@ -389,10 +491,10 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                       )}
                     </div>
                     {work.accessDescription && (
-                      <ReactMarkdown 
+                      <ReactMarkdown
                         className={styles["work__basic-authentication"]}
                         components={{
-                          p: CustomEmphasis
+                          p: CustomEmphasis,
                         }}
                       >
                         {work.accessDescription}

@@ -1,6 +1,6 @@
-import styles from './WorkCardList.module.css'
-import * as Work from '../';
-import { worksData } from '@/app/works/components/Works/Works';
+import styles from "./WorkCardList.module.css";
+import * as Work from "..";
+import { worksData } from "@/app/features/works/components/WorksSection/WorksSection";
 
 const WorkCardList = () => {
   return (
@@ -12,7 +12,6 @@ const WorkCardList = () => {
       </div>
     </div>
   );
-}
+};
 
 export default WorkCardList;
-
