@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import styles from "./About.module.css";
+import styles from "./AboutSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 import { User, Flame, Sparkle } from 'lucide-react';
@@ -10,7 +10,7 @@ import { motion } from "motion/react";
 export const aboutTitle = "About";
 export const aboutSubTitle = "私について";
 
-const About = () => {
+const AboutSection = () => {
   return (
     <>
       <Breadcrumb title={aboutTitle} />
@@ -300,4 +300,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

@@ -1,5 +1,5 @@
 import React from "react";
-import About from "./components/About/About";
+import * as About from "@/app/features/about/components/index";
 import { Metadata } from "next";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";
 
@@ -13,7 +13,7 @@ const AboutPage = () => {
     <>
       <div className="common-container">
         <StairsTransition>
-          <About />
+          <About.AboutSection />
         </StairsTransition>
       </div>
     </>
