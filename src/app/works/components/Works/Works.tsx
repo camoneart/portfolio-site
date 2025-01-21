@@ -1,5 +1,5 @@
 import React from "react";
-import WorkCardGrid from "@/app/features/work/components/WorkCardList/WorkCardList";
+import * as Work from "@/app/features/work/components/index";
 import styles from "./Works.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
@@ -175,7 +175,7 @@ const Works = () => {
       <Breadcrumb title={worksTitle} />
       <section className={styles["works"]}>
         <TitleAnimation title={worksTitle} subTitle={worksSubTitle} />
-        <WorkCardGrid />
+        <Work.WorkCardList />
       </section>
     </>
   );
