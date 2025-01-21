@@ -1,6 +1,5 @@
-import { EmailTemplate } from "@/app/features/contact/components/AdminEmailTemplate/AdminEmailTemplate";
+import * as Contact from "@/app/features/contact/components/index";
 import { Resend } from "resend";
-import { AutoReplyEmailTemplate } from "@/app/features/contact/components/AutoReplyEmailTemplate/AutoReplyEmailTemplate";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -23,7 +22,7 @@ const formData = await request.formData();
       from: process.env.RESEND_FROM_EMAIL || "Acme <onboarding@resend.dev>",
       to: ["aoyamadeveloper@gmail.com"],
       subject,
-      react: EmailTemplate({
+      react: Contact.AdminEmailTemplate({
         username,
         email,
         content,
@@ -43,7 +42,7 @@ const formData = await request.formData();
       from: process.env.RESEND_FROM_EMAIL || "Acme <onboarding@resend.dev>",
       to: [email],
       subject: "お問い合わせありがとうございます",
-      react: AutoReplyEmailTemplate({
+      react: Contact.AutoReplyEmailTemplate({
         username,
         content,
       }) as React.ReactElement,
