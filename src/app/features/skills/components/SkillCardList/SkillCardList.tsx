@@ -1,14 +1,13 @@
 import React from "react";
 import styles from "./SkillCardList.module.css";
-import SkillCard from "../SkillCard/SkillCard";
+import * as Skill from "@/app/features/skills/components/index";
 import { skillsData } from "@/app/skills/components/Skills/Skills";
-
 const SkillCardList = () => {
   return (
     <>
       <div className={styles["skills-layout"]}>
         {skillsData.map((skillData, index) => (
-          <SkillCard key={skillData.id} {...skillData} index={index} />
+          <Skill.SkillCard key={skillData.id} {...skillData} index={index} />
         ))}
       </div>
     </>
