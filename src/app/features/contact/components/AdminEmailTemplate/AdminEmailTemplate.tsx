@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-interface EmailTemplateProps {
+interface AdminEmailTemplate {
   username: string;
   email: string;
   content: string;
 }
 
-export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
+export const AdminEmailTemplate: React.FC<Readonly<AdminEmailTemplate>> = ({
   username,
   content,
 }) => (
