@@ -19,8 +19,15 @@
 #### /app/components/layouts
 - ページの構造やコンテンツの配置（つまりレイアウト関連）を定義したコンポーネントを管理するためのレイヤー
 
-### /app/features/components（/app/features/blog/components）
-- componentsでは共通化が難しい、特定の機能や特定のページ固有のコンポーネント（例：ブログページの場合、BlogImage, BlogList, BlogCard etc...）を管理するためのレイヤー
+### /app/features/〇〇/components（/app/features/blog/components）
+- componentsでは共通化が難しい、特定の機能や特定のページ固有のコンポーネントを管理するためのレイヤー
+- 〇〇には、その機能やページを表す具体的な名前を入れます
+  - blog: ブログ関連の機能
+  - auth: 認証関連の機能
+  - profile: ユーザープロフィール関連の機能
+  - dashboard: ダッシュボード関連の機能
+  - shop: ECショップ関連の機能
+- 例：ブログページの場合、BlogImage, BlogList, BlogCard etc...
 
 #### /app/features/blog/components/index.ts
 - このファイルは、blog関連のコンポーネントを一括でインポートするためのエントリーポイントとなります。
