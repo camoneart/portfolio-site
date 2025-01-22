@@ -1,0 +1,58 @@
+.container {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transition: opacity 500ms ease-in-out;
+}
+
+.overlay-visible {
+  opacity: 1;
+}
+
+.overlay-hidden {
+  opacity: 0;
+}
+
+.line-container {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.line {
+  width: 2px;
+  height: 0;
+  background-color: #fff;
+  transition: height 1000ms ease-in-out;
+}
+
+.line-visible {
+  height: 100vh;
+}
+
+.expanding-overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  transition: all 1000ms ease-in-out;
+}
+
+.expanding-overlay-initial {
+  width: 0;
+  opacity: 0;
+}
+
+.expanding-overlay-expanded {
+  width: 100vw;
+  opacity: 0.5;
+}
