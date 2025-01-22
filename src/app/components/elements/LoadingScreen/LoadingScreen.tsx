@@ -23,7 +23,7 @@ interface LoadingScreenProps {
 const ANIMATION_TIMING = {
   LINE_DELAY: 0,
   LINE_ANIMATION: 1500,  // 線のアニメーション時間（ms）
-  EXPAND_ANIMATION: 500, // 拡大アニメーション時間（ms）
+  EXPAND_ANIMATION: 10, // 拡大アニメーション時間（ms）
   OVERLAY_FADE: 500    // オーバーレイのフェード時間（ms）
 } as const;
 
