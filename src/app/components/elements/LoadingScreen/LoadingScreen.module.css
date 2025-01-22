@@ -1,14 +1,15 @@
-.container {
+.loading-screen-container {
   position: fixed;
   inset: 0;
-  z-index: 50;
+  z-index: 9999;
+  overflow: hidden;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
   background-color: #000;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .overlay-visible {
@@ -19,40 +20,64 @@
   opacity: 0;
 }
 
-.line-container {
+.vertical-line-container {
   position: absolute;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
+  z-index: 2;
 }
 
-.line {
-  width: 2px;
+.vertical-line {
+  width: 0.8px;
   height: 0;
   background-color: #fff;
-  transition: height 1000ms ease-in-out;
+  transition: height 1s ease-in-out;
 }
 
-.line-visible {
+.vertical-line-visible {
   height: 100vh;
 }
 
-.expanding-overlay {
+.vertical-line-fadeout {
+  height: 0;
+}
+
+/* 左側のオーバーレイ */
+.expanding-overlay-left {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  height: 100%;
+  background-color: #fff;
+  transition: width 1s ease-in-out;
+  transform-origin: right;
+  z-index: 1;
+}
+
+/* 右側のオーバーレイ */
+.expanding-overlay-right {
   position: absolute;
   top: 0;
   left: 50%;
   height: 100%;
-  transform: translateX(-50%);
   background-color: #fff;
-  transition: all 1000ms ease-in-out;
+  transition: width 1s ease-in-out;
+  transform-origin: left;
+  z-index: 1;
 }
 
+/* 初期状態 */
 .expanding-overlay-initial {
   width: 0;
-  opacity: 0;
 }
 
+/* 拡大状態 */
 .expanding-overlay-expanded {
-  width: 100vw;
-  opacity: 0.5;
+  width: 50vw;
+}
+
+/* フェードアウト状態 */
+.expanding-overlay-fadeout {
+  width: 0;
 }
