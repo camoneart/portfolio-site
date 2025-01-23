@@ -4,8 +4,6 @@ import { useEffect, useState, useCallback, memo } from 'react';
 import { Howl } from 'howler';
 import { Volume2, VolumeX } from 'lucide-react';
 import styles from './AudioPlayer.module.css';
-import { motion } from "motion/react";
-import useAudioPlayerResponsiveAnimation from '@/app/features/AudioPlayer/hooks/useAudioPlayerResponsiveAnimation';
 
 interface AudioPlayerProps {
   src: string;
@@ -25,7 +23,6 @@ const AudioPlayer = memo(({
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [sound, setSound] = useState<Howl | null>(null);
-  const { animationProps } = useAudioPlayerResponsiveAnimation();
 
   // handleClickをメモ化
   const handleClick = useCallback(() => {
@@ -59,8 +56,7 @@ const AudioPlayer = memo(({
   }, [src, initialVolume]);
 
   return (
-    <motion.button
-      {...animationProps}
+    <button
       onClick={handleClick}
       className={`hidden md:block md:sticky md:inset-0 ${styles["audio-button"]} ${className}`}
       aria-label={isPlaying ? (isMuted ? "Unmute" : "Mute") : "Play"}
@@ -70,7 +66,7 @@ const AudioPlayer = memo(({
       ) : (
         <Volume2 size={size} color={color} className={styles['audio-play']} />
       )}
-    </motion.button>
+    </button>
   );
 });
 
