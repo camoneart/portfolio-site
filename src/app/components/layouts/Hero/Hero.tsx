@@ -12,19 +12,16 @@ const Hero = memo(() => {
     <section className={`font-russo ${styles["hero"]}`}>
       <div className={`pt-6 pb-12 flex flex-col items-center justify-end ${styles["hero__container"]}`}>
         <motion.hgroup
-          initial={{ y: 200 }}
+          initial={{ opacity: 0 }}
           animate={{
-            y: 0,
-            transition: { 
-              type: "spring", 
-              stiffness: 100, 
-              damping: 12, 
-              delay: 1.4, 
-              duration: 1, 
-              ease: "easeInOut" 
+            opacity: 1,
+            transition: {
+              delay: 3.4,
+              duration: 1.8,
+              ease: "easeInOut"
             },
           }}
-          className={`text-center flex flex-col gap-1 md:gap-3 select-none ${styles["hero__hgroup"]}`}
+          className={`z-20 text-center flex flex-col gap-1 md:gap-3 select-none ${styles["hero__hgroup"]}`}
         >
           <h1 className={`z-20 md:tracking-wide font-black ${styles["hero__title"]}`}>
             <span className={`${styles["text-gradient"]}`}>{HERO_TITLE}</span>
