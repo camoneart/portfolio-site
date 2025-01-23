@@ -19,7 +19,6 @@ const Hero = memo(() => {
             transition: {
               delay: 3.35,
               duration: 1.5,
-              // ease: "easeInOut"
               ease: "easeOut"
             },
           }}
