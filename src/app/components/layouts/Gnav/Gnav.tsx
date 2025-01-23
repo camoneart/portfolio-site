@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Gnav.module.css";
-import { motion } from "motion/react";
 import { Route } from "next";
 
 interface GnavProps {
@@ -40,58 +39,34 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
           isOpen ? styles["gnav__list--open"] : ""
         }`}
       >
-        <motion.li
-          initial={{ opacity: 0, y: 70 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.8, duration: 1, ease: "easeInOut" },
-          }}
+        <li
           className={`md:sticky md:inset-0 ${styles["gnav__item"]} ${
             isOpen ? styles["gnav__item--open"] : ""
           }`}
         >
           {renderNavItem("/about" as Route, "About")}
-        </motion.li>
-        <motion.li
-          initial={{ opacity: 0, y: 70 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", stiffness: 100, damping: 12, delay: 2, duration: 1, ease: "easeInOut" },
-          }}
+        </li>
+        <li
           className={`md:sticky md:inset-0 ${styles["gnav__item"]} ${
             isOpen ? styles["gnav__item--open"] : ""
           }`}
         >
           {renderNavItem("/skills" as Route, "Skills")}
-        </motion.li>
-        <motion.li
-          initial={{ opacity: 0, y: 70 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", stiffness: 100, damping: 12, delay: 2.2, duration: 1, ease: "easeInOut" },
-          }}
+        </li>
+        <li
           className={`md:sticky md:inset-0 ${styles["gnav__item"]} ${
             isOpen ? styles["gnav__item--open"] : ""
           }`}
         >
           {renderNavItem("/works" as Route, "Works")}
-        </motion.li>
-        <motion.li
-          initial={{ opacity: 0, y: 70 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", stiffness: 100, damping: 12, delay: 2.4, duration: 1, ease: "easeInOut" },
-          }}
+        </li>
+        <li
           className={`md:sticky md:inset-0 ${styles["gnav__item"]} ${
             isOpen ? styles["gnav__item--open"] : ""
           }`}
         >
           {renderNavItem("/contact" as Route, "Contact")}
-        </motion.li>
+        </li>
       </ul>
     </nav>
   );
