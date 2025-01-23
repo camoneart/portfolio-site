@@ -21,10 +21,10 @@ interface LoadingScreenProps {
 
 // アニメーション時間の定数を明確に定義
 const ANIMATION_TIMING = {
-  LINE_DELAY: 0,
-  LINE_ANIMATION: 1500,  // 線のアニメーション時間（ms）
-  EXPAND_ANIMATION: 10, // 拡大アニメーション時間（ms）
-  OVERLAY_FADE: 500    // オーバーレイのフェード時間（ms）
+  LINE_DELAY: 0,         // 初期遅延時間（アニメーション即時開始）（ms）
+  LINE_ANIMATION: 1000, // 中央の縦線が伸びるアニメーション時間（ms）
+  EXPAND_ANIMATION: 100, // 左右の白背景が拡大するアニメーション時間（ms）
+  OVERLAY_FADE: 500    // 最終的なフェードアウトアニメーション時間（ms）
 } as const;
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({
@@ -32,10 +32,10 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({
   lineColor = '#fff',
   expandingOverlayColor = '#fff',
   timing = {
-    lineDelay: ANIMATION_TIMING.LINE_DELAY,
-    expandDelay: ANIMATION_TIMING.LINE_ANIMATION,  // 線のアニメーション完了後に拡大開始
-    fadeDelay: ANIMATION_TIMING.LINE_ANIMATION + ANIMATION_TIMING.EXPAND_ANIMATION,  // 拡大アニメーション完了後にフェード開始
-    hideDelay: ANIMATION_TIMING.LINE_ANIMATION + ANIMATION_TIMING.EXPAND_ANIMATION + ANIMATION_TIMING.OVERLAY_FADE, // 全アニメーション完了後に非表示
+    lineDelay: ANIMATION_TIMING.LINE_DELAY,        // 中央線のアニメーション開始タイミング（0ms）
+    expandDelay: ANIMATION_TIMING.LINE_ANIMATION, // 中央線のアニメーション完了後、左右拡大エフェクト開始（1000ms）
+    fadeDelay: ANIMATION_TIMING.LINE_ANIMATION + ANIMATION_TIMING.EXPAND_ANIMATION, // 拡大完了後、フェードアウト開始（1100ms）
+    hideDelay: ANIMATION_TIMING.LINE_ANIMATION + ANIMATION_TIMING.EXPAND_ANIMATION + ANIMATION_TIMING.OVERLAY_FADE, // 全アニメーション完了後にコンポーネント非表示（1600ms）
   },
   onLoadingComplete,
 }) => {
