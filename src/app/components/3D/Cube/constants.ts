@@ -4,11 +4,11 @@ import * as THREE from 'three';
 export const CUBE_CONFIG = {
   GRID_SIZE: 6, // グリッドの一辺のキューブの数
   SPACING: 1.2, // キューブ間の間隔
-  SCATTER_COUNT: 150, // 散乱させるキューブの数
+  SCATTER_COUNT: 130, // 散乱させるキューブの数
   SCATTER_RANGE: {
-    X: 15, // 横方向の範囲
-    Y: 15, // 縦方向の範囲
-    Z: 15 // 奥行方向の範囲
+    X: 12, // 横方向の範囲
+    Y: 12, // 縦方向の範囲
+    Z: 12 // 奥行方向の範囲
   },
   FLOAT: {
     MIN_SPEED: 0.0002,
