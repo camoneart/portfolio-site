@@ -17,8 +17,8 @@ const Hero = memo(() => {
             opacity: 1,
             scale: 1,
             transition: {
-              delay: 3.5,
-              duration: 1.5,
+              delay: 3.4,
+              duration: 1.2,
               ease: "easeOut"
             },
           }}
