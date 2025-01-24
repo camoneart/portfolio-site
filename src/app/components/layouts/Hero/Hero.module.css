@@ -24,3 +24,7 @@
     font-size: 3rem;
   }
 }
+
+.hero__description {
+  text-shadow: 0 0 15px #fff;
+}
