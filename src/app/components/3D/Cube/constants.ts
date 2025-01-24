@@ -2,13 +2,13 @@ import * as THREE from 'three';
 
 // 定数を別ファイルに分離
 export const CUBE_CONFIG = {
-  GRID_SIZE: 6,
-  SPACING: 1.2,
-  SCATTER_COUNT: 120,
+  GRID_SIZE: 6, // グリッドの一辺のキューブの数
+  SPACING: 1.2, // キューブ間の間隔
+  SCATTER_COUNT: 150, // 散乱させるキューブの数
   SCATTER_RANGE: {
-    X: 12,
-    Y: 10,
-    Z: 12
+    X: 15, // 横方向の範囲
+    Y: 15, // 縦方向の範囲
+    Z: 15 // 奥行方向の範囲
   },
   FLOAT: {
     MIN_SPEED: 0.0002,
