@@ -17,7 +17,7 @@ const Scene: React.FC = () => {
     (pointer: THREE.Vector2) => {
       camera.position.x += (pointer.x * 0.5 - camera.position.x) * 0.015;
       camera.position.y += (-pointer.y * 0.5 - camera.position.y) * 0.015;
-      camera.lookAt(0, 0, 0);
+      camera.lookAt(0, 0, 0); // キューブの位置
     },
     [camera]
   );
@@ -37,7 +37,7 @@ const Scene: React.FC = () => {
 
   return (
     <>
-      <PerspectiveCamera makeDefault position={[100, 60, 38]} fov={50} />
+      <PerspectiveCamera makeDefault position={[30, 80, 45]} fov={50} />
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} castShadow intensity={1} />
       <pointLight
@@ -52,7 +52,7 @@ const Scene: React.FC = () => {
         intensity={1}
         distance={10}
       />
-      <group ref={groupRef} position={[0, 0, 0]}>
+      <group ref={groupRef} position={[0, 0, 0]} rotation={[Math.PI / 4, Math.PI / 4, 0]}>
         {cubes.map((props, index) => (
           <Cube key={index} {...props} />
         ))}
