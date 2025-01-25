@@ -29,6 +29,6 @@
   text-shadow: 0 0 15px #fff;
 
   @media (width < 640px) {
-    text-shadow: 0 0 10px #fff;
+    text-shadow: none;
   }
 }
