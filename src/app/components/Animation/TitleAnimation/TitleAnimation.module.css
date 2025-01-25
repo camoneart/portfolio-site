@@ -7,7 +7,7 @@
   }
 }
 
-.title {
+.page-title {
   opacity: 0.2;
   font-size: 7.5rem;
   line-height: var(--leading-none);
@@ -20,7 +20,7 @@
   }
 }
 
-.sub-title {
+.page-sub-title {
   position: absolute;
   top: 55%;
   left: 50%;
