@@ -1,13 +1,61 @@
 "use client";
 
-import React, { memo } from "react";
+import React, { memo, useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 import { motion } from "motion/react";
 
 const HERO_TITLE = "Aoyama";
 const HERO_SUBTITLE = "Creative Web Engineer";
 
+// アニメーションのdelay時間を定数として管理
+const ANIMATION_DELAY = {
+  // 初回アクセス時
+  INITIAL: {
+    TITLE: 3.4,
+    SUBTITLE: 4.6
+  },
+  // 2回目以降のアクセス時
+  SUBSEQUENT: {
+    // TITLE: 0.15,
+    // SUBTITLE: 1.35
+    TITLE: 1.2,
+    SUBTITLE: 2.5
+  }
+} as const;
+
+// アニメーションのdurationを定数として管理
+const ANIMATION_DURATION = {
+  // 初回アクセス時
+  INITIAL: {
+    TITLE: 1.2,
+    SUBTITLE: 1.2
+  },
+  // 2回目以降のアクセス時
+  SUBSEQUENT: {
+    TITLE: 1.2,
+    SUBTITLE: 1.2
+  }
+} as const;
+
 const Hero = memo(() => {
+  const [isLoading, setIsLoading] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return !sessionStorage.getItem("hasVisitedHero");
+    }
+    return true;
+  });
+
+  useEffect(() => {
+    if (!sessionStorage.getItem("hasVisitedHero")) {
+      sessionStorage.setItem("hasVisitedHero", "true");
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, ANIMATION_DELAY.INITIAL.SUBTITLE * 1000 + 1000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <section className={`font-russo ${styles["hero"]}`}>
       <div className={`pt-6 pb-12 flex flex-col items-center justify-end ${styles["hero__container"]}`}>
@@ -20,9 +68,13 @@ const Hero = memo(() => {
               opacity: 1,
               scale: 1,
               transition: {
-                delay: 3.4,
-                duration: 1.2,
-                ease: "easeOut"
+                delay: isLoading
+                  ? ANIMATION_DELAY.INITIAL.TITLE
+                  : ANIMATION_DELAY.SUBSEQUENT.TITLE,
+                duration: isLoading
+                  ? ANIMATION_DURATION.INITIAL.TITLE
+                  : ANIMATION_DURATION.SUBSEQUENT.TITLE,
+                ease: "easeOut",
               },
             }}
             className={`z-20 md:tracking-wide font-black ${styles["hero__title"]}`}
@@ -35,9 +87,13 @@ const Hero = memo(() => {
             animate={{
               opacity: 1,
               transition: {
-                delay: 4.6,
-                duration: 1.2,
-                ease: "easeOut"
+                delay: isLoading
+                  ? ANIMATION_DELAY.INITIAL.SUBTITLE
+                  : ANIMATION_DELAY.SUBSEQUENT.SUBTITLE,
+                duration: isLoading
+                  ? ANIMATION_DURATION.INITIAL.SUBTITLE
+                  : ANIMATION_DURATION.SUBSEQUENT.SUBTITLE,
+                ease: "easeOut",
               },
             }}
           >
@@ -49,6 +105,6 @@ const Hero = memo(() => {
   );
 });
 
-Hero.displayName = 'Hero';
+Hero.displayName = "Hero";
 
 export default Hero;
