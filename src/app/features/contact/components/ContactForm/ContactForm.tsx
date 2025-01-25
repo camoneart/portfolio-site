@@ -93,7 +93,7 @@ const ContactForm = () => {
                             <Input
                               placeholder="First & Last Name"
                               {...field}
-                              className="px-3 py-6 md:text-sm"
+                              className="px-4 py-7"
                             />
                           </TooltipTrigger>
                           <TooltipContent>
@@ -121,7 +121,7 @@ const ContactForm = () => {
                             <Input
                               placeholder="Your email address"
                               {...field}
-                              className="px-3 py-6 md:text-sm"
+                              className="px-4 py-7"
                             />
                           </TooltipTrigger>
                           <TooltipContent>
@@ -150,7 +150,7 @@ const ContactForm = () => {
                           <Input
                             placeholder="Subject"
                             {...field}
-                            className="px-3 py-6 md:text-sm"
+                            className="px-4 py-7"
                           />
                         </TooltipTrigger>
                         <TooltipContent>
