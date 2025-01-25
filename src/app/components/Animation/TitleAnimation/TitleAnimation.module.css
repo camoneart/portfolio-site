@@ -15,7 +15,8 @@
   text-shadow: 0 0 13px var(--color-secondary-orange);
 
   @media (width < 768px) {
-    font-size: 4.875rem;
+    /* font-size: 4.875rem; */
+    font-size: 4rem;
     letter-spacing: 0.025em;
   }
 }
@@ -31,7 +32,8 @@
   letter-spacing: 0.05em;
 
   @media (width < 768px) {
-    font-size: 1.375rem;
+    /* font-size: 1.375rem; */
+    font-size: 1.25rem;
     letter-spacing: 0.025em;
   }
 }
