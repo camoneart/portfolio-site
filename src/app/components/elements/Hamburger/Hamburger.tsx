@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./Hamburger.module.css";
-import { motion } from "motion/react";
 
 interface HamburgerProps {
   isOpen: boolean;
@@ -31,13 +30,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggleMenu }) => {
   }, [isOpen]);
 
   return (
-    <motion.button
-      initial={{ opacity: 0, y: 40 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.8, duration: 1, ease: "easeInOut" },
-      }}
+    <button
       type="button"
       className={`${styles["hamburger"]} ${isOpen ? styles["hamburger--open"] : ""}`}
       onClick={toggleMenu}
@@ -73,7 +66,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggleMenu }) => {
           }`}
         ></div>
       </div>
-    </motion.button>
+    </button>
   );
 };
 
