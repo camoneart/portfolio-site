@@ -15,10 +15,10 @@ const TitleAnimation = ({ title, subTitle }: { title: string, subTitle: string }
       }}
       className={`flex flex-col items-center justify-center gap-2 select-none ${styles["title-group"]}`}
     >
-      <h1 className={`font-russo order-2 font-black ${styles["page-title"]} ${styles["motion-title"]}`}>
+      <h1 className={`font-russo order-2 ${styles["page-title"]} ${styles["motion-title"]}`}>
         {title}
       </h1>
-      <p className={`order-1 font-black ${styles["page-sub-title"]}`}>{subTitle}</p>
+      <p className={`order-1 ${styles["page-sub-title"]}`}>{subTitle}</p>
     </motion.hgroup>
   );
 };
