@@ -16,10 +16,8 @@ const ANIMATION_DELAY = {
   },
   // 2回目以降のアクセス時
   SUBSEQUENT: {
-    // TITLE: 0.15,
-    // SUBTITLE: 1.35
     TITLE: 1.2,
-    SUBTITLE: 2.5
+    SUBTITLE: 2.4
   }
 } as const;
 
