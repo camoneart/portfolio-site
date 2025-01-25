@@ -10,9 +10,9 @@ export function ControlViewport(): null {
       if (!viewport) return;
       viewport.setAttribute(
         "content",
-        window.outerWidth > 350
+        window.outerWidth > 340
           ? `width=device-width,initial-scale=1.0,maximum-scale=1.0`
-          : `width=350,maximum-scale=1.0`
+          : `width=340,maximum-scale=1.0`
       );
     };
 
