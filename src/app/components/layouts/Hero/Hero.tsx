@@ -56,7 +56,7 @@ const Hero = memo(() => {
 
   return (
     <section className={`font-russo ${styles["hero"]}`}>
-      <div className={`pb-10 md:pb-14 flex flex-col items-center justify-end ${styles["hero__container"]}`}>
+      <div className={`flex flex-col items-center justify-end ${styles["hero__container"]}`}>
         <hgroup
           className={`z-20 text-center flex flex-col gap-1 md:gap-3 select-none ${styles["hero__hgroup"]}`}
         >
