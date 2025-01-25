@@ -11,8 +11,8 @@ export function ControlViewport(): null {
       viewport.setAttribute(
         "content",
         window.outerWidth > 360
-          ? `width=device-width,initial-scale=1.0`
-          : `width=360`
+          ? `width=device-width,initial-scale=1.0,maximum-scale=1.0`
+          : `width=360,maximum-scale=1.0`
       );
     };
 
