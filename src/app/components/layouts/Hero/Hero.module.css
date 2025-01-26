@@ -18,6 +18,7 @@
 }
 
 .text-gradient {
+  display: inline-block;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
