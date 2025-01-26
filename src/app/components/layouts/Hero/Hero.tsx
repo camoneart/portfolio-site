@@ -80,7 +80,7 @@ const Hero = memo(() => {
             <span className={`${styles["text-gradient"]}`}>{HERO_TITLE}</span>
           </motion.h1>
           <motion.p
-            className={`z-20 text-xl md:text-2xl md:tracking-wider font-black ${styles["hero__description"]}`}
+            className={`z-20 text-xl md:text-2xl md:tracking-wider font-black ${styles["hero__sub-title"]}`}
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,

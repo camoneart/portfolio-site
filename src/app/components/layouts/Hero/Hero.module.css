@@ -34,7 +34,7 @@
   }
 }
 
-.hero__description {
+.hero__sub-title {
   text-shadow: 0 0 15px #fff;
 
   @media (width < 640px) {
