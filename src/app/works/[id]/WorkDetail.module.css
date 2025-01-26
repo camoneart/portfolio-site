@@ -131,9 +131,7 @@
 .work__url-container {
   width: 100%;
   display: block flex;
-  align-items: center;
   font-size: 1.125rem;
-  overflow-wrap: anywhere;
 
   @media (width < 640px) {
     font-size: 0.75rem;
@@ -148,10 +146,12 @@
 }
 
 .work__url {
+  max-width: 100%;
   position: relative;
   display: block flow;
   font-weight: var(--font-weight-normal);
   line-height: var(--leading-x-tight);
+  overflow-wrap: anywhere;
   transition: color 0.4s ease-in-out;
 
   &:hover {
