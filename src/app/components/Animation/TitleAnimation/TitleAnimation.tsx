@@ -13,7 +13,7 @@ const TitleAnimation = ({ title, subTitle }: { title: string, subTitle: string }
         y: 0,
         transition: { type: "spring", stiffness: 100, damping: 12, delay: 1.4, duration: 1, ease: "easeInOut" },
       }}
-      className={`flex flex-col items-center justify-center gap-2 select-none ${styles["title-group"]}`}
+      className={`flex flex-col items-center justify-center gap-2 select-none ${styles["page-title-group"]}`}
     >
       <h1 className={`font-russo order-2 ${styles["page-title"]} ${styles["motion-title"]}`}>
         {title}
