@@ -91,7 +91,6 @@
   width: 100%;
   height: auto;
   margin-block-start: 30px;
-  padding-inline: 5px;
 
   @media (width < 768px) {
     margin-block-start: 15px;
