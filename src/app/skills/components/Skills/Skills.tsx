@@ -269,7 +269,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "React Hook Form",
     skillLink: "react-hook-form",
     description:
-      "このポートフォリオサイトのお問い合わせフォームではReact Hook Formを使用し、「フォームの入力値の状態管理」「送信処理の制御」「エラー表示の管理」など、フォームのパフォーマンス化を行っています。",
+      "このポートフォリオサイトのお問い合わせフォームではReact Hook Formを使用し、「フォームの入力値の状態管理」「送信処理の制御」「エラー表示の管理」など、フォームのパフォーマンス最適化を実現しています。",
     skillLogo: "/images/skills/react-hook-form-logo.svg",
     label: "LIBRARY",
     link: "https://react-hook-form.com/",
