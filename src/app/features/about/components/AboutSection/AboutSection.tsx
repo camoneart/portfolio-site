@@ -171,7 +171,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      AIについて学習を行いながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、クリエイターは今まで以上に<em>クリエイティブと向き合う時間に集中できるようになれる</em>と思っています。
+                      AIについて学習を行いながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に<em>クリエイティブと向き合う時間に集中できるようになれる</em>と思っています。
                     </motion.dd>
                   </div>
 
