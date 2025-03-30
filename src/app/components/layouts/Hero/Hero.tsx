@@ -5,7 +5,7 @@ import styles from "./Hero.module.css";
 import { motion } from "motion/react";
 
 const HERO_TITLE = "Aoyama";
-const HERO_SUBTITLE = "Creative Web Engineer";
+const HERO_SUBTITLE = "Creative Web Developer";
 
 // アニメーションのdelay時間を定数として管理
 const ANIMATION_DELAY = {
