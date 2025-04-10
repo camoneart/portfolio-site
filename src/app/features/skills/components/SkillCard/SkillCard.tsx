@@ -6,7 +6,7 @@ import { Link } from "next-view-transitions";
 import { useSkillCardAnimation } from "@/app/features/skills/hooks/useSkillCardAnimation";
 import { motion } from "motion/react";
 import { memo } from "react";
-import type { Route } from 'next';
+import type { Route } from "next";
 
 interface CardProps {
   id: number;
@@ -45,7 +45,6 @@ const SkillCard = ({
   viewTransitionLogoWrapper,
   viewTransitionLogoBg,
 }: CardProps) => {
-
   const { cardRef } = useSkillCardAnimation({ index });
 
   return (
@@ -55,13 +54,13 @@ const SkillCard = ({
         animate={{
           opacity: 1,
           y: 0,
-          transition: { 
-            type: "spring", 
-            stiffness: 100, 
-            damping: 12, 
-            delay: 1.8 + (0.1 * index),
-            duration: 1, 
-            ease: "easeInOut" 
+          transition: {
+            type: "spring",
+            stiffness: 100,
+            damping: 12,
+            delay: 1.8 + 0.1 * index,
+            duration: 1,
+            ease: "easeInOut",
           },
         }}
         ref={cardRef}
@@ -74,8 +73,12 @@ const SkillCard = ({
           className={`${styles["skill-card-link"]}`}
         >
           <div className={styles["skill-card-content"]}>
-            <div className={`${styles["skill-logo-wrapper"]} ${viewTransitionLogoWrapper}`}>
-              <div className={`${styles["skill-logo-bg"]} ${viewTransitionLogoBg}`} >
+            <div
+              className={`${styles["skill-logo-wrapper"]} ${viewTransitionLogoWrapper}`}
+            >
+              <div
+                className={`${styles["skill-logo-bg"]} ${viewTransitionLogoBg}`}
+              >
                 <Image
                   src={skillLogo}
                   alt={skillTitle}
@@ -86,10 +89,14 @@ const SkillCard = ({
               </div>
             </div>
             <div className={styles["skill-info"]}>
-              <h2 className={`font-russo ${styles["skill-title"]} ${viewTransitionName}`}>
+              <h2
+                className={`font-russo ${styles["skill-title"]} ${viewTransitionName}`}
+              >
                 {skillTitle}
               </h2>
-              <div className={`font-russo ${styles["skill-label"]} ${viewTransitionLabel}`}>
+              <div
+                className={`font-russo ${styles["skill-label"]} ${viewTransitionLabel}`}
+              >
                 {label}
               </div>
             </div>
