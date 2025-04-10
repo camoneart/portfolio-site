@@ -66,7 +66,8 @@
 
 .about-profile-icon,
 .about-hobby-icon,
-.about-vision-icon {
+.about-vision-icon,
+.about-focus-icon {
   display: block grid;
   grid-template-columns: 1fr;
   place-items: center;
@@ -198,4 +199,14 @@
   100% {
     opacity: 1;
   }
+}
+
+.about-zenn-link {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: 0.025em;
+  color: var(--color-zenn-blue);
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
 }

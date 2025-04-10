@@ -4,8 +4,9 @@ import React from "react";
 import styles from "./AboutSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
-import { User, Flame, Sparkle } from 'lucide-react';
+import { User, Flame, Sparkle, Focus } from 'lucide-react';
 import { motion } from "motion/react";
+import Link from "next/link";
 
 export const aboutTitle = "About";
 export const aboutSubTitle = "私について";
@@ -87,7 +88,7 @@ const AboutSection = () => {
 
             <div className={`${styles["about-hobby"]}`}>
               <div className={styles["about-header"]}>
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 2.2, duration: 0.6, ease: "easeInOut" }}
@@ -164,23 +165,6 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
                       className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
-                      <span className={styles["light-effect"]}>AIについての学習</span>
-                    </motion.dt>
-                    <motion.dd 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      AIについて学習を行いながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に<em>クリエイティブと向き合う時間に集中できるようになれる</em>と思っています。
-                    </motion.dd>
-                  </div>
-
-                  <div className={styles["about-content-group"]}>
-                    <motion.dt 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
-                      className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
                       <span className={styles["light-effect"]}>読書</span>
                     </motion.dt>
                     <motion.dd 
@@ -204,6 +188,60 @@ const AboutSection = () => {
               {/* /.about-content */}
             </div>
             {/* /.about-hobby */}
+
+            <div className={`${styles["about-focus"]}`}>
+              <div className={styles["about-header"]}>
+                <motion.div 
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
+                  className={styles["about-focus-icon"]}>
+                  <Focus size={20} color="#ff6b4a" />
+                </motion.div>
+                <motion.h2
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
+                  className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}>Focus</motion.h2>
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ delay: 2.1, duration: 1.3, ease: "easeInOut" }}
+                  className={styles["about-border"]}
+                ></motion.div>
+              </div>
+              <div className={`${styles["about-content"]}`}>
+                <dl className={styles["about-list"]}>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
+                      className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
+                      <span className={styles["light-effect"]}>AIに注力しています</span>
+                    </motion.dt>
+                    <motion.dd 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      AIについて学習を行いながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に<em>クリエイティブと向き合う時間に集中できるようになれる</em>と思っています。
+                    </motion.dd>
+                    <motion.dd 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      最近では、<em>MCP</em>と<em>AIエージェント</em>について理解を深めるため、日々キャッチアップしています。
+                      <Link href="https://zenn.dev/aoyamadev" className={styles["about-zenn-link"]}>Zenn</Link>にて記事を執筆することでアウトプットを行って理解を深めています。
+                    </motion.dd>
+                  </div>
+                </dl>
+                {/* /.about-list */}
+              </div>
+              {/* /.about-content */}
+            </div>
+            {/* /.about-focus */}
 
             <div className={`${styles["about-vision"]}`}>
               <div className={styles["about-header"]}>
