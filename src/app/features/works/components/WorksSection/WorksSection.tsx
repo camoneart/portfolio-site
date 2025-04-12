@@ -75,7 +75,7 @@ export const worksData: WorksData[] = [
       "　ダウンロードフォームは、「全項目を入力しないと、送信できないようにする」「フォーム送信後は、サンクスページに遷移」「性と名が分かれている時のオートコンプリートに対応」などの仕様です。実際のダウンロード機能は実装していません。",
     accessDescription:
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo01の入力をお願いいたします。",
-    labels: [{ no: "Card No.", value: "001/004" }],
+    labels: [{ no: "Card No.", value: "001/005" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/caresend/",
     role: "Coding",
@@ -102,7 +102,7 @@ export const worksData: WorksData[] = [
       "　メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
     accessDescription:
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo02の入力をお願いいたします。",
-    labels: [{ no: "Card No.", value: "002/004" }],
+    labels: [{ no: "Card No.", value: "002/005" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/aobotan/",
     role: "Coding",
@@ -152,7 +152,7 @@ export const worksData: WorksData[] = [
       "　「送信する」ボタンは、必須項目が全て入力されていないと押せないようにしています。確認画面は実装していません。",
     accessDescription:
       "また、BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：demo03の入力をお願いいたします。",
-    labels: [{ no: "Card No.", value: "003/004" }],
+    labels: [{ no: "Card No.", value: "003/005" }],
     skillsList:
       "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
     siteUrl: "https://otowebdev.com/tetote/",
@@ -184,9 +184,41 @@ export const worksData: WorksData[] = [
       "　お問い合わせフォームは、「React Hook Form」でフォームのパフォーマンス化を行い、「Zod」で入力値の検証（バリデーション）を行うことで堅牢なフォームを実装しました。また、メール送信機能につきましては「Resend」を利用して実装しました。",
     accessDescription:
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
-    labels: [{ no: "Card No.", value: "004/004" }],
+    labels: [{ no: "Card No.", value: "004/005" }],
     skillsList:
-      "Next.js, React, TypeScript, CSS, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",
+      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",
+    siteUrl: "https://aoyamadev.com/",
+    role: "Design, Coding",
+    username: "",
+    password: "",
+    viewTransitionName: "view-transition-title-work-4",
+    viewTransitionImage: "view-transition-img-work-4",
+  },
+  {
+    id: 5,
+    image: "/images/works/work05.jpg",
+    workTitle: "OUTPUT QUEST ~叡智の継承者~",
+    description:
+      "私が開発したWebアプリです。RPG風のゲーミフィケーションを取り入れた学習支援アプリで、Zennで記事を投稿することでアプリ内のキャラクター「勇者」が成長していきます。アウトプットを通じて学習意欲を高め、楽しみながら自己成長を促すことを目的に開発しました。",
+    detail01:
+      "　このサイトはNext.js + Tailwind CSS + CSS Modules + TypeScriptで制作し、デプロイはVercelで行いました。",
+    detail02:
+      "　トップページの3Dコンテンツは「React Tree Fiber」で実装しています。",
+    detail03:
+      "　ドットパターンで表現した背景のアニメーションや、カードの出現アニメーションは「GSAP」で実装しています。",
+    detail04:
+      "　カード型UIには「View Transitions API」を利用し、スムーズに流れるような遷移アニメーションを実装しています。",
+    detail05:
+      "　ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識したアニメーションを実装しています。",
+    detail06:
+      "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
+    detail07:
+      "　お問い合わせフォームは、「React Hook Form」でフォームのパフォーマンス化を行い、「Zod」で入力値の検証（バリデーション）を行うことで堅牢なフォームを実装しました。また、メール送信機能につきましては「Resend」を利用して実装しました。",
+    accessDescription:
+      "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
+    labels: [{ no: "Card No.", value: "005/005" }],
+    skillsList:
+      "Next.js, TypeScript, Tailwind CSS, shadcn/ui",
     siteUrl: "https://aoyamadev.com/",
     role: "Design, Coding",
     username: "",
