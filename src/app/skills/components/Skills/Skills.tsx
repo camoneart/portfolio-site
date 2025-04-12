@@ -346,6 +346,23 @@ export const skillsData: SkillsData[] = [
   },
   {
     id: 21,
+    skillTitle: "MCP",
+    skillLink: "mcp",
+    description:
+      "MCP（Model Context Protocol）の概念を理解しています。自作MCPサーバーの実装・活用経験があり、ZennにてMCPに関する技術記事も執筆しています。",
+    skillLogo: "/images/skills/mcp-logo.png",
+    label: "Protocol",
+    link: "https://github.com/modelcontextprotocol",
+    viewTransitionName: "view-transition-title-mcp",
+    viewTransitionImage: "view-transition-img-mcp",
+    viewTransitionBg: "view-transition-bg-mcp",
+    viewTransitionLabel: "view-transition-label-mcp",
+    viewTransitionLogoWrapper:
+      "view-transition-logo-wrapper-mcp",
+    viewTransitionLogoBg: "view-transition-logo-bg-mcp",
+  },
+  {
+    id: 22,
     skillTitle: "Adobe Premiere Pro",
     skillLink: "adobe-premiere-pro",
     description:
