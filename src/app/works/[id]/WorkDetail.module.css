@@ -240,7 +240,7 @@
   box-shadow: 2px 3px 0 0 rgb(0 0 0 / 0.4);
   border: 1px solid var(--label-border-color);
   border-radius: 6px;
-  padding-block: 6px 5.5px;
+  padding-block: 6px 5px;
   padding-inline: 11px;
 
   @media (width < 640px) {
