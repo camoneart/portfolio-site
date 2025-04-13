@@ -169,7 +169,7 @@ export const worksData: WorksData[] = [
     description:
       "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
     detail01:
-      "　このサイトはNext.js + Tailwind CSS + CSS Modules + TypeScriptで制作し、デプロイはVercelで行いました。",
+      "　このサイトはNext.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはVercelで行いました。",
     detail02:
       "　トップページの3Dコンテンツは「React Tree Fiber」で実装しています。",
     detail03:
@@ -201,25 +201,25 @@ export const worksData: WorksData[] = [
     description:
       "私が開発したWebアプリです。RPG風のゲーミフィケーションを取り入れた学習支援アプリで、Zennで記事を投稿することでアプリ内のキャラクター「勇者」が成長していきます。アウトプットを通じて学習意欲を高め、楽しみながら自己成長を促すことを目的に開発しました。",
     detail01:
-      "　このサイトはNext.js + Tailwind CSS + CSS Modules + TypeScriptで制作し、デプロイはVercelで行いました。",
+      "　このサイトはNext.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはVercelで行いました。",
     detail02:
-      "　トップページの3Dコンテンツは「React Tree Fiber」で実装しています。",
+      "　トップページ：ゲームのオープニングを彷彿とさせる演出で、視覚的な出迎えを実現しました。",
     detail03:
-      "　ドットパターンで表現した背景のアニメーションや、カードの出現アニメーションは「GSAP」で実装しています。",
+      "　ダッシュボードページ：アプリ内のキャラクター「勇者」の成長度合いを示すレベル、Zennでの投稿数、レベルアップ報酬で獲得したアイテムや勇者のなかまを確認できます。",
     detail04:
-      "　カード型UIには「View Transitions API」を利用し、スムーズに流れるような遷移アニメーションを実装しています。",
+      "　投稿リストページ：",
     detail05:
-      "　ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識したアニメーションを実装しています。",
+      "　つよさページ：",
     detail06:
-      "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
+      "　なかまページ：",
     detail07:
-      "　お問い合わせフォームは、「React Hook Form」でフォームのパフォーマンス化を行い、「Zod」で入力値の検証（バリデーション）を行うことで堅牢なフォームを実装しました。また、メール送信機能につきましては「Resend」を利用して実装しました。",
+      "　アイテムページ：",
     accessDescription:
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "005/005" }],
     skillsList:
-      "Next.js, TypeScript, Tailwind CSS, shadcn/ui",
-    siteUrl: "https://aoyamadev.com/",
+      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, Motion, Howler.js",
+    siteUrl: "https://outputquest.com/",
     role: "Design, Coding",
     username: "",
     password: "",
