@@ -167,6 +167,28 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               clearProps: 'transform,perspective'
             }
           };
+        } else if (id === 5) {
+          settings = {
+            initial: {
+              opacity: 0,
+              rotateY: -360,
+              rotateX: 0,
+              scale: 0.6,
+              y: 100,
+              x: 0,
+              duration: 0.8
+            },
+            animate: {
+              opacity: 1,
+              rotateY: 0,
+              rotateX: 0,
+              scale: 0.75,
+              y: 0,
+              x: 0,
+              duration: 0.8,
+              clearProps: 'transform,perspective'
+            }
+          };
         }
       }
 
@@ -179,6 +201,8 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
         } else if (id === 3) {
           settings.animate.scale = 0.85;
         } else if (id === 4) {
+          settings.animate.scale = 0.85;
+        } else if (id === 5) {
           settings.animate.scale = 0.85;
         }
       }
