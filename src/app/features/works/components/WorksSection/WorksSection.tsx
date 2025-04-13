@@ -25,6 +25,7 @@ interface WorksData {
   detail05?: string;
   detail06?: string;
   detail07?: string;
+  detail08?: string;
   specification01Detail01?: string;
   specification01Detail02?: string;
   specification01Detail03?: string;
@@ -207,13 +208,15 @@ export const worksData: WorksData[] = [
     detail03:
       "　ダッシュボードページ：アプリ内のキャラクター「勇者」の成長度合いを示すレベル、Zennでの投稿数、レベルアップ報酬で獲得したアイテムや勇者のなかまを確認できます。",
     detail04:
-      "　投稿リストページ：",
+      "　投稿リストページ：Zennで投稿した記事を取得して、アプリ内で「投稿リスト」として記事を閲覧できます。",
     detail05:
-      "　つよさページ：",
+      "　つよさページ：レベルアップ報酬で獲得した「称号」の確認、勇者の装備アイテムの確認、学びの記録を時系列で確認できる「冒険ログ」の確認ができます。",
     detail06:
-      "　なかまページ：",
+      "　なかまページ：勇者のなかまになったキャラクターを閲覧できます。",
     detail07:
-      "　アイテムページ：",
+      "　アイテムページ：レベルアップ報酬で獲得したアイテムを閲覧できます。",
+    detail08:
+      "　アバウトページ：アプリの概要、コンセプト、主要機能について紹介しています。",
     accessDescription:
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "005/005" }],
