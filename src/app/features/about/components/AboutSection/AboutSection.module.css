@@ -50,6 +50,11 @@
 
 .about-content {
   margin-block-start: 17px;
+
+  @media (width < 768px) {
+    display: block grid;
+    place-items: center;
+  }
 }
 
 .about-content-group {
@@ -62,6 +67,49 @@
 /* profile */
 .about-profile {
   display: block grid;
+}
+
+.about-profile-list {
+  display: block grid;
+  place-items: center start;
+  grid-template-columns: auto 1fr;
+  column-gap: 40px;
+
+  @media (width < 768px) {
+    column-gap: 20px;
+  }
+}
+
+.about-profile-info {
+  display: block grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+
+  @media (width < 768px) {
+    row-gap: 5px;
+  }
+}
+
+.about-profile-img-box {
+  width: fit-content;
+  display: block grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  background-color: var(--cmp-bg-secondary-color);
+  box-shadow: var(--cmp-secondary-shadow);
+  border: 1px solid var(--cmp-border-secondary-color);
+  border-radius: 8px;
+  padding-block: 5px;
+  padding-inline: 5px;
+}
+
+.about-profile-img {
+  border-radius: 6px;
+
+  @media (width < 768px) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .about-profile-icon,
@@ -142,6 +190,10 @@
   &.about-list-title-en {
     font-size: 1.375rem;
     letter-spacing: 0.05em;
+
+    @media (width < 768px) {
+      font-size: 1.125rem;
+    }
   }
 }
 

@@ -7,6 +7,7 @@ import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 import { User, Flame, Sparkle, Focus } from 'lucide-react';
 import { motion } from "motion/react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const aboutTitle = "About";
 export const aboutSubTitle = "私について";
@@ -50,35 +51,47 @@ const AboutSection = () => {
                 ></motion.div>
               </div>
               <div className={`${styles["about-content"]}`}>
-                <dl className={styles["about-list"]}>
-                  <div className={styles["about-content-group"]}>
-                    <motion.dt
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
-                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}>
-                      <span className={styles["light-effect"]}>Birthday</span>
-                    </motion.dt>
-                    <motion.dd 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>1999 / 07 / 10</motion.dd>
+                <dl className={`${styles["about-profile-list"]}`}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
+                    className={styles["about-profile-img-box"]}>
+                    <Image src={"/images/about/profile/peter-icon-compression.jpg"} alt="プロフィール画像" width={165} height={165} className={styles["about-profile-img"]} />
+                  </motion.div>
+                  <div className={styles["about-profile-info"]}>
+                    <div className={styles["about-content-group"]}>
+                      <motion.dt
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
+                        className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}>
+                        <span className={styles["light-effect"]}>Birthday</span>
+                      </motion.dt>
+                      <motion.dd 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
+                        className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>1999 / 07 / 10</motion.dd>
+                    </div>
+                    <div className={styles["about-content-group"]}>
+                      <motion.dt
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
+                        className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}>
+                        <span className={styles["light-effect"]}>Name</span>
+                      </motion.dt>
+                      <motion.dd 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
+                        className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>Kaishu Aoyama</motion.dd>
+                    </div>
                   </div>
-                  <div className={styles["about-content-group"]}>
-                    <motion.dt
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
-                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}>
-                      <span className={styles["light-effect"]}>Name</span>
-                    </motion.dt>
-                    <motion.dd 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>青山 魁修｜Aoyama Kaishu</motion.dd>
-                  </div>
+                  {/* <div className={styles["about-profile-img-box"]}>
+                    <Image src={"/images/about/profile/peter-icon-compression.jpg"} alt="プロフィール画像" width={100} height={100} className={styles["about-profile-img"]} />
+                  </div> */}
                 </dl>
                 {/* /.about-list */}
               </div>
@@ -110,28 +123,12 @@ const AboutSection = () => {
               <div className={`${styles["about-content"]}`}>
                 <dl className={styles["about-list"]}>
                   <div className={styles["about-content-group"]}>
-                    <motion.dt
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
-                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}>
-                      <span className={styles["light-effect"]}>学ぶことが好きです。</span>
-                    </motion.dt>
-                    <motion.dd 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      興味を持ったもの、気になったことについて学び、自分の知識やスキルアップに繋げます。
-                    </motion.dd>
-                  </div>
-                  <div className={styles["about-content-group"]}>
                     <motion.dt 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
                       className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
-                      <span className={styles["light-effect"]}>モダン技術のキャッチアップ</span>
+                      <span className={styles["light-effect"]}>技術のキャッチアップ</span>
                     </motion.dt>
                     <motion.dd 
                       initial={{ opacity: 0 }}
@@ -139,6 +136,13 @@ const AboutSection = () => {
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
                       技術力の向上を目的として、日々、情報収集と学習を行っています。特に、興味を持った技術は実際にコードを書いて検証し、実践的な理解を深めることを心がけています。
+                    </motion.dd>
+                    <motion.dd 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      現在は、<em>Next.js（App Router）</em>, <em>Type Script</em>, <em>インタラクション</em>, <em>UI / UX</em>, <em>AI</em>の学習に力を入れています。
                     </motion.dd>
                   </div>
 
@@ -148,14 +152,45 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
                       className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
-                      <span className={styles["light-effect"]}>ギャラリーサイトの閲覧</span>
+                      <span className={styles["light-effect"]}>音楽</span>
                     </motion.dt>
                     <motion.dd 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      デザイン、UI/UX、インタラクションの知見を深めるため、国内外のギャラリーサイトを日常的に閲覧しています。また、<em>｢心地よく、心躍るようなインタラクションを実装できるエンジニアに成長したい｣</em>という想いを実現するため、日々、学習に取り組んでいます。
+                      毎日、音楽を聴きます。音楽から日々のエネルギーを得ています。
+                    </motion.dd>
+                    <motion.dd 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      特に好きなアーティストは、<em>Vaundy</em>, <em>藤井 風</em>, <em>SUPER BEAVER</em>, <em>Saucy Dog</em>です。
+                    </motion.dd>
+                  </div>
+
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
+                      className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
+                      <span className={styles["light-effect"]}>映画鑑賞</span>
+                    </motion.dt>
+                    <motion.dd 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      映画鑑賞が趣味で、なかでも洋画をよく観ています。映画は、私にこれまで気づかなかった考え方や視点、異なる文化、価値観との出会いをもたらしてくれる存在です。
+                    </motion.dd>
+                    <motion.dd 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
+                      特に好きな映画は、<em>アメイジング・スパイダーマン</em>, <em>イコライザー</em>, <em>最強のふたり</em>, <em>ドリームプラン</em>, <em>マイ・インターン</em>, <em>ターミナル</em>, <em>イエスタデイ</em> etc...です。
                     </motion.dd>
                   </div>
 
@@ -172,7 +207,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      技術書やビジネス書、ジャンルを問わず気になった書籍を読むのが好きです。表紙を見て直感で気になった書籍があれば、まず目次に目を通し、気になるトピックがあればとりあえず購入することが多いです。読書では、<em>新たな知恵を得たり、自分とは違った考え方や価値観を学ぶことができる</em>ため、書籍と向き合う時間を大切にしています。私にとっての書籍は、<em>｢先人の知恵を学ぶことができるアイテム｣</em>といった存在です。
+                      技術書やビジネス書、ジャンルを問わず気になった書籍を読むのが好きです。読書では、<em>新たな知識を得たり、私とは違う、著者の考え方や価値観を学ぶことができる</em>ため、書籍と向き合う時間も大切にしています。私にとっての書籍は、<em>｢先人の知恵を学ぶことができるアイテム｣</em>といった存在です。
                     </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
@@ -225,15 +260,14 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      AIについて学習を行いながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に<em>クリエイティブと向き合う時間に集中できるようになれる</em>と思っています。
+                      AIについて学びながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に<em>クリエイティブと向き合う時間に集中できるようになれる</em>と考えています。
                     </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      最近では、<em>MCP</em>と<em>AIエージェント</em>について理解を深めるため、日々キャッチアップしています。
-                      <Link href="https://zenn.dev/aoyamadev" className={styles["about-zenn-link"]}>Zenn</Link>にて記事を執筆することでアウトプットを行って理解を深めています。
+                        最近は、<em>MCP（Model Context Protocol）</em>と<em>AIエージェント</em>に注力しています。自作MCPサーバーを実装して、実際にAIエージェントの能力拡張に活用しています。<Link href="https://zenn.dev/aoyamadev" className={styles["about-zenn-link"]}>Zenn</Link>ではMCPとAIエージェントに関する技術記事も執筆しています。
                     </motion.dd>
                   </div>
                 </dl>
@@ -320,7 +354,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      地に足をつけ、学びを大切とし、チャレンジし続けることで、<em>｢見たことも無い、想像もできなかった場所へ行ける｣</em>と私は信じています。
+                      地に足をつけ、学びを大切とし、謙虚さを忘れず、常にチャレンジし続けることで、<em>｢見たことも無い、想像もできなかった場所へ行ける｣</em>と私は信じています。
                     </motion.dd>
                   </div>
                 </dl>
