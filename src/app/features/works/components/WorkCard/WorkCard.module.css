@@ -96,47 +96,34 @@
 }
 
 @media screen and (1280px <= width) {
-  .card-no-1 {
+  .card-no-1,
+  .card-no-2,
+  .card-no-3,
+  .card-no-4,
+  .card-no-5 {
     transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
   }
 
   .card-no-1:hover,
   .card-no-1:active,
   .card-no-1:focus,
-  .card-no-1:focus-visible {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
-  }
-
-  .card-no-2 {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
-  }
-
+  .card-no-1:focus-visible,
   .card-no-2:hover,
   .card-no-2:active,
   .card-no-2:focus,
-  .card-no-2:focus-visible {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
-  }
-
-  .card-no-3 {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
-  }
-
+  .card-no-2:focus-visible,
   .card-no-3:hover,
   .card-no-3:active,
   .card-no-3:focus,
-  .card-no-3:focus-visible {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
-  }
-
-  .card-no-4 {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
-  }
-
+  .card-no-3:focus-visible,
   .card-no-4:hover,
   .card-no-4:active,
   .card-no-4:focus,
-  .card-no-4:focus-visible {
+  .card-no-4:focus-visible,
+  .card-no-5:hover,
+  .card-no-5:active,
+  .card-no-5:focus,
+  .card-no-5:focus-visible {
     transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
   }
 }
