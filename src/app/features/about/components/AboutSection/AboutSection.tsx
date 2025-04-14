@@ -190,7 +190,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      特に好きな映画は、<em>アメイジング・スパイダーマン</em>, <em>イコライザー</em>, <em>最強のふたり</em>, <em>ドリームプラン</em>, <em>マイ・インターン</em>, <em>ターミナル</em>, <em>イエスタデイ</em> etc...です。
+                      特に好きな映画は、<em>アメイジング・スパイダーマン</em>, <em>イコライザー</em>, <em>最強のふたり</em>, <em>ドリームプラン</em>, <em>マイ・インターン</em>, <em>素晴らしきかな、人生</em>, <em>ターミナル</em>, <em>イエスタデイ</em> etc...です。
                     </motion.dd>
                   </div>
 
