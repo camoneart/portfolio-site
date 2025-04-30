@@ -102,7 +102,7 @@
   z-index: 2;
   display: block flow;
   color: var(--color-primary-white);
-  padding-block: 5px 3px;
+  padding-block: 5px 4px;
   padding-inline: 12px;
   font-size: 1rem;
   line-height: var(--leading-x-tight);
