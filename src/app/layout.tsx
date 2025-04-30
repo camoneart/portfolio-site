@@ -17,8 +17,8 @@ const russoOne = Russo_One({
 
 export const metadata: Metadata = {
   title: {
-    default: "Aoyama｜Creative Web Developer",
-    template: "%s｜Aoyama",
+    default: "AOYAMA｜Creative Web Developer",
+    template: "%s｜AOYAMA",
   },
   description: "Kaishu Aoyamaのポートフォリオサイトです。「モノとの対話」を表現できるエンジニアを目指しています。",
   robots: "noindex, nofollow",

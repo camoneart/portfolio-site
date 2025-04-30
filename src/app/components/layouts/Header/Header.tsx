@@ -43,8 +43,8 @@ export default function Header() {
       <div className={`flex items-center justify-between ${styles["header__container"]}`}>
         <div className={`sticky inset-0 font-russo text-xl md:text-3xl font-black ${styles["header__title"]}`}>
           <Link href="/" className={`${styles["header__title-link"]}`} onClick={() => isOpen && toggleMenu()} >
-            <span className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}>Aoyama</span>
-            <span className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}>Aoyama</span>
+            <span className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}>AOYAMA</span>
+            <span className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}>AOYAMA</span>
           </Link>
         </div>
         <div className={styles["header__items"]}>

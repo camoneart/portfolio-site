@@ -4,7 +4,7 @@ import React, { memo, useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 import { motion } from "motion/react";
 
-const HERO_TITLE = "Aoyama";
+const HERO_TITLE = "AOYAMA";
 const HERO_SUBTITLE = "Creative Web Developer";
 
 // アニメーションのdelay時間を定数として管理
