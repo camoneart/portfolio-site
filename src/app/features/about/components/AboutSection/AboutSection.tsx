@@ -89,9 +89,6 @@ const AboutSection = () => {
                         className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>Kaishu Aoyama</motion.dd>
                     </div>
                   </div>
-                  {/* <div className={styles["about-profile-img-box"]}>
-                    <Image src={"/images/about/profile/peter-icon-compression.jpg"} alt="プロフィール画像" width={100} height={100} className={styles["about-profile-img"]} />
-                  </div> */}
                 </dl>
                 {/* /.about-list */}
               </div>
@@ -135,14 +132,14 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      技術力の向上を目的として、日々、情報収集と学習を行っています。特に、興味を持った技術は実際にコードを書いて検証し、実践的な理解を深めることを心がけています。
+                        技術力の向上を目的として、日々、情報収集と学習を行っています。特に、興味を持った技術は実際にコードを書いて検証したり、その技術を活用したWebアプリを開発したりして、理解を深めることを心がけています。
                     </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      現在は、<em>Next.js（App Router）</em>, <em>Type Script</em>, <em>インタラクション</em>, <em>UI / UX</em>, <em>AI</em>の学習に力を入れています。
+                        現在の主な注力は、<em>Next.js（App Router）</em>, <em>Type Script</em>, <em>インタラクション</em>, <em>UI / UX</em>, <em>AI</em>で、特に<em>AI</em>の学習に力を入れています。
                     </motion.dd>
                   </div>
 
@@ -166,7 +163,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      特に好きなアーティストは、<em>Vaundy</em>, <em>藤井 風</em>, <em>SUPER BEAVER</em>, <em>Saucy Dog</em>です。
+                      特に好きなアーティストは、<em>Vaundy</em>, <em>藤井 風</em>, <em>SUPER BEAVER</em>, <em>Saucy Dog</em>, <em>King Gnu</em>です。
                     </motion.dd>
                   </div>
 
@@ -183,7 +180,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      映画鑑賞が趣味で、なかでも洋画をよく観ています。映画は、私にこれまで気づかなかった考え方や視点、異なる文化、価値観との出会いをもたらしてくれる存在です。
+                      映画鑑賞が趣味で、なかでも洋画をよく観ます。映画は、私にこれまで気づかなかった考え方や視点、異なる文化、価値観との出会いをもたらしてくれる大切な存在です。
                     </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
@@ -207,7 +204,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      技術書やビジネス書、ジャンルを問わず気になった書籍を読むのが好きです。読書では、<em>新たな知識を得たり、私とは違う、著者の考え方や価値観を学ぶことができる</em>ため、書籍と向き合う時間も大切にしています。私にとっての書籍は、<em>｢先人の知恵を学ぶことができるアイテム｣</em>といった存在です。
+                      ジャンルを問わず気になった書籍を読むのが好きです。読書では、<em>新たな知識を得たり、著者の考え方や価値観を学ぶことができます。</em>私にとっての書籍は、<em>｢先人の知恵を学ぶことができるアイテム｣</em>といった存在です。
                     </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
@@ -260,15 +257,15 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      AIについて学びながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に<em>クリエイティブと向き合う時間に集中できるようになれる</em>と考えています。
-                    </motion.dd>
+                        AIについて学びながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に<em>クリエイティブと向き合う時間に集中できるようになれる</em>と考えています。
+                      </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                        最近は、<em>MCP（Model Context Protocol）</em>と<em>AIエージェント</em>に注力しています。自作MCPサーバーを実装して、実際にAIエージェントの能力拡張に活用しています。<Link href="https://zenn.dev/aoyamadev" className={styles["about-zenn-link"]}>Zenn</Link>ではMCPとAIエージェントに関する技術記事も執筆しています。
-                    </motion.dd>
+                        最近は、<em>MCP（Model Context Protocol）</em>と<em>AIエージェント</em>に注力しています。自作MCPサーバーを実装して、実際にAIエージェントの能力拡張に活用しています。<Link href="https://zenn.dev/aoyamadev" className={styles["about-zenn-link"]} target="_blank" rel="noopener noreferrer">Zenn</Link>ではMCPとAIエージェントに関する技術記事も執筆しています。
+                      </motion.dd>
                   </div>
                 </dl>
                 {/* /.about-list */}
@@ -313,8 +310,8 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      <em>｢ユーザーの関心を引きつけ、ユーザーの思い出に残る｣</em>そんなエクスペリエンスを提供できるようになりたいです。また、エンジニアとして<em>ユーザーに寄り添い、ユーザーの想いを形にする</em>ことを大切にし、ユーザーにとって価値ある体験を創造していきたいと考えています。
-                    </motion.dd>
+                        <em>｢ユーザーの関心を引きつけ、ユーザーの思い出に残る｣</em>そんなエクスペリエンスを提供できるようになりたいです。また、エンジニアとして<em>ユーザーに寄り添い、ユーザーの想いを形にする</em>ことを大切にし、<em>ユーザーにとって価値ある体験を創造できるようになりたい</em>と考えています。
+                      </motion.dd>
                   </div>
 
                   <div className={styles["about-content-group"]}>
@@ -330,8 +327,8 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      <em>こちらの動作に対してプロダクトが反応を返してくれる。</em>そんな｢モノとの対話｣を表現できるエンジニアを目指しています。
-                    </motion.dd>
+                        <em>こちらの動作に対してプロダクトが反応を返してくれる。</em>そんな｢モノとの対話｣を表現できるエンジニアを目指しています。
+                      </motion.dd>
                   </div>
 
                   <div className={styles["about-content-group"]}>
@@ -347,15 +344,15 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      <em>｢変化を恐れず、現状に満足するな｣</em>をモットーとしています。
-                    </motion.dd>
+                        <em>｢変化を恐れず、現状に満足するな｣</em>をモットーとしています。
+                      </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      地に足をつけ、学びを大切とし、謙虚さを忘れず、常にチャレンジし続けることで、<em>｢見たことも無い、想像もできなかった場所へ行ける｣</em>と私は信じています。
-                    </motion.dd>
+                        地に足をつけ、学びを大切とし、謙虚さを忘れず、常にチャレンジし続けることで、<em>｢見たことも無い、想像もできなかった場所へ行ける｣</em>と私は信じています。
+                      </motion.dd>
                   </div>
                 </dl>
                 {/* /.about-list */}
