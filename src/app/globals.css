@@ -252,6 +252,14 @@ canvas {
   view-transition-name: view-transition-logo-wrapper-zod;
 }
 
+.view-transition-logo-wrapper-authjs {
+  view-transition-name: view-transition-logo-wrapper-authjs;
+}
+
+.view-transition-logo-wrapper-prisma {
+  view-transition-name: view-transition-logo-wrapper-prisma;
+}
+
 .view-transition-logo-wrapper-supabase {
   view-transition-name: view-transition-logo-wrapper-supabase;
 }
@@ -335,6 +343,14 @@ canvas {
 
 .view-transition-logo-bg-zod {
   view-transition-name: view-transition-logo-bg-zod;
+}
+
+.view-transition-logo-bg-authjs {
+  view-transition-name: view-transition-logo-bg-authjs;
+}
+
+.view-transition-logo-bg-prisma {
+  view-transition-name: view-transition-logo-bg-prisma;
 }
 
 .view-transition-logo-bg-supabase {
@@ -436,6 +452,16 @@ canvas {
 
 .view-transition-img-zod {
   view-transition-name: view-transition-img-zod;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-authjs {
+  view-transition-name: view-transition-img-authjs;
+  aspect-ratio: 1 / 1;
+}
+
+.view-transition-img-prisma {
+  view-transition-name: view-transition-img-prisma;
   aspect-ratio: 1 / 1;
 }
 
@@ -545,6 +571,16 @@ canvas {
   width: fit-content;
 }
 
+.view-transition-title-authjs {
+  view-transition-name: view-transition-title-authjs;
+  width: fit-content;
+}
+
+.view-transition-title-prisma {
+  view-transition-name: view-transition-title-prisma;
+  width: fit-content;
+}
+
 .view-transition-title-supabase {
   view-transition-name: view-transition-title-supabase;
   width: fit-content;
@@ -634,6 +670,14 @@ canvas {
   view-transition-name: view-transition-bg-zod;
 }
 
+.view-transition-bg-authjs {
+  view-transition-name: view-transition-bg-authjs;
+}
+
+.view-transition-bg-prisma {
+  view-transition-name: view-transition-bg-prisma;
+}
+
 .view-transition-bg-supabase {
   view-transition-name: view-transition-bg-supabase;
 }
@@ -717,6 +761,14 @@ canvas {
 
 .view-transition-label-zod {
   view-transition-name: view-transition-label-zod;
+}
+
+.view-transition-label-authjs {
+  view-transition-name: view-transition-label-authjs;
+}
+
+.view-transition-label-prisma {
+  view-transition-name: view-transition-label-prisma;
 }
 
 .view-transition-label-supabase {

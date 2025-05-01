@@ -298,6 +298,38 @@ export const skillsData: SkillsData[] = [
   },
   {
     id: 18,
+    skillTitle: "Auth.js",
+    skillLink: "authjs",
+    description:
+      "",
+    skillLogo: "/images/skills/authjs-logo.png",
+    label: "LIBRARY",
+    link: "https://authjs.dev/",
+    viewTransitionName: "view-transition-title-authjs",
+    viewTransitionImage: "view-transition-img-authjs",
+    viewTransitionBg: "view-transition-bg-authjs",
+    viewTransitionLabel: "view-transition-label-authjs",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-authjs",
+    viewTransitionLogoBg: "view-transition-logo-bg-authjs",
+  },
+  {
+    id: 19,
+    skillTitle: "Prisma",
+    skillLink: "prisma",
+    description:
+      "",
+    skillLogo: "/images/skills/prisma-logo.svg",
+    label: "LIBRARY",
+    link: "https://www.prisma.io/",
+    viewTransitionName: "view-transition-title-prisma",
+    viewTransitionImage: "view-transition-img-prisma",
+    viewTransitionBg: "view-transition-bg-prisma",
+    viewTransitionLabel: "view-transition-label-prisma",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-prisma",
+    viewTransitionLogoBg: "view-transition-logo-bg-prisma",
+  },
+  {
+    id: 20,
     skillTitle: "Supabase",
     skillLink: "supabase",
     description:
@@ -313,7 +345,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-supabase",
   },
   {
-    id: 19,
+    id: 21,
     skillTitle: "webpack",
     skillLink: "webpack",
     description:
@@ -329,7 +361,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-webpack",
   },
   {
-    id: 20,
+    id: 22,
     skillTitle: "Git",
     skillLink: "git",
     description:
@@ -345,7 +377,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-git",
   },
   {
-    id: 21,
+    id: 23,
     skillTitle: "MCP",
     skillLink: "mcp",
     description:
@@ -361,7 +393,7 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-mcp",
   },
   {
-    id: 22,
+    id: 24,
     skillTitle: "Adobe Premiere Pro",
     skillLink: "adobe-premiere-pro",
     description:
