@@ -5,20 +5,20 @@ import styles from "./Hero.module.css";
 import { motion } from "motion/react";
 
 const HERO_TITLE = "AOYAMA";
-const HERO_SUBTITLE = "Creative Web Developer";
+const HERO_SUBTITLE = "Creative Developer";
 
 // アニメーションのdelay時間を定数として管理
 const ANIMATION_DELAY = {
   // 初回アクセス時
   INITIAL: {
     TITLE: 3.4,
-    SUBTITLE: 4.6
+    SUBTITLE: 4.6,
   },
   // 2回目以降のアクセス時
   SUBSEQUENT: {
     TITLE: 1.2,
-    SUBTITLE: 2.4
-  }
+    SUBTITLE: 2.4,
+  },
 } as const;
 
 // アニメーションのdurationを定数として管理
@@ -26,18 +26,18 @@ const ANIMATION_DURATION = {
   // 初回アクセス時
   INITIAL: {
     TITLE: 1.2,
-    SUBTITLE: 1.2
+    SUBTITLE: 1.2,
   },
   // 2回目以降のアクセス時
   SUBSEQUENT: {
     TITLE: 1.2,
-    SUBTITLE: 1.2
-  }
+    SUBTITLE: 1.2,
+  },
 } as const;
 
 const Hero = memo(() => {
   const [isLoading, setIsLoading] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       return !sessionStorage.getItem("hasVisitedHero");
     }
     return true;
@@ -56,7 +56,9 @@ const Hero = memo(() => {
 
   return (
     <section className={`font-russo ${styles["hero"]}`}>
-      <div className={`flex flex-col items-center justify-end ${styles["hero__container"]}`}>
+      <div
+        className={`flex flex-col items-center justify-end ${styles["hero__container"]}`}
+      >
         <hgroup
           className={`z-20 text-center flex flex-col gap-1 md:gap-3 select-none ${styles["hero__hgroup"]}`}
         >

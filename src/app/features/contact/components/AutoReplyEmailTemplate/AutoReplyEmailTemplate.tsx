@@ -10,8 +10,11 @@ export const AutoReplyEmailTemplate: React.FC<AutoReplyEmailTemplateProps> = ({
   <div>
     <h3>{username} 様</h3>
     <h3>お問い合わせありがとうございます。</h3>
-    
-    <p>この度は「AOYAMA｜Creative Web Developer」からお問い合わせいただき、誠にありがとうございます。</p>
+
+    <p>
+      この度は「AOYAMA｜Creative
+      Developer」からお問い合わせいただき、誠にありがとうございます。
+    </p>
 
     <div>
       <p>いただいたお問い合わせ内容は以下になります。</p>
@@ -19,18 +22,18 @@ export const AutoReplyEmailTemplate: React.FC<AutoReplyEmailTemplateProps> = ({
       <hr />
 
       <p>{content}</p>
-      
+
       <hr />
     </div>
-    
+
     <p>内容を確認次第、担当者より1〜3営業日以内にご連絡させていただきます。</p>
 
     <p>今しばらくお待ちいただけますと幸いです。</p>
 
     <p>よろしくお願いいたします。</p>
-    
+
     <hr />
-    
+
     <p>
       ※このメールは自動送信専用のアドレスからお送りしております。ご返信いただいてもお答えできかねますので、ご了承ください。
     </p>

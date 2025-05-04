@@ -4,7 +4,7 @@ import Header from "@/app/components/layouts/Header/Header";
 import Footer from "@/app/components/layouts/Footer/Footer";
 import NetworkBackground from "./components/3D/NetworkBackground/NetworkBackground";
 import { Russo_One } from "next/font/google";
-import { ViewTransitions } from 'next-view-transitions'
+import { ViewTransitions } from "next-view-transitions";
 import { ControlViewport } from "./components/layouts/ControlViewport/ControlViewport";
 import MouseStalker from "./components/MouseStalker/MouseStalker";
 
@@ -17,10 +17,11 @@ const russoOne = Russo_One({
 
 export const metadata: Metadata = {
   title: {
-    default: "AOYAMA｜Creative Web Developer",
+    default: "AOYAMA｜Creative Developer",
     template: "%s｜AOYAMA",
   },
-  description: "Kaishu Aoyamaのポートフォリオサイトです。「モノとの対話」を表現できるエンジニアを目指しています。",
+  description:
+    "Kaishu Aoyamaのポートフォリオサイトです。「モノとの対話」を表現できるエンジニアを目指しています。",
   robots: "noindex, nofollow",
 };
 
