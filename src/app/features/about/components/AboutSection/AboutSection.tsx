@@ -264,7 +264,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                        最近は、<em>MCP（Model Context Protocol）</em>と<em>AIエージェント</em>に注力しています。自作MCPサーバーを実装して、実際にAIエージェントの能力拡張に活用しています。<Link href="https://zenn.dev/aoyamadev" className={styles["about-zenn-link"]} target="_blank" rel="noopener noreferrer">Zenn</Link>ではMCPとAIエージェントに関する技術記事も執筆しています。
+                        最近は<em>MCP（Model Context Protocol）</em>や<em>AIエージェント</em>に注力しています。実際に、AIエージェントの能力拡張のためにMCPサーバーを活用しています。また、AIに関する技術記事を<Link href="https://zenn.dev/aoyamadev" className={styles["about-zenn-link"]} target="_blank" rel="noopener noreferrer">Zenn</Link>にて執筆しています。
                       </motion.dd>
                   </div>
                 </dl>
