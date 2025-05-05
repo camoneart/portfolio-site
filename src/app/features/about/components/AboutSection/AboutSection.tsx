@@ -132,7 +132,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                        技術力の向上を目的として、日々、情報収集と学習を行っています。特に、興味を持った技術は実際にコードを書いて検証したり、その技術を活用したWebアプリを開発したりして、理解を深めることを心がけています。
+                        知的好奇心を原動力に、技術力の向上を目指して日々情報収集と学習に励んでいます。特に興味を持った技術には、実際にコードを書いて検証し、その技術を用いた小規模なWebアプリを開発して挙動を確認することで、理解を深めるよう努めています。
                     </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
