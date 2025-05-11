@@ -252,8 +252,8 @@ canvas {
   view-transition-name: view-transition-logo-wrapper-zod;
 }
 
-.view-transition-logo-wrapper-authjs {
-  view-transition-name: view-transition-logo-wrapper-authjs;
+.view-transition-logo-wrapper-clerk {
+  view-transition-name: view-transition-logo-wrapper-clerk;
 }
 
 .view-transition-logo-wrapper-prisma {
@@ -345,8 +345,8 @@ canvas {
   view-transition-name: view-transition-logo-bg-zod;
 }
 
-.view-transition-logo-bg-authjs {
-  view-transition-name: view-transition-logo-bg-authjs;
+.view-transition-logo-bg-clerk {
+  view-transition-name: view-transition-logo-bg-clerk;
 }
 
 .view-transition-logo-bg-prisma {
@@ -455,8 +455,8 @@ canvas {
   aspect-ratio: 1 / 1;
 }
 
-.view-transition-img-authjs {
-  view-transition-name: view-transition-img-authjs;
+.view-transition-img-clerk {
+  view-transition-name: view-transition-img-clerk;
   aspect-ratio: 1 / 1;
 }
 
@@ -571,8 +571,8 @@ canvas {
   width: fit-content;
 }
 
-.view-transition-title-authjs {
-  view-transition-name: view-transition-title-authjs;
+.view-transition-title-clerk {
+  view-transition-name: view-transition-title-clerk;
   width: fit-content;
 }
 
@@ -670,8 +670,8 @@ canvas {
   view-transition-name: view-transition-bg-zod;
 }
 
-.view-transition-bg-authjs {
-  view-transition-name: view-transition-bg-authjs;
+.view-transition-bg-clerk {
+  view-transition-name: view-transition-bg-clerk;
 }
 
 .view-transition-bg-prisma {
@@ -763,8 +763,8 @@ canvas {
   view-transition-name: view-transition-label-zod;
 }
 
-.view-transition-label-authjs {
-  view-transition-name: view-transition-label-authjs;
+.view-transition-label-clerk {
+  view-transition-name: view-transition-label-clerk;
 }
 
 .view-transition-label-prisma {
