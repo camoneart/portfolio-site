@@ -221,7 +221,7 @@ export const worksData: WorksData[] = [
       "このWebアプリは転職活動用のポートフォリオとして開発したものであり、意図した環境でご確認いただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "005/005" }],
     skillsList:
-      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, Motion, Howler.js, Supabase, Prisma, Auth.js, Zod",
+      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, Motion, Howler.js, Supabase, Prisma, Clerk, Zod, Vercel",
     siteUrl: "https://outputquest.com/",
     role: "Design, Coding",
     username: "",
