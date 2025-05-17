@@ -218,7 +218,7 @@ export const worksData: WorksData[] = [
     detail08:
       "　アバウトページ：アプリの概要、コンセプト、主要機能について紹介しています。",
     accessDescription:
-      "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
+      "このWebアプリは転職活動用のポートフォリオとして開発したものであり、意図した環境でご確認いただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "005/005" }],
     skillsList:
       "Next.js, TypeScript, Tailwind CSS, shadcn/ui, Motion, Howler.js, Supabase, Prisma, Auth.js, Zod",
