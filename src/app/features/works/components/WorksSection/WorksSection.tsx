@@ -200,7 +200,7 @@ export const worksData: WorksData[] = [
     image: "/images/works/work05.jpg",
     workTitle: "OUTPUT QUEST ~叡智の継承者~",
     description:
-      "私が開発したWebアプリです。RPG風のゲーミフィケーションを取り入れた学習支援アプリで、Zennで記事を投稿することでアプリ内の「勇者」が成長していきます。アウトプットを通じて学習意欲を高め、楽しみながら自己成長を促すことを目的に開発しました。",
+      "私が開発したWebアプリです。RPG風のゲーミフィケーションを取り入れた学習支援アプリで、Zennで記事を投稿することでアプリ内の「勇者」が成長し、アイテムやなかまを獲得できます。アウトプットを通じて学習意欲を高め、楽しみながら自己成長を促すことを目的に開発しました。",
     detail01:
       "　このWebアプリはNext.js + CSS Modules + Tailwind CSS + TypeScriptで開発し、デプロイはVercelで行いました。",
     detail02:
