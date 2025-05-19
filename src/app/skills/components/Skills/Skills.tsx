@@ -392,23 +392,6 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-mcp",
     viewTransitionLogoBg: "view-transition-logo-bg-mcp",
   },
-  {
-    id: 24,
-    skillTitle: "Adobe Premiere Pro",
-    skillLink: "adobe-premiere-pro",
-    description:
-      "過去にPremiere Proを使用した動画編集の経験があります。「撮影」「カット」「テロップ入れ」「BGM / 効果音の挿入」などの基本的な操作方法は、全て独学で習得しました。",
-    skillLogo: "/images/skills/adobe-premiere-pro-logo.svg",
-    label: "VIDEO EDITING",
-    link: "https://www.adobe.com/jp/products/premiere.html",
-    viewTransitionName: "view-transition-title-adobe-premiere-pro",
-    viewTransitionImage: "view-transition-img-adobe-premiere-pro",
-    viewTransitionBg: "view-transition-bg-adobe-premiere-pro",
-    viewTransitionLabel: "view-transition-label-adobe-premiere-pro",
-    viewTransitionLogoWrapper:
-      "view-transition-logo-wrapper-adobe-premiere-pro",
-    viewTransitionLogoBg: "view-transition-logo-bg-adobe-premiere-pro",
-  },
 ];
 
 const Skills = () => {
