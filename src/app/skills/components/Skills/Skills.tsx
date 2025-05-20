@@ -189,7 +189,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Astro",
     skillLink: "astro",
     description:
-      "コンテンツフォーカスの高速なWebサイト構築に特化したAstroの理解があります。「アイランドアーキテクチャ」「サーバーファースト」「デフォルトでゼロJS」「コンテンツコレクション」などの主要な機能を学習し理解しています。デプロイはしておりませんが、現在Astroを採用した個人ブログサイトを実装しながら学習を続けています。",
+      "コンテンツフォーカスの高速なWebサイト構築に特化したAstroの理解があります。「アイランドアーキテクチャ」「サーバーファースト」「デフォルトでゼロJS」「コンテンツコレクション」などの主要な機能を学習し理解しています。ローカル環境にてAstroを採用した個人ブログサイトを実装しながら学習を続けています。",
     skillLogo: "/images/skills/astro-icon-light-gradient.svg",
     label: "FRAMEWORK",
     link: "https://astro.build/",
