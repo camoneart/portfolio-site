@@ -61,7 +61,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Sass",
     skillLink: "sass",
     description:
-      "SCSS記法を使用したSassが書けます。ファイルを役割ごとに分割するためにパーシャル化し、メンテナンス性と可読性に配慮したコーディングを行うことができます。ただ、最近ではNative CSSの進化が凄まじく、「変数」や「ネスト」といったSass独自の機能だったものが、Native CSSで使用できるようになったため、Sassの使用頻度は減少しています。",
+      "SCSS記法を使用したSassが書けます。ファイルを役割ごとに分割するためにパーシャル化し、メンテナンス性と可読性に配慮したコーディングを行うことができます。ただ、最近ではNative CSSの進化が凄まじく、「変数」や「ネスト」といったSass独自の機能だったものが、Native CSSで使用できるようになったため、個人的にはSassの使用頻度は減少しています。",
     skillLogo: "/images/skills/sass-logo.svg",
     label: "STYLE",
     link: "https://sass-lang.com/",
@@ -77,7 +77,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Tailwind CSS",
     skillLink: "tailwindcss",
     description:
-      "Tailwind CSSの基本概念を理解し、ユーティリティファーストの考え方に基づいたスタイリング経験があります。このポートフォリオサイトでも、いくつかのコンポーネントにTailwind CSSを活用してUI構築を行っています。",
+      "Tailwind CSSの基本概念を理解し、ユーティリティファーストの考え方に基づいたスタイリング経験があります。このサイトでも、いくつかのコンポーネントにTailwind CSSを活用してUI構築を行っています。",
     skillLogo: "/images/skills/tailwind-css-logo.svg",
     label: "FRAMEWORK",
     link: "https://tailwindcss.com/",
@@ -157,7 +157,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "React",
     skillLink: "react",
     description:
-      "コンポーネント設計、React Hooksを使用した状態管理、RSCの理解、UIライブラリの活用などができ、パフォーマンスと保守性を考慮した実装を心がけます。このポートフォリオサイトの実装にもNext.jsと組み合わせてReactを採用しました。",
+      "コンポーネント設計、React Hooksを使用した状態管理、RSCの理解、UIライブラリの活用などができ、パフォーマンスと保守性を考慮した実装を心がけます。",
     skillLogo: "/images/skills/react-logo.svg",
     label: "LIBRARY",
     link: "https://ja.react.dev/",
@@ -173,7 +173,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Next.js",
     skillLink: "nextjs",
     description:
-      "Next.jsの主要な機能を理解しています。App RouterやServer Componentsなどを活用でき、CSR / SSG / SSR / ISR / RSC などの適切なレンダリング方式の選択とパフォーマンスを考慮した実装を心がけます。このポートフォリオサイトの実装にもNext.jsを採用しています。",
+      "Next.jsの主要な機能を理解しています。App RouterやServer Componentsなどを活用でき、CSR / SSG / SSR / ISR / RSC / PPR などの適切なレンダリング方式の選択とパフォーマンスを考慮した実装を心がけます。このサイトの実装にもNext.jsを採用しました。",
     skillLogo: "/images/skills/nextjs-logo.svg",
     label: "FRAMEWORK",
     link: "https://nextjs.org/",
@@ -205,7 +205,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "webpack",
     skillLink: "webpack",
     description:
-      "Works Listに搭載してある課題サイトの実装時には、モジュールバンドラのwebpackを使用しました。モジュールをバンドル（まとめる）することで、ブラウザからのリクエスト数を減らし、ファイル転送の効率化を行いました。",
+      "このサイトのWorksページにて紹介している課題サイトの実装時に、モジュールバンドラのwebpackを使用しました。モジュールをバンドル（まとめる）することで、ブラウザからのリクエスト数を減らし、ファイル転送の効率化を行いました。",
     skillLogo: "/images/skills/webpack-logo.svg",
     label: "MODULE BUNDLER",
     link: "https://webpack.js.org/",
@@ -221,7 +221,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "GSAP",
     skillLink: "gsap",
     description:
-      "トゥイーンアニメーションを活用し、スムーズでインタラクティブなアニメーションの実装経験があります。このポートフォリオサイトでもGSAPを活用してアニメーションを実装しています。リッチコンテンツなWebサイトを実装するためにWebアニメーションへの理解を深めたいと思っており、Three.jsなどの3Dコンテンツを制作できるライブラリの学習と並行して、GSAPの学習を継続しています。",
+      "トゥイーンアニメーションを活用し、スムーズでインタラクティブなアニメーションの実装経験があります。このサイトでもGSAPでアニメーションを実装しました。リッチコンテンツなWebサイト/Webアプリを実装するためにWebアニメーションへの理解を深めたいと思っており、Three.jsなどの3Dコンテンツを制作できるライブラリの学習と並行して、GSAPの学習を継続しています。",
     skillLogo: "/images/skills/gsap-greensock-logo.svg",
     label: "LIBRARY",
     link: "https://gsap.com/",
@@ -237,7 +237,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Three.js",
     skillLink: "threejs",
     description:
-      "「Scene」「Object（Mesh）」「Camera」「Renderer」などの主要な概念を学び、実際にこのポートフォリオサイトのファーストビューで表示させている3Dモデルを、Three.jsのラッパーライブラリである「React Three Fiber」を使用して実装しました。",
+      "「Scene」「Object（Mesh）」「Camera」「Renderer」などの主要な概念を学びました。このサイトのファーストビューで表示させている3Dモデルを、Three.jsのラッパーライブラリである「React Three Fiber」を使用して実装しました。",
     skillLogo: "/images/skills/threejs-logo.svg",
     label: "LIBRARY",
     link: "https://threejs.org/",
@@ -253,7 +253,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Motion",
     skillLink: "motion",
     description:
-      "Motionを使用したアニメーションの実装経験があります。このポートフォリオサイトでは、「各ページのタイトル」「パンくずリスト」の出現アニメーション、ページ遷移時の階段アニメーションをMotionで実装しました。",
+      "Motionを使用したアニメーションの実装経験があります。このサイトでは、「各ページのタイトル」「パンくずリスト」の出現アニメーション、ページ遷移時の階段アニメーションをMotionで実装しました。",
     skillLogo: "/images/skills/motion-logo.svg",
     label: "LIBRARY",
     link: "https://motion.dev/",
@@ -269,7 +269,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "React Spring",
     skillLink: "react-spring",
     description:
-      "このポートフォリオサイトのマウスストーカーを「React Spring」で実装いたしました。React Springを利用した物理ベースのアニメーションにより、バネのような自然で滑らかな動きを実現しています。",
+      "このサイトのマウスストーカーを「React Spring」で実装しました。React Springを使用した物理ベースのアニメーションにより、バネのような自然で滑らかな動きを実現しています。",
     skillLogo: "/images/skills/react-spring-logo.png",
     label: "LIBRARY",
     link: "https://www.react-spring.dev/",
@@ -285,7 +285,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "React Hook Form",
     skillLink: "react-hook-form",
     description:
-      "このポートフォリオサイトのお問い合わせフォームではReact Hook Formを使用し、「フォームの入力値の状態管理」「送信処理の制御」「エラー表示の管理」など、フォームのパフォーマンス最適化を実現しています。",
+      "このサイトのお問い合わせフォームではReact Hook Formを使用し、「フォームの入力値の状態管理」「送信処理の制御」「エラー表示の管理」など、フォームのパフォーマンス最適化を実現しています。",
     skillLogo: "/images/skills/react-hook-form-logo.svg",
     label: "LIBRARY",
     link: "https://react-hook-form.com/",
@@ -301,7 +301,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Zod",
     skillLink: "zod",
     description:
-      "このポートフォリオサイトのお問い合わせフォームでは、入力値の検証（バリデーション）にZodを使用しています。Zodを使用したスキーマバリデーションを行うことで型安全性が高いバリデーションを実現し、React Hook Formと組み合わせて堅牢なフォームを実装しました。",
+      "このサイトのお問い合わせフォームでは、入力値の検証（バリデーション）にZodを使用しました。Zodを使用したスキーマバリデーションを行うことで型安全性が高いバリデーションを実現し、React Hook Formと組み合わせて堅牢なフォームを実装しました。",
     skillLogo: "/images/skills/zod-logo.svg",
     label: "LIBRARY",
     link: "https://zod.dev/",
@@ -333,7 +333,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Supabase",
     skillLink: "supabase",
     description:
-      "Webアプリ「OUTPUT QUEST ～叡智の継承者～」において、Supabaseを活用し、ユーザー情報をデータベースで管理する機能を実装しました。",
+      "Webアプリ「OUTPUT QUEST ～叡智の継承者～」において、Supabaseを活用しユーザー情報をデータベースで管理できるようにしました。",
     skillLogo: "/images/skills/supabase-logo.svg",
     label: "BaaS",
     link: "https://supabase.com/",
@@ -349,7 +349,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Prisma",
     skillLink: "prisma",
     description:
-      "Webアプリ「OUTPUT QUEST ～叡智の継承者～」では、Prismaを導入してデータベース操作を型安全かつ簡潔に実装しました。",
+      "Webアプリ「OUTPUT QUEST ～叡智の継承者～」では、Prismaを導入してデータベース操作を型安全かつ簡潔に行いました。",
     skillLogo: "/images/skills/prisma-logo.svg",
     label: "LIBRARY",
     link: "https://www.prisma.io/",
