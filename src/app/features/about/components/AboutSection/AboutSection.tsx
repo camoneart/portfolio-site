@@ -139,7 +139,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                        現在の主な注力は、<em>Next.js（App Router）</em>, <em>Type Script</em>, <em>インタラクション</em>, <em>UI / UX</em>, <em>AI</em>で、特に<em>AI</em>の学習に力を入れています。
+                        現在の主な注力は、<em>Next.js（App Router）</em>, <em>Type Script</em>, <em>インタラクション</em>, <em>UI / UX</em>, <em>AI</em>です。
                     </motion.dd>
                   </div>
 
