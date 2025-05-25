@@ -26,6 +26,8 @@ interface WorksData {
   detail06?: string;
   detail07?: string;
   detail08?: string;
+  detail09?: string;
+  detail10?: string;
   specification01Detail01?: string;
   specification01Detail02?: string;
   specification01Detail03?: string;
@@ -78,7 +80,7 @@ export const worksData: WorksData[] = [
       "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：aoym_demo01の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "001/005" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
-    siteUrl: "https://aoymdev.com/caresend",　
+    siteUrl: "https://aoymdev.com/caresend",
     role: "Coding",
     username: "demo",
     password: "demo01",
@@ -206,17 +208,20 @@ export const worksData: WorksData[] = [
     detail02:
       "　トップページ：ゲームのオープニングを彷彿とさせる演出で、視覚的な出迎えを実現しました。",
     detail03:
-      "　ダッシュボードページ：勇者の成長度合いを示すレベル、Zennでの投稿数、レベルアップ報酬で獲得した勇者のなかまやアイテムを確認できます。",
-    detail04:
-      "　投稿リストページ：Zennで投稿した記事を取得して、アプリ内で「投稿リスト」として記事を閲覧できます。",
-    detail05:
-      "　つよさページ：レベルアップ報酬で獲得した「称号」の確認、勇者の装備アイテムの確認、学びの記録を時系列で確認できる「冒険ログ」の確認ができます。",
-    detail06:
-      "　なかまページ：勇者のなかまになったキャラクターを閲覧できます。",
-    detail07:
-      "　アイテムページ：レベルアップ報酬で獲得したアイテムを閲覧できます。",
-    detail08:
       "　アバウトページ：アプリの概要、コンセプト、主要機能について紹介しています。",
+    detail04:
+      "　ログインページ：Clerk認証でログインし、Zennのアカウントと連携することで、投稿データを取得してアプリ内の要素に反映させることができます。",
+    detail05:
+      "　ダッシュボードページ：勇者の成長度合いを示すレベル、Zennでの投稿数、レベルアップ報酬で獲得した勇者のなかまやアイテムを確認できます。",
+    detail06:
+      "　投稿リストページ：Zennで投稿した記事を取得して、アプリ内で「投稿リスト」として記事を閲覧できます。",
+    detail07:
+      "　つよさページ：レベルアップ報酬で獲得した「称号」の確認、勇者の装備アイテムの確認、学びの記録を時系列で確認できる「冒険ログ」の確認ができます。",
+    detail08:
+      "　なかまページ：勇者のなかまになったキャラクターを閲覧できます。",
+    detail09:
+      "　アイテムページ：レベルアップ報酬で獲得したアイテムを閲覧できます。",
+    detail10: "　",
     accessDescription:
       "このWebアプリは転職活動用のポートフォリオとして開発したものであり、意図した環境でご確認いただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "005/005" }],
