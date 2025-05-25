@@ -1,17 +1,14 @@
-import React from 'react';
-import { Components } from 'react-markdown';
-import styles from './CustomEmphasis.module.css';
+import React from "react";
+import { Components } from "react-markdown";
+import styles from "./CustomEmphasis.module.css";
 
-export const CustomEmphasis: Components['p'] = ({ children, ...props }) => {
-  if (typeof children === 'string') {
-    // 最初に "demo" パターンを処理
+export const CustomEmphasis: Components["p"] = ({ children, ...props }) => {
+  if (typeof children === "string") {
+    // 最初に "demo" パターンと "aoym_demo" パターンを処理
     let text = children.replace(
-      /(demo)([0-9]{2})?/g,
-      (match, demo, number) => {
-        if (number) {
-          return `<em class="${styles["emphasis-value"]}">${demo}${number}</em>`;
-        }
-        return `<em class="${styles["emphasis-value"]}">${demo}</em>`;
+      /(aoym_demo[0-9]{2}|demo[0-9]{2}|demo)/g,
+      (match) => {
+        return `<em class="${styles["emphasis-value"]}">${match}</em>`;
       }
     );
 
@@ -22,9 +19,10 @@ export const CustomEmphasis: Components['p'] = ({ children, ...props }) => {
     );
 
     return (
-      <p {...props} 
+      <p
+        {...props}
         dangerouslySetInnerHTML={{ __html: text }}
-        className={styles['emphasis']}
+        className={styles["emphasis"]}
       />
     );
   }
