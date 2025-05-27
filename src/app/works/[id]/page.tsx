@@ -246,6 +246,18 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                               </ReactMarkdown>
                             </>
                           )}
+                          {work.detail09 && (
+                            <>
+                              <ReactMarkdown
+                                className={styles["work__detail"]}
+                                components={{
+                                  p: CustomParagraph,
+                                }}
+                              >
+                                {work.detail09}
+                              </ReactMarkdown>
+                            </>
+                          )}
                         </div>
                       )}
                       {work.specification01 && (

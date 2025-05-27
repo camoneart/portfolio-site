@@ -27,7 +27,6 @@ interface WorksData {
   detail07?: string;
   detail08?: string;
   detail09?: string;
-  detail10?: string;
   specification01Detail01?: string;
   specification01Detail02?: string;
   specification01Detail03?: string;
@@ -221,7 +220,6 @@ export const worksData: WorksData[] = [
       "　なかまページ：勇者のなかまになったキャラクターを閲覧できます。",
     detail09:
       "　アイテムページ：レベルアップ報酬で獲得したアイテムを閲覧できます。",
-    detail10: "　",
     accessDescription:
       "このWebアプリは転職活動用のポートフォリオとして開発したものであり、意図した環境でご確認いただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "005/005" }],
