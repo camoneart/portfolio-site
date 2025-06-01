@@ -28,8 +28,8 @@ https://aoyamadev.com
 
 ### フロント
 
-- [Next.js](https://nextjs.org/blog/next-15-3)：v14.2.20
-- [React](https://ja.react.dev/blog/2024/12/05/react-19)：v18.3.1
+- [Next.js](https://nextjs.org/)：v14.2.20
+- [React](https://ja.react.dev/)：v18.3.1
 - [TypeScript](https://www.typescriptlang.org/)：v5
 
 ### スタイル・UI
