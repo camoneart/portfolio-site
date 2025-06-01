@@ -29,10 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next.config.mjs",
-    "src/app/components/3D/Scene.jsx",
-    "src/app/components/3D/CobeGlobe/CobeGlobe.jsx",
-    "src/app/components/3D/NetworkBackground/NetworkBackground.tsx",
-    "src/app/features/skills/components/SkillsViewTransitionsButton/ViewTransitionsCard.jsx"
+    "src/app/components/3D/NetworkBackground/NetworkBackground.tsx"
   ],
   "exclude": ["node_modules"]
 }
