@@ -205,7 +205,7 @@ export const worksData: WorksData[] = [
     detail01:
       "　このWebアプリはNext.js + CSS Modules + Tailwind CSS + TypeScriptで開発し、デプロイはVercelで行いました。",
     detail02:
-      "　トップページ：ゲームのオープニングを彷彿とさせる演出で、視覚的な出迎えを実現しました。",
+      "　トップページ：ゲームのオープニングを彷彿とさせる演出により、冒険のはじまりを視覚的に表現しました。",
     detail03:
       "　アバウトページ：アプリの概要、コンセプト、主要機能について紹介しています。",
     detail04:
