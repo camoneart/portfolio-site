@@ -310,7 +310,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                        モノづくりを通して、<em>ワクワクしたり、感動を覚えて思い出に残る。</em>そんなエクスペリエンスを提供できるようになりたいです。また、エンジニアとして<em>ユーザーに寄り添い、想いを形にする</em>ことを大切にし、<em>価値ある体験を創造することを目指しています。</em>
+                        モノづくりを通して、<em>ユーザーがワクワクし、感動を覚え、思い出に残る。</em>そんなエクスペリエンスを提供できるようになりたいです。また、エンジニアとして<em>ユーザーに寄り添い、想いを形にする</em>ことを大切にし、<em>価値ある体験を創造することを目指しています。</em>
                       </motion.dd>
                   </div>
 
