@@ -1,5 +1,7 @@
 # AOYAMA｜Creative Developer
 
+![トップページ](/public/gif/README/portfolio-top-page.gif)
+
 ポートフォリオサイトは以下からアクセスできます。
 
 https://aoyamadev.com
@@ -10,6 +12,7 @@ https://aoyamadev.com
 - [使用技術](#technology-used)
 - [ディレクトリ構造](#directory-design)
 - [プロジェクト概要](#project-overview)
+- [各ページ紹介](#page-descriptions)
 
 <h2 id="development-configuration-diagram">開発構成図</h2>
 
@@ -115,10 +118,34 @@ portfolio/
 
 Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはVercelで行いました。
 
-### 各ページ紹介
+<h2 id="page-descriptions">各ページ紹介</h2>
 
-- **トップページ**：トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「これまでの学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」や「ストーリー」を視覚的に表現しています。
-- **アバウトページ**：私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
-- **スキルページ**：サイト制作やアプリ開発をする上で学び、活用してきた技術スタックを一覧でまとめています。
-- **制作実績ページ**：これまでに制作した作品を一覧で紹介しています。
-- **お問い合わせページ**：お問い合わせページになります。こちらからお問い合わせいただけます。
+### **トップページ**
+
+トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「これまでの学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」や「ストーリー」を視覚的に表現しています。
+
+![トップページ](/public/gif/README/portfolio-top-page.gif)
+
+### **アバウトページ**
+
+私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
+
+![アバウトページ](/public/gif/README/portfolio-about-page.gif)
+
+### **スキルページ**
+
+サイト制作やアプリ開発をする上で学び、活用してきた技術スタックを一覧でまとめています。
+
+![スキルページ](/public/gif/README/portfolio-skills-page.gif)
+
+### **制作実績ページ**
+
+これまでに制作した作品を一覧で紹介しています。
+
+![制作実績ページ](/public/gif/README/portfolio-works-page.gif)
+
+### **お問い合わせページ**
+
+お問い合わせページになります。こちらからお問い合わせいただけます。
+
+![お問い合わせページ](/public/gif/README/portfolio-contact-page.gif)
