@@ -1,4 +1,4 @@
-# AOYAMA ｜ Creative Developer
+# AOYAMA｜Creative Developer
 
 アプリは以下からアクセスできます。
 
@@ -13,7 +13,7 @@ https://aoyamadev.com
 
 <h2 id="development-configuration-diagram">開発構成図</h2>
 
-開発構成図を、HTML インフォグラフィックで表現しました。
+開発構成図を、HTMLインフォグラフィックで表現しました。
 
 [開発構成図](https://aoyamadev.github.io/portfolio_development-configuration-diagram/)
 
@@ -21,7 +21,7 @@ https://aoyamadev.com
 
 <img src="https://img.shields.io/badge/-node.js-444.svg?logo=node.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-next.js-444.svg?logo=next.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-react-444.svg?logo=react&style=for-the-badge"> <img src="https://img.shields.io/badge/-TypeScript-444.svg?logo=TypeScript&style=for-the-badge"> <img src="https://img.shields.io/badge/-Tailwind%20CSS-444.svg?logo=Tailwind%20CSS&style=for-the-badge"> <img src="https://img.shields.io/badge/-shadcn/ui-444.svg?logo=shadcn/ui&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Three%20Fiber-444.svg?logo=React&style=for-the-badge"> <img src="https://img.shields.io/badge/-GSAP-444.svg?logo=GSAP&style=for-the-badge"> <img src="https://img.shields.io/badge/-Motion-444.svg?logo=Motion&style=for-the-badge"> <img src="https://img.shields.io/badge/-Howler.js-444.svg?logo=Howler.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Hook%20Form-444.svg?logo=React%20Hook%20Form&style=for-the-badge"> <img src="https://img.shields.io/badge/-Zod-444.svg?logo=Zod&style=for-the-badge"> <img src="https://img.shields.io/badge/-Vercel-444.svg?logo=Vercel&style=for-the-badge">
 
-### node バージョン
+### nodeバージョン
 
 - node v22.14.0
 - npm v10.9.2
