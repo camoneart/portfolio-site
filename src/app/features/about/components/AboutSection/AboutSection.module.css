@@ -104,6 +104,8 @@
 }
 
 .about-profile-img {
+  width: 165px;
+  height: 165px;
   border-radius: 6px;
 
   @media (width < 768px) {

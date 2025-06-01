@@ -57,7 +57,7 @@ const AboutSection = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
                     className={styles["about-profile-img-box"]}>
-                    <Image src={"/images/about/profile/peter-icon-compression.jpg"} alt="プロフィール画像" width={165} height={165} className={styles["about-profile-img"]} />
+                    <Image src={"/images/about/profile/profile-img.jpg"} alt="プロフィール画像" width={165} height={165} className={styles["about-profile-img"]} />
                   </motion.div>
                   <div className={styles["about-profile-info"]}>
                     <div className={styles["about-content-group"]}>
@@ -125,14 +125,14 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
                       className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}>
-                      <span className={styles["light-effect"]}>技術のキャッチアップ</span>
+                      <span className={styles["light-effect"]}>技術力の向上</span>
                     </motion.dt>
                     <motion.dd 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                        知的好奇心を原動力に、技術力の向上を目指して日々情報収集と学習に励んでいます。特に興味を持った技術には、実際にコードを書いて検証し、その技術を用いた小規模なWebアプリを開発して挙動を確認することで、理解を深めるよう努めています。
+                        知的好奇心を原動力に、日々キャッチアップと学習に励んでいます。特に興味を持った技術には、実際にコードを書いて検証し、その技術を用いた小規模なWebアプリを開発して挙動を確認することで、理解を深めるよう努めています。技術力を向上させることで、ユーザーが抱える問題の解決に貢献したいと考えています。
                     </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
@@ -156,14 +156,14 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      毎日、音楽を聴きます。音楽から日々のエネルギーを得ています。
+                      音楽から日々のエネルギーを得ています。
                     </motion.dd>
                     <motion.dd 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                      特に好きなアーティストは、<em>Vaundy</em>, <em>藤井 風</em>, <em>SUPER BEAVER</em>, <em>Saucy Dog</em>, <em>King Gnu</em>です。
+                      特に好きなアーティストは、<em>Maroon 5</em>, <em>Vaundy</em>, <em>藤井 風</em>, <em>SUPER BEAVER</em>, <em>Saucy Dog</em>, <em>King Gnu</em>です。
                     </motion.dd>
                   </div>
 
@@ -337,7 +337,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}>
-                      <span className={styles["light-effect"]}>常にチャレンジし続ける</span>
+                      <span className={styles["light-effect"]}>常に挑戦する</span>
                     </motion.dt>
                     <motion.dd 
                       initial={{ opacity: 0 }}
@@ -351,7 +351,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                        地に足をつけ、学びを大切とし、謙虚さを忘れず、常にチャレンジし続けることで、<em>｢見たことも無い、想像もできなかった場所へ行ける｣</em>と私は信じています。
+                        地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、<em>｢見たことも無い、想像もできなかった場所へ行ける｣</em>と私は信じています。
                       </motion.dd>
                   </div>
                 </dl>
