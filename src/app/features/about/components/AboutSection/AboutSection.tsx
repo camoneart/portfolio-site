@@ -303,14 +303,14 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}>
-                      <span className={styles["light-effect"]}>思い出に残るようなエクスペリエンスを提供したい</span>
+                      <span className={styles["light-effect"]}>好奇心をくすぐる、心踊るような体験を提供したい。</span>
                     </motion.dt>
                     <motion.dd 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                        <em>｢ユーザーの関心を引きつけ、感動を与え、思い出に残る｣</em>そんなエクスペリエンスを提供できるようになりたいです。また、エンジニアとして<em>ユーザーに寄り添い、ユーザーの想いを形にする</em>ことを大切にし、<em>ユーザーにとって価値ある体験を創造できるようになりたい</em>と考えています。
+                        モノづくりを通して、<em>「ユーザーの関心を引きつけ、ワクワクや感動を与え、思い出に残る｣</em>そんなエクスペリエンスを提供できるようになりたいです。また、エンジニアとして<em>ユーザーに寄り添い、想いを形にする</em>ことを大切にし、<em>価値ある体験を創造することを目指しています。</em>
                       </motion.dd>
                   </div>
 
