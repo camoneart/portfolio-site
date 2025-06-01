@@ -1,6 +1,6 @@
 # AOYAMA｜Creative Developer
 
-アプリは以下からアクセスできます。
+ポートフォリオサイトは以下からアクセスできます。
 
 https://aoyamadev.com
 
