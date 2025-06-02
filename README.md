@@ -134,7 +134,7 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 ### **スキルページ**
 
-サイト制作やアプリ開発をする上で学び、活用してきた技術スタックを一覧でまとめています。
+サイト制作やアプリ開発をする上で学び、活用してきたスキルセットを一覧でまとめています。
 
 ![スキルページ](/public/gif/README/portfolio-skills-page.gif)
 
