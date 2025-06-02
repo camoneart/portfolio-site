@@ -2,6 +2,13 @@
   "name": "aoyama-portfolio",
   "version": "0.1.0",
   "private": true,
+  "author": "aoyama",
+  "description": "ポートフォリオサイト",
+  "homepage": "https://aoyama.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aoyamadev/aoyama-portfolio"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
