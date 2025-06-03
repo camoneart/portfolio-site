@@ -146,6 +146,6 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 ### **お問い合わせページ**
 
-お問い合わせページになります。お問い合わせフォームは、「React Hook Form」でフォームのパフォーマンス化を行い、「Zod」で入力値の検証（バリデーション）を行うことで堅牢なフォームを実装しました。また、メール送信機能につきましては「Resend」を利用して実装しました。
+このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
 
 ![お問い合わせページ](/public/gif/README/portfolio-contact-page.gif)
