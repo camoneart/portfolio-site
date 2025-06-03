@@ -6,8 +6,8 @@ import { useSpring, animated } from "@react-spring/web";
 // カスタムフックのメモ化
 const useMousePosition = () => {
   const [position, setPosition] = useState(() => ({
-    x: typeof window !== "undefined" ? window.innerWidth / 2 : 0,
-    y: typeof window !== "undefined" ? window.innerHeight / 2 : 0,
+    x: 0, // Initialize with a consistent value for SSR
+    y: 0, // Initialize with a consistent value for SSR
   }));
 
   // mousemoveハンドラーをメモ化
@@ -16,9 +16,15 @@ const useMousePosition = () => {
   }, []);
 
   useEffect(() => {
+    // Set initial position once on the client after mount
+    setPosition({
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2,
+    });
+
     window.addEventListener("mousemove", updatePosition);
     return () => window.removeEventListener("mousemove", updatePosition);
-  }, [updatePosition]); // 依存配列にupdatePositionを追加
+  }, [updatePosition]); // updatePosition は useCallback でメモ化されているので依存配列に含めても問題ない
 
   return position;
 };
