@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s｜AOYAMA",
   },
   description:
-    "Kaishu Aoyamaのポートフォリオサイトです。「モノとの対話」を表現できるエンジニアを目指しています。",
+    "Kaishu Aoyamaのポートフォリオサイトです。モノづくりを通して、ワクワクしたり心踊るような体験を提供したいです。",
   robots: "noindex, nofollow",
 };
 
