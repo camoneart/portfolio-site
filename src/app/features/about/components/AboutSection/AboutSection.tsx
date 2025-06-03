@@ -327,7 +327,7 @@ const AboutSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut"}}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}>
-                        <em>こちらの動作に対してプロダクトが反応を返してくれる。</em>そんな｢モノとの対話｣を表現できるエンジニアを目指しています。
+                        <em>こちらの動作に対してプロダクトが反応を返してくれる。</em>そんな<em>｢モノとの対話｣</em>を表現できるエンジニアを目指しています。
                       </motion.dd>
                   </div>
 
