@@ -18,7 +18,7 @@ https://aoyamadev.com
 
 開発構成図を、HTMLインフォグラフィックで表現しました。
 
-[開発構成図](https://aoyamadev.github.io/portfolio_development-configuration-diagram/)
+[開発構成図（HTMLインフォグラフィック）](https://aoyamadev.github.io/portfolio_development-configuration-diagram/)
 
 <h2 id="technology-used">使用技術</h2>
 
