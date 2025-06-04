@@ -77,13 +77,13 @@ export const worksData: WorksData[] = [
     detail03:
       "　ダウンロードフォームは、「全項目を入力しないと、送信できないようにする」「フォーム送信後は、サンクスページに遷移」「性と名が分かれている時のオートコンプリートに対応」などの仕様です。実際のダウンロード機能は実装していません。",
     accessDescription:
-      "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：aoym_demo01の入力をお願いいたします。",
+      "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：guest｜パスワード：guest_view01の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "001/005" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://aoymdev.com/caresend",
     role: "Coding",
-    username: "demo",
-    password: "demo01",
+    username: "guest",
+    password: "guest_view01",
     viewTransitionName: "view-transition-title-work-1",
     viewTransitionImage: "view-transition-img-work-1",
   },
@@ -104,13 +104,13 @@ export const worksData: WorksData[] = [
     detail05:
       "　メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
     accessDescription:
-      "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：aoym_demo02の入力をお願いいたします。",
+      "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：guest｜パスワード：guest_view02の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "002/005" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://aoymdev.com/aobotan",
     role: "Coding",
-    username: "demo",
-    password: "demo02",
+    username: "guest",
+    password: "guest_view02",
     viewTransitionName: "view-transition-title-work-2",
     viewTransitionImage: "view-transition-img-work-2",
   },
@@ -154,14 +154,14 @@ export const worksData: WorksData[] = [
     specification06Detail04:
       "　「送信する」ボタンは、必須項目が全て入力されていないと押せないようにしています。確認画面は実装していません。",
     accessDescription:
-      "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：demo｜パスワード：aoym_demo03の入力をお願いいたします。",
+      "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：guest｜パスワード：guest_view03の入力をお願いいたします。",
     labels: [{ no: "Card No.", value: "003/005" }],
     skillsList:
       "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
     siteUrl: "https://aoymdev.com/tetote",
     role: "Coding",
-    username: "demo",
-    password: "demo03",
+    username: "guest",
+    password: "guest_view03",
     viewTransitionName: "view-transition-title-work-3",
     viewTransitionImage: "view-transition-img-work-3",
   },

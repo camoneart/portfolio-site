@@ -4,13 +4,10 @@ import styles from "./CustomEmphasis.module.css";
 
 export const CustomEmphasis: Components["p"] = ({ children, ...props }) => {
   if (typeof children === "string") {
-    // 最初に "demo" パターンと "aoym_demo" パターンを処理
-    let text = children.replace(
-      /(aoym_demo[0-9]{2}|demo[0-9]{2}|demo)/g,
-      (match) => {
-        return `<em class="${styles["emphasis-value"]}">${match}</em>`;
-      }
-    );
+    // 最初に "guest" パターンと "guest_view" パターンを処理
+    let text = children.replace(/(guest_view[0-9]{2}|guest)/g, (match) => {
+      return `<em class="${styles["emphasis-value"]}">${match}</em>`;
+    });
 
     // 次に特定の文章パターンを処理
     text = text.replace(
