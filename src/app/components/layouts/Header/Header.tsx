@@ -39,7 +39,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`w-full h-auto mx-auto select-none md:py-8 py-[1.75rem] md:px-8 px-[1.75rem] ${`${styles["header"]}`}`}>
+    <header className={`w-full h-auto mx-auto select-none md:py-8 py-4 md:px-8 px-4 ${`${styles["header"]}`}`}>
       <div className={`flex items-center justify-between ${styles["header__container"]}`}>
         <div className={`sticky inset-0 font-russo text-xl md:text-3xl font-black ${styles["header__title"]}`}>
           <Link href="/" className={`${styles["header__title-link"]}`} onClick={() => isOpen && toggleMenu()} >
@@ -51,7 +51,8 @@ export default function Header() {
           <Gnav isOpen={isOpen && isCompactLayout} toggleMenu={toggleMenu} />
           <AudioPlayer
             src="/audio/They.mp3"
-            size={17}
+            width={17}
+            height={17}
             color="#fff"
             initialVolume={0.7}
           />

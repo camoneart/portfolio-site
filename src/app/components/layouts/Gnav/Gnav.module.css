@@ -30,13 +30,13 @@
   @media (width < 768px) {
     width: 0;
     height: calc(100dvh - 18px);
-    display: block grid;
-    place-items: center;
-    place-content: center;
-    grid-template-columns: 2fr;
-    grid-template-rows: repeat(4, 100px);
+    display: block flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
     box-shadow: var(--cmp-primary-shadow);
     border: 1px solid var(--cmp-border-primary-color);
+    padding-block-start: 40px;
     padding-inline: 20px;
     border-radius: 10px;
     transition: width 0.7s ease-in-out, background 0.7s ease-in-out;

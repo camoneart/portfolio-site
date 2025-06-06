@@ -9,10 +9,10 @@
   .hamburger {
     display: block flow;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
+    top: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
     background-color: var(--cmp-bg-primary-color);
     border: 1px solid var(--cmp-border-primary-color);
     box-shadow: var(--cmp-primary-shadow);
@@ -28,7 +28,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1.9rem;
+    width: 1.7rem;
     height: 1.25rem;
   }
 

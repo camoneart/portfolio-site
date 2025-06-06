@@ -7,7 +7,8 @@ import styles from './AudioPlayer.module.css';
 
 interface AudioPlayerProps {
   src: string;
-  size?: number;
+  width?: number;
+  height?: number;
   color?: string;
   className?: string;
   initialVolume?: number;
@@ -15,10 +16,11 @@ interface AudioPlayerProps {
 
 const AudioPlayer = memo(({
   src,
-  size = 24,
+  width = 17,
+  height = 17,
   color = 'currentColor',
   className = 'audio-button',
-  initialVolume = 0.5
+  initialVolume = 0.7
 }: AudioPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -62,9 +64,9 @@ const AudioPlayer = memo(({
       aria-label={isPlaying ? (isMuted ? "Unmute" : "Mute") : "Play"}
     >
       {isMuted || !isPlaying ? (
-        <VolumeX size={size} color={color} className={styles['audio-mute']} />
+        <VolumeX width={width} height={height} color={color} className={styles['audio-mute']} />
       ) : (
-        <Volume2 size={size} color={color} className={styles['audio-play']} />
+        <Volume2 width={width} height={height} color={color} className={styles['audio-play']} />
       )}
     </button>
   );
