@@ -51,6 +51,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
     "@types/howler": "^2.2.12",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -58,7 +59,7 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.1.8",
     "typescript": "^5"
   }
 }

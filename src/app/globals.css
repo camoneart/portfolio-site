@@ -1,790 +1,868 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-  /* color */
-  --bg-color-gray: #131315;
-  --color-primary-white: #fff;
-  --color-primary-black: #000;
-  --color-primary-gray: #262626;
-  --color-primary-orange: #ff6b4a;
-  --color-secondary-orange: #ff3d00;
-  --stairs-column-color: #7c1d00;
-  --text-gradient-primary: linear-gradient(
-    108deg,
-    #ffc508,
-    #ff5a2e 70%,
-    #ff9004
-  );
-  --label-bg-color: rgb(246 119 77 / 25%);
-  --label-border-color: rgb(231 153 79 / 75%);
-  --logo-bg-color: rgb(38 38 38 / 0.8);
-  --cmp-bg-primary-color: rgb(255 255 255 / 0.1);
-  --cmp-bg-secondary-color: rgb(255 255 255 / 0.1);
-  --cmp-border-primary-color: rgb(255 255 255 / 0.1);
-  --cmp-border-secondary-color: rgb(255 255 255 / 0.1);
-  --btn-border-orange: rgb(189 77 13);
-  --btn-bg-orange: rgb(189 77 13 / 0.6);
-  --works-item-bg-color: rgb(202 81 12 / 0.6);
-  --selection-color: rgb(231 117 79 / 0.75);
-  --color-zenn-blue: #3EA8FF;
+@plugin 'tailwindcss-animate';
 
-  /* shadow */
-  --logo-bg-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.1),
-    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 255 255 / 0.1);
-  --cmp-primary-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.3),
-    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.1);
-  --detail-cmp-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.3),
-    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.2);
-  --cmp-secondary-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 1px rgb(255 255 255 / 0.3),
-    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0 40px rgb(255 107 74 / 0.2);
-  --card-hover-shadow: 0 25px 35px -5px rgb(0 0 0 / 0.3),
-    0 15px 15px -5px rgb(0 0 0 / 0.1), 0 0 0 1px rgb(255 255 255 / 0.2),
-    0 0 60px rgb(255 107 74 / 0.3);
-  --sidebar-link-hover-shadow: 0px 0px 20px 0px rgb(255 107 74 / 0.6);
-  --hover-text-shadow: 0 0 15px var(--color-primary-orange);
-  --back-btn-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 3px rgb(48, 46, 46),
-    0 0px 25px -5px rgb(0 0 0 / 0.1), 0 0 15px rgb(255 107 74);
+@custom-variant dark (&:is(.dark *));
 
-  /* font weight */
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1536px;
 
-  /* line height */
-  --leading-none: 1;
-  --leading-x-tight: 1.25;
-  --leading-tight: 1.5;
-  --leading-snug: 1.6;
-  --leading-normal: 1.75;
-  --leading-relaxed: 1.8;
-  --leading-loose: 2;
-  --leading-wide: 2.5;
+  --font-*: initial;
+  --font-russo: var(--font-russo-one);
 
-  /* border */
-  --border-rounded: 999em;
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 }
 
-body {
-  display: block grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100svh;
-  color: var(--color-primary-white);
-  background: var(--bg-color-gray);
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
-}
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-main {
-  width: 100%;
-}
-
-canvas {
-  display: block flow;
-}
-
-.common-container {
-  position: relative;
-  max-width: 1280px;
-  width: 100%;
-  height: 100%;
-  padding-block: 1.5rem;
-  padding-inline: 1.25rem;
-  margin-inline: auto;
-
-  @media (width < 768px) {
-    padding-block-start: 2rem;
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
   }
 }
 
-.contact-form-send-btn-container {
-  height: 100px;
-  display: block grid;
-  place-items: center;
-  margin-inline: auto;
-}
+@layer utilities {
+  :root {
+    /* color */
+    --bg-color-gray: #131315;
+    --color-primary-white: #fff;
+    --color-primary-black: #000;
+    --color-primary-gray: #262626;
+    --color-primary-orange: #ff6b4a;
+    --color-secondary-orange: #ff3d00;
+    --stairs-column-color: #7c1d00;
+    --text-gradient-primary: linear-gradient(
+      108deg,
+      #ffc508,
+      #ff5a2e 70%,
+      #ff9004
+    );
+    --label-bg-color: rgb(246 119 77 / 25%);
+    --label-border-color: rgb(231 153 79 / 75%);
+    --logo-bg-color: rgb(38 38 38 / 0.8);
+    --cmp-bg-primary-color: rgb(255 255 255 / 0.1);
+    --cmp-bg-secondary-color: rgb(255 255 255 / 0.1);
+    --cmp-border-primary-color: rgb(255 255 255 / 0.1);
+    --cmp-border-secondary-color: rgb(255 255 255 / 0.1);
+    --btn-border-orange: rgb(189 77 13);
+    --btn-bg-orange: rgb(189 77 13 / 0.6);
+    --works-item-bg-color: rgb(202 81 12 / 0.6);
+    --selection-color: rgb(231 117 79 / 0.75);
+    --color-zenn-blue: #3ea8ff;
 
-.contact-form-send-btn-bg {
-  width: fit-content;
-  border-radius: var(--border-rounded);
-  border: 1px solid var(--btn-border-orange);
-  padding-block: 5px;
-  padding-inline: 5px;
-}
+    /* shadow */
+    --logo-bg-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06),
+      0 0 0 1px rgb(255 255 255 / 0.1), 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 0 40px rgb(255 255 255 / 0.1);
+    --cmp-primary-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06),
+      0 0 0 1px rgb(255 255 255 / 0.3), 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 0 40px rgb(255 107 74 / 0.1);
+    --detail-cmp-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06),
+      0 0 0 1px rgb(255 255 255 / 0.3), 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 0 40px rgb(255 107 74 / 0.2);
+    --cmp-secondary-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06),
+      0 0 0 1px rgb(255 255 255 / 0.3), 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 0 40px rgb(255 107 74 / 0.2);
+    --card-hover-shadow:
+      0 25px 35px -5px rgb(0 0 0 / 0.3), 0 15px 15px -5px rgb(0 0 0 / 0.1),
+      0 0 0 1px rgb(255 255 255 / 0.2), 0 0 60px rgb(255 107 74 / 0.3);
+    --sidebar-link-hover-shadow: 0px 0px 20px 0px rgb(255 107 74 / 0.6);
+    --hover-text-shadow: 0 0 15px var(--color-primary-orange);
+    --back-btn-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06),
+      0 0 0 3px rgb(48, 46, 46), 0 0px 25px -5px rgb(0 0 0 / 0.1),
+      0 0 15px rgb(255 107 74);
 
-.contact-form-send-btn {
-  width: 230px;
-  height: 48px;
-  background-color: var(--btn-bg-orange);
-  border: 1px solid var(--btn-border-orange);
-  border-radius: var(--border-rounded);
-  transition: box-shadow 0.2s ease-in-out;
+    /* font weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
 
-  @media (width < 640px) {
-    width: 150px;
+    /* line height */
+    --leading-none: 1;
+    --leading-x-tight: 1.25;
+    --leading-tight: 1.5;
+    --leading-snug: 1.6;
+    --leading-normal: 1.75;
+    --leading-relaxed: 1.8;
+    --leading-loose: 2;
+    --leading-wide: 2.5;
+
+    /* border */
+    --border-rounded: 999em;
   }
 
-  &:hover {
-    box-shadow: var(--back-btn-shadow);
+  body {
+    display: block grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100svh;
+    color: var(--color-primary-white);
+    background: var(--bg-color-gray);
+    font-family:
+      'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+      Meiryo, sans-serif;
   }
-}
-
-:focus-visible {
-  outline: 1px solid var(--color-secondary-orange);
-}
-
-::selection {
-  background-color: var(--selection-color);
-}
-
-/* View Transitions API｜next-view-transitions */
-/* work */
-.view-transition-title-work-1 {
-  view-transition-name: view-transition-title-work-1;
-  width: fit-content;
-}
-
-.view-transition-title-work-2 {
-  view-transition-name: view-transition-title-work-2;
-}
-
-.view-transition-title-work-3 {
-  view-transition-name: view-transition-title-work-3;
-}
-
-.view-transition-title-work-4 {
-  view-transition-name: view-transition-title-work-4;
-}
-
-.view-transition-img-work-1 {
-  view-transition-name: view-transition-img-work-1;
-  aspect-ratio: 16 / 9;
-}
-
-.view-transition-img-work-2 {
-  view-transition-name: view-transition-img-work-2;
-  aspect-ratio: 16 / 9;
-}
-
-.view-transition-img-work-3 {
-  view-transition-name: view-transition-img-work-3;
-  aspect-ratio: 16 / 9;
-}
-
-.view-transition-img-work-4 {
-  view-transition-name: view-transition-img-work-4;
-  aspect-ratio: 16 / 9;
-}
-
-/* skill */
-/* logo-wrapper */
-.view-transition-logo-wrapper-html {
-  view-transition-name: view-transition-logo-wrapper-html;
-}
-
-.view-transition-logo-wrapper-css {
-  view-transition-name: view-transition-logo-wrapper-css;
-}
-
-.view-transition-logo-wrapper-sass {
-  view-transition-name: view-transition-logo-wrapper-sass;
-}
-
-.view-transition-logo-wrapper-javascript {
-  view-transition-name: view-transition-logo-wrapper-javascript;
-}
-
-.view-transition-logo-wrapper-typescript {
-  view-transition-name: view-transition-logo-wrapper-typescript;
-}
-
-.view-transition-logo-wrapper-php {
-  view-transition-name: view-transition-logo-wrapper-php;
-}
-
-.view-transition-logo-wrapper-wordpress {
-  view-transition-name: view-transition-logo-wrapper-wordpress;
-}
-
-.view-transition-logo-wrapper-react {
-  view-transition-name: view-transition-logo-wrapper-react;
-}
-
-.view-transition-logo-wrapper-nextjs {
-  view-transition-name: view-transition-logo-wrapper-nextjs;
-}
-
-.view-transition-logo-wrapper-tailwind {
-  view-transition-name: view-transition-logo-wrapper-tailwind;
-}
-
-.view-transition-logo-wrapper-framer-motion {
-  view-transition-name: view-transition-logo-wrapper-framer-motion;
-}
-
-.view-transition-logo-wrapper-gsap {
-  view-transition-name: view-transition-logo-wrapper-gsap;
-}
-
-.view-transition-logo-wrapper-threejs {
-  view-transition-name: view-transition-logo-wrapper-threejs;
-}
-
-.view-transition-logo-wrapper-motion {
-  view-transition-name: view-transition-logo-wrapper-motion;
-}
-
-.view-transition-logo-wrapper-react-spring {
-  view-transition-name: view-transition-logo-wrapper-react-spring;
-}
-
-.view-transition-logo-wrapper-react-hook-form {
-  view-transition-name: view-transition-logo-wrapper-react-hook-form;
-}
-
-.view-transition-logo-wrapper-zod {
-  view-transition-name: view-transition-logo-wrapper-zod;
-}
-
-.view-transition-logo-wrapper-clerk {
-  view-transition-name: view-transition-logo-wrapper-clerk;
-}
-
-.view-transition-logo-wrapper-prisma {
-  view-transition-name: view-transition-logo-wrapper-prisma;
-}
-
-.view-transition-logo-wrapper-supabase {
-  view-transition-name: view-transition-logo-wrapper-supabase;
-}
-
-.view-transition-logo-wrapper-webpack {
-  view-transition-name: view-transition-logo-wrapper-webpack;
-}
-
-.view-transition-logo-wrapper-git {
-  view-transition-name: view-transition-logo-wrapper-git;
-}
-
-.view-transition-logo-wrapper-adobe-premiere-pro {
-  view-transition-name: view-transition-logo-wrapper-adobe-premiere-pro;
-}
-
-/* logo-bg */
-.view-transition-logo-bg-html {
-  view-transition-name: view-transition-logo-bg-html;
-}
-
-.view-transition-logo-bg-css {
-  view-transition-name: view-transition-logo-bg-css;
-}
-
-.view-transition-logo-bg-sass {
-  view-transition-name: view-transition-logo-bg-sass;
-}
-
-.view-transition-logo-bg-javascript {
-  view-transition-name: view-transition-logo-bg-javascript;
-}
-
-.view-transition-logo-bg-typescript {
-  view-transition-name: view-transition-logo-bg-typescript;
-}
-
-.view-transition-logo-bg-php {
-  view-transition-name: view-transition-logo-bg-php;
-}
-
-.view-transition-logo-bg-wordpress {
-  view-transition-name: view-transition-logo-bg-wordpress;
-}
-
-.view-transition-logo-bg-react {
-  view-transition-name: view-transition-logo-bg-react;
-}
-
-.view-transition-logo-bg-nextjs {
-  view-transition-name: view-transition-logo-bg-nextjs;
-}
-
-.view-transition-logo-bg-tailwind {
-  view-transition-name: view-transition-logo-bg-tailwind;
-}
-
-.view-transition-logo-bg-framer-motion {
-  view-transition-name: view-transition-logo-bg-framer-motion;
-}
-
-.view-transition-logo-bg-gsap {
-  view-transition-name: view-transition-logo-bg-gsap;
-}
-
-.view-transition-logo-bg-threejs {
-  view-transition-name: view-transition-logo-bg-threejs;
-}
-
-.view-transition-logo-bg-motion {
-  view-transition-name: view-transition-logo-bg-motion;
-}
-
-.view-transition-logo-bg-react-spring {
-  view-transition-name: view-transition-logo-bg-react-spring;
-}
-
-.view-transition-logo-bg-react-hook-form {
-  view-transition-name: view-transition-logo-bg-react-hook-form;
-}
-
-.view-transition-logo-bg-zod {
-  view-transition-name: view-transition-logo-bg-zod;
-}
-
-.view-transition-logo-bg-clerk {
-  view-transition-name: view-transition-logo-bg-clerk;
-}
-
-.view-transition-logo-bg-prisma {
-  view-transition-name: view-transition-logo-bg-prisma;
-}
-
-.view-transition-logo-bg-supabase {
-  view-transition-name: view-transition-logo-bg-supabase;
-}
-
-.view-transition-logo-bg-webpack {
-  view-transition-name: view-transition-logo-bg-webpack;
-}
-
-.view-transition-logo-bg-git {
-  view-transition-name: view-transition-logo-bg-git;
-}
-
-.view-transition-logo-bg-adobe-premiere-pro {
-  view-transition-name: view-transition-logo-bg-adobe-premiere-pro;
-}
-
-/* img */
-.view-transition-img-html {
-  view-transition-name: view-transition-img-html;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-css {
-  view-transition-name: view-transition-img-css;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-sass {
-  view-transition-name: view-transition-img-sass;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-javascript {
-  view-transition-name: view-transition-img-javascript;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-typescript {
-  view-transition-name: view-transition-img-typescript;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-php {
-  view-transition-name: view-transition-img-php;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-wordpress {
-  view-transition-name: view-transition-img-wordpress;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-react {
-  view-transition-name: view-transition-img-react;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-nextjs {
-  view-transition-name: view-transition-img-nextjs;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-astro {
-  view-transition-name: view-transition-img-astro;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-tailwindcss {
-  view-transition-name: view-transition-img-tailwindcss;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-gsap {
-  view-transition-name: view-transition-img-gsap;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-threejs {
-  view-transition-name: view-transition-img-threejs;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-motion {
-  view-transition-name: view-transition-img-motion;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-react-spring {
-  view-transition-name: view-transition-img-react-spring;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-react-hook-form {
-  view-transition-name: view-transition-img-react-hook-form;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-zod {
-  view-transition-name: view-transition-img-zod;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-clerk {
-  view-transition-name: view-transition-img-clerk;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-prisma {
-  view-transition-name: view-transition-img-prisma;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-supabase {
-  view-transition-name: view-transition-img-supabase;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-webpack {
-  view-transition-name: view-transition-img-webpack;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-git {
-  view-transition-name: view-transition-img-git;
-  aspect-ratio: 1 / 1;
-}
-
-.view-transition-img-adobe-premiere-pro {
-  view-transition-name: view-transition-img-adobe-premiere-pro;
-  aspect-ratio: 1 / 1;
-}
-
-/* title */
-.view-transition-title-html {
-  view-transition-name: view-transition-title-html;
-  width: fit-content;
-}
-
-.view-transition-title-css {
-  view-transition-name: view-transition-title-css;
-  width: fit-content;
-}
-
-.view-transition-title-sass {
-  view-transition-name: view-transition-title-sass;
-  width: fit-content;
-}
-
-.view-transition-title-javascript {
-  view-transition-name: view-transition-title-javascript;
-  width: fit-content;
-}
-
-.view-transition-title-typescript {
-  view-transition-name: view-transition-title-typescript;
-  width: fit-content;
-}
-
-.view-transition-title-php {
-  view-transition-name: view-transition-title-php;
-  width: fit-content;
-}
-
-.view-transition-title-wordpress {
-  view-transition-name: view-transition-title-wordpress;
-  width: fit-content;
-}
-
-.view-transition-title-react {
-  view-transition-name: view-transition-title-react;
-  width: fit-content;
-}
-
-.view-transition-title-nextjs {
-  view-transition-name: view-transition-title-nextjs;
-  width: fit-content;
-}
-
-.view-transition-title-astro {
-  view-transition-name: view-transition-title-astro;
-  width: fit-content;
-}
-
-.view-transition-title-tailwindcss {
-  view-transition-name: view-transition-title-tailwindcss;
-  width: fit-content;
-}
-
-.view-transition-title-gsap {
-  view-transition-name: view-transition-title-gsap;
-  width: fit-content;
-}
-
-.view-transition-title-threejs {
-  view-transition-name: view-transition-title-threejs;
-  width: fit-content;
-}
-
-.view-transition-title-motion {
-  view-transition-name: view-transition-title-motion;
-  width: fit-content;
-}
-
-.view-transition-title-react-spring {
-  view-transition-name: view-transition-title-react-spring;
-  width: fit-content;
-}
-
-.view-transition-title-react-hook-form {
-  view-transition-name: view-transition-title-react-hook-form;
-  width: fit-content;
-}
-
-.view-transition-title-zod {
-  view-transition-name: view-transition-title-zod;
-  width: fit-content;
-}
-
-.view-transition-title-clerk {
-  view-transition-name: view-transition-title-clerk;
-  width: fit-content;
-}
-
-.view-transition-title-prisma {
-  view-transition-name: view-transition-title-prisma;
-  width: fit-content;
-}
-
-.view-transition-title-supabase {
-  view-transition-name: view-transition-title-supabase;
-  width: fit-content;
-}
-
-.view-transition-title-webpack {
-  view-transition-name: view-transition-title-webpack;
-  width: fit-content;
-}
-
-.view-transition-title-git {
-  view-transition-name: view-transition-title-git;
-  width: fit-content;
-}
-
-.view-transition-title-adobe-premiere-pro {
-  view-transition-name: view-transition-title-adobe-premiere-pro;
-  width: fit-content;
-}
-
-/* bg */
-.view-transition-bg-html {
-  view-transition-name: view-transition-bg-html;
-}
-
-.view-transition-bg-css {
-  view-transition-name: view-transition-bg-css;
-}
-
-.view-transition-bg-sass {
-  view-transition-name: view-transition-bg-sass;
-}
-
-.view-transition-bg-javascript {
-  view-transition-name: view-transition-bg-javascript;
-}
-
-.view-transition-bg-typescript {
-  view-transition-name: view-transition-bg-typescript;
-}
-
-.view-transition-bg-php {
-  view-transition-name: view-transition-bg-php;
-}
-
-.view-transition-bg-wordpress {
-  view-transition-name: view-transition-bg-wordpress;
-}
-
-.view-transition-bg-react {
-  view-transition-name: view-transition-bg-react;
-}
-
-.view-transition-bg-nextjs {
-  view-transition-name: view-transition-bg-nextjs;
-}
-
-.view-transition-bg-astro {
-  view-transition-name: view-transition-bg-astro;
-}
-
-.view-transition-bg-tailwindcss {
-  view-transition-name: view-transition-bg-tailwindcss;
-}
-
-.view-transition-bg-gsap {
-  view-transition-name: view-transition-bg-gsap;
-}
-
-.view-transition-bg-threejs {
-  view-transition-name: view-transition-bg-threejs;
-}
-
-.view-transition-bg-motion {
-  view-transition-name: view-transition-bg-motion;
-}
-
-.view-transition-bg-react-spring {
-  view-transition-name: view-transition-bg-react-spring;
-}
-
-.view-transition-bg-react-hook-form {
-  view-transition-name: view-transition-bg-react-hook-form;
-}
-
-.view-transition-bg-zod {
-  view-transition-name: view-transition-bg-zod;
-}
-
-.view-transition-bg-clerk {
-  view-transition-name: view-transition-bg-clerk;
-}
-
-.view-transition-bg-prisma {
-  view-transition-name: view-transition-bg-prisma;
-}
-
-.view-transition-bg-supabase {
-  view-transition-name: view-transition-bg-supabase;
-}
-
-.view-transition-bg-webpack {
-  view-transition-name: view-transition-bg-webpack;
-}
-
-.view-transition-bg-git {
-  view-transition-name: view-transition-bg-git;
-}
-
-.view-transition-bg-adobe-premiere-pro {
-  view-transition-name: view-transition-bg-adobe-premiere-pro;
-}
-
-/* label */
-.view-transition-label-html {
-  view-transition-name: view-transition-label-html;
-}
-
-.view-transition-label-css {
-  view-transition-name: view-transition-label-css;
-}
-
-.view-transition-label-sass {
-  view-transition-name: view-transition-label-sass;
-}
-
-.view-transition-label-javascript {
-  view-transition-name: view-transition-label-javascript;
-}
-
-.view-transition-label-typescript {
-  view-transition-name: view-transition-label-typescript;
-}
-
-.view-transition-label-php {
-  view-transition-name: view-transition-label-php;
-}
-
-.view-transition-label-wordpress {
-  view-transition-name: view-transition-label-wordpress;
-}
-
-.view-transition-label-react {
-  view-transition-name: view-transition-label-react;
-}
-
-.view-transition-label-nextjs {
-  view-transition-name: view-transition-label-nextjs;
-}
-
-.view-transition-label-astro {
-  view-transition-name: view-transition-label-astro;
-}
-
-.view-transition-label-tailwindcss {
-  view-transition-name: view-transition-label-tailwindcss;
-}
-
-.view-transition-label-gsap {
-  view-transition-name: view-transition-label-gsap;
-}
-
-.view-transition-label-threejs {
-  view-transition-name: view-transition-label-threejs;
-}
-
-.view-transition-label-motion {
-  view-transition-name: view-transition-label-motion;
-}
-
-.view-transition-label-react-spring {
-  view-transition-name: view-transition-label-react-spring;
-}
-
-.view-transition-label-react-hook-form {
-  view-transition-name: view-transition-label-react-hook-form;
-}
-
-.view-transition-label-zod {
-  view-transition-name: view-transition-label-zod;
-}
-
-.view-transition-label-clerk {
-  view-transition-name: view-transition-label-clerk;
-}
-
-.view-transition-label-prisma {
-  view-transition-name: view-transition-label-prisma;
-}
-
-.view-transition-label-supabase {
-  view-transition-name: view-transition-label-supabase;
-}
-
-.view-transition-label-webpack {
-  view-transition-name: view-transition-label-webpack;
-}
-
-.view-transition-label-git {
-  view-transition-name: view-transition-label-git;
-}
-
-.view-transition-label-adobe-premiere-pro {
-  view-transition-name: view-transition-label-adobe-premiere-pro;
+
+  main {
+    width: 100%;
+  }
+
+  canvas {
+    display: block flow;
+  }
+
+  .common-container {
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    height: 100%;
+    padding-block: 1.5rem;
+    padding-inline: 1.25rem;
+    margin-inline: auto;
+
+    @media (width < 768px) {
+      padding-block-start: 2rem;
+    }
+  }
+
+  .contact-form-send-btn-container {
+    height: 100px;
+    display: block grid;
+    place-items: center;
+    margin-inline: auto;
+  }
+
+  .contact-form-send-btn-bg {
+    width: fit-content;
+    border-radius: var(--border-rounded);
+    border: 1px solid var(--btn-border-orange);
+    padding-block: 5px;
+    padding-inline: 5px;
+  }
+
+  .contact-form-send-btn {
+    width: 230px;
+    height: 48px;
+    background-color: var(--btn-bg-orange);
+    border: 1px solid var(--btn-border-orange);
+    border-radius: var(--border-rounded);
+    transition: box-shadow 0.2s ease-in-out;
+
+    @media (width < 640px) {
+      width: 150px;
+    }
+
+    &:hover {
+      box-shadow: var(--back-btn-shadow);
+    }
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--color-secondary-orange);
+  }
+
+  ::selection {
+    background-color: var(--selection-color);
+  }
+
+  /* View Transitions API｜next-view-transitions */
+  /* work */
+  .view-transition-title-work-1 {
+    view-transition-name: view-transition-title-work-1;
+    width: fit-content;
+  }
+
+  .view-transition-title-work-2 {
+    view-transition-name: view-transition-title-work-2;
+  }
+
+  .view-transition-title-work-3 {
+    view-transition-name: view-transition-title-work-3;
+  }
+
+  .view-transition-title-work-4 {
+    view-transition-name: view-transition-title-work-4;
+  }
+
+  .view-transition-img-work-1 {
+    view-transition-name: view-transition-img-work-1;
+    aspect-ratio: 16 / 9;
+  }
+
+  .view-transition-img-work-2 {
+    view-transition-name: view-transition-img-work-2;
+    aspect-ratio: 16 / 9;
+  }
+
+  .view-transition-img-work-3 {
+    view-transition-name: view-transition-img-work-3;
+    aspect-ratio: 16 / 9;
+  }
+
+  .view-transition-img-work-4 {
+    view-transition-name: view-transition-img-work-4;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* skill */
+  /* logo-wrapper */
+  .view-transition-logo-wrapper-html {
+    view-transition-name: view-transition-logo-wrapper-html;
+  }
+
+  .view-transition-logo-wrapper-css {
+    view-transition-name: view-transition-logo-wrapper-css;
+  }
+
+  .view-transition-logo-wrapper-sass {
+    view-transition-name: view-transition-logo-wrapper-sass;
+  }
+
+  .view-transition-logo-wrapper-javascript {
+    view-transition-name: view-transition-logo-wrapper-javascript;
+  }
+
+  .view-transition-logo-wrapper-typescript {
+    view-transition-name: view-transition-logo-wrapper-typescript;
+  }
+
+  .view-transition-logo-wrapper-php {
+    view-transition-name: view-transition-logo-wrapper-php;
+  }
+
+  .view-transition-logo-wrapper-wordpress {
+    view-transition-name: view-transition-logo-wrapper-wordpress;
+  }
+
+  .view-transition-logo-wrapper-react {
+    view-transition-name: view-transition-logo-wrapper-react;
+  }
+
+  .view-transition-logo-wrapper-nextjs {
+    view-transition-name: view-transition-logo-wrapper-nextjs;
+  }
+
+  .view-transition-logo-wrapper-tailwind {
+    view-transition-name: view-transition-logo-wrapper-tailwind;
+  }
+
+  .view-transition-logo-wrapper-framer-motion {
+    view-transition-name: view-transition-logo-wrapper-framer-motion;
+  }
+
+  .view-transition-logo-wrapper-gsap {
+    view-transition-name: view-transition-logo-wrapper-gsap;
+  }
+
+  .view-transition-logo-wrapper-threejs {
+    view-transition-name: view-transition-logo-wrapper-threejs;
+  }
+
+  .view-transition-logo-wrapper-motion {
+    view-transition-name: view-transition-logo-wrapper-motion;
+  }
+
+  .view-transition-logo-wrapper-react-spring {
+    view-transition-name: view-transition-logo-wrapper-react-spring;
+  }
+
+  .view-transition-logo-wrapper-react-hook-form {
+    view-transition-name: view-transition-logo-wrapper-react-hook-form;
+  }
+
+  .view-transition-logo-wrapper-zod {
+    view-transition-name: view-transition-logo-wrapper-zod;
+  }
+
+  .view-transition-logo-wrapper-clerk {
+    view-transition-name: view-transition-logo-wrapper-clerk;
+  }
+
+  .view-transition-logo-wrapper-prisma {
+    view-transition-name: view-transition-logo-wrapper-prisma;
+  }
+
+  .view-transition-logo-wrapper-supabase {
+    view-transition-name: view-transition-logo-wrapper-supabase;
+  }
+
+  .view-transition-logo-wrapper-webpack {
+    view-transition-name: view-transition-logo-wrapper-webpack;
+  }
+
+  .view-transition-logo-wrapper-git {
+    view-transition-name: view-transition-logo-wrapper-git;
+  }
+
+  .view-transition-logo-wrapper-adobe-premiere-pro {
+    view-transition-name: view-transition-logo-wrapper-adobe-premiere-pro;
+  }
+
+  /* logo-bg */
+  .view-transition-logo-bg-html {
+    view-transition-name: view-transition-logo-bg-html;
+  }
+
+  .view-transition-logo-bg-css {
+    view-transition-name: view-transition-logo-bg-css;
+  }
+
+  .view-transition-logo-bg-sass {
+    view-transition-name: view-transition-logo-bg-sass;
+  }
+
+  .view-transition-logo-bg-javascript {
+    view-transition-name: view-transition-logo-bg-javascript;
+  }
+
+  .view-transition-logo-bg-typescript {
+    view-transition-name: view-transition-logo-bg-typescript;
+  }
+
+  .view-transition-logo-bg-php {
+    view-transition-name: view-transition-logo-bg-php;
+  }
+
+  .view-transition-logo-bg-wordpress {
+    view-transition-name: view-transition-logo-bg-wordpress;
+  }
+
+  .view-transition-logo-bg-react {
+    view-transition-name: view-transition-logo-bg-react;
+  }
+
+  .view-transition-logo-bg-nextjs {
+    view-transition-name: view-transition-logo-bg-nextjs;
+  }
+
+  .view-transition-logo-bg-tailwind {
+    view-transition-name: view-transition-logo-bg-tailwind;
+  }
+
+  .view-transition-logo-bg-framer-motion {
+    view-transition-name: view-transition-logo-bg-framer-motion;
+  }
+
+  .view-transition-logo-bg-gsap {
+    view-transition-name: view-transition-logo-bg-gsap;
+  }
+
+  .view-transition-logo-bg-threejs {
+    view-transition-name: view-transition-logo-bg-threejs;
+  }
+
+  .view-transition-logo-bg-motion {
+    view-transition-name: view-transition-logo-bg-motion;
+  }
+
+  .view-transition-logo-bg-react-spring {
+    view-transition-name: view-transition-logo-bg-react-spring;
+  }
+
+  .view-transition-logo-bg-react-hook-form {
+    view-transition-name: view-transition-logo-bg-react-hook-form;
+  }
+
+  .view-transition-logo-bg-zod {
+    view-transition-name: view-transition-logo-bg-zod;
+  }
+
+  .view-transition-logo-bg-clerk {
+    view-transition-name: view-transition-logo-bg-clerk;
+  }
+
+  .view-transition-logo-bg-prisma {
+    view-transition-name: view-transition-logo-bg-prisma;
+  }
+
+  .view-transition-logo-bg-supabase {
+    view-transition-name: view-transition-logo-bg-supabase;
+  }
+
+  .view-transition-logo-bg-webpack {
+    view-transition-name: view-transition-logo-bg-webpack;
+  }
+
+  .view-transition-logo-bg-git {
+    view-transition-name: view-transition-logo-bg-git;
+  }
+
+  .view-transition-logo-bg-adobe-premiere-pro {
+    view-transition-name: view-transition-logo-bg-adobe-premiere-pro;
+  }
+
+  /* img */
+  .view-transition-img-html {
+    view-transition-name: view-transition-img-html;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-css {
+    view-transition-name: view-transition-img-css;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-sass {
+    view-transition-name: view-transition-img-sass;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-javascript {
+    view-transition-name: view-transition-img-javascript;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-typescript {
+    view-transition-name: view-transition-img-typescript;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-php {
+    view-transition-name: view-transition-img-php;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-wordpress {
+    view-transition-name: view-transition-img-wordpress;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-react {
+    view-transition-name: view-transition-img-react;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-nextjs {
+    view-transition-name: view-transition-img-nextjs;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-astro {
+    view-transition-name: view-transition-img-astro;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-tailwindcss {
+    view-transition-name: view-transition-img-tailwindcss;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-gsap {
+    view-transition-name: view-transition-img-gsap;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-threejs {
+    view-transition-name: view-transition-img-threejs;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-motion {
+    view-transition-name: view-transition-img-motion;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-react-spring {
+    view-transition-name: view-transition-img-react-spring;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-react-hook-form {
+    view-transition-name: view-transition-img-react-hook-form;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-zod {
+    view-transition-name: view-transition-img-zod;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-clerk {
+    view-transition-name: view-transition-img-clerk;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-prisma {
+    view-transition-name: view-transition-img-prisma;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-supabase {
+    view-transition-name: view-transition-img-supabase;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-webpack {
+    view-transition-name: view-transition-img-webpack;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-git {
+    view-transition-name: view-transition-img-git;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-adobe-premiere-pro {
+    view-transition-name: view-transition-img-adobe-premiere-pro;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* title */
+  .view-transition-title-html {
+    view-transition-name: view-transition-title-html;
+    width: fit-content;
+  }
+
+  .view-transition-title-css {
+    view-transition-name: view-transition-title-css;
+    width: fit-content;
+  }
+
+  .view-transition-title-sass {
+    view-transition-name: view-transition-title-sass;
+    width: fit-content;
+  }
+
+  .view-transition-title-javascript {
+    view-transition-name: view-transition-title-javascript;
+    width: fit-content;
+  }
+
+  .view-transition-title-typescript {
+    view-transition-name: view-transition-title-typescript;
+    width: fit-content;
+  }
+
+  .view-transition-title-php {
+    view-transition-name: view-transition-title-php;
+    width: fit-content;
+  }
+
+  .view-transition-title-wordpress {
+    view-transition-name: view-transition-title-wordpress;
+    width: fit-content;
+  }
+
+  .view-transition-title-react {
+    view-transition-name: view-transition-title-react;
+    width: fit-content;
+  }
+
+  .view-transition-title-nextjs {
+    view-transition-name: view-transition-title-nextjs;
+    width: fit-content;
+  }
+
+  .view-transition-title-astro {
+    view-transition-name: view-transition-title-astro;
+    width: fit-content;
+  }
+
+  .view-transition-title-tailwindcss {
+    view-transition-name: view-transition-title-tailwindcss;
+    width: fit-content;
+  }
+
+  .view-transition-title-gsap {
+    view-transition-name: view-transition-title-gsap;
+    width: fit-content;
+  }
+
+  .view-transition-title-threejs {
+    view-transition-name: view-transition-title-threejs;
+    width: fit-content;
+  }
+
+  .view-transition-title-motion {
+    view-transition-name: view-transition-title-motion;
+    width: fit-content;
+  }
+
+  .view-transition-title-react-spring {
+    view-transition-name: view-transition-title-react-spring;
+    width: fit-content;
+  }
+
+  .view-transition-title-react-hook-form {
+    view-transition-name: view-transition-title-react-hook-form;
+    width: fit-content;
+  }
+
+  .view-transition-title-zod {
+    view-transition-name: view-transition-title-zod;
+    width: fit-content;
+  }
+
+  .view-transition-title-clerk {
+    view-transition-name: view-transition-title-clerk;
+    width: fit-content;
+  }
+
+  .view-transition-title-prisma {
+    view-transition-name: view-transition-title-prisma;
+    width: fit-content;
+  }
+
+  .view-transition-title-supabase {
+    view-transition-name: view-transition-title-supabase;
+    width: fit-content;
+  }
+
+  .view-transition-title-webpack {
+    view-transition-name: view-transition-title-webpack;
+    width: fit-content;
+  }
+
+  .view-transition-title-git {
+    view-transition-name: view-transition-title-git;
+    width: fit-content;
+  }
+
+  .view-transition-title-adobe-premiere-pro {
+    view-transition-name: view-transition-title-adobe-premiere-pro;
+    width: fit-content;
+  }
+
+  /* bg */
+  .view-transition-bg-html {
+    view-transition-name: view-transition-bg-html;
+  }
+
+  .view-transition-bg-css {
+    view-transition-name: view-transition-bg-css;
+  }
+
+  .view-transition-bg-sass {
+    view-transition-name: view-transition-bg-sass;
+  }
+
+  .view-transition-bg-javascript {
+    view-transition-name: view-transition-bg-javascript;
+  }
+
+  .view-transition-bg-typescript {
+    view-transition-name: view-transition-bg-typescript;
+  }
+
+  .view-transition-bg-php {
+    view-transition-name: view-transition-bg-php;
+  }
+
+  .view-transition-bg-wordpress {
+    view-transition-name: view-transition-bg-wordpress;
+  }
+
+  .view-transition-bg-react {
+    view-transition-name: view-transition-bg-react;
+  }
+
+  .view-transition-bg-nextjs {
+    view-transition-name: view-transition-bg-nextjs;
+  }
+
+  .view-transition-bg-astro {
+    view-transition-name: view-transition-bg-astro;
+  }
+
+  .view-transition-bg-tailwindcss {
+    view-transition-name: view-transition-bg-tailwindcss;
+  }
+
+  .view-transition-bg-gsap {
+    view-transition-name: view-transition-bg-gsap;
+  }
+
+  .view-transition-bg-threejs {
+    view-transition-name: view-transition-bg-threejs;
+  }
+
+  .view-transition-bg-motion {
+    view-transition-name: view-transition-bg-motion;
+  }
+
+  .view-transition-bg-react-spring {
+    view-transition-name: view-transition-bg-react-spring;
+  }
+
+  .view-transition-bg-react-hook-form {
+    view-transition-name: view-transition-bg-react-hook-form;
+  }
+
+  .view-transition-bg-zod {
+    view-transition-name: view-transition-bg-zod;
+  }
+
+  .view-transition-bg-clerk {
+    view-transition-name: view-transition-bg-clerk;
+  }
+
+  .view-transition-bg-prisma {
+    view-transition-name: view-transition-bg-prisma;
+  }
+
+  .view-transition-bg-supabase {
+    view-transition-name: view-transition-bg-supabase;
+  }
+
+  .view-transition-bg-webpack {
+    view-transition-name: view-transition-bg-webpack;
+  }
+
+  .view-transition-bg-git {
+    view-transition-name: view-transition-bg-git;
+  }
+
+  .view-transition-bg-adobe-premiere-pro {
+    view-transition-name: view-transition-bg-adobe-premiere-pro;
+  }
+
+  /* label */
+  .view-transition-label-html {
+    view-transition-name: view-transition-label-html;
+  }
+
+  .view-transition-label-css {
+    view-transition-name: view-transition-label-css;
+  }
+
+  .view-transition-label-sass {
+    view-transition-name: view-transition-label-sass;
+  }
+
+  .view-transition-label-javascript {
+    view-transition-name: view-transition-label-javascript;
+  }
+
+  .view-transition-label-typescript {
+    view-transition-name: view-transition-label-typescript;
+  }
+
+  .view-transition-label-php {
+    view-transition-name: view-transition-label-php;
+  }
+
+  .view-transition-label-wordpress {
+    view-transition-name: view-transition-label-wordpress;
+  }
+
+  .view-transition-label-react {
+    view-transition-name: view-transition-label-react;
+  }
+
+  .view-transition-label-nextjs {
+    view-transition-name: view-transition-label-nextjs;
+  }
+
+  .view-transition-label-astro {
+    view-transition-name: view-transition-label-astro;
+  }
+
+  .view-transition-label-tailwindcss {
+    view-transition-name: view-transition-label-tailwindcss;
+  }
+
+  .view-transition-label-gsap {
+    view-transition-name: view-transition-label-gsap;
+  }
+
+  .view-transition-label-threejs {
+    view-transition-name: view-transition-label-threejs;
+  }
+
+  .view-transition-label-motion {
+    view-transition-name: view-transition-label-motion;
+  }
+
+  .view-transition-label-react-spring {
+    view-transition-name: view-transition-label-react-spring;
+  }
+
+  .view-transition-label-react-hook-form {
+    view-transition-name: view-transition-label-react-hook-form;
+  }
+
+  .view-transition-label-zod {
+    view-transition-name: view-transition-label-zod;
+  }
+
+  .view-transition-label-clerk {
+    view-transition-name: view-transition-label-clerk;
+  }
+
+  .view-transition-label-prisma {
+    view-transition-name: view-transition-label-prisma;
+  }
+
+  .view-transition-label-supabase {
+    view-transition-name: view-transition-label-supabase;
+  }
+
+  .view-transition-label-webpack {
+    view-transition-name: view-transition-label-webpack;
+  }
+
+  .view-transition-label-git {
+    view-transition-name: view-transition-label-git;
+  }
+
+  .view-transition-label-adobe-premiere-pro {
+    view-transition-name: view-transition-label-adobe-premiere-pro;
+  }
 }
 
 @layer base {
