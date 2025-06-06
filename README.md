@@ -37,7 +37,7 @@ https://aoyamadev.com
 
 ### スタイル・UI
 
-- [Tailwind CSS](https://tailwindcss.com/)：v3.4.1
+- [Tailwind CSS](https://tailwindcss.com/)：v4.1.8
 - [shadcn/ui](https://ui.shadcn.com/)
 
 ### アニメーション
