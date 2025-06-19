@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import { Link } from 'next-view-transitions'
-import styles from './WorkCard.module.css'
-import { useRef } from 'react';
-import Image from 'next/image';
-import { useWorkCardMouseEffect } from '../../hooks/useWorkCardMouseEffect';
-import { useWorkCardAnimation } from '../../hooks/useWorkCardAnimation';
-import type { Route } from 'next';
+import { Link } from "next-view-transitions";
+import styles from "./WorkCard.module.css";
+import { useRef } from "react";
+import Image from "next/image";
+import { useWorkCardMouseEffect } from "../../hooks/useWorkCardMouseEffect";
+import { useWorkCardAnimation } from "../../hooks/useWorkCardAnimation";
+import type { Route } from "next";
 
 interface CardDataProps {
   id: number;
@@ -18,21 +18,29 @@ interface CardDataProps {
   viewTransitionImage: string;
 }
 
-const WorkCard = ({ id, image, workTitle, description, labels, viewTransitionName, viewTransitionImage }: CardDataProps) => {
+const WorkCard = ({
+  id,
+  image,
+  workTitle,
+  description,
+  labels,
+  viewTransitionName,
+  viewTransitionImage,
+}: CardDataProps) => {
   const cardRef = useRef<HTMLElement>(null);
 
   useWorkCardMouseEffect();
   useWorkCardAnimation(cardRef, id);
 
   return (
-    <article 
+    <article
       ref={cardRef}
       id="card"
       className={`${styles["card"]} ${styles[`card-no-${id}`]} ${styles["scroll-driven-animation"]}`}
     >
-      <Link 
-        href={`/works/${id}` as Route} 
-        rel="noopener noreferrer" 
+      <Link
+        href={`/works/${id}` as Route}
+        rel="noopener noreferrer"
         className={styles["card-content-link"]}
       >
         <figure className={styles["card-figure"]}>
@@ -45,7 +53,11 @@ const WorkCard = ({ id, image, workTitle, description, labels, viewTransitionNam
             priority
           />
         </figure>
-        <h2 className={`font-russo ${styles["card-title"]} ${viewTransitionName}`}>{workTitle}</h2>
+        <h2
+          className={`font-russo ${styles["card-title"]} ${viewTransitionName}`}
+        >
+          {workTitle}
+        </h2>
         <p className={styles["card-description"]}>{description}</p>
         <div className={styles["card-footer"]}>
           {labels.map((label, index) => (
@@ -58,6 +70,6 @@ const WorkCard = ({ id, image, workTitle, description, labels, viewTransitionNam
       </Link>
     </article>
   );
-}
+};
 
 export default WorkCard;
