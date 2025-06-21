@@ -1,6 +1,6 @@
-import React, { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
+import React, { useRef, useMemo } from "react";
+import { useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 
 interface CubeProps {
   position: THREE.Vector3;
@@ -24,7 +24,7 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
   const hoverRef = useRef(0);
   const velocityRef = useRef(new THREE.Vector3());
   const initialPosition = useMemo(() => position.clone(), [position]);
-  const currentHoverValue = useRef(0);  // 現在のホバー値を追跡
+  const currentHoverValue = useRef(0); // 現在のホバー値を追跡
 
   const material = useMemo(() => {
     return new THREE.ShaderMaterial({
@@ -79,35 +79,48 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
       `,
       transparent: true,
       side: THREE.DoubleSide,
-    })
-  }, [])
+    });
+  }, []);
 
   useFrame(({ clock }) => {
-    if (!meshRef.current) return
+    if (!meshRef.current) return;
 
-    const time = clock.getElapsedTime()
-    material.uniforms.time.value = time
+    const time = clock.getElapsedTime();
+    material.uniforms.time.value = time;
 
     // ホバー時のインタラクション
     const hoverSpeed = 0.1; // キューブが膨らむ速度。この値を小さくすると遅く、大きくすると速くなります
-    currentHoverValue.current += (hoverRef.current - currentHoverValue.current) * hoverSpeed;
+    currentHoverValue.current +=
+      (hoverRef.current - currentHoverValue.current) * hoverSpeed;
     material.uniforms.hover.value = currentHoverValue.current;
 
-    const floatOffset = Math.sin(time * float.speed + float.offset) * float.amplitude;
-    const floatPosition = initialPosition.clone().add(new THREE.Vector3(0, floatOffset, 0));
+    const floatOffset =
+      Math.sin(time * float.speed + float.offset) * float.amplitude;
+    const floatPosition = initialPosition
+      .clone()
+      .add(new THREE.Vector3(0, floatOffset, 0));
 
-    meshRef.current.quaternion.setFromAxisAngle(float.rotationAxis, time * float.rotationSpeed * 0.5);
+    meshRef.current.quaternion.setFromAxisAngle(
+      float.rotationAxis,
+      time * float.rotationSpeed * 0.5
+    );
 
     if (scatter.isScattered) {
-      meshRef.current.position.x = initialPosition.x + Math.sin(time * 0.5 + float.offset) * 2;
-      meshRef.current.position.y = initialPosition.y + Math.cos(time * 0.7 + float.offset) * 2;
-      meshRef.current.position.z = initialPosition.z + Math.sin(time * 0.3 + float.offset) * 2;
+      meshRef.current.position.x =
+        initialPosition.x + Math.sin(time * 0.5 + float.offset) * 2;
+      meshRef.current.position.y =
+        initialPosition.y + Math.cos(time * 0.7 + float.offset) * 2;
+      meshRef.current.position.z =
+        initialPosition.z + Math.sin(time * 0.3 + float.offset) * 2;
 
       meshRef.current.rotation.x += scatter.rotationSpeed.x * 0.01;
       meshRef.current.rotation.y += scatter.rotationSpeed.y * 0.01;
       meshRef.current.rotation.z += scatter.rotationSpeed.z * 0.01;
-    } else if (currentHoverValue.current > 0.01) {  // ホバー中の動き
-      velocityRef.current.add(scatter.direction.clone().multiplyScalar(scatter.speed * 0.01));
+    } else if (currentHoverValue.current > 0.01) {
+      // ホバー中の動き
+      velocityRef.current.add(
+        scatter.direction.clone().multiplyScalar(scatter.speed * 0.01)
+      );
       velocityRef.current.y += Math.sin(time) * 0.001; // 中心に集まるキューブが元の位置に戻る速度
       velocityRef.current.multiplyScalar(0.99);
 

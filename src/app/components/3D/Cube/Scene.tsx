@@ -52,7 +52,11 @@ const Scene: React.FC = () => {
         intensity={1}
         distance={10}
       />
-      <group ref={groupRef} position={[0, 0, 0]} rotation={[Math.PI / 4, Math.PI / 4, 0]}>
+      <group
+        ref={groupRef}
+        position={[0, 0, 0]}
+        rotation={[Math.PI / 4, Math.PI / 4, 0]}
+      >
         {cubes.map((props, index) => (
           <Cube key={index} {...props} />
         ))}

@@ -1,13 +1,14 @@
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
   "font-russo w-64 m-auto mt-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-base md:text-xl font-medium ring-offset-background transition-colors duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-[#ff5a2e] text-primary-foreground hover:bg-[#ff8565] focus:bg-[#ff8565]",
+        default:
+          "bg-[#ff5a2e] text-primary-foreground hover:bg-[#ff8565] focus:bg-[#ff8565]",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -29,26 +30,22 @@ const buttonVariants = cva(
       size: "default",
     },
   }
-)
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean
+  asChild?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
+    const Comp = asChild ? Slot : "button";
     return (
-      <Comp
-        className="font-russo contact-form-send-btn"
-        ref={ref}
-        {...props}
-      />
-    )
+      <Comp className="font-russo contact-form-send-btn" ref={ref} {...props} />
+    );
   }
-)
-Button.displayName = "Button"
+);
+Button.displayName = "Button";
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };

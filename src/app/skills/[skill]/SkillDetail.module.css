@@ -21,7 +21,9 @@
   border: 1px solid var(--cmp-border-primary-color);
   border-radius: 10px;
   box-shadow: var(--detail-cmp-shadow);
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+  transition:
+    background 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
     scale 0.3s ease-in-out;
   padding-block: 4rem 2.5rem;
   padding-inline: 3rem;

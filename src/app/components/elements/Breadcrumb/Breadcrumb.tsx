@@ -26,17 +26,17 @@ const useMediaQuery = (query: string) => {
     // SSRでのハイドレーション時の不一致を防ぐため、
     // 初期値はfalseとし、クライアントサイドでのみ更新
     const media = window.matchMedia(query);
-    
+
     const updateMatch = () => {
       setMatches(media.matches);
     };
 
     // 初期値を設定
     updateMatch();
-    
+
     // リスナーを追加
     media.addEventListener("change", updateMatch);
-    
+
     // クリーンアップ
     return () => media.removeEventListener("change", updateMatch);
   }, [query]);

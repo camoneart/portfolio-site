@@ -44,19 +44,25 @@ const useInteractiveElementHover = () => {
   }, []); // 依存関係なし
 
   // イベントハンドラーをメモ化
-  const handleMouseEnter = useCallback((e: MouseEvent) => {
-    const target = e.target as HTMLElement;
-    if (isInteractiveElement(target)) {
-      setIsHovering(true);
-    }
-  }, [isInteractiveElement]);
+  const handleMouseEnter = useCallback(
+    (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (isInteractiveElement(target)) {
+        setIsHovering(true);
+      }
+    },
+    [isInteractiveElement]
+  );
 
-  const handleMouseLeave = useCallback((e: MouseEvent) => {
-    const target = e.target as HTMLElement;
-    if (isInteractiveElement(target)) {
-      setIsHovering(false);
-    }
-  }, [isInteractiveElement]);
+  const handleMouseLeave = useCallback(
+    (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (isInteractiveElement(target)) {
+        setIsHovering(false);
+      }
+    },
+    [isInteractiveElement]
+  );
 
   useEffect(() => {
     document.addEventListener("mouseover", handleMouseEnter);
@@ -86,22 +92,28 @@ const MouseStalker = memo(() => {
   }, []);
 
   // spring設定オブジェクトをメモ化
-  const springConfig = useMemo(() => ({
-    mass: 1,
-    tension: 120,
-    friction: 14
-  }), []); // 依存関係なし
+  const springConfig = useMemo(
+    () => ({
+      mass: 1,
+      tension: 120,
+      friction: 14,
+    }),
+    []
+  ); // 依存関係なし
 
   // スタイルオブジェクトをメモ化
-  const baseStyles = useMemo(() => ({
-    position: "fixed" as const,
-    width: "9px",
-    height: "9px",
-    borderRadius: "50%",
-    backgroundColor: "#ff6b4a",
-    pointerEvents: "none" as const,
-    zIndex: 10000,
-  }), []); // 依存関係なし
+  const baseStyles = useMemo(
+    () => ({
+      position: "fixed" as const,
+      width: "9px",
+      height: "9px",
+      borderRadius: "50%",
+      backgroundColor: "#ff6b4a",
+      pointerEvents: "none" as const,
+      zIndex: 10000,
+    }),
+    []
+  ); // 依存関係なし
 
   const springProps = useSpring({
     to: {
@@ -125,6 +137,6 @@ const MouseStalker = memo(() => {
 });
 
 // 表示名を設定（デバッグ用）
-MouseStalker.displayName = 'MouseStalker';
+MouseStalker.displayName = "MouseStalker";
 
 export default MouseStalker;

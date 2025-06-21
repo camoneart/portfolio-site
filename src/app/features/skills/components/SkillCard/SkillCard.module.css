@@ -6,7 +6,10 @@
   border-radius: 10px;
   user-select: none;
   box-shadow: var(--cmp-primary-shadow);
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, scale 0.3s linear;
+  transition:
+    background 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    scale 0.3s linear;
 
   /* scroll driven animation */
   &.scroll-driven-animation {
@@ -18,7 +21,7 @@
   &:hover {
     background: rgb(255 255 255 / 0.2);
     box-shadow: var(--card-hover-shadow);
-    
+
     @media (1280px <= width) {
       scale: 1.08;
     }
@@ -80,7 +83,9 @@
     rgb(255 170 122 / 0.3)
   );
   border-radius: 10px;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: xor;
   padding-inline: 1px;

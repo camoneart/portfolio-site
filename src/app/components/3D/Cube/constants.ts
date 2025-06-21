@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 
 // 定数を別ファイルに分離
 export const CUBE_CONFIG = {
@@ -8,14 +8,14 @@ export const CUBE_CONFIG = {
   SCATTER_RANGE: {
     X: 12, // 横方向の範囲
     Y: 12, // 縦方向の範囲
-    Z: 12 // 奥行方向の範囲
+    Z: 12, // 奥行方向の範囲
   },
   FLOAT: {
     MIN_SPEED: 0.0002,
     MAX_SPEED: 0.0005,
     MIN_AMPLITUDE: 0.05,
-    MAX_AMPLITUDE: 0.15
-  }
+    MAX_AMPLITUDE: 0.15,
+  },
 } as const;
 
 // 型定義
@@ -38,4 +38,4 @@ export interface CubeData {
   position: THREE.Vector3;
   float: CubeFloat;
   scatter: CubeScatter;
-} 
+}

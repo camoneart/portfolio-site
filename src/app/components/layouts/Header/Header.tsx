@@ -26,10 +26,10 @@ export default function Header() {
     checkScreenSize();
 
     // リサイズイベントリスナーを追加
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
 
     // クリーンアップ関数
-    return () => window.removeEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, [isOpen]);
 
   const toggleMenu = () => {
@@ -39,12 +39,30 @@ export default function Header() {
   };
 
   return (
-    <header className={`w-full h-auto mx-auto select-none md:py-8 py-4 md:px-8 px-4 ${`${styles["header"]}`}`}>
-      <div className={`flex items-center justify-between ${styles["header__container"]}`}>
-        <div className={`sticky inset-0 font-russo text-xl md:text-3xl font-black ${styles["header__title"]}`}>
-          <Link href="/" className={`${styles["header__title-link"]}`} onClick={() => isOpen && toggleMenu()} >
-            <span className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}>AOYAMA</span>
-            <span className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}>AOYAMA</span>
+    <header
+      className={`w-full h-auto mx-auto select-none md:py-8 py-4 md:px-8 px-4 ${`${styles["header"]}`}`}
+    >
+      <div
+        className={`flex items-center justify-between ${styles["header__container"]}`}
+      >
+        <div
+          className={`sticky inset-0 font-russo text-xl md:text-3xl font-black ${styles["header__title"]}`}
+        >
+          <Link
+            href="/"
+            className={`${styles["header__title-link"]}`}
+            onClick={() => isOpen && toggleMenu()}
+          >
+            <span
+              className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}
+            >
+              AOYAMA
+            </span>
+            <span
+              className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}
+            >
+              AOYAMA
+            </span>
           </Link>
         </div>
         <div className={styles["header__items"]}>
@@ -61,4 +79,4 @@ export default function Header() {
       </div>
     </header>
   );
-};
+}

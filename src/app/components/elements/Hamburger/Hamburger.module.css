@@ -19,7 +19,10 @@
     border-radius: 10px;
     backdrop-filter: blur(5px);
     z-index: 9999;
-    transition: width 0.5s ease, height 0.5s ease, top 0.5s ease,
+    transition:
+      width 0.5s ease,
+      height 0.5s ease,
+      top 0.5s ease,
       right 0.5s ease;
   }
 
@@ -74,16 +77,19 @@
   /*----------------------------------------
     閉じた時のスタイル
   ----------------------------------------*/
-  .hamburger[data-mounted="true"][data-was-open="true"] .hamburger__line-top.hamburger__line--close {
+  .hamburger[data-mounted="true"][data-was-open="true"]
+    .hamburger__line-top.hamburger__line--close {
     animation: 0.3s ease 0s 1 normal forwards running menu-close-top;
   }
 
-  .hamburger[data-mounted="true"][data-was-open="true"] .hamburger__line-middle.hamburger__line--close {
+  .hamburger[data-mounted="true"][data-was-open="true"]
+    .hamburger__line-middle.hamburger__line--close {
     animation: 0.3s ease 0s 1 normal forwards running menu-close-middle;
     opacity: 1;
   }
 
-  .hamburger[data-mounted="true"][data-was-open="true"] .hamburger__line-bottom.hamburger__line--close {
+  .hamburger[data-mounted="true"][data-was-open="true"]
+    .hamburger__line-bottom.hamburger__line--close {
     animation: 0.3s ease 0s 1 normal forwards running menu-close-bottom;
   }
 

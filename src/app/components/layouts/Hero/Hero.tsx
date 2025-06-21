@@ -46,9 +46,12 @@ const Hero = memo(() => {
   useEffect(() => {
     if (!sessionStorage.getItem("hasVisitedHero")) {
       sessionStorage.setItem("hasVisitedHero", "true");
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-      }, ANIMATION_DELAY.INITIAL.SUBTITLE * 1000 + 1000);
+      const timer = setTimeout(
+        () => {
+          setIsLoading(false);
+        },
+        ANIMATION_DELAY.INITIAL.SUBTITLE * 1000 + 1000
+      );
 
       return () => clearTimeout(timer);
     }

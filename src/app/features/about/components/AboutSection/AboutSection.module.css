@@ -63,7 +63,6 @@
   row-gap: 7px;
 }
 
-
 /* profile */
 .about-profile {
   display: block grid;
@@ -145,7 +144,6 @@
   line-height: var(--leading-tight);
 }
 
-
 /* hobby */
 .about-hobby {
   display: block grid;
@@ -168,12 +166,10 @@
   letter-spacing: 0.025em;
 }
 
-
 /* vision */
 .about-vision {
   display: block grid;
 }
-
 
 /* 共通 */
 .about-title-lv2 {
@@ -231,7 +227,6 @@
     background: linear-gradient(transparent 70%, rgb(255 61 0 / 0.75) 70%);
   }
 }
-
 
 /* scroll driven animation */
 .scroll-driven-animation {

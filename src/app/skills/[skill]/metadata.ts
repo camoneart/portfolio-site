@@ -1,8 +1,12 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 import { skillsData } from "../components/Skills/Skills";
 
-export async function generateSkillMetadata({ params }: { params: { skill: string } }): Promise<Metadata> {
-  const skillData = skillsData.find(s => s.skillLink === params.skill);
+export async function generateSkillMetadata({
+  params,
+}: {
+  params: { skill: string };
+}): Promise<Metadata> {
+  const skillData = skillsData.find((s) => s.skillLink === params.skill);
 
   if (!skillData) {
     return {

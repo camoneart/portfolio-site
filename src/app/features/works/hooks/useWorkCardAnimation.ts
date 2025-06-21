@@ -1,5 +1,5 @@
-import { useEffect, RefObject } from 'react';
-import gsap from 'gsap';
+import { useEffect, RefObject } from "react";
+import gsap from "gsap";
 
 interface AnimationSettings {
   initial: {
@@ -23,16 +23,19 @@ interface AnimationSettings {
   };
 }
 
-export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number) => {
+export const useWorkCardAnimation = (
+  cardRef: RefObject<HTMLElement>,
+  id: number
+) => {
   useEffect(() => {
     const card = cardRef.current;
     if (!card) return;
 
-    let currentBreakpoint = 'mobile';
+    let currentBreakpoint = "mobile";
 
     const getAnimationSettings = () => {
-      const mediaQuery1280 = window.matchMedia('(min-width: 1280px)');
-      const mediaQuery1536 = window.matchMedia('(min-width: 1536px)');
+      const mediaQuery1280 = window.matchMedia("(min-width: 1280px)");
+      const mediaQuery1536 = window.matchMedia("(min-width: 1536px)");
 
       // デフォルトの設定（モバイル用｜1280px未満）
       let settings: AnimationSettings = {
@@ -44,7 +47,7 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
           y: 100,
           x: 0,
           // perspective: 0,
-          duration: 0.8
+          duration: 0.8,
         },
         animate: {
           opacity: 1,
@@ -55,22 +58,22 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
           x: 0,
           // perspective: 0,
           duration: 0.8,
-          clearProps: 'transform,perspective'  // トランスフォーム関連プロパティをクリア
-        }
+          clearProps: "transform,perspective", // トランスフォーム関連プロパティをクリア
+        },
       };
 
       // 現在のブレイクポイントを更新
-      const newBreakpoint = mediaQuery1536.matches 
-        ? 'large' 
-        : mediaQuery1280.matches 
-          ? 'medium' 
-          : 'mobile';
-      
+      const newBreakpoint = mediaQuery1536.matches
+        ? "large"
+        : mediaQuery1280.matches
+          ? "medium"
+          : "mobile";
+
       // ブレイクポイントが変更された場合のトランスフォームリセット
-      if (currentBreakpoint !== newBreakpoint && newBreakpoint === 'mobile') {
+      if (currentBreakpoint !== newBreakpoint && newBreakpoint === "mobile") {
         // モバイルビューに切り替わった時に全てのトランスフォームをリセット
         gsap.set(card, {
-          clearProps: 'all'  // 全てのGSAPプロパティをクリア
+          clearProps: "all", // 全てのGSAPプロパティをクリア
         });
         currentBreakpoint = newBreakpoint;
         return settings;
@@ -88,7 +91,7 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               scale: 0.6,
               y: 100,
               x: 0,
-              duration: 0.8
+              duration: 0.8,
             },
             animate: {
               opacity: 1,
@@ -98,8 +101,8 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               y: 0,
               x: 0,
               duration: 0.8,
-              clearProps: 'transform,perspective'
-            }
+              clearProps: "transform,perspective",
+            },
           };
         } else if (id === 2) {
           settings = {
@@ -110,7 +113,7 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               scale: 0.6,
               y: 100,
               x: 0,
-              duration: 0.8
+              duration: 0.8,
             },
             animate: {
               opacity: 1,
@@ -120,8 +123,8 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               y: 0,
               x: 0,
               duration: 0.8,
-              clearProps: 'transform,perspective'
-            }
+              clearProps: "transform,perspective",
+            },
           };
         } else if (id === 3) {
           settings = {
@@ -132,7 +135,7 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               scale: 0.6,
               y: 100,
               x: 0,
-              duration: 0.8
+              duration: 0.8,
             },
             animate: {
               opacity: 1,
@@ -142,8 +145,8 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               y: 0,
               x: 0,
               duration: 0.8,
-              clearProps: 'transform,perspective'
-            }
+              clearProps: "transform,perspective",
+            },
           };
         } else if (id === 4) {
           settings = {
@@ -154,7 +157,7 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               scale: 0.6,
               y: 50,
               x: 0,
-              duration: 0.8
+              duration: 0.8,
             },
             animate: {
               opacity: 1,
@@ -164,8 +167,8 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               y: 0,
               x: 0,
               duration: 0.8,
-              clearProps: 'transform,perspective'
-            }
+              clearProps: "transform,perspective",
+            },
           };
         } else if (id === 5) {
           settings = {
@@ -176,7 +179,7 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               scale: 0.6,
               y: 100,
               x: 0,
-              duration: 0.8
+              duration: 0.8,
             },
             animate: {
               opacity: 1,
@@ -186,8 +189,8 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
               y: 0,
               x: 0,
               duration: 0.8,
-              clearProps: 'transform,perspective'
-            }
+              clearProps: "transform,perspective",
+            },
           };
         }
       }
@@ -212,13 +215,13 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
 
     const animateCard = (immediate = false) => {
       const settings = getAnimationSettings();
-      
+
       if (immediate) {
         gsap.set(card, settings.animate);
       } else {
         // アニメーション前に既存のトランスフォームをクリア
         gsap.set(card, {
-          clearProps: 'transform'
+          clearProps: "transform",
         });
 
         // 初期状態を設定
@@ -233,14 +236,14 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
           duration: 1.2,
           ease: "power3.out",
           delay: baseDelay + (id - 1) * 0.2,
-          clearProps: "transform" // アニメーション後にtransformプロパティをクリア
+          clearProps: "transform", // アニメーション後にtransformプロパティをクリア
         });
       }
     };
 
     const handleResize = () => {
-      const mediaQuery1280 = window.matchMedia('(min-width: 1280px)');
-      
+      const mediaQuery1280 = window.matchMedia("(min-width: 1280px)");
+
       // 1280px未満の場合、全てのトランスフォームをクリア
       if (!mediaQuery1280.matches) {
         gsap.to(card, {
@@ -249,10 +252,10 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
           scale: 1,
           y: 0,
           x: 0,
-          perspective: 'none',
+          perspective: "none",
           duration: 0.3,
           ease: "power2.out",
-          clearProps: 'transform,perspective'
+          clearProps: "transform,perspective",
         });
       } else {
         const settings = getAnimationSettings();
@@ -273,14 +276,14 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(handleResize, 100);
     };
-    window.addEventListener('resize', resizeHandler);
+    window.addEventListener("resize", resizeHandler);
 
     return () => {
-      window.removeEventListener('resize', resizeHandler);
+      window.removeEventListener("resize", resizeHandler);
       clearTimeout(resizeTimer);
       gsap.set(card, {
-        clearProps: 'transform'
+        clearProps: "transform",
       });
     };
   }, [id, cardRef]);
-}; 
+};

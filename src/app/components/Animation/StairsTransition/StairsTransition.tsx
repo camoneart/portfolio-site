@@ -72,65 +72,77 @@ const StairColumn = memo(({ custom }: { custom: number }) => (
 ));
 
 // デバッグ用のdisplayName設定
-StairColumn.displayName = 'StairColumn';
+StairColumn.displayName = "StairColumn";
 
-const StairsTransitionContent = memo(({ children }: { children: React.ReactNode }) => {
-  const [isAnimating, setIsAnimating] = useState(false);
+const StairsTransitionContent = memo(
+  ({ children }: { children: React.ReactNode }) => {
+    const [isAnimating, setIsAnimating] = useState(false);
 
-  const handleAnimationStart = useCallback(() => setIsAnimating(true), []);
-  const handleAnimationComplete = useCallback(() => setIsAnimating(false), []);
+    const handleAnimationStart = useCallback(() => setIsAnimating(true), []);
+    const handleAnimationComplete = useCallback(
+      () => setIsAnimating(false),
+      []
+    );
 
-  const overlayAnimProps = useMemo(() => ({
-    initial: "initial",
-    animate: "enter",
-    exit: "exit",
-    variants: overlayVariants,
-    custom: ANIMATION_CONFIG.COLUMNS,
-  }), []);
+    const overlayAnimProps = useMemo(
+      () => ({
+        initial: "initial",
+        animate: "enter",
+        exit: "exit",
+        variants: overlayVariants,
+        custom: ANIMATION_CONFIG.COLUMNS,
+      }),
+      []
+    );
 
-  useEffect(() => {
-    document.body.style.overflow = isAnimating ? "hidden" : "visible";
-    return () => {
-      document.body.style.overflow = "visible";
-    };
-  }, [isAnimating]);
+    useEffect(() => {
+      document.body.style.overflow = isAnimating ? "hidden" : "visible";
+      return () => {
+        document.body.style.overflow = "visible";
+      };
+    }, [isAnimating]);
 
-  const columns = useMemo(
-    () => Array.from({ length: ANIMATION_CONFIG.COLUMNS }, (_, i) => 
-      ANIMATION_CONFIG.COLUMNS - i
-    ),
-    []
-  );
+    const columns = useMemo(
+      () =>
+        Array.from(
+          { length: ANIMATION_CONFIG.COLUMNS },
+          (_, i) => ANIMATION_CONFIG.COLUMNS - i
+        ),
+      []
+    );
 
-  return (
-    <div className={`${styles["stairs-transition"]} ${styles["page"]} ${isAnimating ? styles["no-scroll"] : ""}`}>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key="overlay"
-          {...overlayAnimProps}
-          className={styles["stairs-transition-bg"]}
-          onAnimationStart={handleAnimationStart}
-          onAnimationComplete={handleAnimationComplete}
-        />
-      </AnimatePresence>
-      <div className={styles["stairs-transition-container"]}>
+    return (
+      <div
+        className={`${styles["stairs-transition"]} ${styles["page"]} ${isAnimating ? styles["no-scroll"] : ""}`}
+      >
         <AnimatePresence mode="wait">
-          {columns.map((custom) => (
-            <StairColumn key={`stair-${custom}`} custom={custom} />
-          ))}
+          <motion.div
+            key="overlay"
+            {...overlayAnimProps}
+            className={styles["stairs-transition-bg"]}
+            onAnimationStart={handleAnimationStart}
+            onAnimationComplete={handleAnimationComplete}
+          />
         </AnimatePresence>
+        <div className={styles["stairs-transition-container"]}>
+          <AnimatePresence mode="wait">
+            {columns.map((custom) => (
+              <StairColumn key={`stair-${custom}`} custom={custom} />
+            ))}
+          </AnimatePresence>
+        </div>
+        {children}
       </div>
-      {children}
-    </div>
-  );
-});
+    );
+  }
+);
 
 const StairsTransition = memo(({ children }: { children: React.ReactNode }) => (
   <StairsTransitionContent>{children}</StairsTransitionContent>
 ));
 
 // デバッグ用のdisplayName設定
-StairsTransitionContent.displayName = 'StairsTransitionContent';
-StairsTransition.displayName = 'StairsTransition';
+StairsTransitionContent.displayName = "StairsTransitionContent";
+StairsTransition.displayName = "StairsTransition";
 
 export default StairsTransition;

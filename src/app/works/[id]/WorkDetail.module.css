@@ -405,7 +405,9 @@
   border-radius: var(--border-rounded);
   padding-block: 15px;
   padding-inline: 30px;
-  transition: top 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    top 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   position: relative;
   top: 0;
 

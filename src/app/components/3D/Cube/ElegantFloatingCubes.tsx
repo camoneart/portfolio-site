@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import React, { memo } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { memo } from "react";
+import { Canvas } from "@react-three/fiber";
 import Scene from "./Scene";
 
 // カメラ設定を定数化して最適化
@@ -21,9 +21,9 @@ const ElegantFloatingCubes = memo(() => {
     >
       <Scene />
     </Canvas>
-  )
+  );
 });
 
-ElegantFloatingCubes.displayName = 'ElegantFloatingCubes';
+ElegantFloatingCubes.displayName = "ElegantFloatingCubes";
 
 export default ElegantFloatingCubes;
