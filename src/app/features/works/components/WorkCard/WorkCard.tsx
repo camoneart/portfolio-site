@@ -12,6 +12,7 @@ interface CardDataProps {
   id: number;
   image: string;
   workTitle: string;
+  cardDesc?: string;
   description: string;
   labels: { no: string; value: string }[];
   viewTransitionName: string;
@@ -22,7 +23,7 @@ const WorkCard = ({
   id,
   image,
   workTitle,
-  description,
+  cardDesc,
   labels,
   viewTransitionName,
   viewTransitionImage,
@@ -58,7 +59,7 @@ const WorkCard = ({
         >
           {workTitle}
         </h2>
-        <p className={styles["card-description"]}>{description}</p>
+        <p className={styles["card-description"]}>{cardDesc}</p>
         <div className={styles["card-footer"]}>
           {labels.map((label, index) => (
             <div key={index} className={`font-russo ${styles["card-label"]}`}>

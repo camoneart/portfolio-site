@@ -11,6 +11,7 @@ interface WorksData {
   id: number;
   image: string;
   workTitle: string;
+  cardDesc?: string;
   description: string;
   specification01?: string;
   specification02?: string;
@@ -75,6 +76,8 @@ export const worksData: WorksData[] = [
     id: 1,
     image: "/images/works/work01.jpg",
     workTitle: "CareSend｜有資格介護人材が集まる介護派遣サービス",
+    cardDesc:
+      "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の介護派遣サービスのLPサイト」になります。",
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の介護派遣サービスのLPサイト」になります。",
     detail01: "　GSAPを利用して、要素の出現アニメーションを実装しています。",
@@ -98,6 +101,8 @@ export const worksData: WorksData[] = [
     image: "/images/works/work02.jpg",
     workTitle:
       "青牡丹工務店｜大阪市北区の住宅建築・リフォーム・公共事業なら青牡丹工務店",
+    cardDesc:
+      "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の建築会社のサイト」になります。",
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の建築会社のサイト」になります。",
     detail01: "　ローディング画面を実装しています。",
@@ -124,6 +129,8 @@ export const worksData: WorksData[] = [
     id: 3,
     image: "/images/works/work03.jpg",
     workTitle: "採用特設サイト｜株式会社TETOTE",
+    cardDesc:
+      "こちらのサイトは、Figmaで作成されたWordPressオリジナルテーマのデザインカンプを基にコーディングを行った「架空のITコンサルファームの採用サイト」になります。",
     description:
       "こちらのサイトは、Figmaで作成されたWordPressオリジナルテーマのデザインカンプを基にコーディングを行った「架空のITコンサルファームの採用サイト」になります。",
     specification01: "トップページの仕様",
@@ -175,6 +182,8 @@ export const worksData: WorksData[] = [
     id: 4,
     image: "/images/works/work04.jpg",
     workTitle: "AOYAMA｜Creative Developer",
+    cardDesc:
+      "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
     description:
       "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
     detail01:
@@ -201,7 +210,7 @@ export const worksData: WorksData[] = [
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "004/005" }],
     skillsList:
-      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, React Three Fiber, GSAP, Motion, Howler.js, React Hook Form, Zod, Vercel",
+      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, GSAP, Motion, React Three Fiber, Drei, React Spring, Howler.js, React Hook Form, Zod, Vercel",
     siteUrl: "https://aoyamadev.com",
     role: "Design, Coding",
     username: "",
@@ -213,8 +222,10 @@ export const worksData: WorksData[] = [
     id: 5,
     image: "/images/works/work05.jpg",
     workTitle: "OUTPUT QUEST　叡智の継承者",
+    cardDesc:
+      '「OUTPUT QUEST　叡智の継承者」は、私が開発したWebアプリです。ゲーミフィケーションを取り入れた "RPG風の新感覚学習アプリ" になっています。',
     description:
-      "「OUTPUT QUEST　叡智の継承者」は、私が開発したWebアプリです。RPG風のゲーミフィケーションを取り入れた RPG風の新感覚学習アプリで、Zennで記事を投稿することでアプリ内の「勇者」が成長し、アイテムの入手、称号の獲得、仲間との出会いがあなたを待っています。アウトプットを通じて学習意欲や知的好奇心を高め、楽しみながら自己成長を促すことを目的に開発しました。",
+      "「OUTPUT QUEST　叡智の継承者」は、私が開発したWebアプリです。ゲーミフィケーションを取り入れた RPG風の新感覚学習アプリ で、Zennで記事を投稿することでアプリ内の「勇者」が成長し、アイテムの入手、称号の獲得、仲間との出会いがあなたを待っています。アウトプットを通じて学習意欲や知的好奇心を高め、楽しみながら自己成長を促すことを目的に開発しました。",
     detail01:
       "　このWebアプリはNext.js + CSS Modules + Tailwind CSS + TypeScriptで開発し、デプロイはVercelで行いました。",
     detail02:
