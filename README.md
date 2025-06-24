@@ -1,6 +1,6 @@
 # AOYAMA｜Creative Developer
 
-![トップページ](/public/gif/README/portfolio-top-page.gif)
+![トップページ](public/gif/readme/portfolio-top-page.gif)
 
 ポートフォリオサイトは以下からアクセスできます。
 
@@ -13,6 +13,7 @@ https://aoyamadev.com
 - [ディレクトリ構造](#directory-design)
 - [プロジェクト概要](#project-overview)
 - [各ページ紹介](#page-descriptions)
+- [機能紹介](#feature-introduction)
 
 <h2 id="development-configuration-diagram">開発構成図</h2>
 
@@ -39,11 +40,18 @@ https://aoyamadev.com
 
 - [Tailwind CSS](https://tailwindcss.com/)：v4.1.8
 - [shadcn/ui](https://ui.shadcn.com/)
+- [Radix UI](https://www.radix-ui.com/)
 
 ### アニメーション
 
 - [GSAP](https://gsap.com/)：v3.12.5
 - [Motion](https://motion.dev/)：v11.12.0
+
+### 3Dコンテンツ
+
+- [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction)：v8.17.10
+- [Drei](https://drei.docs.pmnd.rs/getting-started/introduction)：v9.117.3
+- [React Spring](https://www.react-spring.dev/)：v9.7.5
 
 ### オーディオ
 
@@ -125,28 +133,35 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「これまでの学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」や「ストーリー」を視覚的に表現しています。
 
-![トップページ](/public/gif/README/portfolio-top-page.gif)
+![トップページ](/public/gif/readme/portfolio-top-page.gif)
 
 ### **アバウトページ**
 
 私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
 
-![アバウトページ](/public/gif/README/portfolio-about-page.gif)
+![アバウトページ](/public/gif/readme/portfolio-about-page.gif)
 
 ### **スキルページ**
 
 サイト制作やアプリ開発をする上で学び、活用してきたスキルセットを一覧でまとめています。
 
-![スキルページ](/public/gif/README/portfolio-skills-page.gif)
+![スキルページ](/public/gif/readme/portfolio-skills-page.gif)
 
 ### **制作実績ページ**
 
 これまでに制作した作品を一覧で紹介しています。
 
-![制作実績ページ](/public/gif/README/portfolio-works-page.gif)
+![制作実績ページ](/public/gif/readme/portfolio-works-page.gif)
 
 ### **お問い合わせページ**
 
 このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
 
-![お問い合わせページ](/public/gif/README/portfolio-contact-page.gif)
+![お問い合わせページ](/public/gif/readme/portfolio-contact-page.gif)
+
+<h2 id="feature-introduction">機能紹介</h2>
+
+- ドットパターンで表現した背景のアニメーションや、カードの出現アニメーションは「GSAP」で実装しています。
+- カード型UIには「View Transitions API」を利用し、スムーズに流れるような遷移アニメーションを実装しています。
+- ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識したアニメーションを実装しています。
+- オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。
