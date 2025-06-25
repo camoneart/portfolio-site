@@ -379,8 +379,9 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      最近は<em>Claude Code</em>や<em>Vibe Coding</em>
-                      に注力しています。また、AIに関する技術記事を
+                      <em>LLM</em>, <em>生成AI</em> に加え、最近は{" "}
+                      <em>Claude Code</em>や<em>Vibe Coding</em>
+                      に注力しています。 また、AIに関する技術記事を{" "}
                       <Link
                         href="https://zenn.dev/aoyamadev"
                         className={styles["about-zenn-link"]}
