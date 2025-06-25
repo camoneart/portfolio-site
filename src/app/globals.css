@@ -349,8 +349,12 @@
     view-transition-name: view-transition-logo-wrapper-git;
   }
 
-  .view-transition-logo-wrapper-adobe-premiere-pro {
-    view-transition-name: view-transition-logo-wrapper-adobe-premiere-pro;
+  .view-transition-logo-wrapper-llm {
+    view-transition-name: view-transition-logo-wrapper-llm;
+  }
+
+  .view-transition-logo-wrapper-mcp {
+    view-transition-name: view-transition-logo-wrapper-mcp;
   }
 
   /* logo-bg */
@@ -442,8 +446,12 @@
     view-transition-name: view-transition-logo-bg-git;
   }
 
-  .view-transition-logo-bg-adobe-premiere-pro {
-    view-transition-name: view-transition-logo-bg-adobe-premiere-pro;
+  .view-transition-logo-bg-llm {
+    view-transition-name: view-transition-logo-bg-llm;
+  }
+
+  .view-transition-logo-bg-mcp {
+    view-transition-name: view-transition-logo-bg-mcp;
   }
 
   /* img */
@@ -557,8 +565,13 @@
     aspect-ratio: 1 / 1;
   }
 
-  .view-transition-img-adobe-premiere-pro {
-    view-transition-name: view-transition-img-adobe-premiere-pro;
+  .view-transition-img-llm {
+    view-transition-name: view-transition-img-llm;
+    aspect-ratio: 1 / 1;
+  }
+
+  .view-transition-img-mcp {
+    view-transition-name: view-transition-img-mcp;
     aspect-ratio: 1 / 1;
   }
 
@@ -673,8 +686,13 @@
     width: fit-content;
   }
 
-  .view-transition-title-adobe-premiere-pro {
-    view-transition-name: view-transition-title-adobe-premiere-pro;
+  .view-transition-title-llm {
+    view-transition-name: view-transition-title-llm;
+    width: fit-content;
+  }
+
+  .view-transition-title-mcp {
+    view-transition-name: view-transition-title-mcp;
     width: fit-content;
   }
 
@@ -767,8 +785,12 @@
     view-transition-name: view-transition-bg-git;
   }
 
-  .view-transition-bg-adobe-premiere-pro {
-    view-transition-name: view-transition-bg-adobe-premiere-pro;
+  .view-transition-bg-llm {
+    view-transition-name: view-transition-bg-llm;
+  }
+
+  .view-transition-bg-mcp {
+    view-transition-name: view-transition-bg-mcp;
   }
 
   /* label */
@@ -860,8 +882,12 @@
     view-transition-name: view-transition-label-git;
   }
 
-  .view-transition-label-adobe-premiere-pro {
-    view-transition-name: view-transition-label-adobe-premiere-pro;
+  .view-transition-label-llm {
+    view-transition-name: view-transition-label-llm;
+  }
+
+  .view-transition-label-mcp {
+    view-transition-name: view-transition-label-mcp;
   }
 }
 
