@@ -110,12 +110,15 @@ portfolio/
 │   │   └── ui/                     # shadcn/ui コンポーネント
 │   ├── lib/                        # ライブラリ・ユーティリティ
 │   └── utils/                      # ユーティリティ関数
+├── .cursorrules                    # Cursor Rules
+├── .depcheckrc.json                # 依存関係チェックツール depcheck の設定ファイル
 ├── .env                            # 環境変数の設定ファイル
 ├── .eslintrc.json                  # ESLint設定ファイル
 ├── .gitignore                      # GitHubの差分に含まないものを格納
 ├── .npmrc                          # pnpmの設定ファイル
 ├── .prettierrc.json                # Prettierの設定ファイル
 ├── components.json                 # shadcn/ui設定ファイル
+├── next-env.d.ts                   # Next.js の型定義補完ファイル（自動生成）
 ├── next.config.mjs                 # Next.js設定ファイル
 ├── package.json                    # プロジェクトの依存関係・スクリプト定義
 ├── pnpm-lock.yaml                  # pnpmの依存関係ロックファイル
