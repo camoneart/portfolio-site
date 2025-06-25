@@ -61,6 +61,10 @@ https://aoyamadev.com
 - [React Hook Form](https://react-hook-form.com/)：v7.54.0（フォーム）
 - [Zod](https://zod.dev/)：v3.23.8（スキーマバリデーション）
 
+### メール送信サービス
+
+- [Resend](https://resend.com/docs/introduction)：v4.0.1
+
 ### ホスティング
 
 - [Vercel](https://vercel.com/)
