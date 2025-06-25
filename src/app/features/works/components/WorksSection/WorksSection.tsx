@@ -210,7 +210,7 @@ export const worksData: WorksData[] = [
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "004/005" }],
     skillsList:
-      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, GSAP, Motion, React Three Fiber, Drei, React Spring, Howler.js, React Hook Form, Zod, Vercel",
+      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, GSAP, Motion, React Three Fiber, Drei, React Spring, Howler.js, React Hook Form, Zod, Resend, Vercel",
     siteUrl: "https://aoyamadev.com",
     role: "Design, Coding",
     username: "",
