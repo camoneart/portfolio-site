@@ -40,7 +40,6 @@ https://aoyamadev.com
 
 - [Tailwind CSS](https://tailwindcss.com/)：v4.1.8
 - [shadcn/ui](https://ui.shadcn.com/)
-- [Radix UI](https://www.radix-ui.com/)
 
 ### アニメーション
 
