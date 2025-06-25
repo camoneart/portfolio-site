@@ -143,7 +143,7 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 ### **スキルページ**
 
-独学で培ったWebサイト/Webアプリ開発に必要なスキルセットを一覧形式で紹介しています。
+独学で培ったWeb開発に必要なスキルセットを一覧形式で紹介しています。
 
 ![スキルページ](/public/gif/readme/portfolio-skills-page.gif)
 
