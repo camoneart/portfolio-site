@@ -73,9 +73,9 @@ https://aoyamadev.com
 
 ```
 portfolio/
-├── .next/                          # Next.jsビルド・キャッシュファイル
 ├── public/                         # 静的ファイル
 │   ├── audio/                      # 音声ファイル
+│   ├── gif/                        # アニメーション画像ファイル
 │   └── images/                     # 画像ファイル
 │       ├── about/                  # アバウトページ用画像
 │       ├── contact/                # お問い合わせページ用画像
