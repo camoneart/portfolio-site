@@ -205,8 +205,8 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       現在の主な注力は、<em>Next.js(App Router)</em>,{" "}
-                      <em>AI</em>, <em>Type Script</em>,{" "}
-                      <em>インタラクション</em>, <em>UI / UX</em>です。
+                      <em>LLM</em>, <em>Generative AI</em>,{" "}
+                      <em>Interaction・Animation</em>, <em>UI / UX</em>です。
                     </motion.dd>
                   </div>
 
@@ -379,7 +379,7 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <em>LLM</em>, <em>生成AI</em> に加え、最近は{" "}
+                      <em>LLM</em>, <em>Generative AI</em> に加え、最近は{" "}
                       <em>Gemini CLI</em>, <em>Claude Code</em>,{" "}
                       <em>Vibe Coding</em>
                       に注力しています。 また、AIに関する技術記事を{" "}
