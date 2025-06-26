@@ -201,7 +201,7 @@ export const worksData: WorksData[] = [
     detail07:
       "　ドットパターンで表現した背景のアニメーションや、カードの出現アニメーションは「GSAP」で実装しています。",
     detail08:
-      "　カード型UIには「View Transitions API」を利用し、スムーズに流れるような遷移アニメーションを実装しています。",
+      "　カード型UIには「View Transitions API」を利用し、クリック時にスムーズに流れるような遷移アニメーションを実装しています。ユーザーに適切な視線誘導をもたらすアニメーションを実装することで、コンテンツへの没入感を高め、ユーザーの操作を助ける演出でUX向上を目指しました。",
     detail09:
       "　ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識したアニメーションを実装しています。",
     detail10:
@@ -210,7 +210,7 @@ export const worksData: WorksData[] = [
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "004/005" }],
     skillsList:
-      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, GSAP, Motion, next-view-transitions, React Three Fiber, Drei, React Spring, Howler.js, React Hook Form, Zod, Resend, Vercel",
+      "Next.js, TypeScript, Tailwind CSS, shadcn/ui, GSAP, Motion, View Transitions API, React Three Fiber, Drei, React Spring, Howler.js, React Hook Form, Zod, Resend, Vercel",
     siteUrl: "https://aoyamadev.com",
     role: "Design, Coding",
     username: "",
