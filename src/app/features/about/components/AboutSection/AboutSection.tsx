@@ -192,7 +192,10 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      知的好奇心を原動力に、日々キャッチアップと学習に励んでいます。特に興味を持った技術には、実際にコードを書いて検証し、その技術を用いた小規模なWebアプリを開発して挙動を確認することで、理解を深めるよう努めています。技術力を向上させることで、ユーザーが抱える問題の解決に貢献したいと考えています。
+                      <em>
+                        「ユーザーの課題解決に貢献するプロダクト開発に携わりたい」
+                      </em>
+                      そんな想いから、知的好奇心を原動力に日々キャッチアップと学習に励んでいます。興味を持った技術はコードを書いて挙動を検証することで、理解を深めるようにしています。
                     </motion.dd>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -205,8 +208,8 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       現在の主な注力は、<em>Next.js(App Router)</em>,{" "}
-                      <em>LLM</em>, <em>Generative AI</em>,{" "}
-                      <em>Interaction・Animation</em>, <em>UI / UX</em>です。
+                      <em>TypeScript</em>, <em>LLM・Generative AI</em>,{" "}
+                      <em>Interaction/Animation</em>, <em>UI/UX</em>です。
                     </motion.dd>
                   </div>
 
@@ -249,9 +252,9 @@ const AboutSection = () => {
                       <em>アクアマン</em>, <em>ワンダーウーマン</em>,{" "}
                       <em>ザ・フラッシュ</em>, <em>ジャスティス・リーグ</em>,{" "}
                       <em>イコライザー</em>, <em>最強のふたり</em>,{" "}
-                      <em>ドリームプラン</em>, <em>マイ・インターン</em>,{" "}
-                      <em>素晴らしきかな、人生</em>, <em>ターミナル</em>,{" "}
-                      <em>イエスタデイ</em> etc...です。
+                      <em>幸せのちから</em>, <em>ドリームプラン</em>,{" "}
+                      <em>マイ・インターン</em>, <em>素晴らしきかな、人生</em>,{" "}
+                      <em>ターミナル</em>, <em>イエスタデイ</em> etc...です。
                     </motion.dd>
                   </div>
 
@@ -393,6 +396,20 @@ const AboutSection = () => {
                       </Link>
                       にて執筆しています。
                     </motion.dd>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      今後は、LLMを活用した<em>AI駆動開発</em>に注力し、
+                      AIのアシストを受けつつ、試行錯誤を重ね、常にプロダクトの在り方を考えながら
+                      <em>ユーザー体験の最適化</em>に挑戦したいです。
+                    </motion.dd>
                   </div>
                 </dl>
                 {/* /.about-list */}
@@ -440,7 +457,8 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        好奇心をくすぐる、心踊るような体験を提供したい。
+                        {/* 好奇心をくすぐる、心踊るような体験を提供したい。 */}
+                        ユーザーに寄り添うエンジニアになる。
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -453,14 +471,26 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      モノづくりを通して、
-                      <em>ユーザーがワクワクし、感動を覚え、思い出に残る。</em>
-                      そんなエクスペリエンスを提供できるようになりたいです。また、エンジニアとして
-                      <em>ユーザーに寄り添い、想いを形にする</em>
-                      ことを大切にし、価値ある体験を創造するためにも、
-                      <em>
-                        知的好奇心を大切にし、「好き」を追求していきます。
-                      </em>
+                      <p>
+                        私が目指すビジョンは
+                        <em>「ユーザーに寄り添うエンジニア」</em>です。
+                      </p>
+                      <p>
+                        プロダクトと技術は、ともに
+                        <em>
+                          ユーザーの課題を解決し価値を届ける手段だと私は考えています。
+                        </em>
+                      </p>
+                      <p>
+                        モノづくりを通して、
+                        <em>ワクワクし、感動を覚え、思い出に残る。</em>
+                        そんなエクスペリエンスを提供できるようになりたいです。
+                      </p>
+                      <p>
+                        エンジニアとして利用者の想いを形にするためにも、
+                        日々の学習を怠らず、価値ある体験の創造に挑み続け、
+                        <em>私は日々成長し続けます。</em>
+                      </p>
                     </motion.dd>
                   </div>
 
@@ -493,7 +523,7 @@ const AboutSection = () => {
                         こちらの動作に対してプロダクトが反応を返してくれる。
                       </em>
                       そんな<em>｢モノとの対話｣</em>
-                      を表現できるエンジニアを目指しています。
+                      を表現できるようになりたいです。
                     </motion.dd>
                   </div>
 
