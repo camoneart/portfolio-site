@@ -234,22 +234,6 @@ export const skillsData: SkillsData[] = [
   },
   {
     id: 14,
-    skillTitle: "Three.js",
-    skillLink: "threejs",
-    description:
-      "「Scene」「Object（Mesh）」「Camera」「Renderer」などの主要な概念を学びました。このサイトのファーストビューで表示させている3Dモデルを、Three.jsのラッパーライブラリである「React Three Fiber」を使用して実装しました。",
-    skillLogo: "/images/skills/threejs-logo.svg",
-    label: "LIBRARY",
-    link: "https://threejs.org/",
-    viewTransitionName: "view-transition-title-threejs",
-    viewTransitionImage: "view-transition-img-threejs",
-    viewTransitionBg: "view-transition-bg-threejs",
-    viewTransitionLabel: "view-transition-label-threejs",
-    viewTransitionLogoWrapper: "view-transition-logo-wrapper-threejs",
-    viewTransitionLogoBg: "view-transition-logo-bg-threejs",
-  },
-  {
-    id: 15,
     skillTitle: "Motion",
     skillLink: "motion",
     description:
@@ -263,6 +247,22 @@ export const skillsData: SkillsData[] = [
     viewTransitionLabel: "view-transition-label-motion",
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-motion",
     viewTransitionLogoBg: "view-transition-logo-bg-motion",
+  },
+  {
+    id: 15,
+    skillTitle: "Three.js",
+    skillLink: "threejs",
+    description:
+      "「Scene」「Object（Mesh）」「Camera」「Renderer」などの主要な概念を学びました。このサイトのファーストビューで表示させている3Dモデルを、Three.jsのラッパーライブラリである「React Three Fiber」を使用して実装しました。",
+    skillLogo: "/images/skills/threejs-logo.svg",
+    label: "LIBRARY",
+    link: "https://threejs.org/",
+    viewTransitionName: "view-transition-title-threejs",
+    viewTransitionImage: "view-transition-img-threejs",
+    viewTransitionBg: "view-transition-bg-threejs",
+    viewTransitionLabel: "view-transition-label-threejs",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-threejs",
+    viewTransitionLogoBg: "view-transition-logo-bg-threejs",
   },
   {
     id: 16,
@@ -317,7 +317,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Clerk",
     skillLink: "clerk",
     description:
-      "Webアプリ「OUTPUT QUEST ～叡智の継承者～」において、Clerkを用いたユーザー認証（ログイン）機能を実装しました。",
+      "Webアプリ「OUTPUT QUEST　叡智の継承者」において、Clerkを用いたユーザー認証（ログイン）機能を実装しました。",
     skillLogo: "/images/skills/clerk-logo.png",
     label: "SaaS",
     link: "https://clerk.com/",
@@ -333,7 +333,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Supabase",
     skillLink: "supabase",
     description:
-      "Webアプリ「OUTPUT QUEST ～叡智の継承者～」において、Supabaseを活用しユーザー情報をデータベースで管理できるようにしました。",
+      "Webアプリ「OUTPUT QUEST　叡智の継承者」において、Supabaseを活用しユーザー情報をデータベースで管理できるようにしました。",
     skillLogo: "/images/skills/supabase-logo.svg",
     label: "BaaS",
     link: "https://supabase.com/",
@@ -349,7 +349,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Prisma",
     skillLink: "prisma",
     description:
-      "Webアプリ「OUTPUT QUEST ～叡智の継承者～」では、Prismaを導入してデータベース操作を型安全かつ簡潔に行いました。",
+      "Webアプリ「OUTPUT QUEST　叡智の継承者」では、Prismaを導入してデータベース操作を型安全かつ簡潔に行いました。",
     skillLogo: "/images/skills/prisma-logo.svg",
     label: "LIBRARY",
     link: "https://www.prisma.io/",
