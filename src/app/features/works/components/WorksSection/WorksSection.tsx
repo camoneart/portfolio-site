@@ -252,7 +252,7 @@ export const worksData: WorksData[] = [
     detail13:
       "　Zennとの連携について：OUTPUT QUESTとZennアカウントを連携させることで得られるメリットや、ゲストユーザーとしてアプリを手軽に体験する方法について解説します。あなたに合った方法で、OUTPUT QUESTの世界を体験できます。",
     detail14:
-      "　OUTPUT QUESTとは ?：OUTPUT QUESTの世界観と使い方、アウトプットを通じて成長する「RPG風新感覚学習アプリ」の始め方を解説します。アプリの概要、コンセプト、主要機能について紹介します。",
+      "　OUTPUT QUESTとは ?：OUTPUT QUESTの世界観と使い方、アウトプットを通じて成長する「RPG風学習支援アプリ」の始め方を解説します。アプリの概要、コンセプト、主要機能について紹介します。",
     detail15: "　利用規約：OUTPUT QUESTの利用規約を確認できます。",
     detail16:
       "　プライバシーポリシー：OUTPUT QUESTのプライバシーポリシーを確認できます。",
