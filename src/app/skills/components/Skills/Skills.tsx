@@ -367,7 +367,7 @@ export const skillsData: SkillsData[] = [
     description:
       "Gitの基本的なコマンドを理解しています。普段はGitHubでリモートリポジトリとローカルリポジトリを連携し「git add」「git commit」「git push」などのコマンドを使用してファイルのバージョン管理や、変更履歴の追跡を行っています。",
     skillLogo: "/images/skills/git-logo.svg",
-    label: "VERSION CONTROL",
+    label: "VCS",
     link: "https://git-scm.com/",
     viewTransitionName: "view-transition-title-git",
     viewTransitionImage: "view-transition-img-git",
