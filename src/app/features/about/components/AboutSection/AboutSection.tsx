@@ -406,8 +406,8 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      今後は、LLMを活用した<em>AI駆動開発</em>に注力し、
-                      AIのアシストを受けつつ、試行錯誤を重ね、常にプロダクトの在り方を考えながら
+                      今後はLLMを活用した<em>AI駆動開発</em>に注力し、
+                      AIのアシストを受けつつ、エンジニアとして試行錯誤を重ね、常にプロダクトの在り方を考えながら
                       <em>ユーザー体験の最適化</em>に挑戦したいです。
                     </motion.dd>
                   </div>
