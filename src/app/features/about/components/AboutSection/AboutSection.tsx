@@ -565,8 +565,9 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、
-                      <em>｢見たことも無い、想像もできなかった場所へ行ける｣</em>
+                      <em>
+                        地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、｢見たことも無い、想像もできなかった場所へ行ける｣
+                      </em>
                       と私は信じています。
                     </motion.dd>
                   </div>
