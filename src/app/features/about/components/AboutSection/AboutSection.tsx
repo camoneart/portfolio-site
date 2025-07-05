@@ -207,9 +207,76 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      現在の主な注力は、<em>Next.js(App Router)</em>,{" "}
-                      <em>TypeScript</em>, <em>LLM・Generative AI</em>,{" "}
-                      <em>Interaction/Animation</em>, <em>UI/UX</em>です。
+                      現在の主な注力：「Next.js（App
+                      Router）」「TypeScript」「LLM・Generative
+                      AI」「Interaction / Animation」「UI / UX」
+                    </motion.dd>
+                  </div>
+
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <span className={styles["light-effect"]}>
+                        アウトプット
+                      </span>
+                    </motion.dt>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <p>
+                        私は日々、自己成長を目的にWeb開発とAIの学習に取り組んでいます。
+                      </p>
+                      <p>
+                        キャッチアップとアウトプットを続ける中で、
+                        <em>&quot;継続すること&quot;</em>{" "}
+                        の大切さを改めて実感し、
+                        <em>
+                          &quot;学ぶ&quot; という行為を楽しみながら継続したい
+                        </em>{" "}
+                        という思いが芽生えました。
+                        そこで、その課題を解決するために、
+                        <em>
+                          <Link
+                            href="https://outputquest.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            &quot;OUTPUT QUEST　叡智の継承者&quot;
+                          </Link>{" "}
+                          という &quot;RPG風学習支援アプリ&quot;
+                        </em>{" "}
+                        を開発しました。
+                      </p>
+                    </motion.dd>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      最近は、「Obsidian × Cursor によるメモ管理（知的生産）」
+                      に興味を持っています。 AI時代において、
+                      <em>ノウハウの蓄積</em>と<em>生成AIへのインプット</em>
+                      は今後ますます重要になると考えています。
                     </motion.dd>
                   </div>
 
