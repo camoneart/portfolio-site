@@ -1,5 +1,5 @@
 {
-  "name": "aoyama-portfolio",
+  "name": "portfolio-site",
   "version": "0.1.0",
   "private": true,
   "author": "aoyama",
@@ -7,7 +7,7 @@
   "homepage": "https://aoyama.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aoyamadev/aoyama-portfolio"
+    "url": "https://github.com/hashiramaendure/portfolio-site"
   },
   "packageManager": "pnpm@10.11.1",
   "scripts": {
