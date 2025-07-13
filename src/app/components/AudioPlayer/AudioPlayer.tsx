@@ -27,18 +27,24 @@ const AudioPlayer = memo(
     const [isMuted, setIsMuted] = useState(false);
     const [sound, setSound] = useState<Howl | null>(null);
 
-    // handleClickをメモ化
+    // handleClickをメモ化 - 再生中は Howl の mute API でサウンドを制御する
     const handleClick = useCallback(() => {
       if (!sound) return;
 
+      // 再生前
       if (!isPlaying) {
-        sound.volume(isMuted ? 0 : initialVolume);
+        sound.mute(isMuted); // 現在のミュート状態を反映
         sound.play();
-      } else {
-        setIsMuted(!isMuted);
-        sound.volume(isMuted ? initialVolume : 0);
+        return;
       }
-    }, [sound, isPlaying, isMuted, initialVolume]);
+
+      // 再生中: ミュート状態をトグル
+      setIsMuted((prevMuted) => {
+        const nextMuted = !prevMuted;
+        sound.mute(nextMuted);
+        return nextMuted;
+      });
+    }, [sound, isPlaying, isMuted]);
 
     useEffect(() => {
       const newSound = new Howl({
