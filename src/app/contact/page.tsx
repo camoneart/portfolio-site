@@ -6,7 +6,7 @@ import StairsTransition from "../components/Animation/StairsTransition/StairsTra
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "このページは、AOYAMA｜Creative Developerのお問い合わせページになります。",
+    "このページは、aoyama｜Creative Developerのお問い合わせページになります。",
 };
 
 const ContactPage = () => {

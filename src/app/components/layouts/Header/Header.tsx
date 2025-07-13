@@ -56,12 +56,12 @@ export default function Header() {
             <span
               className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}
             >
-              AOYAMA
+              aoyama
             </span>
             <span
               className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}
             >
-              AOYAMA
+              aoyama
             </span>
           </Link>
         </div>

@@ -1,4 +1,4 @@
-# AOYAMA｜Creative Developer
+# aoyama｜Creative Developer
 
 ![トップページ](public/gif/readme/portfolio-top-page.gif)
 
