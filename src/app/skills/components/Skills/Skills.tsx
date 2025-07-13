@@ -381,7 +381,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "LLM",
     skillLink: "llm",
     description:
-      "LLM（Large Language Model）を日常的に活用しており、主に「ChatGPT」「Gemini」「Claude」を使い分けています。シーンに応じて、それぞれのモデルの強みを活かすよう心がけています。",
+      "LLM（Large Language Model）を日常的に活用しており、主に「ChatGPT」「Gemini」「Claude」を使い分けています。シーンに応じて、それぞれのモデルの強みを活かすよう心がけています。最近はClaude Codeを活用したAI駆動開発にも取り組んでいます。",
     skillLogo: "/images/skills/llm-logo.svg",
     label: "AI",
     link: "https://github.com/modelcontextprotocol",
