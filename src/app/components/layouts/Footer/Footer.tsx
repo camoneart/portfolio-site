@@ -12,7 +12,7 @@ export default function Footer() {
         <p className={`z-20 ${styles["footer__text"]}`}>
           <small className={`text-xs font-bold ${styles["footer__copyright"]}`}>
             <span className={`${styles["text-gradient"]}`}>
-              &copy; 2024 - {new Date().getFullYear()} AOYAMA
+              &copy; {new Date().getFullYear()} AOYAMA
             </span>
           </small>
         </p>
