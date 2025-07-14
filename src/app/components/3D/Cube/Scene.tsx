@@ -37,7 +37,7 @@ const Scene: React.FC = () => {
 
   return (
     <>
-      <PerspectiveCamera makeDefault position={[30, 80, 45]} fov={50} />
+      <PerspectiveCamera makeDefault position={[30, 80, 45]} fov={55} />
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} castShadow intensity={1} />
       <pointLight
