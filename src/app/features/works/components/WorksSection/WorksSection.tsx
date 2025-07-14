@@ -65,8 +65,6 @@ interface WorksData {
   skillsList: string;
   siteUrl: string;
   role: string;
-  username: string;
-  password: string;
   viewTransitionName: string;
   viewTransitionImage: string;
 }
@@ -86,13 +84,11 @@ export const worksData: WorksData[] = [
     detail03:
       "　ダウンロードフォームは、「全項目を入力しないと、送信できないようにする」「フォーム送信後は、サンクスページに遷移」「性と名が分かれている時のオートコンプリートに対応」などの仕様です。実際のダウンロード機能は実装していません。",
     accessDescription:
-      "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：guest｜パスワード：guest_view01の入力をお願いいたします。",
-    labels: [{ no: "Card No.", value: "001/005" }],
+      "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
+    labels: [{ no: "Card No.", value: "001/006" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://aoymdev.com/caresend",
     role: "Coding",
-    username: "guest",
-    password: "guest_view01",
     viewTransitionName: "view-transition-title-work-1",
     viewTransitionImage: "view-transition-img-work-1",
   },
@@ -115,13 +111,11 @@ export const worksData: WorksData[] = [
     detail05:
       "　メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
     accessDescription:
-      "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：guest｜パスワード：guest_view02の入力をお願いいたします。",
-    labels: [{ no: "Card No.", value: "002/005" }],
+      "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
+    labels: [{ no: "Card No.", value: "002/006" }],
     skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
     siteUrl: "https://aoymdev.com/aobotan",
     role: "Coding",
-    username: "guest",
-    password: "guest_view02",
     viewTransitionName: "view-transition-title-work-2",
     viewTransitionImage: "view-transition-img-work-2",
   },
@@ -167,14 +161,12 @@ export const worksData: WorksData[] = [
     specification06Detail04:
       "　「送信する」ボタンは、必須項目が全て入力されていないと押せないようにしています。確認画面は実装していません。",
     accessDescription:
-      "BASIC認証をかけているため、お手数ですがサイトのアクセス時に、ユーザーネーム：guest｜パスワード：guest_view03の入力をお願いいたします。",
-    labels: [{ no: "Card No.", value: "003/005" }],
+      "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
+    labels: [{ no: "Card No.", value: "003/006" }],
     skillsList:
       "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
     siteUrl: "https://aoymdev.com/tetote",
     role: "Coding",
-    username: "guest",
-    password: "guest_view03",
     viewTransitionName: "view-transition-title-work-3",
     viewTransitionImage: "view-transition-img-work-3",
   },
@@ -208,13 +200,11 @@ export const worksData: WorksData[] = [
       "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
     accessDescription:
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
-    labels: [{ no: "Card No.", value: "004/005" }],
+    labels: [{ no: "Card No.", value: "004/006" }],
     skillsList:
       "Next.js, TypeScript, Tailwind CSS, shadcn/ui, GSAP, Motion, View Transitions API, React Three Fiber, Drei, React Spring, Howler.js, React Hook Form, Zod, Resend, Vercel",
     siteUrl: "https://aoyamadev.com",
     role: "Design, Coding",
-    username: "",
-    password: "",
     viewTransitionName: "view-transition-title-work-4",
     viewTransitionImage: "view-transition-img-work-4",
   },
@@ -258,15 +248,62 @@ export const worksData: WorksData[] = [
       "　プライバシーポリシー：OUTPUT QUESTのプライバシーポリシーを確認できます。",
     accessDescription:
       "このWebアプリは転職活動用のポートフォリオとして開発したものであり、意図した環境でご確認いただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
-    labels: [{ no: "Card No.", value: "005/005" }],
+    labels: [{ no: "Card No.", value: "005/006" }],
     skillsList:
       "Next.js, TypeScript, Tailwind CSS, shadcn/ui, Motion, Howler.js, Clerk, Prisma, Supabase, zod, Vercel AI SDK, react-markdown, Vercel",
     siteUrl: "https://outputquest.com",
     role: "Design, Coding",
-    username: "",
-    password: "",
     viewTransitionName: "view-transition-title-work-5",
     viewTransitionImage: "view-transition-img-work-5",
+  },
+  {
+    id: 6,
+    image: "/images/works/work06.jpg",
+    workTitle: "Shadow Clone Jutsu",
+    cardDesc:
+      '"影分身の術(Git Worktree)" で、Claude Codeとのパラレル開発を効率化するツールです。',
+    description:
+      '"影分身の術(Git Worktree)" で、Claude Codeとのパラレル開発を効率化するツールです。',
+    detail01:
+      "　CLIは TypeScript + Commander 製で、`pnpm dlx shadow-clone-jutsu` ですぐに実行できます。",
+    detail02:
+      "　`create` コマンドで Git worktree を新規作成し、機能ごとに分身ブランチを瞬時に生成します。",
+    detail03:
+      "　`delete` コマンドは不要になった worktree とブランチを安全にクリーンアップします。",
+    detail04:
+      "　`attach` コマンドで既存ブランチを worktree に紐付け、作業途中の分身を再利用できます。",
+    detail05:
+      "　`list` コマンドは現在の分身一覧をテーブル形式で表示し、パス・更新日時をひと目で確認できます。",
+    detail06:
+      "　`batch` コマンドでは複数の分身を一括作成／削除でき、大量タスクの準備を自動化します。",
+    detail07:
+      "　`sync` コマンドは origin と upstream の差分を検出し、各分身ブランチへ一括マージして整合性を保ちます。",
+    detail08:
+      "　`snapshot` コマンドで作業状態をコミットにスナップショットし、Claude Code のレビューに渡せます。",
+    detail09:
+      "　`review` コマンドは差分を Claude Code へ送り、AI からのレビューフィードバックを取得します。",
+    detail10:
+      "　`suggest` コマンドはコード改善案を Claude Code へ依頼し、自動で PR を生成します。",
+    detail11:
+      "　`graph` コマンドは worktree とブランチの構造を ASCII グラフで可視化します。",
+    detail12:
+      "　`health` コマンドが Git 設定・リモート接続・ディスク容量を診断し、問題を早期発見します。",
+    detail13:
+      "　`github` コマンドは Draft PR の作成やブラウザでのブランチ比較をワンコマンドで実行します。",
+    detail14:
+      "　`tmux` コマンドにより各分身用のウィンドウを自動生成し、並列作業を効率化します。",
+    detail15:
+      "　設定ファイル `.shadowclonerc.json` を `config` コマンドの対話 UI で簡単に編集できます。",
+    detail16:
+      "　全コマンドはカラー表示とスピナーで実行状況を可視化し、ユーザー体験を高めています。",
+    accessDescription: "",
+    labels: [{ no: "Card No.", value: "006/006" }],
+    skillsList:
+      "TypeScript, Commander, simple-git, Execa, Inquirer, Chalk, Ora, Zod, tsup, Vitest",
+    siteUrl: "https://github.com/hashiramaendure/shadow-clone-jutsu",
+    role: "Design, Coding",
+    viewTransitionName: "view-transition-title-work-6",
+    viewTransitionImage: "view-transition-img-work-6",
   },
 ];
 

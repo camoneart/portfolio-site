@@ -30,8 +30,6 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
 
   const skillsList = work.skillsList.split(", ") || [];
   const roleList = work.role?.split(", ") || [];
-  const usernameList = work.username?.split(", ") || [];
-  const passwordList = work.password?.split(", ") || [];
 
   return (
     <>
@@ -105,40 +103,6 @@ const WorkDetail = ({ params }: { params: { id: string } }) => {
                         ))}
                       </ul>
                     </div>
-                    {work.username && (
-                      <div className={`font-russo ${styles["work__name"]}`}>
-                        <span className={styles["work__name-label"]}>
-                          username：
-                        </span>
-                        <ul className={styles["work__name-list"]}>
-                          {usernameList.map((username, index) => (
-                            <li
-                              key={index}
-                              className={styles["work__name-item"]}
-                            >
-                              {username}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                    {work.password && (
-                      <div className={`font-russo ${styles["work__password"]}`}>
-                        <span className={styles["work__password-label"]}>
-                          password：
-                        </span>
-                        <ul className={styles["work__password-list"]}>
-                          {passwordList.map((password, index) => (
-                            <li
-                              key={index}
-                              className={styles["work__password-item"]}
-                            >
-                              {password}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
                   </div>
                   <div className={styles["work__summary"]}>
                     <h2 className={styles["work__summary-title"]}>概要</h2>

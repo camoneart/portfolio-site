@@ -239,6 +239,14 @@
     view-transition-name: view-transition-title-work-4;
   }
 
+  .view-transition-title-work-5 {
+    view-transition-name: view-transition-title-work-5;
+  }
+
+  .view-transition-title-work-6 {
+    view-transition-name: view-transition-title-work-6;
+  }
+
   .view-transition-img-work-1 {
     view-transition-name: view-transition-img-work-1;
     aspect-ratio: 16 / 9;
@@ -256,6 +264,16 @@
 
   .view-transition-img-work-4 {
     view-transition-name: view-transition-img-work-4;
+    aspect-ratio: 16 / 9;
+  }
+
+  .view-transition-img-work-5 {
+    view-transition-name: view-transition-img-work-5;
+    aspect-ratio: 16 / 9;
+  }
+
+  .view-transition-img-work-6 {
+    view-transition-name: view-transition-img-work-6;
     aspect-ratio: 16 / 9;
   }
 
