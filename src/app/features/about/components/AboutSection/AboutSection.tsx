@@ -450,9 +450,8 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <em>LLM</em>, <em>Generative AI</em> に加え、最近は{" "}
-                      <em>Gemini CLI</em>, <em>Claude Code</em>,{" "}
-                      <em>Vibe Coding</em>
-                      に注力しています。 また、AIに関する技術記事を{" "}
+                      <em>Claude Code</em>, <em>Vibe Coding</em>
+                      に注力しています。 また、Web開発やAIに関する技術記事を{" "}
                       <Link
                         href="https://zenn.dev/aoyamadev"
                         className={styles["about-zenn-link"]}
@@ -473,8 +472,8 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      今後はLLMを活用した<em>AI駆動開発</em>に注力し、
-                      AIのアシストを受けつつ、エンジニアとして試行錯誤を重ね、常にプロダクトの在り方を考えながら
+                      今後はLLMを活用した<em>AI駆動開発</em>
+                      でAIのアシストを受けつつ、エンジニアとして試行錯誤を重ね、常にプロダクトの在り方を考えながら
                       <em>ユーザー体験の最適化</em>に挑戦したいです。
                     </motion.dd>
                   </div>
