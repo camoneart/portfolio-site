@@ -1,6 +1,7 @@
 .dot-marker {
   display: inline-block;
   position: relative;
+  margin-inline-end: 10px;
 
   &::before {
     content: "";

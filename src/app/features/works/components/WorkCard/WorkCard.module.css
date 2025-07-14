@@ -128,7 +128,11 @@
   .card-no-5:hover,
   .card-no-5:active,
   .card-no-5:focus,
-  .card-no-5:focus-visible {
+  .card-no-5:focus-visible,
+  .card-no-6:hover,
+  .card-no-6:active,
+  .card-no-6:focus,
+  .card-no-6:focus-visible {
     transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
       scale(1.07);
   }

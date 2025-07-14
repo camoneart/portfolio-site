@@ -145,6 +145,9 @@
 
     /* border */
     --border-rounded: 999em;
+
+    /* code bg */
+    --code-bg-color: #4b4b4b;
   }
 
   body {

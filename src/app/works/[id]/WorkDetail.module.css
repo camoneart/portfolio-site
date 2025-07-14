@@ -318,13 +318,22 @@
   word-break: auto-phrase;
 
   & p {
-    display: block grid;
-    grid-template-columns: 8px auto;
-    column-gap: 6px;
+    display: inline-block;
+    align-items: center;
+    padding-inline: 20px 0;
+    text-indent: -12px;
 
     @media (width < 640px) {
       grid-template-columns: 7px auto;
     }
+  }
+
+  & code {
+    font-size: 0.75rem;
+    line-height: var(--leading-none);
+    background-color: var(--code-bg-color);
+    padding: 4px;
+    border-radius: 5px;
   }
 }
 
