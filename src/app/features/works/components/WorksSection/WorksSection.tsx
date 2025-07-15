@@ -300,7 +300,7 @@ export const worksData: WorksData[] = [
     labels: [{ no: "Card No.", value: "006/006" }],
     skillsList:
       "TypeScript, Commander, simple-git, Execa, Inquirer, Chalk, Ora, Zod, tsup, Vitest",
-    siteUrl: "https://github.com/hashiramaendure/shadow-clone-jutsu",
+    siteUrl: "https://github.com/hashiramaendure/scj",
     role: "Design, Coding",
     viewTransitionName: "view-transition-title-work-6",
     viewTransitionImage: "view-transition-img-work-6",
