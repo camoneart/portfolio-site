@@ -259,48 +259,48 @@ export const worksData: WorksData[] = [
   {
     id: 6,
     image: "/images/works/work06.jpg",
-    workTitle: "Shadow Clone Jutsu",
+    workTitle: "Maestro",
     cardDesc:
-      '"影分身の術(Git Worktree)" で、Claude Codeとのパラレル開発を効率化するツールです。',
+      '"オーケストレーション(Git Worktree)" で、Claude Codeとのパラレル開発を効率化するツールです。',
     description:
-      '"影分身の術(Git Worktree)" で、Claude Codeとのパラレル開発を効率化するツールです。',
+      '"オーケストレーション(Git Worktree)" で、Claude Codeとのパラレル開発を効率化するツールです。',
     detail01:
-      "　CLIは TypeScript + Commander 製で、`pnpm dlx shadow-clone-jutsu` ですぐに実行できます。",
+      "　複数機能を同時開発できる“影分身”フローで、ブランチ切り替えの時間をゼロにします。",
     detail02:
-      "　`create` コマンドで Git worktree を新規作成し、機能ごとに分身ブランチを瞬時に生成します。",
+      "　worktreeを自動管理することで、stashやコンフリクトのストレスから解放され、開発に集中できます。",
     detail03:
-      "　`delete` コマンドは不要になった worktree とブランチを安全にクリーンアップします。",
+      "　CLI 1つで作成・削除・同期が完結。複雑なGitコマンドを覚える必要がありません。",
     detail04:
-      "　`attach` コマンドで既存ブランチを worktree に紐付け、作業途中の分身を再利用できます。",
+      "　Claude Codeと連携し、分身ブランチごとにAIペアプロをワンコマンドで開始できます。",
     detail05:
-      "　`list` コマンドは現在の分身一覧をテーブル形式で表示し、パス・更新日時をひと目で確認できます。",
+      "　tmux / fzf 統合でターミナルから直感的に分身を切り替え、パラレル開発の効率が向上します。",
     detail06:
-      "　`batch` コマンドでは複数の分身を一括作成／削除でき、大量タスクの準備を自動化します。",
+      "　ダッシュボード & ASCII グラフで全分身の状態を可視化。迷子にならず俯瞰して管理できます。",
     detail07:
-      "　`sync` コマンドは origin と upstream の差分を検出し、各分身ブランチへ一括マージして整合性を保ちます。",
+      "　自動同期とスナップショットで安全網を張り、大胆なリファクタリングや実験を後押しします。",
     detail08:
-      "　`snapshot` コマンドで作業状態をコミットにスナップショットし、Claude Code のレビューに渡せます。",
+      "　`health`コマンドがリモート乖離やディスク容量不足を検知し、トラブルを未然に防止します。",
     detail09:
-      "　`review` コマンドは差分を Claude Code へ送り、AI からのレビューフィードバックを取得します。",
+      "　`review` / `suggest`コマンドでAIレビューと改善提案を即取得し、品質向上を自動化。",
     detail10:
-      "　`suggest` コマンドはコード改善案を Claude Code へ依頼し、自動で PR を生成します。",
+      "　`graph`コマンドでブランチ構造を一目で把握し、オンボーディングもスムーズです。",
     detail11:
-      "　`graph` コマンドは worktree とブランチの構造を ASCII グラフで可視化します。",
+      "　GitHub連携により Draft PR作成から自動マージフローまで一括実行し、リリースを高速化。",
     detail12:
-      "　`health` コマンドが Git 設定・リモート接続・ディスク容量を診断し、問題を早期発見します。",
+      "　設定は JSON 1ファイル、対話UIで初学者でもすぐに生産性を向上できます。",
     detail13:
-      "　`github` コマンドは Draft PR の作成やブラウザでのブランチ比較をワンコマンドで実行します。",
+      "　TypeScript製の柔軟な設計で、チームの開発文化に合わせたカスタマイズが容易です。",
     detail14:
-      "　`tmux` コマンドにより各分身用のウィンドウを自動生成し、並列作業を効率化します。",
+      "　シングルバイナリ配布で `pnpm dlx` から即起動。グローバルインストール不要です。",
     detail15:
-      "　設定ファイル `.shadowclonerc.json` を `config` コマンドの対話 UI で簡単に編集できます。",
+      "　カラー表示とスピナーが長時間処理のストレスを軽減。快適なCLI体験を実現。",
     detail16:
-      "　全コマンドはカラー表示とスピナーで実行状況を可視化し、ユーザー体験を高めています。",
+      "　MITライセンスのオープンソース。コミュニティと共に進化する “忍術” です。",
     accessDescription: "",
     labels: [{ no: "Card No.", value: "006/006" }],
     skillsList:
       "TypeScript, Commander, simple-git, Execa, Inquirer, Chalk, Ora, Zod, tsup, Vitest",
-    siteUrl: "https://github.com/hashiramaendure/scj",
+    siteUrl: "https://github.com/hashiramaendure/maestro",
     role: "Design, Coding",
     viewTransitionName: "view-transition-title-work-6",
     viewTransitionImage: "view-transition-img-work-6",
