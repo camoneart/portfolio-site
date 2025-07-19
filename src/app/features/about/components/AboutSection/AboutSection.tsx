@@ -224,7 +224,16 @@ const AboutSection = () => {
                 </div>
                 <div className={`${styles["about-sns-content"]}`}>
                   <ul className={styles["about-sns-list"]}>
-                    <li className={styles["about-sns-item"]}>
+                    <motion.li
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={styles["about-sns-item"]}
+                    >
                       <Link
                         href={"https://github.com/hashiramaendure"}
                         target="_blank"
@@ -244,11 +253,31 @@ const AboutSection = () => {
                               </div>
                             </div>
                           </div>
-                          <h3 className={styles["about-sns-title"]}>GitHub</h3>
+                          <motion.h3
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                              delay: 3.9,
+                              duration: 0.6,
+                              ease: "easeInOut",
+                            }}
+                            className={styles["about-sns-title"]}
+                          >
+                            GitHub
+                          </motion.h3>
                         </div>
                       </Link>
-                    </li>
-                    <li className={styles["about-sns-item"]}>
+                    </motion.li>
+                    <motion.li
+                      className={styles["about-sns-item"]}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                    >
                       <Link
                         href={"https://x.com/hashiramaendure"}
                         target="_blank"
@@ -268,11 +297,31 @@ const AboutSection = () => {
                               </div>
                             </div>
                           </div>
-                          <h3 className={styles["about-sns-title"]}>X</h3>
+                          <motion.h3
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                              delay: 3.9,
+                              duration: 0.6,
+                              ease: "easeInOut",
+                            }}
+                            className={styles["about-sns-title"]}
+                          >
+                            X
+                          </motion.h3>
                         </div>
                       </Link>
-                    </li>
-                    <li className={styles["about-sns-item"]}>
+                    </motion.li>
+                    <motion.li
+                      className={styles["about-sns-item"]}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                    >
                       <Link
                         href={"https://zenn.dev/hashiramaendure"}
                         target="_blank"
@@ -292,10 +341,21 @@ const AboutSection = () => {
                               </div>
                             </div>
                           </div>
-                          <h3 className={styles["about-sns-title"]}>Zenn</h3>
+                          <motion.h3
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                              delay: 3.9,
+                              duration: 0.6,
+                              ease: "easeInOut",
+                            }}
+                            className={styles["about-sns-title"]}
+                          >
+                            Zenn
+                          </motion.h3>
                         </div>
                       </Link>
-                    </li>
+                    </motion.li>
                   </ul>
                   {/* /.about-list */}
                 </div>
