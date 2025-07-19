@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./AboutSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
-import { User, Flame, Sparkle, Focus } from "lucide-react";
+import { User, Flame, Sparkle, Focus, AtSign } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -36,111 +36,274 @@ const AboutSection = () => {
           className={styles["about-container"]}
         >
           <div className={styles["about-wrapper"]}>
-            <div className={`${styles["about-profile"]}`}>
-              <div className={styles["about-header"]}>
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 2.2, duration: 0.6, ease: "easeInOut" }}
-                  className={styles["about-profile-icon"]}
-                >
-                  <User size={25} color="#ff6b4a" />
-                </motion.div>
-                <motion.h2
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 2.1, duration: 0.7, ease: "easeInOut" }}
-                  className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}
-                >
-                  Profile
-                </motion.h2>
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ delay: 2.1, duration: 1.3, ease: "easeInOut" }}
-                  className={styles["about-border"]}
-                ></motion.div>
-              </div>
-              <div className={`${styles["about-content"]}`}>
-                <dl className={`${styles["about-profile-list"]}`}>
+            <div className={styles["about-top-box"]}>
+              <div className={`${styles["about-profile"]}`}>
+                <div className={styles["about-header"]}>
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{
-                      delay: 3.4,
+                      delay: 2.2,
                       duration: 0.6,
                       ease: "easeInOut",
                     }}
-                    className={styles["about-profile-img-box"]}
+                    className={styles["about-profile-icon"]}
                   >
-                    <Image
-                      src={"/images/about/profile/profile-img.jpg"}
-                      alt="プロフィール画像"
-                      width={165}
-                      height={165}
-                      className={styles["about-profile-img"]}
-                    />
+                    <User size={25} color="#ff6b4a" />
                   </motion.div>
-                  <div className={styles["about-profile-info"]}>
-                    <div className={styles["about-content-group"]}>
-                      <motion.dt
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                          delay: 3.4,
-                          duration: 0.6,
-                          ease: "easeInOut",
-                        }}
-                        className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}
-                      >
-                        <span className={styles["light-effect"]}>Birthday</span>
-                      </motion.dt>
-                      <motion.dd
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                          delay: 3.9,
-                          duration: 0.6,
-                          ease: "easeInOut",
-                        }}
-                        className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                      >
-                        1999 / 07 / 10
-                      </motion.dd>
+                  <motion.h2
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 2.1,
+                      duration: 0.7,
+                      ease: "easeInOut",
+                    }}
+                    className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}
+                  >
+                    Profile
+                  </motion.h2>
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "100%" }}
+                    transition={{
+                      delay: 2.1,
+                      duration: 1.3,
+                      ease: "easeInOut",
+                    }}
+                    className={styles["about-border"]}
+                  ></motion.div>
+                </div>
+                <div className={`${styles["about-content"]}`}>
+                  <dl className={`${styles["about-profile-list"]}`}>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={styles["about-profile-img-box"]}
+                    >
+                      <Image
+                        src={"/images/about/profile/profile-img.jpg"}
+                        alt="プロフィール画像"
+                        width={155}
+                        height={155}
+                        className={styles["about-profile-img"]}
+                      />
+                    </motion.div>
+                    <div className={styles["about-profile-info"]}>
+                      <div className={styles["about-content-group"]}>
+                        <motion.dt
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{
+                            delay: 3.4,
+                            duration: 0.6,
+                            ease: "easeInOut",
+                          }}
+                          className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}
+                        >
+                          <span className={styles["light-effect"]}>
+                            Birthday
+                          </span>
+                        </motion.dt>
+                        <motion.dd
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{
+                            delay: 3.9,
+                            duration: 0.6,
+                            ease: "easeInOut",
+                          }}
+                          className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                        >
+                          1999 / 07 / 10
+                        </motion.dd>
+                      </div>
+                      <div className={styles["about-content-group"]}>
+                        <motion.dt
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{
+                            delay: 3.4,
+                            duration: 0.6,
+                            ease: "easeInOut",
+                          }}
+                          className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}
+                        >
+                          <span className={styles["light-effect"]}>Name</span>
+                        </motion.dt>
+                        <motion.dd
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{
+                            delay: 3.9,
+                            duration: 0.6,
+                            ease: "easeInOut",
+                          }}
+                          className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                        >
+                          Kaishu Aoyama
+                        </motion.dd>
+                      </div>
+                      <div className={styles["about-content-group"]}>
+                        <motion.dt
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{
+                            delay: 3.4,
+                            duration: 0.6,
+                            ease: "easeInOut",
+                          }}
+                          className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}
+                        >
+                          <span className={styles["light-effect"]}>
+                            Nickname
+                          </span>
+                        </motion.dt>
+                        <motion.dd
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{
+                            delay: 3.9,
+                            duration: 0.6,
+                            ease: "easeInOut",
+                          }}
+                          className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                        >
+                          hashirama
+                        </motion.dd>
+                      </div>
                     </div>
-                    <div className={styles["about-content-group"]}>
-                      <motion.dt
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                          delay: 3.4,
-                          duration: 0.6,
-                          ease: "easeInOut",
-                        }}
-                        className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}
-                      >
-                        <span className={styles["light-effect"]}>Name</span>
-                      </motion.dt>
-                      <motion.dd
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                          delay: 3.9,
-                          duration: 0.6,
-                          ease: "easeInOut",
-                        }}
-                        className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                      >
-                        Kaishu Aoyama
-                      </motion.dd>
-                    </div>
-                  </div>
-                </dl>
-                {/* /.about-list */}
+                  </dl>
+                  {/* /.about-list */}
+                </div>
+                {/* /.about-content */}
               </div>
-              {/* /.about-content */}
+              {/* /.about-profile */}
+
+              <div className={`${styles["about-sns"]}`}>
+                <div className={styles["about-header"]}>
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 2.2,
+                      duration: 0.6,
+                      ease: "easeInOut",
+                    }}
+                    className={styles["about-sns-icon"]}
+                  >
+                    <AtSign size={20} color="#ff6b4a" />
+                  </motion.div>
+                  <motion.h2
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 2.1,
+                      duration: 0.7,
+                      ease: "easeInOut",
+                    }}
+                    className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}
+                  >
+                    SNS
+                  </motion.h2>
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "100%" }}
+                    transition={{
+                      delay: 2.1,
+                      duration: 1.3,
+                      ease: "easeInOut",
+                    }}
+                    className={styles["about-border"]}
+                  ></motion.div>
+                </div>
+                <div className={`${styles["about-sns-content"]}`}>
+                  <ul className={styles["about-sns-list"]}>
+                    <li className={styles["about-sns-item"]}>
+                      <Link
+                        href={"https://github.com/hashiramaendure"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles["about-sns-link"]}
+                      >
+                        <div className={styles["about-sns-link-content"]}>
+                          <div className={styles["about-sns-logo-wrapper"]}>
+                            <div className={styles["about-sns-logo-box"]}>
+                              <div className={styles["about-sns-logo-bg"]}>
+                                <Image
+                                  src={"/images/about/sns/github-logo.svg"}
+                                  alt="GitHub"
+                                  width={20}
+                                  height={20}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <h3 className={styles["about-sns-title"]}>GitHub</h3>
+                        </div>
+                      </Link>
+                    </li>
+                    <li className={styles["about-sns-item"]}>
+                      <Link
+                        href={"https://x.com/hashiramaendure"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles["about-sns-link"]}
+                      >
+                        <div className={styles["about-sns-link-content"]}>
+                          <div className={styles["about-sns-logo-wrapper"]}>
+                            <div className={styles["about-sns-logo-box"]}>
+                              <div className={styles["about-sns-logo-bg"]}>
+                                <Image
+                                  src={"/images/about/sns/x-logo.svg"}
+                                  alt="X"
+                                  width={20}
+                                  height={20}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <h3 className={styles["about-sns-title"]}>X</h3>
+                        </div>
+                      </Link>
+                    </li>
+                    <li className={styles["about-sns-item"]}>
+                      <Link
+                        href={"https://zenn.dev/hashiramaendure"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles["about-sns-link"]}
+                      >
+                        <div className={styles["about-sns-link-content"]}>
+                          <div className={styles["about-sns-logo-wrapper"]}>
+                            <div className={styles["about-sns-logo-box"]}>
+                              <div className={styles["about-sns-logo-bg"]}>
+                                <Image
+                                  src={"/images/about/sns/zenn-logo.svg"}
+                                  alt="Zenn"
+                                  width={20}
+                                  height={20}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <h3 className={styles["about-sns-title"]}>Zenn</h3>
+                        </div>
+                      </Link>
+                    </li>
+                  </ul>
+                  {/* /.about-list */}
+                </div>
+                {/* /.about-content */}
+              </div>
+              {/* /.about-sns */}
             </div>
-            {/* /.about-profile */}
+            {/* /.about-top-box */}
 
             <div className={`${styles["about-hobby"]}`}>
               <div className={styles["about-header"]}>
@@ -178,7 +341,7 @@ const AboutSection = () => {
                         duration: 0.6,
                         ease: "easeInOut",
                       }}
-                      className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>Web開発</span>
                     </motion.dt>
@@ -192,10 +355,14 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <em>
-                        「ユーザーの課題解決に貢献するプロダクト開発に携わりたい」
-                      </em>
-                      そんな想いから、知的好奇心を原動力に日々キャッチアップと学習に励んでいます。興味を持った技術はコードを書いて挙動を検証することで、理解を深めるようにしています。
+                      <p>
+                        <em>
+                          「ユーザーの課題解決に貢献するプロダクト開発に携わりたい」
+                        </em>
+                      </p>
+                      <p>
+                        そんな想いから、知的好奇心を原動力に日々キャッチアップと学習に励んでいます。興味を持った技術はコードを書いて挙動を検証することで、理解を深めるようにしています。
+                      </p>
                     </motion.dd>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -207,9 +374,11 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      現在の主な注力：「Next.js（App
-                      Router）」「TypeScript」「LLM・Generative
-                      AI」「Interaction / Animation」「UI / UX」
+                      <p>
+                        現在の主な注力：「Next.js（App
+                        Router）」「TypeScript」「LLM・Generative
+                        AI」「Interaction / Animation」「UI / UX」
+                      </p>
                     </motion.dd>
                   </div>
 
@@ -222,7 +391,7 @@ const AboutSection = () => {
                         duration: 0.6,
                         ease: "easeInOut",
                       }}
-                      className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
                         アウトプット
@@ -273,10 +442,12 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      最近は、「Obsidian × Cursor によるメモ管理（知的生産）」
-                      に興味を持っています。 AI時代において、
-                      <em>ノウハウの蓄積</em>と<em>生成AIへのインプット</em>
-                      は今後ますます重要になると考えています。
+                      <p>
+                        最近は、「Obsidian × Cursor によるメモ管理（知的生産）」
+                        に興味を持っています。 AI時代において、
+                        <em>ノウハウの蓄積</em>と<em>生成AIへのインプット</em>
+                        は今後ますます重要になると考えています。
+                      </p>
                     </motion.dd>
                   </div>
 
@@ -289,7 +460,7 @@ const AboutSection = () => {
                         duration: 0.6,
                         ease: "easeInOut",
                       }}
-                      className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>映画鑑賞</span>
                     </motion.dt>
@@ -303,7 +474,9 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      映画鑑賞が趣味で、特に洋画を好んでよく観ます。映画は、私にこれまで気づかなかった考え方や視点、異なる文化、価値観との出会いをもたらしてくれる大切な存在です。
+                      <p>
+                        映画鑑賞が趣味で、特に洋画を好んでよく観ます。映画は、私にこれまで気づかなかった考え方や視点、異なる文化、価値観との出会いをもたらしてくれる大切な存在です。
+                      </p>
                     </motion.dd>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -315,13 +488,16 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      特に好きな映画は、<em>アメイジング・スパイダーマン</em>,{" "}
-                      <em>アクアマン</em>, <em>ワンダーウーマン</em>,{" "}
-                      <em>ザ・フラッシュ</em>, <em>ジャスティス・リーグ</em>,{" "}
-                      <em>イコライザー</em>, <em>最強のふたり</em>,{" "}
-                      <em>幸せのちから</em>, <em>ドリームプラン</em>,{" "}
-                      <em>マイ・インターン</em>, <em>素晴らしきかな、人生</em>,{" "}
-                      <em>ターミナル</em>, <em>イエスタデイ</em> etc...です。
+                      <p>
+                        特に好きな映画は、<em>アメイジング・スパイダーマン</em>,{" "}
+                        <em>アクアマン</em>, <em>ワンダーウーマン</em>,{" "}
+                        <em>ザ・フラッシュ</em>, <em>ジャスティス・リーグ</em>,{" "}
+                        <em>イコライザー</em>, <em>最強のふたり</em>,{" "}
+                        <em>幸せのちから</em>, <em>ドリームプラン</em>,{" "}
+                        <em>マイ・インターン</em>, <em>素晴らしきかな、人生</em>
+                        , <em>ターミナル</em>, <em>イエスタデイ</em>{" "}
+                        etc...です。
+                      </p>
                     </motion.dd>
                   </div>
 
@@ -334,7 +510,7 @@ const AboutSection = () => {
                         duration: 0.6,
                         ease: "easeInOut",
                       }}
-                      className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>読書</span>
                     </motion.dt>
@@ -348,13 +524,19 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      ジャンルを問わず気になった書籍を読むのが好きです。読書では、
-                      <em>
-                        新たな知識を得たり、著者の考え方や価値観を学ぶことができます。
-                      </em>
-                      私にとっての書籍は、
-                      <em>｢先人の知恵を学ぶことができるアイテム｣</em>
-                      といった存在です。
+                      <p>
+                        ジャンルを問わず気になった書籍を読むのが好きです。読書では、
+                      </p>
+                      <p>
+                        <em>
+                          新たな知識を得たり、著者の考え方や価値観を学ぶことができます。
+                        </em>
+                      </p>
+                      <p>
+                        私にとっての書籍は、
+                        <em>｢先人の知恵を学ぶことができるアイテム｣</em>
+                        といった存在です。
+                      </p>
                     </motion.dd>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -366,12 +548,14 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      お気に入りの書籍は、
-                      <em>
-                        ｢クリエイティブの授業 STEAL LIKE AN ARTIST
-                        &quot;君がつくるべきもの&quot;をつくれるようになるために｣
-                      </em>
-                      です。
+                      <p>
+                        お気に入りの書籍は、
+                        <em>
+                          ｢クリエイティブの授業 STEAL LIKE AN ARTIST
+                          &quot;君がつくるべきもの&quot;をつくれるようになるために｣
+                        </em>
+                        です。
+                      </p>
                     </motion.dd>
                   </div>
                 </dl>
@@ -417,7 +601,7 @@ const AboutSection = () => {
                         duration: 0.6,
                         ease: "easeInOut",
                       }}
-                      className={`${styles["about-hobby-list-title"]} ${styles["scroll-driven-animation"]}`}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
                         AIに注力しています
@@ -433,11 +617,13 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      AIについて学びながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に
-                      <em>
-                        クリエイティブと向き合う時間に集中できるようになれる
-                      </em>
-                      と考えています。
+                      <p>
+                        AIについて学びながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に
+                        <em>
+                          クリエイティブと向き合う時間に集中できるようになれる
+                        </em>
+                        と考えています。
+                      </p>
                     </motion.dd>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -449,18 +635,20 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <em>LLM</em>, <em>Generative AI</em> に加え、最近は{" "}
-                      <em>Claude Code</em>, <em>Vibe Coding</em>
-                      に注力しています。 また、Web開発やAIに関する技術記事を{" "}
-                      <Link
-                        href="https://zenn.dev/aoyamadev"
-                        className={styles["about-zenn-link"]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Zenn
-                      </Link>
-                      にて執筆しています。
+                      <p>
+                        <em>LLM</em>, <em>Generative AI</em> に加え、最近は{" "}
+                        <em>Claude Code</em>, <em>Vibe Coding</em>
+                        に注力しています。 また、Web開発やAIに関する技術記事を{" "}
+                        <Link
+                          href="https://zenn.dev/aoyamadev"
+                          className={styles["about-zenn-link"]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Zenn
+                        </Link>
+                        にて執筆しています。
+                      </p>
                     </motion.dd>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -472,9 +660,11 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      今後はLLMを活用した<em>AI駆動開発</em>
-                      でAIのアシストを受けつつ、エンジニアとして試行錯誤を重ね、常にプロダクトの在り方を考えながら
-                      <em>ユーザー体験の最適化</em>に挑戦したいです。
+                      <p>
+                        今後はLLMを活用した<em>AI駆動開発</em>
+                        でAIのアシストを受けつつ、エンジニアとして試行錯誤を重ね、常にプロダクトの在り方を考えながら
+                        <em>ユーザー体験の最適化</em>に挑戦したいです。
+                      </p>
                     </motion.dd>
                   </div>
                 </dl>
@@ -585,11 +775,13 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <em>
-                        こちらの動作に対してプロダクトが反応を返してくれる。
-                      </em>
-                      そんな<em>｢モノとの対話｣</em>
-                      を表現できるようになりたいです。
+                      <p>
+                        <em>
+                          こちらの動作に対してプロダクトが反応を返してくれる。
+                        </em>
+                        そんな<em>｢モノとの対話｣</em>
+                        を表現できるようになりたいです。
+                      </p>
                     </motion.dd>
                   </div>
 
@@ -618,8 +810,10 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <em>｢変化を恐れず、現状に満足するな｣</em>
-                      をモットーとしています。
+                      <p>
+                        <em>｢変化を恐れず、現状に満足するな｣</em>
+                        をモットーとしています。
+                      </p>
                     </motion.dd>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -631,10 +825,12 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <em>
-                        地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、｢見たことも無い、想像もできなかった場所へ行ける｣
-                      </em>
-                      と私は信じています。
+                      <p>
+                        <em>
+                          地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、｢見たことも無い、想像もできなかった場所へ行ける｣
+                        </em>
+                        と私は信じています。
+                      </p>
                     </motion.dd>
                   </div>
                 </dl>
