@@ -19,7 +19,7 @@ https://aoyamadev.com
 
 開発構成図を、HTMLインフォグラフィックで表現しました。
 
-[開発構成図（HTMLインフォグラフィック）](https://hashiramaendure.github.io/portfolio-development-configuration-diagram/)
+[開発構成図（HTMLインフォグラフィック）](https://camoneart.github.io/portfolio-development-configuration-diagram/)
 
 <h2 id="technology-used">使用技術</h2>
 

@@ -261,21 +261,21 @@ export const worksData: WorksData[] = [
     image: "/images/works/work06.jpg",
     workTitle: "Maestro",
     cardDesc:
-      '"オーケストレーション(Git Worktree)" で、Claude Codeとのパラレル開発を効率化するツールです。',
+      '"Git Worktreeを活用した「オーケストラ開発」で、Claude Codeとのパラレル開発を飛躍的に効率化するCLIツールです。',
     description:
-      '"オーケストレーション(Git Worktree)" で、Claude Codeとのパラレル開発を効率化するツールです。',
+      '"Git Worktreeを活用した「オーケストラ開発」で、Claude Codeとのパラレル開発を飛躍的に効率化するCLIツールです。',
     detail01:
-      "　複数機能を同時開発できる“影分身”フローで、ブランチ切り替えの時間をゼロにします。",
+      "　複数のブランチで並行作業を行う際に、ディレクトリを切り替えることなく、各ブランチを独立した「演奏者」として扱うことができます。",
     detail02:
       "　worktreeを自動管理することで、stashやコンフリクトのストレスから解放され、開発に集中できます。",
     detail03:
       "　CLI 1つで作成・削除・同期が完結。複雑なGitコマンドを覚える必要がありません。",
     detail04:
-      "　Claude Codeと連携し、分身ブランチごとにAIペアプロをワンコマンドで開始できます。",
+      "　Claude Codeと連携し、演奏者ごとにAI駆動開発をワンコマンドで開始できます。",
     detail05:
-      "　tmux / fzf 統合でターミナルから直感的に分身を切り替え、パラレル開発の効率が向上します。",
+      "　tmux / fzf 統合でターミナルから直感的に演奏者を切り替え、パラレル開発の効率が向上します。",
     detail06:
-      "　ダッシュボード & ASCII グラフで全分身の状態を可視化。迷子にならず俯瞰して管理できます。",
+      "　ダッシュボード & ASCII グラフで全演奏者の状態を可視化。迷子にならず俯瞰して管理できます。",
     detail07:
       "　自動同期とスナップショットで安全網を張り、大胆なリファクタリングや実験を後押しします。",
     detail08:
@@ -295,12 +295,12 @@ export const worksData: WorksData[] = [
     detail15:
       "　カラー表示とスピナーが長時間処理のストレスを軽減。快適なCLI体験を実現。",
     detail16:
-      "　MITライセンスのオープンソース。コミュニティと共に進化する “忍術” です。",
+      "　MITライセンスのオープンソース。コミュニティと共に進化する「オーケストレーション」ツールです。",
     accessDescription: "",
     labels: [{ no: "Card No.", value: "006/006" }],
     skillsList:
       "TypeScript, Commander, simple-git, Execa, Inquirer, Chalk, Ora, Zod, tsup, Vitest",
-    siteUrl: "https://github.com/hashiramaendure/maestro",
+    siteUrl: "https://github.com/camoneart/maestro",
     role: "Design, Coding",
     viewTransitionName: "view-transition-title-work-6",
     viewTransitionImage: "view-transition-img-work-6",

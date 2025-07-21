@@ -7,7 +7,7 @@
   "homepage": "https://aoyama.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hashiramaendure/portfolio-site"
+    "url": "https://github.com/camoneart/portfolio-site"
   },
   "packageManager": "pnpm@10.11.1",
   "scripts": {

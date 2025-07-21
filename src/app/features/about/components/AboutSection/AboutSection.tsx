@@ -174,7 +174,7 @@ const AboutSection = () => {
                           }}
                           className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                         >
-                          hashirama
+                          camone
                         </motion.dd>
                       </div>
                     </div>
@@ -235,7 +235,7 @@ const AboutSection = () => {
                       className={styles["about-sns-item"]}
                     >
                       <Link
-                        href={"https://github.com/hashiramaendure"}
+                        href={"https://github.com/camoneart"}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles["about-sns-link"]}
@@ -279,7 +279,7 @@ const AboutSection = () => {
                       }}
                     >
                       <Link
-                        href={"https://x.com/hashiramaendure"}
+                        href={"https://x.com/camoneart"}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles["about-sns-link"]}
@@ -323,7 +323,7 @@ const AboutSection = () => {
                       }}
                     >
                       <Link
-                        href={"https://zenn.dev/hashiramaendure"}
+                        href={"https://zenn.dev/camoneart"}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles["about-sns-link"]}
