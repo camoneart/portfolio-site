@@ -213,9 +213,9 @@ export const worksData: WorksData[] = [
     image: "/images/works/work05.jpg",
     workTitle: "OUTPUT QUEST　叡智の継承者",
     cardDesc:
-      '私が開発したWebアプリです。ゲーミフィケーションを取り入れた "RPG風の新感覚学習アプリ" になっています。',
+      'ゲーミフィケーションを取り入れた "RPG風学習支援アプリ" です。勇者と共に学びの冒険に旅立ちましょう。',
     description:
-      '私が開発したWebアプリです。ゲーミフィケーションを取り入れた "RPG風の新感覚学習アプリ" で、Zennで記事を投稿することでアプリ内の「勇者」が成長し、アイテムの入手、称号の獲得、仲間との出会いがあなたを待っています。アウトプットを通じて学習意欲や知的好奇心を高め、楽しみながら自己成長を促すことを目的に開発しました。',
+      '私が開発したWebアプリです。ゲーミフィケーションを取り入れた "RPG風学習支援アプリ" で、Zennで記事を投稿することでアプリ内の「勇者」が成長し、アイテムの入手、称号の獲得、仲間との出会いがあなたを待っています。アウトプットを通じて学習意欲や知的好奇心を高め、楽しみながら自己成長を促すことを目的に開発しました。',
     detail01:
       "　このWebアプリはNext.js + CSS Modules + Tailwind CSS + TypeScriptで開発し、デプロイはVercelで行いました。",
     detail02:
@@ -261,9 +261,9 @@ export const worksData: WorksData[] = [
     image: "/images/works/work06.jpg",
     workTitle: "Maestro",
     cardDesc:
-      '"Git worktreeを活用した「オーケストラ開発」で、Claude Codeとのパラレル開発を飛躍的に効率化するCLIツールです。',
+      "Git worktreeを活用した「オーケストラ開発」で、Claude Codeとのパラレル開発を飛躍的に効率化するCLIツールです。",
     description:
-      '"Git worktreeを活用した「オーケストラ開発」で、Claude Codeとのパラレル開発を飛躍的に効率化するCLIツールです。',
+      "Git worktreeを活用した「オーケストラ開発」で、Claude Codeとのパラレル開発を飛躍的に効率化するCLIツールです。",
     detail01:
       "　複数のブランチで並行作業を行う際に、ディレクトリを切り替えることなく、各ブランチを独立した「演奏者」として扱うことができます。",
     detail02:
