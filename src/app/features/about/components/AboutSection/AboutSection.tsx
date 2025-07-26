@@ -492,23 +492,6 @@ const AboutSection = () => {
                         を開発しました。
                       </p>
                     </motion.dd>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
-                      <p>
-                        最近は、「Obsidian × Cursor によるメモ管理（知的生産）」
-                        に興味を持っています。 AI時代において、
-                        <em>ノウハウの蓄積</em>と<em>生成AIへのインプット</em>
-                        は今後ますます重要になると考えています。
-                      </p>
-                    </motion.dd>
                   </div>
 
                   <div className={styles["about-content-group"]}>
