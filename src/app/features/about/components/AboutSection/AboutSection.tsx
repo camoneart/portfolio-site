@@ -485,9 +485,9 @@ const AboutSection = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            &quot;OUTPUT QUEST　叡智の継承者&quot;
+                            &quot;OUTPUT QUEST 叡智の継承者&quot;
                           </Link>{" "}
-                          という &quot;RPG風学習支援アプリ&quot;
+                          というRPG風学習支援アプリ
                         </em>{" "}
                         を開発しました。
                       </p>
