@@ -265,41 +265,41 @@ export const worksData: WorksData[] = [
     description:
       "Git worktreeを活用した「オーケストラ開発」で、Claude Codeとのパラレル開発を飛躍的に効率化するCLIツールです。",
     detail01:
-      "　複数のブランチで並行作業を行う際に、ディレクトリを切り替えることなく、各ブランチを独立した「演奏者」として扱うことができます。",
+      "　Git worktreeを「オーケストラメンバー」として管理。各ブランチが独立したディレクトリで並行作業でき、stashやブランチ切り替えのストレスから解放されます。",
     detail02:
-      "　worktreeを自動管理することで、stashやコンフリクトのストレスから解放され、開発に集中できます。",
+      "　`mst create feature/auth`一発で新しいworktreeを作成。`--tmux`で専用セッション、`--setup`で環境構築、`--open`でエディタ起動も同時に実行可能。",
     detail03:
-      "　CLI 1つで作成・削除・同期が完結。複雑なGitコマンドを覚える必要がありません。",
+      "　MCP (Model Context Protocol)サーバーを内蔵し、Claude CodeからMaestroの機能を直接操作。`mst mcp serve`で起動し、AIとの統合開発を実現。",
     detail04:
-      "　Claude Codeと連携し、演奏者ごとにAI駆動開発をワンコマンドで開始できます。",
+      "　`--claude-md`オプションでCLAUDE.mdファイルの管理モードを制御。共有モード（シンボリックリンク）と分割モード（独立ファイル）を選択可能。",
     detail05:
-      "　tmux / fzf 統合でターミナルから直感的に演奏者を切り替え、パラレル開発の効率が向上します。",
+      "　GitHub Issue/PR連携で`mst create 123`のように番号を指定するだけで、タイトルやラベル情報を自動取得してブランチ名を生成。",
     detail06:
-      "　ダッシュボード & ASCII グラフで全演奏者の状態を可視化。迷子にならず俯瞰して管理できます。",
+      "　`mst sync --all`で全worktreeを最新のmainブランチに同期。`--rebase`オプションでrebaseも選択でき、コンフリクトを未然に防止。",
     detail07:
-      "　自動同期とスナップショットで安全網を張り、大胆なリファクタリングや実験を後押しします。",
+      "　`mst exec --all npm test`で全worktreeで一括コマンド実行。並列実行数も`--concurrency`で制御でき、CI/CDとの連携も容易。",
     detail08:
-      "　`health`コマンドがリモート乖離やディスク容量不足を検知し、トラブルを未然に防止します。",
+      "　`mst push --pr`で現在のブランチをpushしつつPRを作成。`--draft-pr`でドラフトPR、`--all`で全worktreeのPR作成も可能。",
     detail09:
-      "　`review` / `suggest`コマンドでAIレビューと改善提案を即取得し、品質向上を自動化。",
+      "　`mst list`で全worktreeの状態を一覧表示。`--last-commit`で最終コミット、`--metadata`でGitHub連携情報も確認可能。",
     detail10:
-      "　`graph`コマンドでブランチ構造を一目で把握し、オンボーディングもスムーズです。",
+      "　tmuxとの深い統合。`--tmux-h`で水平分割、`--tmux-v`で垂直分割でworktreeを開き、セッション管理も自動化。",
     detail11:
-      "　GitHub連携により Draft PR作成から自動マージフローまで一括実行し、リリースを高速化。",
+      "　`mst snapshot`で現在の作業状態を保存。メッセージ付きで履歴管理し、`--restore`でいつでも過去の状態に復元可能。",
     detail12:
-      "　設定は JSON 1ファイル、対話UIで初学者でもすぐに生産性を向上できます。",
+      "　`mst health`でworktreeの健全性をチェック。孤立したworktreeの検出、ディスク容量警告、`--fix`での自動修復機能を提供。",
     detail13:
-      "　TypeScript製の柔軟な設計で、チームの開発文化に合わせたカスタマイズが容易です。",
+      "　`mst graph`でworktree間の関係をMermaid図やDOT形式で可視化。循環参照の自動検出・解決機能も搭載。",
     detail14:
-      "　シングルバイナリ配布で `pnpm dlx` から即起動。グローバルインストール不要です。",
+      "　`.maestro.json`で開発フローをカスタマイズ。postCreateフック、自動セットアップ、ファイル同期などチーム固有の設定が可能。",
     detail15:
-      "　カラー表示とスピナーが長時間処理のストレスを軽減。快適なCLI体験を実現。",
+      "　`mst completion bash/zsh/fish`でシェル補完を生成。Homebrewインストールなら自動設定され、タブ補完で効率的な操作を実現。",
     detail16:
-      "　MITライセンスのオープンソース。コミュニティと共に進化する「オーケストレーション」ツールです。",
+      "　Node.js 20以上で動作し、npm/pnpm/Homebrewでインストール可能。`maestro`と`mst`の両方のコマンドで呼び出せる柔軟な設計。",
     accessDescription: "",
     labels: [{ no: "Card No.", value: "006/006" }],
     skillsList:
-      "TypeScript, Commander, simple-git, Execa, Inquirer, Chalk, Ora, Zod, tsup, Vitest",
+      "TypeScript, commander, simple-git, execa, inquirer, chalk, ora, zod, cli-progress, chokidar, conf, p-limit, open, @modelcontextprotocol/sdk, tsup, vitest",
     siteUrl: "https://github.com/camoneart/maestro",
     role: "Design, Coding",
     viewTransitionName: "view-transition-title-work-6",
