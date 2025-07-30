@@ -423,17 +423,6 @@ const AboutSection = () => {
                       <p>
                         そんな想いから、知的好奇心を原動力に日々キャッチアップと学習に励んでいます。興味を持った技術はコードを書いて挙動を検証することで、理解を深めるようにしています。
                       </p>
-                    </motion.dd>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
                       <p>
                         現在の主な注力：「Next.js（App
                         Router）」「TypeScript」「LLM・Generative
