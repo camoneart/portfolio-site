@@ -32,6 +32,47 @@ const useMousePosition = () => {
 const useInteractiveElementHover = () => {
   const [isHovering, setIsHovering] = useState(false);
 
+  // ページ遷移時にホバー状態をリセット
+  useEffect(() => {
+    const resetHoverState = () => {
+      setIsHovering(false);
+    };
+
+    // ページの可視性が変わった時にリセット
+    document.addEventListener("visibilitychange", resetHoverState);
+    // フォーカスが戻った時にリセット
+    window.addEventListener("focus", resetHoverState);
+    // ページ遷移を検知してリセット（Next.jsのクライアントサイド遷移対応）
+    const handleRouteChange = () => {
+      resetHoverState();
+    };
+
+    // Next.jsのページ遷移イベントをリスン
+    window.addEventListener("popstate", handleRouteChange);
+
+    // URLの変更を監視（pushState/replaceState対応）
+    const originalPushState = history.pushState;
+    const originalReplaceState = history.replaceState;
+
+    history.pushState = function (...args) {
+      originalPushState.apply(history, args);
+      resetHoverState();
+    };
+
+    history.replaceState = function (...args) {
+      originalReplaceState.apply(history, args);
+      resetHoverState();
+    };
+
+    return () => {
+      document.removeEventListener("visibilitychange", resetHoverState);
+      window.removeEventListener("focus", resetHoverState);
+      window.removeEventListener("popstate", handleRouteChange);
+      history.pushState = originalPushState;
+      history.replaceState = originalReplaceState;
+    };
+  }, []);
+
   // インタラクティブ要素判定ロジックをメモ化
   const isInteractiveElement = useCallback((element: HTMLElement): boolean => {
     const tagName = element.tagName.toLowerCase();
@@ -84,11 +125,21 @@ const MouseStalker = memo(() => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
+    // 初回訪問チェック
+    const hasVisited = sessionStorage.getItem("mouseStalkerVisited");
 
-    return () => clearTimeout(timer);
+    if (hasVisited) {
+      // 2回目以降は即座に表示
+      setIsVisible(true);
+    } else {
+      // 初回訪問時のみ5秒遅延
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+        sessionStorage.setItem("mouseStalkerVisited", "true");
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   // spring設定オブジェクトをメモ化
