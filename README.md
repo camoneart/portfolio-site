@@ -76,12 +76,14 @@ https://aoyamadev.com
 portfolio/
 ├── public/                         # 静的ファイル
 │   ├── audio/                      # 音声ファイル
-│   ├── gif/                        # アニメーション画像ファイル
-│   └── images/                     # 画像ファイル
-│       ├── about/                  # アバウトページ用画像
-│       ├── contact/                # お問い合わせページ用画像
-│       ├── skills/                 # スキル一覧ページ用画像
-│       └── works/                  # 制作実績ページ用画像
+│   ├── images/                     # 画像ファイル
+│   │   ├── about/                  # アバウトページ用画像
+│   │   ├── contact/                # お問い合わせページ用画像
+│   │   ├── gifs/                   # アニメーション画像ファイル
+│   │   ├── skills/                 # スキル一覧ページ用画像
+│   │   ├── thumbnails/             # サムネイル用画像
+│   │   └── works/                  # 制作実績ページ用画像
+│   └── videos/                     # 動画ファイル
 ├── src/
 │   ├── app/                        # ルートディレクトリ（ルーティング管理）
 │   │   ├── about/                  # アバウトページ
@@ -140,8 +142,8 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「これまでの学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」や「ストーリー」を視覚的に表現しています。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/top-page.jpg">
-  <source src="./public/videos/top-page.mp4" type="video/mp4">
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/top-page.jpg?raw=1">
+  <source src="./public/videos/top-page.mp4?raw=1" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -149,8 +151,8 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/about-page.jpg">
-  <source src="./public/videos/about-page.mp4" type="video/mp4">
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/about-page.jpg?raw=1">
+  <source src="./public/videos/about-page.mp4?raw=1" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -158,8 +160,8 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 私が独学で培ったWeb開発に必要なスキルセットを一覧形式で紹介しています。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/skills-page.jpg">
-  <source src="./public/videos/skills-page.mp4" type="video/mp4">
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/skills-page.jpg?raw=1">
+  <source src="./public/videos/skills-page.mp4?raw=1" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -168,8 +170,8 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 私がこれまでに制作した作品を一覧で紹介しています。<br />
 作品カードをクリックすることで、作品の詳細を確認できます。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/works-page.jpg">
-  <source src="./public/videos/works-page.mp4" type="video/mp4">
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/works-page.jpg?raw=1">
+  <source src="./public/videos/works-page.mp4?raw=1" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -177,8 +179,8 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/contact-page.jpg">
-  <source src="./public/videos/contact-page.mp4" type="video/mp4">
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/contact-page.jpg?raw=1">
+  <source src="./public/videos/contact-page.mp4?raw=1" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
