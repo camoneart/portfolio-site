@@ -76,14 +76,12 @@ https://aoyamadev.com
 portfolio/
 ├── public/                         # 静的ファイル
 │   ├── audio/                      # 音声ファイル
-│   ├── images/                     # 画像ファイル
-│   │   ├── about/                  # アバウトページ用画像
-│   │   ├── contact/                # お問い合わせページ用画像
-│   │   ├── gifs/                   # アニメーション画像ファイル
-│   │   ├── skills/                 # スキル一覧ページ用画像
-│   │   ├── thumbnails/             # サムネイル用画像
-│   │   └── works/                  # 制作実績ページ用画像
-│   └── videos/                     # 動画ファイル
+│   └── images/                     # 画像ファイル
+│       ├── about/                  # アバウトページ用画像
+│       ├── contact/                # お問い合わせページ用画像
+│       ├── gifs/                   # アニメーション画像ファイル
+│       ├── skills/                 # スキル一覧ページ用画像
+│       └── works/                  # 制作実績ページ用画像
 ├── src/
 │   ├── app/                        # ルートディレクトリ（ルーティング管理）
 │   │   ├── about/                  # アバウトページ
@@ -165,9 +163,9 @@ https://github.com/user-attachments/assets/49f73287-2748-4893-99a5-3600cfc2de17
 
 ### **お問い合わせページ**
 
-このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
+https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
 
-https://github.com/user-attachments/assets/24fe2946-d0a1-4a92-8935-1c59b87bec51
+このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
 
 <h2 id="feature-introduction">機能紹介</h2>
 
