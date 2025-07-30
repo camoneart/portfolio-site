@@ -1,6 +1,6 @@
 # aoyama｜Creative Developer
 
-![トップページ](public/gif/readme/portfolio-top-page.gif)
+![トップページ](public/images/gifs/top-page.gif)
 
 ポートフォリオサイトは以下からアクセスできます。
 
@@ -140,37 +140,47 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「これまでの学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」や「ストーリー」を視覚的に表現しています。
 
-![トップページ](/public/gif/readme/portfolio-top-page.gif)
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/top-page.jpg">
+  <source src="./public/videos/top-page.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### **アバウトページ**
 
 私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
 
-![アバウトページ](/public/gif/readme/portfolio-about-page.gif)
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/about-page.jpg">
+  <source src="./public/videos/about-page.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### **スキルページ**
 
 私が独学で培ったWeb開発に必要なスキルセットを一覧形式で紹介しています。
 
-![スキルページ](/public/gif/readme/portfolio-skills-page.gif)
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/skills-page.jpg">
+  <source src="./public/videos/skills-page.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### **制作実績ページ**
 
-私がこれまでに制作した作品を一覧で紹介しています。
+私がこれまでに制作した作品を一覧で紹介しています。<br />
+作品カードをクリックすることで、作品の詳細を確認できます。
 
-![制作実績ページ](/public/gif/readme/portfolio-works-page.gif)
-
-### **作品ページ**
-
-私が制作した作品の詳細を確認できます。
-
-![作品ページ](/public/gif/readme/portfolio-work-detail-page.gif)
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/works-page.jpg">
+  <source src="./public/videos/works-page.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### **お問い合わせページ**
 
 このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
 
-![お問い合わせページ](/public/gif/readme/portfolio-contact-page.gif)
+<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/contact-page.jpg">
+  <source src="./public/videos/contact-page.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 <h2 id="feature-introduction">機能紹介</h2>
 
