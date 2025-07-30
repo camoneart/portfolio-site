@@ -142,42 +142,32 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで制作し、デプロイはV
 
 トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「これまでの学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」や「ストーリー」を視覚的に表現しています。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/top-page.jpg?raw=1" src="./public/videos/top-page.mp4?raw=1">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/fc0ae32c-1878-4b6d-8b65-3659f0c89f4d
 
 ### **アバウトページ**
 
 私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/about-page.jpg?raw=1" src="./public/videos/about-page.mp4?raw=1">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/3245ec3f-7913-40e1-b6fe-45fc9828438e
 
 ### **スキルページ**
 
 私が独学で培ったWeb開発に必要なスキルセットを一覧形式で紹介しています。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/skills-page.jpg?raw=1" src="./public/videos/skills-page.mp4?raw=1">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/a7654848-143e-4573-9164-ab02b2bf1df4
 
 ### **制作実績ページ**
 
 私がこれまでに制作した作品を一覧で紹介しています。<br />
 作品カードをクリックすることで、作品の詳細を確認できます。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/works-page.jpg?raw=1" src="./public/videos/works-page.mp4?raw=1">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/49f73287-2748-4893-99a5-3600cfc2de17
 
 ### **お問い合わせページ**
 
 このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
 
-<video controls playsinline muted width="720" preload="metadata" poster="./public/images/thumbnails/contact-page.jpg?raw=1" src="./public/videos/contact-page.mp4?raw=1">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/24fe2946-d0a1-4a92-8935-1c59b87bec51
 
 <h2 id="feature-introduction">機能紹介</h2>
 
