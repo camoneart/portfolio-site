@@ -299,7 +299,7 @@ export const worksData: WorksData[] = [
     accessDescription: "",
     labels: [{ no: "Card No.", value: "006/006" }],
     skillsList:
-      "TypeScript, commander, simple-git, execa, inquirer, chalk, ora, zod, cli-progress, chokidar, conf, p-limit, open, @modelcontextprotocol/sdk, tsup, vitest",
+      "TypeScript, commander, simple-git, execa, inquirer, chalk, ora, zod, cli-progress, chokidar, conf, p-limit, open, modelcontextprotocol/sdk, tsup, vitest",
     siteUrl: "https://github.com/camoneart/maestro",
     role: "Design, Coding",
     viewTransitionName: "view-transition-title-work-6",
