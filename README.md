@@ -146,7 +146,7 @@ https://github.com/user-attachments/assets/fc0ae32c-1878-4b6d-8b65-3659f0c89f4d
 
 私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
 
-https://github.com/user-attachments/assets/3245ec3f-7913-40e1-b6fe-45fc9828438e
+https://github.com/user-attachments/assets/a059b5cd-b38a-42b0-a683-5ecdd3e430c3
 
 ### **スキルページ**
 
