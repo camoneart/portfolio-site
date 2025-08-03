@@ -109,9 +109,14 @@
 }
 
 .about-profile-img {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 6px;
+
+  @media (width < 1024px) {
+    width: 150px;
+    height: 150px;
+  }
 
   @media (width < 768px) {
     width: 120px;

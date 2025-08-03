@@ -89,8 +89,8 @@ const AboutSection = () => {
                       <Image
                         src={"/images/about/profile/profile-img.jpg"}
                         alt="プロフィール画像"
-                        width={155}
-                        height={155}
+                        width={170}
+                        height={170}
                         className={styles["about-profile-img"]}
                       />
                     </motion.div>
