@@ -261,9 +261,9 @@ export const worksData: WorksData[] = [
     image: "/images/works/work06.jpg",
     workTitle: "Maestro",
     cardDesc:
-      "Git worktreeを活用した「オーケストラ開発」で、Claude Codeとのパラレル開発を飛躍的に効率化するCLIツールです。",
+      'Git worktreeを "オーケストラ" のように指揮し、Claude Codeとの並列開発を加速させるCLIツール',
     description:
-      "Git worktreeを活用した「オーケストラ開発」で、Claude Codeとのパラレル開発を飛躍的に効率化するCLIツールです。",
+      'Git worktreeを "オーケストラ" のように指揮し、Claude Codeとの並列開発を加速させるCLIツール',
     detail01:
       "　Git worktreeを「オーケストラメンバー」として管理。各ブランチが独立したディレクトリで並行作業でき、stashやブランチ切り替えのストレスから解放されます。",
     detail02:
