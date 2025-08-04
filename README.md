@@ -146,7 +146,7 @@ https://github.com/user-attachments/assets/fc0ae32c-1878-4b6d-8b65-3659f0c89f4d
 
 私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
 
-https://github.com/user-attachments/assets/a059b5cd-b38a-42b0-a683-5ecdd3e430c3
+https://github.com/user-attachments/assets/005dbbeb-a4f6-40f7-9a9d-7dd3f849b42f
 
 ### **スキルページ**
 
@@ -159,7 +159,7 @@ https://github.com/user-attachments/assets/a7654848-143e-4573-9164-ab02b2bf1df4
 私がこれまでに制作した作品を一覧で紹介しています。<br />
 作品カードをクリックすることで、作品の詳細を確認できます。
 
-https://github.com/user-attachments/assets/49f73287-2748-4893-99a5-3600cfc2de17
+https://github.com/user-attachments/assets/19ff0d0a-576f-4ba2-a8d5-0ec45e22723c
 
 ### **お問い合わせページ**
 
