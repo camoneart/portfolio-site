@@ -18,6 +18,6 @@ export async function generateWorkMetadata({
 
   return {
     title: `${workData.workTitle}`,
-    description: `このページでは、制作実績：「${workData.workTitle}」の詳細についてご覧いただけます。`,
+    description: `このページでは、Kaishu Aoyamaの作品：「${workData.workTitle}」の詳細についてご覧いただけます。`,
   };
 }
