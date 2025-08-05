@@ -290,11 +290,7 @@
 }
 
 .work__detail-container {
-  margin-block-start: 15px;
-
-  @media (width < 640px) {
-    margin-block-start: 15px;
-  }
+  margin-block-start: 20px;
 }
 
 .work__detail-content {
