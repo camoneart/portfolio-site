@@ -296,7 +296,7 @@
 .work__detail-content {
   display: block grid;
   grid-template-columns: auto;
-  row-gap: 10px;
+  row-gap: 15px;
 }
 
 .work__detail-content-inner {
@@ -311,7 +311,6 @@
   font-weight: var(--font-weight-normal);
   line-height: var(--leading-normal);
   text-wrap: pretty;
-  word-break: auto-phrase;
 
   & p {
     display: inline-block;
@@ -328,10 +327,10 @@
     font-size: 0.75rem;
     line-height: var(--leading-none);
     background-color: var(--code-bg-color);
-    padding-block: 4.5px 4px;
+    padding-block: 3px;
     padding-inline: 6px 4px;
     margin-inline: 2px;
-    border-radius: 5px;
+    border-radius: 3px;
   }
 }
 
