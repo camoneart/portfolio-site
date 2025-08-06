@@ -421,10 +421,10 @@ const AboutSection = () => {
                         </em>
                       </p>
                       <p>
-                        そんな想いから、知的好奇心を原動力に日々キャッチアップと学習に励んでいます。興味を持った技術はコードを書いて挙動を検証することで、理解を深めるようにしています。
+                        そんな想いから、知的好奇心を原動力に日々キャッチアップと学習に取り組んでいます。興味を持った技術はコードを書いて挙動を検証することで、理解を深めるようにしています。
                       </p>
                       <p>
-                        現在の主な注力：「Next.js（App
+                        <em>現在の主な注力</em>：「Next.js（App
                         Router）」「TypeScript」「LLM・Generative
                         AI」「Interaction / Animation」「UI / UX」
                       </p>
@@ -457,28 +457,35 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        私は日々、自己成長を目的にWeb開発とAIの学習に取り組んでいます。
-                      </p>
-                      <p>
-                        キャッチアップとアウトプットを続ける中で、
+                        私は日々、自己成長を目的としたキャッチアップとアウトプットを続けていく中で、
                         <em>&quot;継続すること&quot;</em>{" "}
                         の大切さを改めて実感し、
                         <em>
                           &quot;学ぶ&quot; という行為を楽しみながら継続したい
                         </em>{" "}
                         という思いが芽生えました。
-                        そこで、その課題を解決するために、
+                        そこで、その課題解決のために、
+                      </p>
+                      <p>
+                        <Link
+                          href="https://outputquest.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles["about-product-link"]}
+                        >
+                          &quot;OUTPUT QUEST 叡智の継承者&quot;
+                        </Link>{" "}
+                        というRPG風学習支援アプリを開発しました。
+                      </p>
+                      <p>
+                        コンセプトは
                         <em>
-                          <Link
-                            href="https://outputquest.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            &quot;OUTPUT QUEST 叡智の継承者&quot;
-                          </Link>{" "}
-                          というRPG風学習支援アプリ
-                        </em>{" "}
-                        を開発しました。
+                          &quot;アウトプットを学びの冒険に変える。RPG風学習支援アプリ&quot;
+                        </em>
+                        です。
+                      </p>
+                      <p>
+                        ゲーミフィケーションを取り入れたRPG風学習支援アプリになっています。
                       </p>
                     </motion.dd>
                   </div>
@@ -521,13 +528,8 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        特に好きな映画は、<em>アメイジング・スパイダーマン</em>,{" "}
-                        <em>フォレスト・ガンプ</em>,{" "}
-                        <em>ショーシャンクの空に</em>, <em>イコライザー</em>,{" "}
-                        <em>最強のふたり</em>, <em>幸せのちから</em>,{" "}
-                        <em>ドリームプラン</em>, <em>マイ・インターン</em>,{" "}
-                        <em>素晴らしきかな、人生</em>, <em>ターミナル</em>,{" "}
-                        <em>イエスタデイ</em> etc...です。
+                        <em>特に好きな映画</em>
+                        ：「アメイジング・スパイダーマン」「フォレスト・ガンプ」「ショーシャンクの空に」「イコライザー」「最強のふたり」「幸せのちから」「ドリームプラン」「マイ・インターン」「素晴らしきかな、人生」「ターミナル」「イエスタデイ」etc...
                       </p>
                     </motion.dd>
                   </div>
@@ -671,7 +673,7 @@ const AboutSection = () => {
                         <em>Claude Code</em>, <em>Vibe Coding</em>
                         に注力しています。 また、Web開発やAIに関する技術記事を{" "}
                         <Link
-                          href="https://zenn.dev/aoyamadev"
+                          href="https://zenn.dev/camoneart"
                           className={styles["about-zenn-link"]}
                           target="_blank"
                           rel="noopener noreferrer"
