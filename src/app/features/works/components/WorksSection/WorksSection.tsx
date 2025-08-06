@@ -265,37 +265,29 @@ export const worksData: WorksData[] = [
     description:
       'Git worktreeを "オーケストラ" のように指揮し、Claude Codeとの並列開発を加速させるCLIツール',
     detail01:
-      "　Git worktreeを「オーケストラメンバー」として管理。各ブランチが独立したディレクトリで並行作業でき、stashやブランチ切り替えのストレスから解放されます。",
+      '　Maestroは "指揮者" として機能し、各worktreeを "オーケストラ演奏者" のように操り、Claude Code × Git worktreeによる並列開発の効率化を実現します。',
     detail02:
-      "　`mst create feature/auth`一発で新しいworktreeを作成。`--tmux`で専用セッション、`--setup`で環境構築、`--open`でエディタ起動も同時に実行可能。",
+      "　「指揮するだけ、すべてが調和する」— これがMaestroの設計思想。Git、tmux、GitHub、Claude Codeなど既存ツールを統合し、開発者の認知負荷を最小化、創造性を最大化します。",
     detail03:
-      "　MCP (Model Context Protocol)サーバーを内蔵し、Claude CodeからMaestroの機能を直接操作。`mst mcp serve`で起動し、AIとの統合開発を実現。",
+      "　MaestroはMCPサーバーとしても機能します。「mstでissue123のブランチを作成して、Cursorで開いて」などの自然言語で指示することで、Claude CodeがMaestroを操る新しい開発体験を提供します。",
     detail04:
-      "　`--claude-md`オプションでCLAUDE.mdファイルの管理モードを制御。共有モード（シンボリックリンク）と分割モード（独立ファイル）を選択可能。",
+      "　`mst create 123 --tmux --claude-md`：GitHub Issue/PRからブランチとworktreeを作成し、専用のtmuxセッション内で開発環境を構築。CLAUDE.mdのシンボリックリンクを作成し全てのworktreeで同じCLAUDE.mdを共有。Claude Codeとの連携準備が整い、コンテキストスイッチのコストを最小化します。",
     detail05:
-      "　GitHub Issue/PR連携で`mst create 123`のように番号を指定するだけで、タイトルやラベル情報を自動取得してブランチ名を生成。",
+      "　`mst github issue 123 -o`：Issue番号からブランチとworktreeを自動作成、`.maestro.json：development.defaultEditor`に設定したIDEでworktreeを自動で開きます。開発環境への移行がシームレスに。",
     detail06:
-      "　`mst sync --all`で全worktreeを最新のmainブランチに同期。`--rebase`オプションでrebaseも選択でき、コンフリクトを未然に防止。",
-    detail07:
-      "　`mst exec --all npm test`で全worktreeで一括コマンド実行。並列実行数も`--concurrency`で制御でき、CI/CDとの連携も容易。",
-    detail08:
-      "　`mst push --pr`で現在のブランチをpushしつつPRを作成。`--draft-pr`でドラフトPR、`--all`で全worktreeのPR作成も可能。",
+      "　`mst tmux`：`fzf`による高速切り替え、`--tmux-h-panes 4`オプションで瞬時にtmuxセッションを4分割レイアウトに構築。各ペインにブランチ名が表示され、並列作業を視覚的に管理することで効率的な開発環境を実現します。",
+    detail07: "　`mst list`：ローカルのworktreeを一覧表示できます。",
+    detail08: "　`mst github list`：GitHub上のIssue/PRを一覧表示できます。",
     detail09:
-      "　`mst list`で全worktreeの状態を一覧表示。`--last-commit`で最終コミット、`--metadata`でGitHub連携情報も確認可能。",
+      "　`mst where --current`：現在のworktreeを確認することができます。",
     detail10:
-      "　tmuxとの深い統合。`--tmux-h`で水平分割、`--tmux-v`で垂直分割でworktreeを開き、セッション管理も自動化。",
+      "　`mst list --last-commit`や`mst list --metadata`で、各演奏者(worktree)の活動状況の詳細を把握できます。",
     detail11:
-      "　`mst snapshot`で現在の作業状態を保存。メッセージ付きで履歴管理し、`--restore`でいつでも過去の状態に復元可能。",
+      "　`mst snapshot`で作業状態を完全保存。実験的な変更の前にスナップショットを作成し、失敗したら即座に復元。git stashよりも直感的で、メッセージ付きで履歴管理が可能です。",
     detail12:
-      "　`mst health`でworktreeの健全性をチェック。孤立したworktreeの検出、ディスク容量警告、`--fix`での自動修復機能を提供。",
+      "　`.maestro.json`でプロジェクトごとに挙動をカスタマイズ可能です。worktreeの保存先、自動セットアップコマンド、同期ファイル、ライフサイクルフック、tmux/GitHub/Claude連携などの柔軟な設定に加え、`postCreate`フックで環境構築の自動化が可能です。",
     detail13:
-      "　`mst graph`でworktree間の関係をMermaid図やDOT形式で可視化。循環参照の自動検出・解決機能も搭載。",
-    detail14:
-      "　`.maestro.json`で開発フローをカスタマイズ。postCreateフック、自動セットアップ、ファイル同期などチーム固有の設定が可能。",
-    detail15:
-      "　`mst completion bash/zsh/fish`でシェル補完を生成。Homebrewインストールなら自動設定され、タブ補完で効率的な操作を実現。",
-    detail16:
-      "　Node.js 20以上で動作し、npm/pnpm/Homebrewでインストール可能。`maestro`と`mst`の両方のコマンドで呼び出せる柔軟な設計。",
+      "　必要なのはNode.js 20以上のみです。`brew install camoneart/tap/maestro`または`npm install -g @camoneart/maestro`または`pnpm add -g @camoneart/maestro`ですぐにインストールできます。",
     accessDescription: "",
     labels: [{ no: "Card No.", value: "006/006" }],
     skillsList:
