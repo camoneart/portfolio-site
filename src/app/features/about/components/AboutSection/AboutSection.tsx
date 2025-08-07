@@ -461,12 +461,14 @@ const AboutSection = () => {
                         <em>&quot;継続すること&quot;</em>{" "}
                         の大切さを改めて実感し、
                         <em>
-                          &quot;学ぶ&quot; という行為を楽しみながら継続したい
+                          &quot;学ぶ&quot; という行為そのものを
+                          &quot;楽しい体験&quot;
+                          に変えられたら、継続に繋がるよな。
                         </em>{" "}
                         という思いが芽生えました。
-                        そこで、その課題解決のために、
                       </p>
                       <p>
+                        この課題解決のために、私は{" "}
                         <Link
                           href="https://outputquest.com"
                           target="_blank"
@@ -475,17 +477,67 @@ const AboutSection = () => {
                         >
                           &quot;OUTPUT QUEST 叡智の継承者&quot;
                         </Link>{" "}
-                        というRPG風学習支援アプリを開発しました。
+                        というWebアプリを開発しました。
                       </p>
                       <p>
-                        コンセプトは
+                        コンセプトは{" "}
                         <em>
                           &quot;アウトプットを学びの冒険に変える。RPG風学習支援アプリ&quot;
-                        </em>
+                        </em>{" "}
                         です。
                       </p>
                       <p>
-                        ゲーミフィケーションを取り入れたRPG風学習支援アプリになっています。
+                        <em>RPG風のゲーミフィケーション</em>を取り入れており、
+                        <em>
+                          アウトプットを通じて学習意欲や知的好奇心を高め、楽しみながら自己成長を促す
+                        </em>
+                        ことを目的に開発しました。
+                      </p>
+                    </motion.dd>
+                  </div>
+
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <span className={styles["light-effect"]}>音楽</span>
+                    </motion.dt>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <p>
+                        音楽を毎日聴きます。音楽は、
+                        <em>私に勇気と力を与え、心を救ってくれる存在</em> です。
+                      </p>
+                    </motion.dd>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <p>
+                        <em>好きなミュージシャン</em>
+                        ：「Vaundy」「藤井風」「SUPER BEAVER」「Saucy
+                        Dog」「GReeeeN」etc...
                       </p>
                     </motion.dd>
                   </div>
@@ -513,8 +565,13 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
+                      <p>映画鑑賞が趣味で、特に洋画を好んでよく観ます。</p>
                       <p>
-                        映画鑑賞が趣味で、特に洋画を好んでよく観ます。映画は、私にこれまで気づかなかった考え方や視点、異なる文化、価値観との出会いをもたらしてくれる大切な存在です。
+                        映画は私に、
+                        <em>
+                          これまで気づかなかった考え方や視点、異なる文化や価値観との出会いをもたらしてくれる大切な存在
+                        </em>{" "}
+                        です。
                       </p>
                     </motion.dd>
                     <motion.dd
@@ -557,17 +614,16 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
+                      <p>ジャンルを問わず気になった書籍を読むのが好きです。</p>
                       <p>
-                        ジャンルを問わず気になった書籍を読むのが好きです。読書では、
-                      </p>
-                      <p>
+                        読書では、
                         <em>
                           新たな知識を得たり、著者の考え方や価値観を学ぶことができます。
                         </em>
                       </p>
                       <p>
                         私にとっての書籍は、
-                        <em>｢先人の知恵を学ぶことができるアイテム｣</em>
+                        <em>｢先人の知恵を学ぶことができるアイテム｣</em>{" "}
                         といった存在です。
                       </p>
                     </motion.dd>
@@ -586,7 +642,7 @@ const AboutSection = () => {
                         <em>
                           ｢クリエイティブの授業 STEAL LIKE AN ARTIST
                           &quot;君がつくるべきもの&quot;をつくれるようになるために｣
-                        </em>
+                        </em>{" "}
                         です。
                       </p>
                     </motion.dd>
@@ -651,11 +707,11 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        AIについて学びながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、今まで以上に
+                        AIについて学びながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、
                         <em>
-                          クリエイティブと向き合う時間に集中できるようになれる
-                        </em>
-                        と考えています。
+                          今まで以上にクリエイティブと向き合う時間に集中できるようになれる
+                        </em>{" "}
+                        と私は考えています。
                       </p>
                     </motion.dd>
                     <motion.dd
@@ -670,8 +726,9 @@ const AboutSection = () => {
                     >
                       <p>
                         <em>LLM</em>, <em>Generative AI</em> に加え、最近は{" "}
-                        <em>Claude Code</em>, <em>Vibe Coding</em>
-                        に注力しています。 また、Web開発やAIに関する技術記事を{" "}
+                        <em>Claude Code</em>, <em>Vibe Coding</em> といった{" "}
+                        <em>AI駆動開発</em> に注力しています。
+                        また、Web開発やAIに関する技術記事を{" "}
                         <Link
                           href="https://zenn.dev/camoneart"
                           className={styles["about-zenn-link"]}
@@ -694,9 +751,11 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        今後はLLMを活用した<em>AI駆動開発</em>
-                        でAIのアシストを受けつつ、エンジニアとして試行錯誤を重ね、常にプロダクトの在り方を考えながら
-                        <em>ユーザー体験の最適化</em>に挑戦したいです。
+                        今後はLLMを活用したAI駆動開発でAIのアシストを受けつつ、
+                        <em>
+                          エンジニアとして試行錯誤を重ね、常にプロダクトの在り方を考えながら
+                          ユーザー体験の最適化に挑戦したいです。
+                        </em>
                       </p>
                     </motion.dd>
                   </div>
@@ -746,8 +805,7 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        {/* 好奇心をくすぐる、心踊るような体験を提供したい。 */}
-                        ユーザーに寄り添うエンジニアになる。
+                        ユーザーに寄り添うエンジニアになる
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -761,24 +819,24 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        私が目指すビジョンは
-                        <em>「ユーザーに寄り添うエンジニア」</em>です。
+                        私が目指すビジョンは{" "}
+                        <em>&quot;ユーザーに寄り添うエンジニア&quot;</em> です。
                       </p>
                       <p>
-                        プロダクトと技術は、ともに
-                        <em>
-                          ユーザーの課題を解決し価値を届ける手段だと私は考えています。
-                        </em>
+                        プロダクトと技術は、
+                        <em>ユーザーの課題を解決し価値を届ける手段</em>{" "}
+                        だと私は考えています。
                       </p>
                       <p>
                         モノづくりを通して、
                         <em>ワクワクし、感動を覚え、思い出に残る。</em>
-                        そんなエクスペリエンスを提供できるようになりたいです。
+                        そんな体験を提供できるようになりたいです。
                       </p>
                       <p>
-                        エンジニアとして利用者の想いを形にするためにも、
-                        日々の学習を怠らず、価値ある体験の創造に挑み続け、
-                        <em>私は日々成長し続けます。</em>
+                        利用者の想いを形にするためにも、
+                        <em>
+                          日々学ぶことを楽しみ、価値ある体験の創造に挑み続け、私はクリエイターとして成長し続けます。
+                        </em>
                       </p>
                     </motion.dd>
                   </div>
@@ -859,6 +917,8 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
+                        <em>&quot;楽な道のりよりも、険しい道の歩き方&quot;</em>{" "}
+                        を知りたいし、
                         <em>
                           地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、｢見たことも無い、想像もできなかった場所へ行ける｣
                         </em>
