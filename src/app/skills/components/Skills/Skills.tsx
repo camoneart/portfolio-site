@@ -392,22 +392,22 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-llm",
     viewTransitionLogoBg: "view-transition-logo-bg-llm",
   },
-  // {
-  //   id: 24,
-  //   skillTitle: "MCP",
-  //   skillLink: "mcp",
-  //   description:
-  //     "MCP（Model Context Protocol）の概念を理解しており、AIエージェントの能力拡張にMCPを活用しています。ZennではMCPやAIエージェントに関する技術記事を執筆しています。",
-  //   skillLogo: "/images/skills/mcp-logo.png",
-  //   label: "Protocol",
-  //   link: "https://github.com/modelcontextprotocol",
-  //   viewTransitionName: "view-transition-title-mcp",
-  //   viewTransitionImage: "view-transition-img-mcp",
-  //   viewTransitionBg: "view-transition-bg-mcp",
-  //   viewTransitionLabel: "view-transition-label-mcp",
-  //   viewTransitionLogoWrapper: "view-transition-logo-wrapper-mcp",
-  //   viewTransitionLogoBg: "view-transition-logo-bg-mcp",
-  // },
+  {
+    id: 24,
+    skillTitle: "MCP",
+    skillLink: "mcp",
+    description:
+      "MCP（Model Context Protocol）の概念を理解し、AIエージェント（Claude Code）の能力拡張にMCPサーバーを活用しています。ZennではMCPやAIエージェントに関する技術記事を執筆しています。",
+    skillLogo: "/images/skills/mcp-logo.png",
+    label: "Protocol",
+    link: "https://github.com/modelcontextprotocol",
+    viewTransitionName: "view-transition-title-mcp",
+    viewTransitionImage: "view-transition-img-mcp",
+    viewTransitionBg: "view-transition-bg-mcp",
+    viewTransitionLabel: "view-transition-label-mcp",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-mcp",
+    viewTransitionLogoBg: "view-transition-logo-bg-mcp",
+  },
 ];
 
 const Skills = () => {
