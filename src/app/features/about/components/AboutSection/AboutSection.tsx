@@ -507,52 +507,6 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <span className={styles["light-effect"]}>音楽</span>
-                    </motion.dt>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
-                      <p>
-                        音楽を毎日聴きます。音楽は、
-                        <em>私に勇気と力を与え、心を救ってくれる存在</em> です。
-                      </p>
-                    </motion.dd>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
-                      <p>
-                        <em>好きなミュージシャン</em>
-                        ：「Vaundy」「藤井風」「SUPER BEAVER」「Saucy
-                        Dog」「GReeeeN」etc...
-                      </p>
-                    </motion.dd>
-                  </div>
-
-                  <div className={styles["about-content-group"]}>
-                    <motion.dt
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.4,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
-                    >
                       <span className={styles["light-effect"]}>映画鑑賞</span>
                     </motion.dt>
                     <motion.dd
