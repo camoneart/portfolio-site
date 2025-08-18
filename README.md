@@ -163,9 +163,10 @@ https://github.com/user-attachments/assets/19ff0d0a-576f-4ba2-a8d5-0ec45e22723c
 
 ### **お問い合わせページ**
 
+このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
+
 https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
 
-このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
 
 <h2 id="feature-introduction">機能紹介</h2>
 
