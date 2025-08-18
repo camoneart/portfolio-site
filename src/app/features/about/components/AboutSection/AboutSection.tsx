@@ -416,16 +416,17 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
+                        知的好奇心を原動力に、
+                        <em>&quot;調べまくる.ᐟ　試しまくる.ᐟ.ᐟ&quot;</em>
+                        そんな日々を過ごしています。興味を持った技術はコードを書いて挙動を検証し、
                         <em>
-                          「ユーザーの課題解決に貢献するプロダクト開発に携わりたい」
+                          &quot;トライ&エラー&quot;
+                          を繰り返しながら理解を深めるようにしています。
                         </em>
                       </p>
                       <p>
-                        そんな想いから、知的好奇心を原動力に日々キャッチアップと学習に取り組んでいます。興味を持った技術はコードを書いて挙動を検証することで、理解を深めるようにしています。
-                      </p>
-                      <p>
                         <em>現在の主な注力</em>：「Next.js（App
-                        Router）」「TypeScript」「LLM・Generative
+                        Router）」「TypeScript」「LLM / Generative
                         AI」「Interaction / Animation」「UI / UX」
                       </p>
                     </motion.dd>
@@ -443,7 +444,7 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        アウトプット
+                        学び、理解すること
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -492,6 +493,29 @@ const AboutSection = () => {
                           アウトプットを通じて学習意欲や知的好奇心を高め、楽しみながら自己成長を促す
                         </em>
                         ことを目的に開発しました。
+                      </p>
+                    </motion.dd>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <p>
+                        また、Web開発やAIに関する技術記事を{" "}
+                        <Link
+                          href="https://zenn.dev/camoneart"
+                          className={styles["about-zenn-link"]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Zenn
+                        </Link>
+                        にて執筆しています。
                       </p>
                     </motion.dd>
                   </div>
@@ -661,7 +685,11 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        AIについて学びながら日常的にLLMを利用しています。AIを活用し、生産性を上げることで、
+                        <em>LLM</em>, <em>Generative AI</em>
+                        に注力し、AIを日常的に利用しています。
+                      </p>
+                      <p>
+                        AIを活用して生産性を上げることで、
                         <em>
                           今まで以上にクリエイティブと向き合う時間に集中できるようになれる
                         </em>{" "}
@@ -679,36 +707,9 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        <em>LLM</em>, <em>Generative AI</em> に加え、最近は{" "}
-                        <em>Claude Code</em>, <em>Vibe Coding</em> といった{" "}
-                        <em>AI駆動開発</em> に注力しています。
-                        また、Web開発やAIに関する技術記事を{" "}
-                        <Link
-                          href="https://zenn.dev/camoneart"
-                          className={styles["about-zenn-link"]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Zenn
-                        </Link>
-                        にて執筆しています。
-                      </p>
-                    </motion.dd>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
-                      <p>
-                        今後はLLMを活用したAI駆動開発でAIのアシストを受けつつ、
+                        今後は
                         <em>
-                          エンジニアとして試行錯誤を重ね、常にプロダクトの在り方を考えながら
-                          ユーザー体験の最適化に挑戦したいです。
+                          AIエージェントを活用し、エンジニアとして試行錯誤を楽しみながら、プロダクトの在り方を探求し、ユーザー体験の最適化に挑戦したいです。
                         </em>
                       </p>
                     </motion.dd>
@@ -777,19 +778,15 @@ const AboutSection = () => {
                         <em>&quot;ユーザーに寄り添うエンジニア&quot;</em> です。
                       </p>
                       <p>
-                        プロダクトと技術は、
-                        <em>ユーザーの課題を解決し価値を届ける手段</em>{" "}
-                        だと私は考えています。
-                      </p>
-                      <p>
-                        モノづくりを通して、
-                        <em>ワクワクし、感動を覚え、思い出に残る。</em>
-                        そんな体験を提供できるようになりたいです。
-                      </p>
-                      <p>
-                        利用者の想いを形にするためにも、
+                        Webを通じて価値あるプロダクトを高速で届け、
                         <em>
-                          日々学ぶことを楽しみ、価値ある体験の創造に挑み続け、私はクリエイターとして成長し続けます。
+                          社会をより良くするためにポジティブな変化を生み出す活動
+                        </em>
+                        を続けていきたいです。
+                      </p>
+                      <p>
+                        <em>
+                          そのためにアンラーンして学び続け、知的好奇心を原動力に、価値ある体験の創造に没頭したいです。
                         </em>
                       </p>
                     </motion.dd>
@@ -856,7 +853,7 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        <em>｢変化を恐れず、現状に満足するな｣</em>
+                        <em>&quot;変化を恐れず、現状に満足するな&quot;</em>
                         をモットーとしています。
                       </p>
                     </motion.dd>
@@ -873,8 +870,9 @@ const AboutSection = () => {
                       <p>
                         <em>&quot;楽な道のりよりも、険しい道の歩き方&quot;</em>{" "}
                         を知りたいし、
+                        地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、
                         <em>
-                          地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、｢見たことも無い、想像もできなかった場所へ行ける｣
+                          &quot;見たことも無い、想像もできなかった場所まで行ける&quot;
                         </em>
                         と私は信じています。
                       </p>
