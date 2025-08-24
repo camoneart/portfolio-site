@@ -164,14 +164,14 @@ https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
 
 <h2 id="development-configuration-diagram">開発構成図</h2>
 
-[開発構成図](https://camoneart.github.io/portfolio-development-configuration-diagram/)をHTMLインフォグラフィックで表現しました。
+[開発構成図](https://camoneart.github.io/portfolio-development-configuration-diagram/)はHTMLインフォグラフィックで表現しました。
 
 <h2 id="directory-design">ディレクトリ構造</h2>
 
 ```
 portfolio/
 ├── public/                         # 静的ファイル
-│   ├── audio/                      # 音声ファイル
+│   ├── audio/                      # BGMファイル
 │   └── images/                     # 画像ファイル
 │       ├── about/                  # アバウトページ用画像
 │       ├── contact/                # お問い合わせページ用画像
