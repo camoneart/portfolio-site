@@ -119,8 +119,8 @@ https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
 
 ### nodeバージョン
 
-- node v22.14.0
-- pnpm v10.11.1
+- [node](https://nodejs.org/ja/)：v22.14.0
+- [pnpm](https://pnpm.io/ja/)：v10.11.1
 
 ### フロント
 
