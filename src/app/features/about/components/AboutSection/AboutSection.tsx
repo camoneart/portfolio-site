@@ -425,9 +425,9 @@ const AboutSection = () => {
                         </em>
                       </p>
                       <p>
-                        <em>現在の主な注力</em>：「Next.js（App
-                        Router）」「TypeScript」「LLM / Generative
-                        AI」「Interaction / Animation」「UI / UX」
+                        <em>現在の主な注力</em>：Next.js（App Router）,
+                        TypeScript, LLM / Generative AI, Interaction /
+                        Animation, UI / UX
                       </p>
                     </motion.dd>
                   </div>
