@@ -173,7 +173,7 @@ export const worksData: WorksData[] = [
   {
     id: 4,
     image: "/images/works/work04.jpg",
-    workTitle: "aoyama｜Creative Developer",
+    workTitle: "aoyama｜Web Engineer",
     cardDesc:
       "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
     description:

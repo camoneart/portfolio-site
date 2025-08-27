@@ -17,7 +17,7 @@ const russoOne = Russo_One({
 
 export const metadata: Metadata = {
   title: {
-    default: "aoyama｜Creative Developer",
+    default: "aoyama｜Web Engineer",
     template: "%s｜aoyama",
   },
   description:
