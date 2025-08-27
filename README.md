@@ -27,7 +27,7 @@ Next.js + CSS Modules + Tailwind CSS + TypeScriptで開発し、デプロイはV
 
 トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」と「ストーリー」を視覚的に表現しています。
 
-https://github.com/user-attachments/assets/fc0ae32c-1878-4b6d-8b65-3659f0c89f4d
+![トップページ](public/images/gifs/top-page.gif)
 
 ### **アバウトページ**
 
@@ -174,9 +174,8 @@ portfolio/
 │   ├── audio/                      # BGMファイル
 │   └── images/                     # 画像ファイル
 │       ├── about/                  # アバウトページ用画像
-│       ├── contact/                # お問い合わせページ用画像
-│       ├── gifs/                   # アニメーション画像ファイル
-│       ├── skills/                 # スキル一覧ページ用画像
+│       ├── gifs/                   # アニメーション画像
+│       ├── skills/                 # スキル一覧ページの各スキルのロゴ画像
 │       └── works/                  # 制作実績ページ用画像
 ├── src/
 │   ├── app/                        # ルートディレクトリ（ルーティング管理）
