@@ -723,6 +723,70 @@ const AboutSection = () => {
             </div>
             {/* /.about-focus */}
 
+            <div className={`${styles["about-focus"]}`}>
+              <div className={styles["about-header"]}>
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
+                  className={styles["about-focus-icon"]}
+                >
+                  <Focus size={20} color="#ff6b4a" />
+                </motion.div>
+                <motion.h2
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
+                  className={`font-russo ${styles["about-title-lv2"]} ${styles["scroll-driven-animation"]}`}
+                >
+                  Traits
+                </motion.h2>
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ delay: 2.1, duration: 1.3, ease: "easeInOut" }}
+                  className={styles["about-border"]}
+                ></motion.div>
+              </div>
+              <div className={`${styles["about-content"]}`}>
+                <dl className={styles["about-list"]}>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <span className={styles["light-effect"]}>私の特徴</span>
+                    </motion.dt>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <p>
+                        <em>ポジティブ</em>, <em>知的好奇心</em>,{" "}
+                        <em>自走力</em>, <em>継続力</em>,{" "}
+                        <em>ダイエットが得意（過去-40kgの減量に成功）</em>
+                      </p>
+                    </motion.dd>
+                  </div>
+                </dl>
+                {/* /.about-list */}
+              </div>
+              {/* /.about-content */}
+            </div>
+            {/* /.about-focus */}
+
             <div className={`${styles["about-vision"]}`}>
               <div className={styles["about-header"]}>
                 <motion.div
