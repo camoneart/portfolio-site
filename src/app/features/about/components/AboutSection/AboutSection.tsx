@@ -825,7 +825,7 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        モノづくりで1人でも多くの人に笑顔と感動を届け、幸せを感じてほしい
+                        モノづくりで1人でも多くの人に笑顔と感動を届けたい
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -848,10 +848,15 @@ const AboutSection = () => {
                         を続けていきたいです。
                       </p>
                       <p>
-                        <em>誰かの幸せが私の幸せなので、</em>
-                        そのためにアンラーンして学び続け、知的好奇心を原動力に{" "}
-                        <em>&quot;1人でも多くの人が笑顔になれる&quot;</em>{" "}
-                        そんな価値ある体験の創造に没頭したいです。
+                        <em>
+                          Webアプリ/サービスを通じて
+                          &quot;日々の癒しや幸せに繋がる体験価値&quot;
+                          を届けたい。
+                        </em>
+                        そのために、
+                        <em>
+                          知的好奇心を原動力にアンラーンして学び続け、クリエイティブに没頭したいです。
+                        </em>
                       </p>
                     </motion.dd>
                   </div>
