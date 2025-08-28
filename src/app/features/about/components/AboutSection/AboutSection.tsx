@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./AboutSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
-import { User, Flame, Sparkle, Focus, AtSign } from "lucide-react";
+import { User, Flame, Sparkle, Focus, CircleCheck, AtSign } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -425,7 +425,7 @@ const AboutSection = () => {
                         </em>
                       </p>
                       <p>
-                        <em>現在の主な注力</em>：「Next.js（App
+                        <em>注力</em>：「Next.js（App
                         Router）」「TypeScript」「LLM / Generative AI / AI
                         Agents」「Interaction / Animation」「UI / UX」
                       </p>
@@ -710,8 +710,9 @@ const AboutSection = () => {
                     >
                       <p>
                         <em>
-                          エンジニアとして試行錯誤しながらプロダクトの在り方を探求し、ユーザー体験の最適化に挑戦していきたいです。
+                          AIエージェントを活用し、Webアプリ/サービスを通じてお客様に価値あるプロダクトを高速で届け、社会にポジティブな変化を生み出す活動
                         </em>
+                        を続けていきたいです。
                       </p>
                     </motion.dd>
                   </div>
@@ -730,7 +731,7 @@ const AboutSection = () => {
                   transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
                   className={styles["about-focus-icon"]}
                 >
-                  <Focus size={20} color="#ff6b4a" />
+                  <CircleCheck size={20} color="#ff6b4a" />
                 </motion.div>
                 <motion.h2
                   initial={{ opacity: 0, x: -50 }}
@@ -825,7 +826,7 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        モノづくりで1人でも多くの人に笑顔と感動を届けたい
+                        ユーザーに寄り添うエンジニアになる
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -843,17 +844,40 @@ const AboutSection = () => {
                         <em>&quot;ユーザーに寄り添うエンジニア&quot;</em> です。
                       </p>
                       <p>
-                        AIエージェントを活用し、Webアプリ/サービスを通じて価値あるプロダクトを高速で届け、
-                        <em>社会にポジティブな変化を生み出す活動</em>
-                        を続けていきたいです。
+                        エンジニアとして試行錯誤しながらプロダクトの在り方を探求し、ユーザー体験の最適化に挑戦していきたいです。
                       </p>
+                    </motion.dd>
+                  </div>
+
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <span className={styles["light-effect"]}>
+                        モノづくりで笑顔と感動を届けたい
+                      </span>
+                    </motion.dt>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
                       <p>
-                        <em>
-                          Webアプリ/サービスを通じて
-                          &quot;日々の癒しや幸せに繋がる体験価値&quot;
-                          を届けたい。
-                        </em>
-                        そのために、
+                        Webアプリ/サービスを通じて
+                        <em>&quot;日々の癒しや幸せに繋がる体験価値&quot;</em>
+                        を届けたい。 そのために、
                         <em>
                           知的好奇心を原動力にアンラーンして学び続け、クリエイティブに没頭したいです。
                         </em>
