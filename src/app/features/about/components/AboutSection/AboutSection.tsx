@@ -601,7 +601,9 @@ const AboutSection = () => {
                       </p>
                       <p>
                         私にとっての書籍は、
-                        <em>｢先人の知恵を学ぶことができるアイテム｣</em>{" "}
+                        <em>
+                          &quot;先人の知恵を学ぶことができるアイテム&quot;
+                        </em>{" "}
                         といった存在です。
                       </p>
                     </motion.dd>
@@ -685,7 +687,7 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        <em>LLM</em>, <em>Generative AI</em>
+                        <em>LLM</em>, <em>Generative AI</em>, <em>AI Agents</em>
                         に注力し、AIを日常的に利用しています。
                       </p>
                       <p>
@@ -709,7 +711,7 @@ const AboutSection = () => {
                       <p>
                         今後は
                         <em>
-                          AIエージェントを活用し、エンジニアとして試行錯誤を楽しみながらプロダクトの在り方を探求し、ユーザー体験の最適化に挑戦したいです。
+                          AIエージェントを活用し、エンジニアとして試行錯誤しながらプロダクトの在り方を探求し、ユーザー体験の最適化に挑戦したいです。
                         </em>
                       </p>
                     </motion.dd>
@@ -760,7 +762,7 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        ユーザーに寄り添うエンジニアになる
+                        モノづくりで1人でも多くの人を笑顔にし、感動を届けたい
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -778,7 +780,7 @@ const AboutSection = () => {
                         <em>&quot;ユーザーに寄り添うエンジニア&quot;</em> です。
                       </p>
                       <p>
-                        Webを通じて価値あるプロダクトを高速で届け、
+                        Webアプリ/サービスを通じて価値あるプロダクトを高速で届け、
                         <em>
                           社会をより良くするためにポジティブな変化を生み出す活動
                         </em>
@@ -786,7 +788,7 @@ const AboutSection = () => {
                       </p>
                       <p>
                         <em>
-                          そのためにアンラーンして学び続け、知的好奇心を原動力に、価値ある体験の創造に没頭したいです。
+                          そのためにアンラーンして学び続け、知的好奇心を原動力に「1人でも多くの人が笑顔になれる」そんな価値ある体験の創造に没頭したいです。
                         </em>
                       </p>
                     </motion.dd>
@@ -821,7 +823,7 @@ const AboutSection = () => {
                         <em>
                           こちらの動作に対してプロダクトが反応を返してくれる。
                         </em>
-                        そんな<em>｢モノとの対話｣</em>
+                        そんな<em>&quot;モノとの対話&quot;</em>
                         を表現できるようになりたいです。
                       </p>
                     </motion.dd>
