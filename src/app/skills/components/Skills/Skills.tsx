@@ -397,7 +397,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "MCP",
     skillLink: "mcp",
     description:
-      "MCP（Model Context Protocol）の概念を理解し、AIエージェント（Claude Code）の能力拡張にMCPサーバーを活用しています。ZennではMCPやAIエージェントに関する技術記事を執筆しています。",
+      "MCP（Model Context Protocol）の概念を理解し、AIエージェントの能力拡張にMCPサーバーを活用しています。ZennではMCPやAIエージェントなどのAIに関する技術記事も執筆しています。",
     skillLogo: "/images/skills/mcp-logo.png",
     label: "Protocol",
     link: "https://github.com/modelcontextprotocol",
