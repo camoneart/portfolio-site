@@ -483,7 +483,7 @@ const AboutSection = () => {
                       <p>
                         コンセプトは{" "}
                         <em>
-                          &quot;アウトプットを学びの冒険に変える。RPG風学習支援アプリ&quot;
+                          &quot;アウトプットを学びの冒険に変える。RPG風学習支援Webアプリ&quot;
                         </em>{" "}
                         です。
                       </p>
