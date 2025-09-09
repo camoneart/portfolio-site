@@ -710,7 +710,7 @@ const AboutSection = () => {
                     >
                       <p>
                         <em>
-                          AIエージェントを活用し、Webアプリ/サービスを通じてお客様に価値あるプロダクトを高速で届け、社会にポジティブな変化を生み出す活動
+                          AIエージェントを活用し、Webサービスを通じてお客様に価値あるプロダクトを高速で届け、社会にポジティブな変化を生み出す活動
                         </em>
                         を続けていきたいです。
                       </p>
@@ -774,9 +774,64 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        <em>ポジティブ</em>, <em>知的好奇心</em>,{" "}
-                        <em>自走力</em>, <em>継続力</em>,{" "}
-                        <em>ダイエットが得意（過去-40kgの減量に成功）</em>
+                        <em>ポジティブ</em> / <em>知的好奇心</em> /{" "}
+                        <em>自走力</em> / <em>継続力</em>
+                      </p>
+                    </motion.dd>
+                  </div>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <span className={styles["light-effect"]}>得意なこと</span>
+                    </motion.dt>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <p>
+                        <em>ダイエット（過去-40kgの減量に成功）</em>
+                      </p>
+                    </motion.dd>
+                  </div>
+                  <div className={styles["about-content-group"]}>
+                    <motion.dt
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.4,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <span className={styles["light-effect"]}>苦手なこと</span>
+                    </motion.dt>
+                    <motion.dd
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        delay: 3.9,
+                        duration: 0.6,
+                        ease: "easeInOut",
+                      }}
+                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
+                    >
+                      <p>
+                        <em>怒ること</em> / <em>諦めること</em>
                       </p>
                     </motion.dd>
                   </div>
@@ -826,7 +881,7 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        ユーザーに寄り添うエンジニアになる
+                        「来年のための今年」
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -840,11 +895,11 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        私が目指すビジョンは{" "}
-                        <em>&quot;ユーザーに寄り添うエンジニア&quot;</em> です。
+                        <em>来年のために今年はなにができるだろう？</em>
+                        って常に考えています。
                       </p>
                       <p>
-                        エンジニアとして試行錯誤しながらプロダクトの在り方を探求し、ユーザー体験の最適化に挑戦していきたいです。
+                        とにかく自分をアップデートし続けたいです。やりたいこと、際限ないですね。
                       </p>
                     </motion.dd>
                   </div>
@@ -861,7 +916,7 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        モノづくりで笑顔と感動を届けたい
+                        &quot;幸せ&quot; に繋がる体験価値を届ける
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -875,47 +930,12 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        Webアプリ/サービスを通じて
+                        Webサービスを通じて
                         <em>&quot;日々の癒しや幸せに繋がる体験価値&quot;</em>
                         を届けたい。 そのために、
                         <em>
-                          知的好奇心を原動力にアンラーンして学び続け、クリエイティブに没頭したいです。
+                          エンジニアとして試行錯誤しながらプロダクトの在り方を探求し、知的好奇心を原動力にアンラーンして学び続け、クリエイティブに没頭したいです。
                         </em>
-                      </p>
-                    </motion.dd>
-                  </div>
-
-                  <div className={styles["about-content-group"]}>
-                    <motion.dt
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.4,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
-                    >
-                      <span className={styles["light-effect"]}>
-                        モノとの対話
-                      </span>
-                    </motion.dt>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
-                      <p>
-                        <em>
-                          こちらの動作に対してプロダクトが反応を返してくれる。
-                        </em>
-                        そんな<em>&quot;モノとの対話&quot;</em>
-                        を表現できるようになりたいです。
                       </p>
                     </motion.dd>
                   </div>
@@ -965,7 +985,7 @@ const AboutSection = () => {
                         を知りたいし、
                         地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、
                         <em>
-                          &quot;見たことも無い、想像もできなかった場所まで行ける&quot;
+                          &quot;見たことも無い、想像もできなかった景色と出会える&quot;
                         </em>
                         と私は信じています。
                       </p>
