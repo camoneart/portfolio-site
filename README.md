@@ -19,7 +19,9 @@ https://aoyamadev.com
 
 私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。
 
-Next.js + CSS Modules + Tailwind CSS + TypeScriptで開発し、デプロイはVercelで行いました。
+視覚的に見ていて楽しいUIを目指し、Motion・GSAPによるアニメーションとReact Three Fiberで3Dコンテンツを実装。View Transitions API による遷移アニメーションで、ユーザーに適切な視線誘導をもたらし操作を助ける演出でUX向上を目指しました。
+
+Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしました。
 
 <h2 id="page-descriptions">各ページ紹介</h2>
 
