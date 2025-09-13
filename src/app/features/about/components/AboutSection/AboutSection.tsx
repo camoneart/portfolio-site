@@ -698,23 +698,6 @@ const AboutSection = () => {
                         と私は考えています。
                       </p>
                     </motion.dd>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
-                      <p>
-                        <em>
-                          AIエージェントを活用し、Webサービスを通じてお客様に価値あるプロダクトを高速で届け、社会にポジティブな変化を生み出す活動
-                        </em>
-                        を続けていきたいです。
-                      </p>
-                    </motion.dd>
                   </div>
                 </dl>
                 {/* /.about-list */}
@@ -930,12 +913,9 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        Webサービスを通じて
-                        <em>&quot;日々の癒しや幸せに繋がる体験価値&quot;</em>
-                        を届けたい。 そのために、
-                        <em>
-                          エンジニアとして試行錯誤しながらプロダクトの在り方を探求し、知的好奇心を原動力にアンラーンして学び続け、クリエイティブに没頭したいです。
-                        </em>
+                        エンジニアとして試行錯誤しながらプロダクトの在り方を探求し、ユーザー体験の最適化に挑戦していきたいです。Webサービスを通じてお客様に価値あるプロダクトを高速で届け、
+                        <em>&quot;お客様の幸せに繋がる体験価値&quot;</em>
+                        の提供で貢献し、社会にポジティブな変化を生み出す活動を続けていきたいです。そのために知的好奇心を原動力にアンラーンして学び続け、クリエイティブに没頭したいです！
                       </p>
                     </motion.dd>
                   </div>
