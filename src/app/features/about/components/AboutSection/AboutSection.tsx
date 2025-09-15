@@ -805,7 +805,7 @@ const AboutSection = () => {
                     >
                       <p>
                         <em>ポジティブ</em> / <em>知的好奇心</em> /{" "}
-                        <em>自走力</em> / <em>継続力</em>
+                        <em>探究心</em> / <em>自走力</em> / <em>継続力</em>
                       </p>
                     </motion.dd>
                   </div>
