@@ -109,7 +109,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "TypeScript",
     skillLink: "typescript",
     description:
-      "基本的な型システム「型アノテーション」「interface」「type」や、コードの共通化と型の安全性を両立するための言語機能である「ジェネリクス」などを使用した型定義ができます。",
+      "プリミティブ型・ユニオン型・オブジェクト型などの基本的な型定義から、型推論・型エイリアス(type文)・interface・関数の型付け・ジェネリクスまで、TypeScriptの型定義を活用して安全で保守性の高い実装ができます。",
     skillLogo: "/images/skills/ts-logo.svg",
     label: "PROGRAMMING",
     link: "https://www.typescriptlang.org/",
