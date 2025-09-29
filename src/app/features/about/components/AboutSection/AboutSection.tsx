@@ -494,17 +494,6 @@ const AboutSection = () => {
                         <em>&quot;ユーザーの幸福度に繋がる体験価値&quot;</em>
                         の提供で貢献したいという想いで開発しました。
                       </p>
-                    </motion.dd>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
                       <p>
                         また、Web開発やAIに関する技術記事を{" "}
                         <Link
@@ -549,17 +538,6 @@ const AboutSection = () => {
                         <em>&quot;現実と向き合う力&quot;</em>
                         を与えてくれます。
                       </p>
-                    </motion.dd>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
                       <p>
                         <em>好きなミュージシャン</em>：「Vaundy」「King
                         Gnu」「藤井 風」「SUPER BEAVER」「Saucy Dog」etc...
@@ -598,17 +576,6 @@ const AboutSection = () => {
                         </em>{" "}
                         です。
                       </p>
-                    </motion.dd>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
                       <p>
                         <em>好きな映画</em>
                         ：「アメイジング・スパイダーマン」「ヴェノム」「最高の人生の見つけ方」「最強のふたり」「幸せのちから」「ドリームプラン」「プラダを着た悪魔」「マイ・インターン」「42～世界を変えた男～」「ラ・ラ・ランド」「グリーンブック」「フォレスト・ガンプ」「ショーシャンクの空に」「イコライザー」「アメリカン・スナイパー」「素晴らしきかな、人生」「ターミナル」「イエスタデイ」etc...
@@ -1000,17 +967,6 @@ const AboutSection = () => {
                         <em>&quot;変化を恐れず、現状に満足するな&quot;</em>
                         をモットーとしています。
                       </p>
-                    </motion.dd>
-                    <motion.dd
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        delay: 3.9,
-                        duration: 0.6,
-                        ease: "easeInOut",
-                      }}
-                      className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
-                    >
                       <p>
                         <em>&quot;楽な道のりよりも、険しい道の歩き方&quot;</em>{" "}
                         を知りたいし、
@@ -1019,6 +975,15 @@ const AboutSection = () => {
                           &quot;見たことも無い、想像もできなかった景色と出会える&quot;
                         </em>
                         と私は信じています。
+                      </p>
+                      <p>
+                        「
+                        <em>
+                          人生を有意義なものとするため、
+                          自らの大事なもののために闘う。何があろうと。
+                          例え失敗に終わっても。それこそが最高の生き方です。
+                        </em>
+                        」
                       </p>
                     </motion.dd>
                   </div>

@@ -322,7 +322,7 @@
 .scroll-driven-animation {
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% entry 300%;
+  animation-range: entry 0% entry 230%;
 }
 
 @keyframes appear {
