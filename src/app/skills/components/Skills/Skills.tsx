@@ -317,7 +317,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Clerk",
     skillLink: "clerk",
     description:
-      "Webアプリ「OUTPUT QUEST　叡智の継承者」において、Clerkを用いたユーザー認証（ログイン）機能を実装しました。",
+      "個人で開発したWebアプリ「OUTPUT QUEST　叡智の継承者」にて、Clerkによるユーザー認証機能を実装しました。Webhookを活用してSupabaseデータベースとユーザー情報を自動同期し、OAuth（Google・GitHub）によるソーシャルログインとプロフィール管理機能を実現。セキュアな認証基盤を構築しています。",
     skillLogo: "/images/skills/clerk-logo.png",
     label: "SaaS",
     link: "https://clerk.com/",
@@ -333,7 +333,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Supabase",
     skillLink: "supabase",
     description:
-      "Webアプリ「OUTPUT QUEST　叡智の継承者」において、Supabaseを活用しユーザー情報をデータベースで管理できるようにしました。",
+      "個人で開発したWebアプリ「OUTPUT QUEST　叡智の継承者」にて、SupabaseのPostgreSQLデータベースを採用し、Prismaを介した型安全なデータベース操作を実装しました。Clerk認証とWebhookで連携し、ユーザーの作成・更新・削除を自動同期する仕組みを構築。API Routes（GET/POST）でユーザー情報の取得・更新を行い、Zenn記事情報と紐付けてリアルタイムに経験値やレベルを管理しています。",
     skillLogo: "/images/skills/supabase-logo.svg",
     label: "BaaS",
     link: "https://supabase.com/",
@@ -349,7 +349,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Prisma",
     skillLink: "prisma",
     description:
-      "Webアプリ「OUTPUT QUEST　叡智の継承者」では、Prismaを導入してデータベース操作を型安全かつ簡潔に行いました。",
+      "個人で開発したWebアプリ「OUTPUT QUEST　叡智の継承者」にて、PrismaをORMとして採用し、Supabase PostgreSQLとの型安全な連携を実現しました。スキーマ定義からTypeScript型の自動生成、マイグレーション管理まで一元化し、findUnique・update・createなどのクエリを型安全に実装。開発効率とコード品質の向上を両立しています。",
     skillLogo: "/images/skills/prisma-logo.svg",
     label: "LIBRARY",
     link: "https://www.prisma.io/",
