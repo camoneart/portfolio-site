@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     const { data: adminMailData, error: adminMailError } =
       await resend.emails.send({
         from: process.env.RESEND_FROM_EMAIL || "Acme <onboarding@resend.dev>",
-        to: ["aoymdev@gmail.com"],
+        to: ["kaishuaoyama@gmail.com"],
         subject,
         react: Contact.AdminEmailTemplate({
           username,
