@@ -915,7 +915,8 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        &quot;幸せ&quot; に繋がる体験価値を届ける
+                        &quot;喜び&quot; や &quot;幸せ&quot;
+                        に繋がる価値を届ける
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -929,8 +930,8 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        エンジニアとして試行錯誤しながらプロダクトの在り方を探求し、ユーザー体験の最適化に挑戦していきたいです。Webサービスを通じてお客様に価値あるプロダクトを高速で届け、
-                        <em>&quot;日々の癒しや幸せに繋がる体験価値&quot;</em>
+                        Webサービスを通じてお客様に価値あるプロダクトを高速で届け、
+                        <em>&quot;喜びや幸せに繋がる価値&quot;</em>
                         の提供で貢献し、
                         <em>
                           社会にポジティブな変化を生み出す活動を続けていきたいです。
