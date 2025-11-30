@@ -10,10 +10,7 @@ import { createPointsSystem } from "./helpers";
 import styles from "./NetworkBackground.module.css";
 gsap.registerPlugin(CustomEase, useGSAP);
 
-CustomEase.create(
-  "custom",
-  "M0,0 C0.126,0.382 0.282,0.674 0.44,0.822 0.632,1.002 0.818,1.001 1,1"
-);
+CustomEase.create("custom", "M0,0 C0.126,0.382 0.282,0.674 0.44,0.822 0.632,1.002 0.818,1.001 1,1");
 
 const GRID_CONFIG = {
   gridSize: 100,
@@ -29,10 +26,7 @@ function Points() {
   const activePointsRef = useRef<Set<number>>(new Set());
   const animationRef = useRef<gsap.core.Timeline | null>(null);
 
-  const { geometry, points, positions } = useMemo(
-    () => createPointsSystem(GRID_CONFIG),
-    []
-  );
+  const { geometry, points, positions } = useMemo(() => createPointsSystem(GRID_CONFIG), []);
 
   // 初期のアクティブポイントをランダムに生成する関数
   const generateInitialActivePoints = useCallback(() => {

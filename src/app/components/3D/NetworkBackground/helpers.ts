@@ -21,10 +21,7 @@ export const createPointsSystem = ({ gridSize, spacing }: GridConfig) => {
 
   // ポイントジオメトリを作成する
   const geometry = new THREE.BufferGeometry();
-  geometry.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(positions, 3)
-  );
+  geometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
   geometry.setAttribute("scale", new THREE.Float32BufferAttribute(scales, 1));
 
   // シェーダーマテリアルのカスタマイズ

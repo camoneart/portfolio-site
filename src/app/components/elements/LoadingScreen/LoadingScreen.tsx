@@ -34,8 +34,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({
   timing = {
     lineDelay: ANIMATION_TIMING.LINE_DELAY, // 中央線のアニメーション開始タイミング（0ms）
     expandDelay: ANIMATION_TIMING.LINE_ANIMATION, // 中央線のアニメーション完了後、左右拡大エフェクト開始、1秒持続（1000ms）
-    fadeDelay:
-      ANIMATION_TIMING.LINE_ANIMATION + ANIMATION_TIMING.EXPAND_ANIMATION, // 拡大完了後、フェードアウト開始、1.1秒持続（1100ms）
+    fadeDelay: ANIMATION_TIMING.LINE_ANIMATION + ANIMATION_TIMING.EXPAND_ANIMATION, // 拡大完了後、フェードアウト開始、1.1秒持続（1100ms）
     hideDelay:
       ANIMATION_TIMING.LINE_ANIMATION +
       ANIMATION_TIMING.EXPAND_ANIMATION +

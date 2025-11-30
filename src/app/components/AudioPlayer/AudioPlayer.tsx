@@ -73,19 +73,9 @@ const AudioPlayer = memo(
         aria-label={isPlaying ? (isMuted ? "Unmute" : "Mute") : "Play"}
       >
         {isMuted || !isPlaying ? (
-          <VolumeX
-            width={width}
-            height={height}
-            color={color}
-            className={styles["audio-mute"]}
-          />
+          <VolumeX width={width} height={height} color={color} className={styles["audio-mute"]} />
         ) : (
-          <Volume2
-            width={width}
-            height={height}
-            color={color}
-            className={styles["audio-play"]}
-          />
+          <Volume2 width={width} height={height} color={color} className={styles["audio-play"]} />
         )}
       </button>
     );

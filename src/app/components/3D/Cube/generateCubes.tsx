@@ -26,10 +26,7 @@ const generateMissingPositions = (): THREE.Vector3[] => {
   );
 };
 
-const generateMainCubes = (
-  cubes: CubeData[],
-  missingPositions: THREE.Vector3[]
-): void => {
+const generateMainCubes = (cubes: CubeData[], missingPositions: THREE.Vector3[]): void => {
   const halfGrid = CUBE_CONFIG.GRID_SIZE / 2;
 
   for (let x = 0; x < CUBE_CONFIG.GRID_SIZE; x++) {
@@ -53,12 +50,9 @@ const generateMainCubes = (
 
 const generateScatteredCubes = (cubes: CubeData[]): void => {
   const scatterRange = {
-    x:
-      CUBE_CONFIG.GRID_SIZE * CUBE_CONFIG.SPACING * CUBE_CONFIG.SCATTER_RANGE.X,
-    y:
-      CUBE_CONFIG.GRID_SIZE * CUBE_CONFIG.SPACING * CUBE_CONFIG.SCATTER_RANGE.Y,
-    z:
-      CUBE_CONFIG.GRID_SIZE * CUBE_CONFIG.SPACING * CUBE_CONFIG.SCATTER_RANGE.Z,
+    x: CUBE_CONFIG.GRID_SIZE * CUBE_CONFIG.SPACING * CUBE_CONFIG.SCATTER_RANGE.X,
+    y: CUBE_CONFIG.GRID_SIZE * CUBE_CONFIG.SPACING * CUBE_CONFIG.SCATTER_RANGE.Y,
+    z: CUBE_CONFIG.GRID_SIZE * CUBE_CONFIG.SPACING * CUBE_CONFIG.SCATTER_RANGE.Z,
   };
 
   for (let i = 0; i < CUBE_CONFIG.SCATTER_COUNT; i++) {
@@ -81,9 +75,7 @@ const isMissingPosition = (
   z: number,
   missingPositions: THREE.Vector3[]
 ): boolean => {
-  return missingPositions.some(
-    (pos) => pos.x === x && pos.y === y && pos.z === z
-  );
+  return missingPositions.some((pos) => pos.x === x && pos.y === y && pos.z === z);
 };
 
 // createCubeの最適化
@@ -93,8 +85,7 @@ const createCube = (position: THREE.Vector3, isScattered = false): CubeData => {
     float: {
       offset: Math.random() * Math.PI * 2,
       amplitude:
-        Math.random() *
-          (CUBE_CONFIG.FLOAT.MAX_AMPLITUDE - CUBE_CONFIG.FLOAT.MIN_AMPLITUDE) +
+        Math.random() * (CUBE_CONFIG.FLOAT.MAX_AMPLITUDE - CUBE_CONFIG.FLOAT.MIN_AMPLITUDE) +
         CUBE_CONFIG.FLOAT.MIN_AMPLITUDE,
       rotationAxis: new THREE.Vector3(
         Math.random() - 0.5,
@@ -102,12 +93,10 @@ const createCube = (position: THREE.Vector3, isScattered = false): CubeData => {
         Math.random() - 0.5
       ).normalize(),
       speed:
-        Math.random() *
-          (CUBE_CONFIG.FLOAT.MAX_SPEED - CUBE_CONFIG.FLOAT.MIN_SPEED) +
+        Math.random() * (CUBE_CONFIG.FLOAT.MAX_SPEED - CUBE_CONFIG.FLOAT.MIN_SPEED) +
         CUBE_CONFIG.FLOAT.MIN_SPEED,
       rotationSpeed:
-        Math.random() *
-          (CUBE_CONFIG.FLOAT.MAX_SPEED - CUBE_CONFIG.FLOAT.MIN_SPEED) +
+        Math.random() * (CUBE_CONFIG.FLOAT.MAX_SPEED - CUBE_CONFIG.FLOAT.MIN_SPEED) +
         CUBE_CONFIG.FLOAT.MIN_SPEED,
     },
     scatter: {

@@ -23,10 +23,7 @@ interface AnimationSettings {
   };
 }
 
-export const useWorkCardAnimation = (
-  cardRef: RefObject<HTMLElement>,
-  id: number
-) => {
+export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement>, id: number) => {
   useEffect(() => {
     const card = cardRef.current;
     if (!card) return;

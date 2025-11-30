@@ -17,17 +17,16 @@ export async function POST(request: Request) {
 
   try {
     // 管理者向けメール送信
-    const { data: adminMailData, error: adminMailError } =
-      await resend.emails.send({
-        from: process.env.RESEND_FROM_EMAIL || "Acme <onboarding@resend.dev>",
-        to: ["kaishuaoyama@gmail.com"],
-        subject,
-        react: Contact.AdminEmailTemplate({
-          username,
-          email,
-          content,
-        }) as React.ReactElement,
-      });
+    const { data: adminMailData, error: adminMailError } = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || "Acme <onboarding@resend.dev>",
+      to: ["kaishuaoyama@gmail.com"],
+      subject,
+      react: Contact.AdminEmailTemplate({
+        username,
+        email,
+        content,
+      }) as React.ReactElement,
+    });
 
     if (adminMailError) {
       console.error("Admin mail error:", adminMailError);
@@ -41,16 +40,15 @@ export async function POST(request: Request) {
     }
 
     // お問い合わせ者向け自動返信メール
-    const { data: autoReplyData, error: autoReplyError } =
-      await resend.emails.send({
-        from: process.env.RESEND_FROM_EMAIL || "Acme <onboarding@resend.dev>",
-        to: [email],
-        subject: "お問い合わせありがとうございます",
-        react: Contact.AutoReplyEmailTemplate({
-          username,
-          content,
-        }) as React.ReactElement,
-      });
+    const { data: autoReplyData, error: autoReplyError } = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || "Acme <onboarding@resend.dev>",
+      to: [email],
+      subject: "お問い合わせありがとうございます",
+      react: Contact.AutoReplyEmailTemplate({
+        username,
+        content,
+      }) as React.ReactElement,
+    });
 
     if (autoReplyError) {
       console.error("Auto reply error:", autoReplyError);

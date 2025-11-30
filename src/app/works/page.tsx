@@ -5,8 +5,7 @@ import StairsTransition from "../components/Animation/StairsTransition/StairsTra
 
 export const metadata: Metadata = {
   title: "Works",
-  description:
-    "このページでは、Kaishu Aoyamaが制作した作品を一覧で紹介しています。",
+  description: "このページでは、Kaishu Aoyamaが制作した作品を一覧で紹介しています。",
 };
 
 const WorksPage = () => {

@@ -76,10 +76,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
     >
       <ol className={`${styles["breadcrumb__list"]}`}>
         <li className={styles["breadcrumb__item"]}>
-          <Link
-            href="/"
-            className={`${styles["breadcrumb__link"]} ${styles["hover-un"]}`}
-          >
+          <Link href="/" className={`${styles["breadcrumb__link"]} ${styles["hover-un"]}`}>
             Home
           </Link>
         </li>

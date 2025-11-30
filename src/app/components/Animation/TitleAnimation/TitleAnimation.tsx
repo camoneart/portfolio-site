@@ -4,13 +4,7 @@ import React from "react";
 import styles from "./TitleAnimation.module.css";
 import { motion } from "motion/react";
 
-const TitleAnimation = ({
-  title,
-  subTitle,
-}: {
-  title: string;
-  subTitle: string;
-}) => {
+const TitleAnimation = ({ title, subTitle }: { title: string; subTitle: string }) => {
   return (
     <motion.hgroup
       initial={{ opacity: 0, y: 30 }}
@@ -28,9 +22,7 @@ const TitleAnimation = ({
       }}
       className={`flex flex-col items-center justify-center gap-2 select-none ${styles["page-title-group"]}`}
     >
-      <h1
-        className={`font-russo order-2 ${styles["page-title"]} ${styles["motion-title"]}`}
-      >
+      <h1 className={`font-russo order-2 ${styles["page-title"]} ${styles["motion-title"]}`}>
         {title}
       </h1>
       <p className={`order-1 ${styles["page-sub-title"]}`}>{subTitle}</p>

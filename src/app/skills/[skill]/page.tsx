@@ -23,22 +23,12 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
 
   return (
     <>
-      <Breadcrumb
-        title={skill.skillTitle}
-        parentPath={"/skills"}
-        parentLabel={"Skills"}
-      />
+      <Breadcrumb title={skill.skillTitle} parentPath={"/skills"} parentLabel={"Skills"} />
       <div className="common-container">
         <div className={styles["skill-info-container"]}>
-          <div
-            className={`${styles["skill-content"]} ${skill.viewTransitionBg}`}
-          >
-            <div
-              className={`${styles["skill-logo-wrapper"]} ${skill.viewTransitionLogoWrapper}`}
-            >
-              <div
-                className={`${styles["skill-logo-bg"]} ${skill.viewTransitionLogoBg}`}
-              >
+          <div className={`${styles["skill-content"]} ${skill.viewTransitionBg}`}>
+            <div className={`${styles["skill-logo-wrapper"]} ${skill.viewTransitionLogoWrapper}`}>
+              <div className={`${styles["skill-logo-bg"]} ${skill.viewTransitionLogoBg}`}>
                 <Image
                   src={skill.skillLogo}
                   alt={skill.skillTitle}
@@ -54,9 +44,7 @@ const SkillDetail = ({ params }: { params: { skill: string } }) => {
             >
               {skill.skillTitle}
             </h1>
-            <div
-              className={`font-russo ${styles["skill-label"]} ${skill.viewTransitionLabel}`}
-            >
+            <div className={`font-russo ${styles["skill-label"]} ${skill.viewTransitionLabel}`}>
               {skill.label}
             </div>
             <p className={styles["skill-description"]}>{skill.description}</p>

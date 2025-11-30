@@ -59,9 +59,7 @@ const Hero = memo(() => {
 
   return (
     <section className={`font-russo ${styles["hero"]}`}>
-      <div
-        className={`flex flex-col items-center justify-end ${styles["hero__container"]}`}
-      >
+      <div className={`flex flex-col items-center justify-end ${styles["hero__container"]}`}>
         <hgroup
           className={`z-20 text-center flex flex-col gap-1 md:gap-3 select-none ${styles["hero__hgroup"]}`}
         >
@@ -71,9 +69,7 @@ const Hero = memo(() => {
               opacity: 1,
               scale: 1,
               transition: {
-                delay: isLoading
-                  ? ANIMATION_DELAY.INITIAL.TITLE
-                  : ANIMATION_DELAY.SUBSEQUENT.TITLE,
+                delay: isLoading ? ANIMATION_DELAY.INITIAL.TITLE : ANIMATION_DELAY.SUBSEQUENT.TITLE,
                 duration: isLoading
                   ? ANIMATION_DURATION.INITIAL.TITLE
                   : ANIMATION_DURATION.SUBSEQUENT.TITLE,

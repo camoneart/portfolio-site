@@ -21,12 +21,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 // toast UI
 const notify = () =>
@@ -147,11 +142,7 @@ const ContactForm = () => {
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <Input
-                            placeholder="Subject"
-                            {...field}
-                            className="px-4 py-7"
-                          />
+                          <Input placeholder="Subject" {...field} className="px-4 py-7" />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>件名を入力してください</p>
@@ -175,10 +166,7 @@ const ContactForm = () => {
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <Textarea
-                            placeholder="Your message here..."
-                            {...field}
-                          />
+                          <Textarea placeholder="Your message here..." {...field} />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>お問い合わせ内容を入力してください</p>
@@ -192,12 +180,7 @@ const ContactForm = () => {
             />
             <div className="contact-form-send-btn-container">
               {form.formState.isSubmitting ? (
-                <ProgressBar
-                  height="100"
-                  width="100"
-                  barColor="#ca510c99"
-                  borderColor="#bd4d0d"
-                />
+                <ProgressBar height="100" width="100" barColor="#ca510c99" borderColor="#bd4d0d" />
               ) : (
                 <div className="contact-form-send-btn-bg">
                   <Button type="submit" disabled={form.formState.isSubmitting}>

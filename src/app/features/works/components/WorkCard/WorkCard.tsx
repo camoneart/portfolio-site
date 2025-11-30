@@ -54,11 +54,7 @@ const WorkCard = ({
             priority
           />
         </figure>
-        <h2
-          className={`font-russo ${styles["card-title"]} ${viewTransitionName}`}
-        >
-          {workTitle}
-        </h2>
+        <h2 className={`font-russo ${styles["card-title"]} ${viewTransitionName}`}>{workTitle}</h2>
         <p className={styles["card-description"]}>{cardDesc}</p>
         <div className={styles["card-footer"]}>
           {labels.map((label, index) => (

@@ -29,15 +29,9 @@ const Gnav = ({ isOpen, toggleMenu }: GnavProps) => {
   };
 
   return (
-    <nav
-      className={`font-russo ${styles["gnav"]} ${
-        isOpen ? styles["gnav--open"] : ""
-      }`}
-    >
+    <nav className={`font-russo ${styles["gnav"]} ${isOpen ? styles["gnav--open"] : ""}`}>
       <ul
-        className={`font-black ${styles["gnav__list"]} ${
-          isOpen ? styles["gnav__list--open"] : ""
-        }`}
+        className={`font-black ${styles["gnav__list"]} ${isOpen ? styles["gnav__list--open"] : ""}`}
       >
         <li
           className={`md:sticky md:inset-0 ${styles["gnav__item"]} ${

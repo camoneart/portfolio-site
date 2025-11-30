@@ -40,23 +40,9 @@ const Scene: React.FC = () => {
       <PerspectiveCamera makeDefault position={[30, 80, 45]} fov={55} />
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} castShadow intensity={1} />
-      <pointLight
-        position={[-3, 2, 3]}
-        color={0xff69b4}
-        intensity={1}
-        distance={10}
-      />
-      <pointLight
-        position={[3, -2, -3]}
-        color={0x00ffff}
-        intensity={1}
-        distance={10}
-      />
-      <group
-        ref={groupRef}
-        position={[0, 0, 0]}
-        rotation={[Math.PI / 4, Math.PI / 4, 0]}
-      >
+      <pointLight position={[-3, 2, 3]} color={0xff69b4} intensity={1} distance={10} />
+      <pointLight position={[3, -2, -3]} color={0x00ffff} intensity={1} distance={10} />
+      <group ref={groupRef} position={[0, 0, 0]} rotation={[Math.PI / 4, Math.PI / 4, 0]}>
         {cubes.map((props, index) => (
           <Cube key={index} {...props} />
         ))}

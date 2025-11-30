@@ -95,19 +95,15 @@ export const worksData: WorksData[] = [
   {
     id: 2,
     image: "/images/works/work02.jpg",
-    workTitle:
-      "青牡丹工務店｜大阪市北区の住宅建築・リフォーム・公共事業なら青牡丹工務店",
+    workTitle: "青牡丹工務店｜大阪市北区の住宅建築・リフォーム・公共事業なら青牡丹工務店",
     cardDesc:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の建築会社のサイト」になります。",
     description:
       "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の建築会社のサイト」になります。",
     detail01: "　ローディング画面を実装しています。",
-    detail02:
-      "　ファーストビューコピーや見出しの出現アニメーションは、GSAPで実装しています。",
-    detail03:
-      "　トップページの横並びの画像箇所は、Swiperでスライダーを実装しています。",
-    detail04:
-      "　NEWSセクションのお知らせの内容は、モーダルで出現させる仕様になっています。",
+    detail02: "　ファーストビューコピーや見出しの出現アニメーションは、GSAPで実装しています。",
+    detail03: "　トップページの横並びの画像箇所は、Swiperでスライダーを実装しています。",
+    detail04: "　NEWSセクションのお知らせの内容は、モーダルで出現させる仕様になっています。",
     detail05:
       "　メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
     accessDescription:
@@ -133,10 +129,8 @@ export const worksData: WorksData[] = [
     specification04: "ブログ詳細ページ仕様",
     specification05: "募集要項とFAQページ仕様",
     specification06: "エントリーフォームページ仕様",
-    specification01Detail01:
-      "　トップページの要素をGSAPでふわっと表示させるようにしています。",
-    specification01Detail02:
-      "　ファーストビュー直下のスライダーはSwiperで実装しています。",
+    specification01Detail01: "　トップページの要素をGSAPでふわっと表示させるようにしています。",
+    specification01Detail02: "　ファーストビュー直下のスライダーはSwiperで実装しています。",
     specification01Detail03:
       "　blogはデフォルトの投稿機能を使用。staff一覧はカスタム投稿を使用して管理画面に「スタッフ管理」の項目を追加して、コンテンツ入稿できるようにしています。",
     specification01Detail04:
@@ -146,12 +140,10 @@ export const worksData: WorksData[] = [
     specification02Detail02:
       "　サイドバーは追従する目次で、PC時のみ常に右側に表示させています。「クリックで該当部分にスクロール」「現在の話題の部分は色の濃いアクティブ表示」「スクロールすることでアクティブ部分はリアルタイムに変化」という仕様になっています。",
     specification02Detail03: "　その他のメンバーはランダムで表示させています。",
-    specification03Detail01:
-      "　ブログはWordPressのデフォルト投稿機能を使っています。",
+    specification03Detail01: "　ブログはWordPressのデフォルト投稿機能を使っています。",
     specification03Detail02:
       "　ブログ記事は9つ以上用意して、ページネーションが機能するようにしています。",
-    specification04Detail01:
-      "　投稿画面からの入稿で、コンテンツを表示させています。",
+    specification04Detail01: "　投稿画面からの入稿で、コンテンツを表示させています。",
     specification05Detail01:
       "　3つのボタンはページ内リンクになっており、クリックすると該当セクションまでスクロールする仕様になっています。",
     specification06Detail01: "　プラグインは、CF7を使用しています。",
@@ -163,8 +155,7 @@ export const worksData: WorksData[] = [
     accessDescription:
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "003/006" }],
-    skillsList:
-      "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
+    skillsList: "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
     siteUrl: "https://aoymdev.com/tetote",
     role: "Coding",
     viewTransitionName: "view-transition-title-work-3",
@@ -178,16 +169,14 @@ export const worksData: WorksData[] = [
       "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
     description:
       "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
-    detail01:
-      "　Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしています。",
+    detail01: "　Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしています。",
     detail02:
       "　トップページ：トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「これまでの学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」や「ストーリー」を視覚的に表現しています。",
     detail03:
       "　アバウトページ：私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。",
     detail04:
       "　スキルページ：サイト制作やアプリ開発をする上で学び、活用してきたスキルセットを一覧でまとめています。",
-    detail05:
-      "　制作実績ページ：これまでに制作した作品を一覧で紹介しています。",
+    detail05: "　制作実績ページ：これまでに制作した作品を一覧で紹介しています。",
     detail06:
       "　お問い合わせページ：このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信サービスには「Resend」を利用しています。",
     detail07:
@@ -196,8 +185,7 @@ export const worksData: WorksData[] = [
       "　カード型UIには「View Transitions API」を利用し、クリック時にスムーズに流れるような遷移アニメーションを実装しています。ユーザーに適切な視線誘導をもたらすアニメーションを実装することで、コンテンツへの没入感を高め、ユーザーの操作を助ける演出でUX向上を目指しました。",
     detail09:
       "　ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識したアニメーションを実装しています。",
-    detail10:
-      "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
+    detail10: "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
     accessDescription:
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "004/006" }],
@@ -216,8 +204,7 @@ export const worksData: WorksData[] = [
       "アウトプットを学びの冒険に変えるRPG風学習支援Webアプリです。勇者と共に学びの冒険をはじめよう！",
     description:
       '「OUTPUT QUEST 叡智の継承者」は、Zennで記事を投稿し、勇者を成長させていく「RPG風学習支援Webアプリ」です。ゲーミフィケーション要素がアウトプットという行為を「学びの冒険」という体験に変え、学習の継続をサポートします。ユーザーが学ぶことを楽しみ、理解を深めることに達成感を覚え、"ユーザーの幸福度に繋がる体験価値" の提供で貢献したいという想いで開発しました。',
-    detail01:
-      "　Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしています。",
+    detail01: "　Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしています。",
     detail02:
       "　トップページ：ゲームのオープニングを彷彿とさせる演出により、冒険のはじまりを視覚的に表現しました。",
     detail03:
@@ -228,8 +215,7 @@ export const worksData: WorksData[] = [
       "　記事探索：AIが勇者の仲間の「賢者」として、次に書く記事に最適なテーマを提案。賢者（AI）は、あなたのZenn記事を探索し、過去の投稿から傾向を探ることで、あなたの成長に最適な「学びのタネ」を見つけ出します。",
     detail06:
       "　つよさ：勇者の成長度合いを示すレベル、レベルアップ報酬で獲得した「称号」の確認、勇者の「装備アイテム」の確認、これまでの学びの軌跡が残る「冒険ログ」の確認ができます。",
-    detail07:
-      "　称号リスト：勇者がレベルアップ報酬で獲得した称号を一覧で確認できます。",
+    detail07: "　称号リスト：勇者がレベルアップ報酬で獲得した称号を一覧で確認できます。",
     detail08: "　そうび一覧：勇者の装備アイテムを一覧で確認できます。",
     detail09:
       "　冒険ログ：学びの軌跡が残る「冒険ログ」。これまでの学びの軌跡を時系列で確認できます。",
@@ -244,8 +230,7 @@ export const worksData: WorksData[] = [
     detail14:
       "　OUTPUT QUESTとは ?：OUTPUT QUESTの世界観と使い方、アウトプットを通じて成長する「RPG風学習支援Webアプリ」の始め方を解説します。アプリの概要、コンセプト、主要機能について紹介します。",
     detail15: "　利用規約：OUTPUT QUESTの利用規約を確認できます。",
-    detail16:
-      "　プライバシーポリシー：OUTPUT QUESTのプライバシーポリシーを確認できます。",
+    detail16: "　プライバシーポリシー：OUTPUT QUESTのプライバシーポリシーを確認できます。",
     accessDescription:
       "このWebアプリは転職活動用のポートフォリオとして開発したものであり、意図した環境でご確認いただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "005/006" }],
@@ -278,8 +263,7 @@ export const worksData: WorksData[] = [
       "　`mst tmux`：`fzf`による高速切り替え、`--tmux-h-panes 4`オプションで瞬時にtmuxセッションを4分割レイアウトに構築。各ペインにブランチ名が表示され、並列作業を視覚的に管理することで効率的な開発環境を実現します。",
     detail07: "　`mst list`：ローカルのworktreeを一覧表示できます。",
     detail08: "　`mst github list`：GitHub上のIssue/PRを一覧表示できます。",
-    detail09:
-      "　`mst where --current`：現在のworktreeを確認することができます。",
+    detail09: "　`mst where --current`：現在のworktreeを確認することができます。",
     detail10:
       "　`mst list --last-commit`や`mst list --metadata`で、各演奏者(worktree)の活動状況の詳細を把握できます。",
     detail11:

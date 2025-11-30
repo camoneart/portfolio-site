@@ -90,15 +90,11 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
 
     // ホバー時のインタラクション
     const hoverSpeed = 0.1; // キューブが膨らむ速度。この値を小さくすると遅く、大きくすると速くなります
-    currentHoverValue.current +=
-      (hoverRef.current - currentHoverValue.current) * hoverSpeed;
+    currentHoverValue.current += (hoverRef.current - currentHoverValue.current) * hoverSpeed;
     material.uniforms.hover.value = currentHoverValue.current;
 
-    const floatOffset =
-      Math.sin(time * float.speed + float.offset) * float.amplitude;
-    const floatPosition = initialPosition
-      .clone()
-      .add(new THREE.Vector3(0, floatOffset, 0));
+    const floatOffset = Math.sin(time * float.speed + float.offset) * float.amplitude;
+    const floatPosition = initialPosition.clone().add(new THREE.Vector3(0, floatOffset, 0));
 
     meshRef.current.quaternion.setFromAxisAngle(
       float.rotationAxis,
@@ -106,21 +102,16 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
     );
 
     if (scatter.isScattered) {
-      meshRef.current.position.x =
-        initialPosition.x + Math.sin(time * 0.5 + float.offset) * 2;
-      meshRef.current.position.y =
-        initialPosition.y + Math.cos(time * 0.7 + float.offset) * 2;
-      meshRef.current.position.z =
-        initialPosition.z + Math.sin(time * 0.3 + float.offset) * 2;
+      meshRef.current.position.x = initialPosition.x + Math.sin(time * 0.5 + float.offset) * 2;
+      meshRef.current.position.y = initialPosition.y + Math.cos(time * 0.7 + float.offset) * 2;
+      meshRef.current.position.z = initialPosition.z + Math.sin(time * 0.3 + float.offset) * 2;
 
       meshRef.current.rotation.x += scatter.rotationSpeed.x * 0.01;
       meshRef.current.rotation.y += scatter.rotationSpeed.y * 0.01;
       meshRef.current.rotation.z += scatter.rotationSpeed.z * 0.01;
     } else if (currentHoverValue.current > 0.01) {
       // ホバー中の動き
-      velocityRef.current.add(
-        scatter.direction.clone().multiplyScalar(scatter.speed * 0.01)
-      );
+      velocityRef.current.add(scatter.direction.clone().multiplyScalar(scatter.speed * 0.01));
       velocityRef.current.y += Math.sin(time) * 0.001; // 中心に集まるキューブが元の位置に戻る速度
       velocityRef.current.multiplyScalar(0.99);
 

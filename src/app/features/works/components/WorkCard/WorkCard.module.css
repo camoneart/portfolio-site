@@ -105,8 +105,7 @@
   .card-no-3,
   .card-no-4,
   .card-no-5 {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
-      scale(1);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
   }
 
   .card-no-1:hover,
@@ -133,8 +132,7 @@
   .card-no-6:active,
   .card-no-6:focus,
   .card-no-6:focus-visible {
-    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg)
-      scale(1.07);
+    transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
   }
 }
 

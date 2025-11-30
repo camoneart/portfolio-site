@@ -16,11 +16,7 @@ export const CustomEmphasis: Components["p"] = ({ children, ...props }) => {
     );
 
     return (
-      <p
-        {...props}
-        dangerouslySetInnerHTML={{ __html: text }}
-        className={styles["emphasis"]}
-      />
+      <p {...props} dangerouslySetInnerHTML={{ __html: text }} className={styles["emphasis"]} />
     );
   }
   return <p {...props}>{children}</p>;

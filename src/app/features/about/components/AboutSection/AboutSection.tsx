@@ -106,9 +106,7 @@ const AboutSection = () => {
                           }}
                           className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}
                         >
-                          <span className={styles["light-effect"]}>
-                            Birthday
-                          </span>
+                          <span className={styles["light-effect"]}>Birthday</span>
                         </motion.dt>
                         <motion.dd
                           initial={{ opacity: 0 }}
@@ -160,9 +158,7 @@ const AboutSection = () => {
                           }}
                           className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]} ${styles["about-list-title-en"]}`}
                         >
-                          <span className={styles["light-effect"]}>
-                            Nickname
-                          </span>
+                          <span className={styles["light-effect"]}>Nickname</span>
                         </motion.dt>
                         <motion.dd
                           initial={{ opacity: 0 }}
@@ -420,15 +416,13 @@ const AboutSection = () => {
                         <em>&quot;調べまくる.ᐟ　試しまくる.ᐟ.ᐟ&quot;</em>
                         そんな日々を過ごしています。興味を持った技術はコードを書いて挙動を検証し、
                         <em>
-                          &quot;トライ&エラー&quot;
-                          を繰り返しながら理解を深めるようにしています。
+                          &quot;トライ&エラー&quot; を繰り返しながら理解を深めるようにしています。
                         </em>
                       </p>
                       <p>
                         <em>注力</em>
-                        ：「Next.js」「React」「TypeScript」「LLM / Generative
-                        AI」「Context Engineering」「Interaction /
-                        Animation」「UI / UX」
+                        ：「Next.js」「React」「TypeScript」「LLM / Generative AI」「Context
+                        Engineering」「Interaction / Animation」「UI / UX」
                       </p>
                     </motion.dd>
                   </div>
@@ -444,9 +438,7 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <span className={styles["light-effect"]}>
-                        学び、理解すること
-                      </span>
+                      <span className={styles["light-effect"]}>学び、理解すること</span>
                     </motion.dt>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -460,11 +452,9 @@ const AboutSection = () => {
                     >
                       <p>
                         私は日々、自己成長を目的としたキャッチアップとアウトプットを続けていく中で、
-                        <em>&quot;継続すること&quot;</em>{" "}
-                        の大切さを改めて実感し、
+                        <em>&quot;継続すること&quot;</em> の大切さを改めて実感し、
                         <em>
-                          &quot;学ぶ&quot; という行為そのものを
-                          &quot;楽しい体験&quot;
+                          &quot;学ぶ&quot; という行為そのものを &quot;楽しい体験&quot;
                           に変えられたら、継続に繋がるよな。
                         </em>{" "}
                         という思いが芽生えました。
@@ -540,8 +530,8 @@ const AboutSection = () => {
                         を与えてくれます。
                       </p>
                       <p>
-                        <em>好きなミュージシャン</em>：「Vaundy」「King
-                        Gnu」「藤井 風」「SUPER BEAVER」「Saucy Dog」etc...
+                        <em>好きなミュージシャン</em>：「Vaundy」「King Gnu」「藤井 風」「SUPER
+                        BEAVER」「Saucy Dog」etc...
                       </p>
                     </motion.dd>
                   </div>
@@ -611,16 +601,11 @@ const AboutSection = () => {
                       <p>ジャンルを問わず気になった書籍を読むのが好きです。</p>
                       <p>
                         読書では、
-                        <em>
-                          新たな知識を得たり、著者の考え方や価値観を学ぶことができます。
-                        </em>
+                        <em>新たな知識を得たり、著者の考え方や価値観を学ぶことができます。</em>
                       </p>
                       <p>
                         私にとっての書籍は、
-                        <em>
-                          &quot;先人の知恵を学ぶことができるアイテム&quot;
-                        </em>{" "}
-                        といった存在です。
+                        <em>&quot;先人の知恵を学ぶことができるアイテム&quot;</em> といった存在です。
                       </p>
                     </motion.dd>
                     <motion.dd
@@ -688,9 +673,7 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <span className={styles["light-effect"]}>
-                        AIに注力しています
-                      </span>
+                      <span className={styles["light-effect"]}>AIに注力しています</span>
                     </motion.dt>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -773,8 +756,8 @@ const AboutSection = () => {
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <p>
-                        <em>ポジティブ</em> / <em>知的好奇心</em> /{" "}
-                        <em>探究心</em> / <em>自走力</em> / <em>継続力</em>
+                        <em>ポジティブ</em> / <em>知的好奇心</em> / <em>探究心</em> /{" "}
+                        <em>自走力</em> / <em>継続力</em>
                       </p>
                     </motion.dd>
                   </div>
@@ -879,9 +862,7 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <span className={styles["light-effect"]}>
-                        「来年のための今年」
-                      </span>
+                      <span className={styles["light-effect"]}>「来年のための今年」</span>
                     </motion.dt>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -893,9 +874,7 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-description"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <p>
-                        「来年のために今年はなにができるだろう？」と常に考えています。
-                      </p>
+                      <p>「来年のために今年はなにができるだろう？」と常に考えています。</p>
                       <p>
                         <em>とにかく自分をアップデートし続けたいです。</em>
                         やりたいこと、際限ないです。
@@ -915,8 +894,7 @@ const AboutSection = () => {
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
                       <span className={styles["light-effect"]}>
-                        &quot;喜び&quot; や &quot;幸せ&quot;
-                        に繋がる価値を届ける
+                        &quot;喜び&quot; や &quot;幸せ&quot; に繋がる価値を届ける
                       </span>
                     </motion.dt>
                     <motion.dd
@@ -933,9 +911,7 @@ const AboutSection = () => {
                         Webサービスを通じてお客様に価値あるプロダクトを高速で届け、
                         <em>&quot;喜びや幸せに繋がる価値&quot;</em>
                         の提供で貢献し、
-                        <em>
-                          社会にポジティブな変化を生み出す活動を続けていきたいです。
-                        </em>
+                        <em>社会にポジティブな変化を生み出す活動を続けていきたいです。</em>
                         そのために知的好奇心を原動力にアンラーンして学び続け、クリエイティブに没頭したいです！
                       </p>
                     </motion.dd>
@@ -952,9 +928,7 @@ const AboutSection = () => {
                       }}
                       className={`${styles["about-list-title"]} ${styles["scroll-driven-animation"]}`}
                     >
-                      <span className={styles["light-effect"]}>
-                        常に挑戦する
-                      </span>
+                      <span className={styles["light-effect"]}>常に挑戦する</span>
                     </motion.dt>
                     <motion.dd
                       initial={{ opacity: 0 }}
@@ -971,12 +945,9 @@ const AboutSection = () => {
                         をモットーとしています。
                       </p>
                       <p>
-                        <em>&quot;楽な道のりよりも、険しい道の歩き方&quot;</em>{" "}
-                        を知りたいし、
+                        <em>&quot;楽な道のりよりも、険しい道の歩き方&quot;</em> を知りたいし、
                         地に足をつけ、学びを大切とし、謙虚さを忘れず、挑戦を続けることで、
-                        <em>
-                          &quot;見たことも無い、想像もできなかった景色と出会える&quot;
-                        </em>
+                        <em>&quot;見たことも無い、想像もできなかった景色と出会える&quot;</em>
                         と私は信じています。
                       </p>
                       <p>

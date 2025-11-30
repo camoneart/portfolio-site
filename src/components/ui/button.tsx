@@ -7,14 +7,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-[#ff5a2e] text-primary-foreground hover:bg-[#ff8565] focus:bg-[#ff8565]",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        default: "bg-[#ff5a2e] text-primary-foreground hover:bg-[#ff8565] focus:bg-[#ff8565]",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
@@ -42,11 +38,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
-      <Comp
-        className="font-russo contact-form-send-btn cursor-pointer"
-        ref={ref}
-        {...props}
-      />
+      <Comp className="font-russo contact-form-send-btn cursor-pointer" ref={ref} {...props} />
     );
   }
 );

@@ -42,9 +42,7 @@ export default function Header() {
     <header
       className={`w-full h-auto mx-auto select-none md:py-8 py-4 md:px-8 px-4 ${`${styles["header"]}`}`}
     >
-      <div
-        className={`flex items-center justify-between ${styles["header__container"]}`}
-      >
+      <div className={`flex items-center justify-between ${styles["header__container"]}`}>
         <div
           className={`sticky inset-0 font-russo text-xl md:text-3xl font-black ${styles["header__title"]}`}
         >
@@ -53,16 +51,8 @@ export default function Header() {
             className={`${styles["header__title-link"]}`}
             onClick={() => isOpen && toggleMenu()}
           >
-            <span
-              className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}
-            >
-              aoyama
-            </span>
-            <span
-              className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}
-            >
-              aoyama
-            </span>
+            <span className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}>aoyama</span>
+            <span className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}>aoyama</span>
           </Link>
         </div>
         <div className={styles["header__items"]}>
