@@ -28,7 +28,7 @@ export const createPointsSystem = ({ gridSize, spacing }: GridConfig) => {
   const material = new THREE.ShaderMaterial({
     uniforms: {
       color: { value: new THREE.Color("#999999") },
-      activeColor: { value: new THREE.Color("#FF8800") },
+      activeColor: { value: new THREE.Color("#ff4a5a") },
     },
     vertexShader: `
       attribute float scale;

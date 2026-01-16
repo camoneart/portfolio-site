@@ -49,7 +49,7 @@ const AboutSection = () => {
                     }}
                     className={styles["about-profile-icon"]}
                   >
-                    <User size={25} color="#ff6b4a" />
+                    <User size={25} color="#ff4a5a" />
                   </motion.div>
                   <motion.h2
                     initial={{ opacity: 0, x: -50 }}
@@ -193,7 +193,7 @@ const AboutSection = () => {
                     }}
                     className={styles["about-sns-icon"]}
                   >
-                    <AtSign size={20} color="#ff6b4a" />
+                    <AtSign size={20} color="#ff4a5a" />
                   </motion.div>
                   <motion.h2
                     initial={{ opacity: 0, x: -50 }}
@@ -369,7 +369,7 @@ const AboutSection = () => {
                   transition={{ delay: 2.2, duration: 0.6, ease: "easeInOut" }}
                   className={styles["about-hobby-icon"]}
                 >
-                  <Flame size={21} color="#ff6b4a" />
+                  <Flame size={21} color="#ff4a5a" />
                 </motion.div>
                 <motion.h2
                   initial={{ opacity: 0, x: -50 }}
@@ -643,7 +643,7 @@ const AboutSection = () => {
                   transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
                   className={styles["about-focus-icon"]}
                 >
-                  <Focus size={20} color="#ff6b4a" />
+                  <Focus size={20} color="#ff4a5a" />
                 </motion.div>
                 <motion.h2
                   initial={{ opacity: 0, x: -50 }}
@@ -713,7 +713,7 @@ const AboutSection = () => {
                   transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
                   className={styles["about-focus-icon"]}
                 >
-                  <CircleCheck size={20} color="#ff6b4a" />
+                  <CircleCheck size={20} color="#ff4a5a" />
                 </motion.div>
                 <motion.h2
                   initial={{ opacity: 0, x: -50 }}
@@ -832,7 +832,7 @@ const AboutSection = () => {
                   transition={{ delay: 2.1, duration: 0.6, ease: "easeInOut" }}
                   className={styles["about-vision-icon"]}
                 >
-                  <Sparkle size={20} color="#ff6b4a" />
+                  <Sparkle size={20} color="#ff4a5a" />
                 </motion.div>
                 <motion.h2
                   initial={{ opacity: 0, x: -50 }}

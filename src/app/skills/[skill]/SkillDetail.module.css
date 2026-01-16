@@ -61,7 +61,7 @@
   font-weight: var(--font-weight-normal);
   letter-spacing: 0.5px;
   line-height: var(--leading-none);
-  color: var(--color-primary-orange);
+  color: var(--color-primary-red);
   background-color: var(--label-bg-color);
   box-shadow: 2px 3px 0 0 rgb(0 0 0 / 0.4);
   border: 1px solid var(--label-border-color);
