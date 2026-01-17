@@ -92,6 +92,7 @@ const AboutSection = () => {
                         width={170}
                         height={170}
                         className={styles["about-profile-img"]}
+                        priority
                       />
                     </motion.div>
                     <div className={styles["about-profile-info"]}>
@@ -245,6 +246,7 @@ const AboutSection = () => {
                                   alt="GitHub"
                                   width={20}
                                   height={20}
+                                  priority
                                 />
                               </div>
                             </div>
@@ -289,6 +291,7 @@ const AboutSection = () => {
                                   alt="X"
                                   width={20}
                                   height={20}
+                                  priority
                                 />
                               </div>
                             </div>
@@ -333,6 +336,7 @@ const AboutSection = () => {
                                   alt="Zenn"
                                   width={20}
                                   height={20}
+                                  priority
                                 />
                               </div>
                             </div>
