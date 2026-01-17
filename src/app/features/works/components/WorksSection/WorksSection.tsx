@@ -73,97 +73,6 @@ export const worksData: WorksData[] = [
   {
     id: 1,
     image: "/images/works/work01.jpg",
-    workTitle: "CareSend｜有資格介護人材が集まる介護派遣サービス",
-    cardDesc:
-      "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の介護派遣サービスのLPサイト」になります。",
-    description:
-      "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の介護派遣サービスのLPサイト」になります。",
-    detail01: "　GSAPを利用して、要素の出現アニメーションを実装しています。",
-    detail02:
-      "　企業ロゴが無限ループするスライダーと、導入事例セクションのカードUIのスライダーはSwiperで実装しています。",
-    detail03:
-      "　ダウンロードフォームは、「全項目を入力しないと、送信できないようにする」「フォーム送信後は、サンクスページに遷移」「性と名が分かれている時のオートコンプリートに対応」などの仕様です。実際のダウンロード機能は実装していません。",
-    accessDescription:
-      "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
-    labels: [{ no: "Card No.", value: "001/006" }],
-    skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
-    siteUrl: "https://aoymdev.com/caresend",
-    role: "Coding",
-    viewTransitionName: "view-transition-title-work-1",
-    viewTransitionImage: "view-transition-img-work-1",
-  },
-  {
-    id: 2,
-    image: "/images/works/work02.jpg",
-    workTitle: "青牡丹工務店｜大阪市北区の住宅建築・リフォーム・公共事業なら青牡丹工務店",
-    cardDesc:
-      "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の建築会社のサイト」になります。",
-    description:
-      "こちらのサイトは、Figmaで作成されたデザインカンプを基にコーディングを行った「架空の建築会社のサイト」になります。",
-    detail01: "　ローディング画面を実装しています。",
-    detail02: "　ファーストビューコピーや見出しの出現アニメーションは、GSAPで実装しています。",
-    detail03: "　トップページの横並びの画像箇所は、Swiperでスライダーを実装しています。",
-    detail04: "　NEWSセクションのお知らせの内容は、モーダルで出現させる仕様になっています。",
-    detail05:
-      "　メールフォームの仕様は、「必須項目を全て入力しないと送信ボタンが押せない」「適切なautocomplete属性を使用しフォームの最適化」「フォーム送信後は、サンクスページに遷移」などになっています。",
-    accessDescription:
-      "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
-    labels: [{ no: "Card No.", value: "002/006" }],
-    skillsList: "HTML, CSS, Sass, JavaScript, Swiper, GSAP, webpack",
-    siteUrl: "https://aoymdev.com/aobotan",
-    role: "Coding",
-    viewTransitionName: "view-transition-title-work-2",
-    viewTransitionImage: "view-transition-img-work-2",
-  },
-  {
-    id: 3,
-    image: "/images/works/work03.jpg",
-    workTitle: "採用特設サイト｜株式会社TETOTE",
-    cardDesc:
-      "こちらのサイトは、Figmaで作成されたWordPressオリジナルテーマのデザインカンプを基にコーディングを行った「架空のITコンサルファームの採用サイト」になります。",
-    description:
-      "こちらのサイトは、Figmaで作成されたWordPressオリジナルテーマのデザインカンプを基にコーディングを行った「架空のITコンサルファームの採用サイト」になります。",
-    specification01: "トップページの仕様",
-    specification02: "STAFF詳細ページ仕様",
-    specification03: "ブログ一覧ページ仕様",
-    specification04: "ブログ詳細ページ仕様",
-    specification05: "募集要項とFAQページ仕様",
-    specification06: "エントリーフォームページ仕様",
-    specification01Detail01: "　トップページの要素をGSAPでふわっと表示させるようにしています。",
-    specification01Detail02: "　ファーストビュー直下のスライダーはSwiperで実装しています。",
-    specification01Detail03:
-      "　blogはデフォルトの投稿機能を使用。staff一覧はカスタム投稿を使用して管理画面に「スタッフ管理」の項目を追加して、コンテンツ入稿できるようにしています。",
-    specification01Detail04:
-      "　「人を知る」セクションでは、カスタム投稿「スタッフ管理」から入稿したコンテンツをスライダーで表示。",
-    specification02Detail01:
-      "　「スタッフメッセージ一行目」「スタッフメッセージ二行目」「職種名」「名前」「入社年度」「プロフィール」の内容は、カスタムフィールドの情報を表示させ、スタッフ画像はサムネイルで設定した画像を表示させています。",
-    specification02Detail02:
-      "　サイドバーは追従する目次で、PC時のみ常に右側に表示させています。「クリックで該当部分にスクロール」「現在の話題の部分は色の濃いアクティブ表示」「スクロールすることでアクティブ部分はリアルタイムに変化」という仕様になっています。",
-    specification02Detail03: "　その他のメンバーはランダムで表示させています。",
-    specification03Detail01: "　ブログはWordPressのデフォルト投稿機能を使っています。",
-    specification03Detail02:
-      "　ブログ記事は9つ以上用意して、ページネーションが機能するようにしています。",
-    specification04Detail01: "　投稿画面からの入稿で、コンテンツを表示させています。",
-    specification05Detail01:
-      "　3つのボタンはページ内リンクになっており、クリックすると該当セクションまでスクロールする仕様になっています。",
-    specification06Detail01: "　プラグインは、CF7を使用しています。",
-    specification06Detail02: "　月選択は1~12の範囲、日は1~31の範囲で選択。",
-    specification06Detail03:
-      "　フォームアクセシビリティを考慮して、select、radio、checkboxなどをtabキーでフォーカスが当たるようにし、spaceキーで選択できる仕様にしています。",
-    specification06Detail04:
-      "　「送信する」ボタンは、必須項目が全て入力されていないと押せないようにしています。確認画面は実装していません。",
-    accessDescription:
-      "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
-    labels: [{ no: "Card No.", value: "003/006" }],
-    skillsList: "HTML, CSS, Sass, JavaScript, PHP, WordPress, Swiper, GSAP, webpack",
-    siteUrl: "https://aoymdev.com/tetote",
-    role: "Coding",
-    viewTransitionName: "view-transition-title-work-3",
-    viewTransitionImage: "view-transition-img-work-3",
-  },
-  {
-    id: 4,
-    image: "/images/works/work04.jpg",
     workTitle: "aoyama｜Web Engineer",
     cardDesc:
       "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
@@ -188,17 +97,17 @@ export const worksData: WorksData[] = [
     detail10: "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
     accessDescription:
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
-    labels: [{ no: "Card No.", value: "004/006" }],
+    labels: [{ no: "Card No.", value: "001/003" }],
     skillsList:
       "Next.js, TypeScript, Tailwind CSS, shadcn/ui, GSAP, Motion, View Transitions API, React Three Fiber, Drei, React Spring, Howler.js, React Hook Form, Zod, Resend, Vercel",
     siteUrl: "https://aoyamadev.com",
     role: "Design, Coding",
-    viewTransitionName: "view-transition-title-work-4",
-    viewTransitionImage: "view-transition-img-work-4",
+    viewTransitionName: "view-transition-title-work-1",
+    viewTransitionImage: "view-transition-img-work-1",
   },
   {
-    id: 5,
-    image: "/images/works/work05.jpg",
+    id: 2,
+    image: "/images/works/work02.jpg",
     workTitle: "OUTPUT QUEST　叡智の継承者",
     cardDesc:
       "アウトプットを学びの冒険に変えるRPG風学習支援Webアプリです。勇者と共に学びの冒険をはじめよう！",
@@ -233,17 +142,17 @@ export const worksData: WorksData[] = [
     detail16: "　プライバシーポリシー：OUTPUT QUESTのプライバシーポリシーを確認できます。",
     accessDescription:
       "このWebアプリは転職活動用のポートフォリオとして開発したものであり、意図した環境でご確認いただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
-    labels: [{ no: "Card No.", value: "005/006" }],
+    labels: [{ no: "Card No.", value: "002/003" }],
     skillsList:
       "Next.js, TypeScript, Tailwind CSS, shadcn/ui, Motion, Howler.js, Clerk, Prisma, Supabase, zod, Vercel AI SDK, react-markdown, Vercel",
     siteUrl: "https://outputquest.com",
     role: "Design, Coding",
-    viewTransitionName: "view-transition-title-work-5",
-    viewTransitionImage: "view-transition-img-work-5",
+    viewTransitionName: "view-transition-title-work-2",
+    viewTransitionImage: "view-transition-img-work-2",
   },
   {
-    id: 6,
-    image: "/images/works/work06.jpg",
+    id: 3,
+    image: "/images/works/work03.jpg",
     workTitle: "Maestro",
     cardDesc:
       'Git worktreeを "オーケストラ" のように指揮し、Claude Codeとの並列開発を加速させるCLIツール',
@@ -273,13 +182,13 @@ export const worksData: WorksData[] = [
     detail13:
       "　必要なのはNode.js 20以上のみです。`brew install camoneart/tap/maestro`または`npm install -g @camoneart/maestro`または`pnpm add -g @camoneart/maestro`ですぐにインストールできます。",
     accessDescription: "",
-    labels: [{ no: "Card No.", value: "006/006" }],
+    labels: [{ no: "Card No.", value: "003/003" }],
     skillsList:
       "TypeScript, commander, simple-git, execa, inquirer, chalk, ora, zod, cli-progress, chokidar, conf, p-limit, open, modelcontextprotocol/sdk, tsup, vitest",
     siteUrl: "https://github.com/camoneart/maestro",
     role: "Design, Coding",
-    viewTransitionName: "view-transition-title-work-6",
-    viewTransitionImage: "view-transition-img-work-6",
+    viewTransitionName: "view-transition-title-work-3",
+    viewTransitionImage: "view-transition-img-work-3",
   },
 ];
 
