@@ -4,9 +4,10 @@ import { skillsData } from "../components/Skills/Skills";
 export async function generateSkillMetadata({
   params,
 }: {
-  params: { skill: string };
+  params: Promise<{ skill: string }>;
 }): Promise<Metadata> {
-  const skillData = skillsData.find((s) => s.skillLink === params.skill);
+  const { skill } = await params;
+  const skillData = skillsData.find((s) => s.skillLink === skill);
 
   if (!skillData) {
     return {

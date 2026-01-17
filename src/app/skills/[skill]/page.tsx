@@ -14,8 +14,9 @@ export async function generateStaticParams() {
 
 export const generateMetadata = generateSkillMetadata;
 
-const SkillDetail = ({ params }: { params: { skill: string } }) => {
-  const skill = skillsData.find((s) => s.skillLink === params.skill);
+const SkillDetail = async ({ params }: { params: Promise<{ skill: string }> }) => {
+  const { skill: skillParam } = await params;
+  const skill = skillsData.find((s) => s.skillLink === skillParam);
 
   if (!skill) {
     return <div>スキルが見つかりませんでした。</div>;
