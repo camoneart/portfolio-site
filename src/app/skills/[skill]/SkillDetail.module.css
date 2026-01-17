@@ -20,7 +20,7 @@
   background: var(--cmp-bg-primary-color);
   border: 1px solid var(--cmp-border-primary-color);
   border-radius: 10px;
-  box-shadow: var(--detail-cmp-shadow);
+  box-shadow: var(--cmp-secondary-shadow);
   transition:
     background 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out,
@@ -61,7 +61,7 @@
   font-weight: var(--font-weight-normal);
   letter-spacing: 0.5px;
   line-height: var(--leading-none);
-  color: var(--color-primary-red);
+  color: var(--color-primary-pink);
   background-color: var(--label-bg-color);
   box-shadow: 2px 3px 0 0 rgb(0 0 0 / 0.4);
   border: 1px solid var(--label-border-color);

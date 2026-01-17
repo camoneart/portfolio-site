@@ -79,9 +79,10 @@
     --color-primary-white: #fff;
     --color-primary-black: #000;
     --color-primary-gray: #262626;
-    --color-primary-red: #ff4a5a;
-    --color-secondary-red: #e63946;
-    --stairs-column-color: #7c0020;
+    --color-primary-pink: #ff6b8a;
+    --color-primary-light-pink: #ffa8ba;
+    --color-secondary-pink: #e63946;
+    --stairs-column-color: #813049;
     --text-gradient-primary: linear-gradient(108deg, #ff6b8a, #e63946 70%, #ff4a5a);
     --label-bg-color: rgb(246 77 90 / 25%);
     --label-border-color: rgb(231 79 100 / 75%);
@@ -90,8 +91,8 @@
     --cmp-bg-secondary-color: rgb(255 255 255 / 0.1);
     --cmp-border-primary-color: rgb(255 255 255 / 0.1);
     --cmp-border-secondary-color: rgb(255 255 255 / 0.1);
-    --btn-border-red: rgb(189 13 50);
-    --btn-bg-red: rgb(189 13 50 / 0.6);
+    --btn-border-pink: #e74f64;
+    --btn-bg-pink: rgb(246 77 90 / 60%);
     --works-item-bg-color: rgb(202 12 60 / 0.6);
     --selection-color: rgb(231 79 100 / 0.75);
     --color-zenn-blue: #3ea8ff;
@@ -104,26 +105,22 @@
     --cmp-primary-shadow:
       0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06),
       0 0 0 1px rgb(255 255 255 / 0.3), 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 0 40px rgb(255 74 90 / 0.1);
-    --detail-cmp-shadow:
-      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06),
-      0 0 0 1px rgb(255 255 255 / 0.3), 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 0 40px rgb(255 74 90 / 0.2);
+      0 0 40px rgb(255 107 138 / 0.1);
     --cmp-secondary-shadow:
       0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06),
       0 0 0 1px rgb(255 255 255 / 0.3), 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 0 40px rgb(255 74 90 / 0.2);
+      0 0 40px rgb(255 107 138 / 0.2);
     --card-hover-shadow:
-      0 25px 35px -5px rgb(0 0 0 / 0.3), 0 15px 15px -5px rgb(0 0 0 / 0.1),
-      0 0 0 1px rgb(255 255 255 / 0.2), 0 0 60px rgb(255 74 90 / 0.3);
+      0 7px 5px 1px rgb(0 0 0 / 0.3), 0 15px 15px -5px rgb(0 0 0 / 0.1),
+      0 0 0 1px rgb(255 255 255 / 0.2), 0 0 30px rgb(255 107 138 / 0.3);
     --sns-card-hover-shadow:
       0 15px 25px -5px rgb(0 0 0 / 0.3), 0 15px 15px -5px rgb(0 0 0 / 0.1),
-      0 0 0 1px rgb(255 255 255 / 0.2), 0 0 15px rgb(255 74 90 / 0.3);
-    --sidebar-link-hover-shadow: 0px 0px 20px 0px rgb(255 74 90 / 0.6);
-    --hover-text-shadow: 0 0 15px var(--color-primary-red);
+      0 0 0 1px rgb(255 255 255 / 0.2), 0 0 15px rgb(255 107 138 / 0.3);
+    --sidebar-link-hover-shadow: 0px 0px 20px 0px rgb(255 107 138 / 0.6);
+    --hover-text-shadow: 0 0 15px var(--color-primary-pink);
     --back-btn-shadow:
       0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06), 0 0 0 3px rgb(48, 46, 46),
-      0 0px 25px -5px rgb(0 0 0 / 0.1), 0 0 15px rgb(255 74 90);
+      0 0px 25px -5px rgb(0 0 0 / 0.1), 0 0 15px rgb(255 107 138);
 
     /* font weight */
     --font-weight-normal: 400;
@@ -179,40 +176,8 @@
     }
   }
 
-  .contact-form-send-btn-container {
-    height: 100px;
-    display: block grid;
-    place-items: center;
-    margin-inline: auto;
-  }
-
-  .contact-form-send-btn-bg {
-    width: fit-content;
-    border-radius: var(--border-rounded);
-    border: 1px solid var(--btn-border-red);
-    padding-block: 5px;
-    padding-inline: 5px;
-  }
-
-  .contact-form-send-btn {
-    width: 230px;
-    height: 48px;
-    background-color: var(--btn-bg-red);
-    border: 1px solid var(--btn-border-red);
-    border-radius: var(--border-rounded);
-    transition: box-shadow 0.2s ease-in-out;
-
-    @media (width < 640px) {
-      width: 150px;
-    }
-
-    &:hover {
-      box-shadow: var(--back-btn-shadow);
-    }
-  }
-
   :focus-visible {
-    outline: 1px solid var(--color-secondary-red);
+    outline: 1px solid var(--color-secondary-pink);
   }
 
   ::selection {
@@ -928,7 +893,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 14 100% 59%;
+    --ring: 347 100% 71%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -955,7 +920,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 14 100% 59%;
+    --ring: 347 100% 71%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;

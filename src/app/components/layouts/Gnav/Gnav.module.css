@@ -125,7 +125,7 @@
   transition: color 0.4s ease-in-out;
 
   &:hover {
-    color: var(--color-primary-red);
+    color: var(--color-primary-pink);
   }
 
   @media (768px <= width) {
@@ -184,5 +184,5 @@
 }
 
 .gnav__link.active {
-  color: var(--color-primary-red);
+  color: var(--color-primary-pink);
 }

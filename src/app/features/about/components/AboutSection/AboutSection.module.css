@@ -230,7 +230,7 @@
 .about-sns-title {
   font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
-  text-shadow: 0 0 8px var(--color-secondary-red);
+  text-shadow: 0 0 8px var(--color-primary-pink);
 
   @media (width < 768px) {
     font-size: 1rem;
@@ -282,13 +282,13 @@
 }
 
 .light-effect {
-  text-shadow: 0 0 8px var(--color-secondary-red);
+  text-shadow: 0 0 8px var(--color-primary-pink);
 }
 
 .underline {
   width: fit-content;
   padding-inline: 4px;
-  background: linear-gradient(transparent 70%, rgb(230 57 70 / 0.75) 70%);
+  background: linear-gradient(transparent 70%, rgb(255 107 138 / 0.75) 70%);
 }
 
 .about-list {
@@ -314,7 +314,7 @@
     line-height: var(--leading-x-tight);
     width: fit-content;
     padding-inline: 4px;
-    background: linear-gradient(transparent 70%, rgb(230 57 70 / 0.75) 70%);
+    background: linear-gradient(transparent 70%, rgb(255 107 138 / 0.75) 70%);
   }
 }
 

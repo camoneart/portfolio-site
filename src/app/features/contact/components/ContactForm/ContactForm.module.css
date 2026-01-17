@@ -16,15 +16,56 @@
 
 .required {
   margin-inline-start: 4px;
-  color: var(--color-primary-red);
+  color: var(--color-primary-pink);
 }
 
-/* scroll driven animation */
-/* .scroll-driven-animation {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% entry 100%;
-} */
+.contact-form-send-btn-container {
+  height: 100px;
+  display: block grid;
+  place-items: center;
+  margin-inline: auto;
+}
+
+.contact-form-send-btn {
+  position: relative;
+  display: block grid;
+  place-items: center;
+  border-radius: var(--border-rounded);
+  border: 1px solid var(--btn-border-pink);
+  width: 230px;
+  height: 48px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: var(--back-btn-shadow);
+  }
+
+  &:hover .send-btn-bg {
+    scale: 1 1;
+  }
+
+  @media (width < 640px) {
+    width: 150px;
+  }
+}
+
+.send-btn-bg {
+  position: absolute;
+  inset: 3px;
+  border-radius: var(--border-rounded);
+  background-color: var(--btn-bg-pink);
+  transform-origin: center;
+  scale: 0 1;
+  transition: scale 0.3s ease-out;
+}
+
+.send-btn-text {
+  position: relative;
+  z-index: 1;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-white);
+}
 
 @keyframes appear {
   0% {

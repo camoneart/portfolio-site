@@ -27,6 +27,7 @@
 }
 
 .hero__title {
+  position: relative;
   font-size: 6rem;
   line-height: var(--leading-x-tight);
 
