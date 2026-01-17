@@ -9,9 +9,7 @@ export default function Footer() {
       <div className={`p-5 grid place-items-center ${styles["footer__container"]}`}>
         <p className={`z-20 ${styles["footer__text"]}`}>
           <small className={`text-xs font-bold ${styles["footer__copyright"]}`}>
-            <span className={`${styles["text-gradient"]}`}>
-              &copy; aoyama
-            </span>
+            <span className={`${styles["text-gradient"]}`}>&copy; aoyama</span>
           </small>
         </p>
       </div>

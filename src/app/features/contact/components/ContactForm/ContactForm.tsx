@@ -180,13 +180,13 @@ const ContactForm = () => {
                 <ProgressBar height="100" width="100" barColor="#ca510c99" borderColor="#bd4d0d" />
               ) : (
                 <button
-                type="submit"
-                disabled={form.formState.isSubmitting}
-                className={styles["contact-form-send-btn"]}
-              >
-                <div className={styles["send-btn-bg"]} />
-                <span className={styles["send-btn-text"]}>Send</span>
-              </button>
+                  type="submit"
+                  disabled={form.formState.isSubmitting}
+                  className={styles["contact-form-send-btn"]}
+                >
+                  <div className={styles["send-btn-bg"]} />
+                  <span className={styles["send-btn-text"]}>Send</span>
+                </button>
               )}
             </div>
           </form>
