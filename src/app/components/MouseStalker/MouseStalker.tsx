@@ -56,12 +56,14 @@ const useInteractiveElementHover = () => {
 
     history.pushState = function (...args) {
       originalPushState.apply(history, args);
-      resetHoverState();
+      // React 19では同期的な状態更新が禁止されているため遅延実行
+      setTimeout(resetHoverState, 0);
     };
 
     history.replaceState = function (...args) {
       originalReplaceState.apply(history, args);
-      resetHoverState();
+      // React 19では同期的な状態更新が禁止されているため遅延実行
+      setTimeout(resetHoverState, 0);
     };
 
     return () => {

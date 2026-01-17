@@ -4,9 +4,10 @@ import { worksData } from "../../features/works/components/WorksSection/WorksSec
 export async function generateWorkMetadata({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-  const workId = parseInt(params.id);
+  const { id } = await params;
+  const workId = parseInt(id);
   const workData = worksData.find((w) => w.id === workId);
 
   if (!workData) {

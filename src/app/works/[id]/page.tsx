@@ -19,8 +19,9 @@ export async function generateStaticParams() {
 
 export const generateMetadata = generateWorkMetadata;
 
-const WorkDetail = ({ params }: { params: { id: string } }) => {
-  const workId = parseInt(params.id);
+const WorkDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+  const workId = parseInt(id);
   const work = worksData.find((w) => w.id === workId);
   const otherWorks = worksData.filter((w) => w.id !== workId);
 
