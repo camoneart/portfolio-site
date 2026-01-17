@@ -32,8 +32,8 @@
   place-items: center;
   border-radius: var(--border-rounded);
   border: 1px solid var(--btn-border-pink);
-  width: 230px;
-  height: 48px;
+  width: 200px;
+  height: 55px;
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
 
