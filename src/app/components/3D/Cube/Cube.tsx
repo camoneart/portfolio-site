@@ -31,50 +31,51 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
       uniforms: {
         time: { value: 0 },
         hover: { value: 0.0 },
-        baseColor: { value: new THREE.Color(0xffffff) },
-        rimColor: { value: new THREE.Color(0xffd569) },
+        color1: { value: new THREE.Color(0xff5a78) },
+        color2: { value: new THREE.Color(0xff8fa8) },
+        color3: { value: new THREE.Color(0xffc8d8) },
       },
       vertexShader: `
         varying vec3 vNormal;
         varying vec3 vViewPosition;
+        varying vec3 vPosition;
         uniform float hover;
-        
+
         void main() {
           vNormal = normalize(normalMatrix * normal);
           vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
           vViewPosition = -mvPosition.xyz;
-          
+          vPosition = position;
+
           vec3 pos = position;
           pos += normal * hover * 0.1;
-          
+
           gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
         }
       `,
       fragmentShader: `
         uniform float time;
         uniform float hover;
-        uniform vec3 baseColor;
-        uniform vec3 rimColor;
+        uniform vec3 color1;
+        uniform vec3 color2;
+        uniform vec3 color3;
         varying vec3 vNormal;
         varying vec3 vViewPosition;
-        
+        varying vec3 vPosition;
+
         void main() {
           vec3 normal = normalize(vNormal);
           vec3 viewDir = normalize(vViewPosition);
-          
+
           float fresnel = 0.1 + pow(1.0 + dot(viewDir, normal), 2.0);
-          
-          float rainbow = sin(dot(normal, viewDir) * 10.0 + time) * 0.5 + 0.5;
-          vec3 iridescence = vec3(
-            sin(rainbow * 3.14159 * 2.0) * 0.5 + 0.5,
-            sin(rainbow * 3.14159 * 2.0 + 2.094) * 0.5 + 0.5,
-            sin(rainbow * 3.14159 * 2.0 + 4.188) * 0.5 + 0.5
-          );
-          
-          vec3 color = mix(baseColor, rimColor, fresnel + hover * 0.3);
-          color = mix(color, iridescence, 0.3 + hover * 0.2);
-          
-          gl_FragColor = vec4(color, 0.8 + hover * 0.2);
+
+          float gradientFactor = (-vPosition.y + 0.5);
+          vec3 gradient = mix(color1, color2, gradientFactor);
+          gradient = mix(gradient, color3, gradientFactor * 0.5);
+
+          vec3 color = mix(gradient, gradient * 1.2, fresnel + hover * 0.3);
+
+          gl_FragColor = vec4(color, 0.85 + hover * 0.15);
         }
       `,
       transparent: true,

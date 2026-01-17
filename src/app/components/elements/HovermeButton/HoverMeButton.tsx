@@ -41,7 +41,7 @@ const HoverMeButton: React.FC<HoverMeButtonProps> = ({ href }) => {
         className={`group relative inline-flex h-[calc(48px+8px)] items-center justify-center rounded-full bg-transparent py-1 pl-14 pr-7 text-sm sm:text-base font-bold text-white ${styles["btn-link"]}`}
       >
         <div
-          className={`absolute left-1 inline-flex h-12 w-12 items-center justify-start rounded-full transition-[width] duration-300 linear group-hover:w-[calc(100%-8px)] ${styles["arrow-bg"]}`}
+          className={`absolute left-[3px] inline-flex h-12 w-12 items-center justify-start rounded-full transition-[width] duration-300 linear group-hover:w-[calc(100%-6px)] ${styles["arrow-bg"]}`}
         >
           <div className={`ml-3.5 flex items-center justify-center`}>
             <svg

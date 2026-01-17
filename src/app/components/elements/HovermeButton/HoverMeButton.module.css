@@ -6,7 +6,7 @@
 }
 
 .btn-link {
-  border: 1px solid var(--btn-border-orange);
+  border: 1px solid var(--btn-border-pink);
   transition: box-shadow 0.2s ease-in-out;
 
   &:hover {
@@ -15,5 +15,5 @@
 }
 
 .arrow-bg {
-  background-color: var(--btn-bg-orange);
+  background-color: var(--btn-bg-pink);
 }

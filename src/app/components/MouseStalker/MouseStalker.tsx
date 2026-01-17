@@ -159,7 +159,7 @@ const MouseStalker = memo(() => {
       width: "9px",
       height: "9px",
       borderRadius: "50%",
-      backgroundColor: "#ff6b4a",
+      backgroundColor: "#ff6b8a",
       pointerEvents: "none" as const,
       zIndex: 10000,
     }),

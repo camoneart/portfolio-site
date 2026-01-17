@@ -4,11 +4,8 @@ import React, { useEffect } from "react";
 import styles from "./ContactForm.module.css";
 import useContactForm from "@/app/features/contact/hooks/useContactForm";
 import { motion } from "motion/react";
-
 import { ProgressBar } from "react-loader-spinner";
 import toast, { Toaster } from "react-hot-toast";
-
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -178,15 +175,18 @@ const ContactForm = () => {
                 </FormItem>
               )}
             />
-            <div className="contact-form-send-btn-container">
+            <div className={styles["contact-form-send-btn-container"]}>
               {form.formState.isSubmitting ? (
                 <ProgressBar height="100" width="100" barColor="#ca510c99" borderColor="#bd4d0d" />
               ) : (
-                <div className="contact-form-send-btn-bg">
-                  <Button type="submit" disabled={form.formState.isSubmitting}>
-                    Send
-                  </Button>
-                </div>
+                <button
+                  type="submit"
+                  disabled={form.formState.isSubmitting}
+                  className={styles["contact-form-send-btn"]}
+                >
+                  <div className={styles["send-btn-bg"]} />
+                  <span className={styles["send-btn-text"]}>Send</span>
+                </button>
               )}
             </div>
           </form>

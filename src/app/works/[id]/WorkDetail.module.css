@@ -45,7 +45,7 @@
   height: auto;
   color: var(--color-primary-white);
   background-color: var(--cmp-bg-primary-color);
-  box-shadow: var(--detail-cmp-shadow);
+  box-shadow: var(--cmp-secondary-shadow);
   border: 1px solid var(--cmp-border-primary-color);
   border-radius: 20px;
   padding-block: 40px 50px;
@@ -154,7 +154,7 @@
   transition: color 0.4s ease-in-out;
 
   &:hover {
-    color: var(--color-primary-orange);
+    color: var(--color-primary-pink);
   }
 
   &.hover-un {
@@ -235,7 +235,7 @@
   font-weight: var(--font-weight-normal);
   letter-spacing: 0.5px;
   line-height: var(--leading-none);
-  color: var(--color-primary-orange);
+  color: var(--color-primary-pink);
   background-color: var(--label-bg-color);
   box-shadow: 2px 3px 0 0 rgb(0 0 0 / 0.4);
   border: 1px solid var(--label-border-color);
@@ -439,7 +439,7 @@
   height: auto;
   color: var(--color-primary-white);
   background-color: var(--cmp-bg-primary-color);
-  box-shadow: var(--detail-cmp-shadow);
+  box-shadow: var(--cmp-secondary-shadow);
   border: 1px solid var(--cmp-border-primary-color);
   border-radius: 20px;
   padding-block: 40px;
