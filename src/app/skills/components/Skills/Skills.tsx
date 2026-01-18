@@ -408,6 +408,22 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoWrapper: "view-transition-logo-wrapper-mcp",
     viewTransitionLogoBg: "view-transition-logo-bg-mcp",
   },
+  {
+    id: 25,
+    skillTitle: "Claude Code",
+    skillLink: "claude-code",
+    description:
+      "",
+    skillLogo: "/images/skills/cc-logo.png",
+    label: "AI Agent",
+    link: "https://github.com/modelcontextprotocol",
+    viewTransitionName: "view-transition-title-cc",
+    viewTransitionImage: "view-transition-img-cc",
+    viewTransitionBg: "view-transition-bg-cc",
+    viewTransitionLabel: "view-transition-label-cc",
+    viewTransitionLogoWrapper: "view-transition-logo-wrapper-cc",
+    viewTransitionLogoBg: "view-transition-logo-bg-cc",
+  },
 ];
 
 const Skills = () => {
