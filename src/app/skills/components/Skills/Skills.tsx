@@ -1,4 +1,3 @@
-import React from "react";
 import * as Skill from "@/app/features/skills/components/index";
 import styles from "./Skills.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import ContactForm from "@/app/features/contact/components/ContactForm/ContactForm";
 import styles from "./Contact.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";

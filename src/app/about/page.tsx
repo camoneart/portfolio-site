@@ -1,4 +1,3 @@
-import React from "react";
 import * as About from "@/app/features/about/components/index";
 import { Metadata } from "next";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";

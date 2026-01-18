@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import styles from "./AboutSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";

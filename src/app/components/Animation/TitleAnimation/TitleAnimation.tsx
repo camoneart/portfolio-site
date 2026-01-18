@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import styles from "./TitleAnimation.module.css";
 import { motion } from "motion/react";
 

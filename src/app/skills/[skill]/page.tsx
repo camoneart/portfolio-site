@@ -1,4 +1,3 @@
-import React from "react";
 import { skillsData } from "../components/Skills/Skills";
 import Image from "next/image";
 import styles from "./SkillDetail.module.css";

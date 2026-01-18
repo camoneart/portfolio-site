@@ -1,4 +1,3 @@
-import React from "react";
 import Skills from "./components/Skills/Skills";
 import { Metadata } from "next";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";
