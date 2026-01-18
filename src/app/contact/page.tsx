@@ -1,4 +1,3 @@
-import React from "react";
 import { Metadata } from "next";
 import Contact from "@/app/contact/components/Contact/Contact";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";

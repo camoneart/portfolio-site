@@ -1,4 +1,3 @@
-import React from "react";
 import * as Work from "@/app/features/works/components/index";
 import { Metadata } from "next";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";

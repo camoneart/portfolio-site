@@ -1,4 +1,3 @@
-import React from "react";
 import { Components } from "react-markdown";
 import styles from "./CustomEmphasis.module.css";
 

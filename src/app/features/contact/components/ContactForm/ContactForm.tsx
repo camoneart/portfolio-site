@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import styles from "./ContactForm.module.css";
 import useContactForm from "@/app/features/contact/hooks/useContactForm";
 import { motion } from "motion/react";

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import AudioPlayer from "../../AudioPlayer/AudioPlayer";
 import Hamburger from "../../elements/Hamburger/Hamburger";

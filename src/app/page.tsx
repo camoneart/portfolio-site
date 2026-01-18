@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import LoadingScreen from "./components/elements/LoadingScreen/LoadingScreen";
 import ElegantFloatingCubes from "./components/3D/Cube/ElegantFloatingCubes";
 import Hero from "./components/layouts/Hero/Hero";

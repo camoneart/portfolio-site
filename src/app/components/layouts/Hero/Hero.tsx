@@ -1,6 +1,6 @@
 "use client";
 
-import React, { memo, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 import { motion } from "motion/react";
 

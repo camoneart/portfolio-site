@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "next-view-transitions";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";

@@ -1,4 +1,3 @@
-import React from "react";
 import * as Work from "@/app/features/works/components/index";
 import styles from "./WorksSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";

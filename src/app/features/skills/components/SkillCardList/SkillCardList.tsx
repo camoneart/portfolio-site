@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./SkillCardList.module.css";
 import * as Skill from "@/app/features/skills/components/index";
 import { skillsData } from "@/app/skills/components/Skills/Skills";
