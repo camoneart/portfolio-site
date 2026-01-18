@@ -172,7 +172,7 @@ export const skillsData: SkillsData[] = [
     skillTitle: "Next.js",
     skillLink: "nextjs",
     description:
-      "Next.jsの主要な機能を理解しています。App RouterやServer Componentsなどを活用でき、CSR / SSG / SSR / ISR / RSC / PPR などの適切なレンダリング方式の選択とパフォーマンスを考慮した実装を心がけます。このサイトの実装にもNext.jsを採用しました。",
+      "Next.jsの主要な機能を理解しています。App RouterやServer Componentsなどを活用でき、CSR / SSG / SSR / ISR / RSC / PPR などの適切なレンダリング方式の選択とパフォーマンスを考慮した実装を心がけます。v16で導入された新しいキャッシュ戦略「Cache Components」も学び、個人開発したWebアプリ「OUTPUT QUEST」に活用しています。このサイトの実装にもNext.jsを採用しています。",
     skillLogo: "/images/skills/nextjs-logo.svg",
     label: "FRAMEWORK",
     link: "https://nextjs.org/",
