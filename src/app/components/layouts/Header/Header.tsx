@@ -58,7 +58,7 @@ export default function Header() {
         <div className={styles["header__items"]}>
           <Gnav isOpen={isOpen && isCompactLayout} toggleMenu={toggleMenu} />
           <AudioPlayer
-            src="/audio/They.mp3"
+            src="/audio/digital-sakura.mp3"
             width={17}
             height={17}
             color="#fff"
