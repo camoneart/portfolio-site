@@ -41,6 +41,3 @@ next-env.d.ts
 
 # log
 _docs/templates/
-
-# claude
-.claude/.mcp.json
