@@ -1,5 +1,5 @@
 import styles from "./WorkCardList.module.css";
-import { WorkCard } from "../WorkCard";
+import WorkCard from "../WorkCard/WorkCard";
 import { worksData } from "@/app/features/works/data/works";
 
 const WorkCardList = () => {

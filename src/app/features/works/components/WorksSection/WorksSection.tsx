@@ -1,4 +1,4 @@
-import { WorkCardList } from "../WorkCardList";
+import WorkCardList from "../WorkCardList/WorkCardList";
 import styles from "./WorksSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
