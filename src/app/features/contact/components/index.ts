@@ -1,4 +1,4 @@
-import { AdminEmailTemplate } from "./AdminEmailTemplate/AdminEmailTemplate";
-import { AutoReplyEmailTemplate } from "./AutoReplyEmailTemplate/AutoReplyEmailTemplate";
-
-export { AdminEmailTemplate, AutoReplyEmailTemplate };
+export { AdminEmailTemplate } from "./AdminEmailTemplate/AdminEmailTemplate";
+export { AutoReplyEmailTemplate } from "./AutoReplyEmailTemplate/AutoReplyEmailTemplate";
+export { ContactForm } from "./ContactForm";
+export { ContactSection, contactTitle, contactSubTitle } from "./ContactSection";

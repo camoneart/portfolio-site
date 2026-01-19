@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Contact from "@/app/contact/components/Contact/Contact";
+import { ContactSection } from "@/app/features/contact/components";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";
 
 export const metadata: Metadata = {
@@ -9,13 +9,11 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <>
-      <div className="common-container">
-        <StairsTransition>
-          <Contact />
-        </StairsTransition>
-      </div>
-    </>
+    <div className="common-container">
+      <StairsTransition>
+        <ContactSection />
+      </StairsTransition>
+    </div>
   );
 };
 

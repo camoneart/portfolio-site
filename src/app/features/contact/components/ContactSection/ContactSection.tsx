@@ -1,13 +1,14 @@
 "use client";
 
-import ContactForm from "@/app/features/contact/components/ContactForm/ContactForm";
-import styles from "./Contact.module.css";
+import { ContactForm } from "../ContactForm";
+import styles from "./ContactSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
+
 export const contactTitle = "Contact";
 export const contactSubTitle = "お問い合わせ";
 
-const Contact = () => {
+const ContactSection = () => {
   return (
     <>
       <Breadcrumb title={contactTitle} />
@@ -19,4 +20,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;
