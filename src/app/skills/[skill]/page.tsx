@@ -1,4 +1,4 @@
-import { skillsData } from "../components/Skills/Skills";
+import { skillsData } from "@/app/features/skills/data/skills";
 import Image from "next/image";
 import styles from "./SkillDetail.module.css";
 import { generateSkillMetadata } from "./metadata";

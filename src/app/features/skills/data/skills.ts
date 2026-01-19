@@ -1,12 +1,4 @@
-import * as Skill from "@/app/features/skills/components/index";
-import styles from "./Skills.module.css";
-import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
-import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
-
-export const skillsTitle = "Skills";
-export const skillsSubTitle = "スキル一覧";
-
-interface SkillsData {
+export interface SkillsData {
   id: number;
   skillTitle: string;
   skillLink: string;
@@ -411,8 +403,7 @@ export const skillsData: SkillsData[] = [
     id: 25,
     skillTitle: "Claude Code",
     skillLink: "claude-code",
-    description:
-      "",
+    description: "",
     skillLogo: "/images/skills/cc-logo.png",
     label: "AI Agent",
     link: "https://github.com/modelcontextprotocol",
@@ -424,17 +415,3 @@ export const skillsData: SkillsData[] = [
     viewTransitionLogoBg: "view-transition-logo-bg-cc",
   },
 ];
-
-const Skills = () => {
-  return (
-    <>
-      <Breadcrumb title={skillsTitle} />
-      <section className={styles["skills"]}>
-        <TitleAnimation title={skillsTitle} subTitle={skillsSubTitle} />
-        <Skill.SkillCardList />
-      </section>
-    </>
-  );
-};
-
-export default Skills;
