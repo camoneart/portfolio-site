@@ -1,5 +1,3 @@
-import WorkCard from "./WorkCard/WorkCard";
-import WorkCardList from "./WorkCardList/WorkCardList";
-import WorksSection from "./WorksSection/WorksSection";
-
-export { WorkCard, WorkCardList, WorksSection };
+export { WorkCard } from "./WorkCard";
+export { WorkCardList } from "./WorkCardList";
+export { WorksSection, worksTitle, worksSubTitle } from "./WorksSection";

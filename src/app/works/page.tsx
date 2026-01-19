@@ -1,4 +1,4 @@
-import * as Work from "@/app/features/works/components/index";
+import { WorksSection } from "@/app/features/works/components";
 import { Metadata } from "next";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";
 
@@ -9,13 +9,11 @@ export const metadata: Metadata = {
 
 const WorksPage = () => {
   return (
-    <>
-      <div className="common-container">
-        <StairsTransition>
-          <Work.WorksSection />
-        </StairsTransition>
-      </div>
-    </>
+    <div className="common-container">
+      <StairsTransition>
+        <WorksSection />
+      </StairsTransition>
+    </div>
   );
 };
 
