@@ -3,8 +3,8 @@
 import { motion } from "motion/react";
 import { User, AtSign } from "lucide-react";
 import Image from "next/image";
-import { SectionHeader } from "../shared";
-import styles from "../AboutSection/AboutSection.module.css";
+import SectionHeader from "../SectionHeader/SectionHeader";
+import styles from "./ProfileSection.module.css";
 
 const ProfileSection = () => {
   return (

@@ -2,8 +2,8 @@
 
 import { motion } from "motion/react";
 import { Sparkle } from "lucide-react";
-import { SectionHeader } from "../shared";
-import styles from "../AboutSection/AboutSection.module.css";
+import SectionHeader from "../SectionHeader/SectionHeader";
+import styles from "./ValuesSection.module.css";
 
 const ValuesSection = () => {
   return (

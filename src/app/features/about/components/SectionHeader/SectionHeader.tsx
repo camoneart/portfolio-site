@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { LucideIcon } from "lucide-react";
-import styles from "../AboutSection/AboutSection.module.css";
+import styles from "./SectionHeader.module.css";
 
 interface SectionHeaderProps {
   title: string;

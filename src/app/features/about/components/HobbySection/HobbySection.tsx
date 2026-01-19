@@ -2,8 +2,8 @@
 
 import { motion } from "motion/react";
 import { Flame } from "lucide-react";
-import { SectionHeader } from "../shared";
-import styles from "../AboutSection/AboutSection.module.css";
+import SectionHeader from "../SectionHeader/SectionHeader";
+import styles from "./HobbySection.module.css";
 
 const HobbySection = () => {
   return (

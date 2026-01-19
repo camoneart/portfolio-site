@@ -2,12 +2,12 @@
 
 import { motion } from "motion/react";
 import { CircleCheck } from "lucide-react";
-import { SectionHeader } from "../shared";
-import styles from "../AboutSection/AboutSection.module.css";
+import SectionHeader from "../SectionHeader/SectionHeader";
+import styles from "./TraitsSection.module.css";
 
 const TraitsSection = () => {
   return (
-    <div className={styles["about-focus"]}>
+    <div className={styles["about-traits"]}>
       <SectionHeader
         title="Traits"
         icon={CircleCheck}

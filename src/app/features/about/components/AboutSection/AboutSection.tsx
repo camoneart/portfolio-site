@@ -4,11 +4,11 @@ import styles from "./AboutSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
 import { motion } from "motion/react";
-import { ProfileSection } from "../ProfileSection";
-import { HobbySection } from "../HobbySection";
-import { FocusSection } from "../FocusSection";
-import { TraitsSection } from "../TraitsSection";
-import { ValuesSection } from "../ValuesSection";
+import ProfileSection from "../ProfileSection/ProfileSection";
+import HobbySection from "../HobbySection/HobbySection";
+import FocusSection from "../FocusSection/FocusSection";
+import TraitsSection from "../TraitsSection/TraitsSection";
+import ValuesSection from "../ValuesSection/ValuesSection";
 
 export const aboutTitle = "About";
 export const aboutSubTitle = "私について";
