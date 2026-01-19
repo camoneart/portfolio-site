@@ -340,8 +340,7 @@
   }
 }
 
-.about-product-link,
-.about-zenn-link {
+.about-product-link {
   position: relative;
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
@@ -374,8 +373,5 @@
 
 .about-product-link {
   color: #ffc400;
-}
-
-.about-zenn-link {
-  color: var(--color-zenn-blue);
+  display: inline-block;
 }
