@@ -1,3 +1,6 @@
-export { SkillCard } from "./SkillCard";
-export { SkillCardList } from "./SkillCardList";
-export { SkillsSection, skillsTitle, skillsSubTitle } from "./SkillsSection";
+import SkillCard from "./SkillCard/SkillCard";
+import SkillCardList from "./SkillCardList/SkillCardList";
+import SkillsSection from "./SkillsSection/SkillsSection";
+
+export { skillsTitle, skillsSubTitle } from "./SkillsSection/SkillsSection";
+export { SkillCard, SkillCardList, SkillsSection };

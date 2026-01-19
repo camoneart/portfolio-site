@@ -1,5 +1,5 @@
 import styles from "./SkillCardList.module.css";
-import { SkillCard } from "../SkillCard";
+import SkillCard from "../SkillCard/SkillCard";
 import { skillsData } from "@/app/features/skills/data/skills";
 
 const SkillCardList = () => {

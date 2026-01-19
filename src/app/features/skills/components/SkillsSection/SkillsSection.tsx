@@ -1,4 +1,4 @@
-import { SkillCardList } from "../SkillCardList";
+import SkillCardList from "../SkillCardList/SkillCardList";
 import styles from "./SkillsSection.module.css";
 import TitleAnimation from "@/app/components/Animation/TitleAnimation/TitleAnimation";
 import Breadcrumb from "@/app/components/elements/Breadcrumb/Breadcrumb";
