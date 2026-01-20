@@ -1,4 +1,4 @@
-import Skills from "./components/Skills/Skills";
+import { SkillsSection } from "@/app/features/skills/components";
 import { Metadata } from "next";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";
 
@@ -9,13 +9,11 @@ export const metadata: Metadata = {
 
 const SkillsPage = () => {
   return (
-    <>
-      <div className="common-container">
-        <StairsTransition>
-          <Skills />
-        </StairsTransition>
-      </div>
-    </>
+    <div className="common-container">
+      <StairsTransition>
+        <SkillsSection />
+      </StairsTransition>
+    </div>
   );
 };
 

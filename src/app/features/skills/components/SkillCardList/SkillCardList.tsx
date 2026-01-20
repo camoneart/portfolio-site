@@ -1,15 +1,14 @@
 import styles from "./SkillCardList.module.css";
-import * as Skill from "@/app/features/skills/components/index";
-import { skillsData } from "@/app/skills/components/Skills/Skills";
+import { skillsData } from "@/app/features/skills/data/skills";
+import * as Skills from "@/app/features/skills/components";
+
 const SkillCardList = () => {
   return (
-    <>
-      <div className={styles["skills-layout"]}>
-        {skillsData.map((skillData, index) => (
-          <Skill.SkillCard key={skillData.id} {...skillData} index={index} />
-        ))}
-      </div>
-    </>
+    <div className={styles["skills-layout"]}>
+      {skillsData.map((skillData, index) => (
+        <Skills.SkillCard key={skillData.id} {...skillData} index={index} />
+      ))}
+    </div>
   );
 };
 

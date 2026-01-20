@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { skillsData } from "../components/Skills/Skills";
+import { skillsData } from "@/app/features/skills/data/skills";
 
 export async function generateSkillMetadata({
   params,
