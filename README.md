@@ -34,6 +34,7 @@ Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしまし
 ### **アバウトページ**
 
 私のプロフィールを紹介しています。趣味（Web開発、音楽/映像鑑賞、読書）、AIへの注力、自分の特徴や得意/苦手なこと、価値観、モノづくりに対する想いを綴っています。
+
 https://github.com/user-attachments/assets/cca83cd4-c832-4cd6-a3f7-4e8d9653eec6
 
 ### **スキルページ**
