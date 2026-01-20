@@ -61,11 +61,6 @@
 
 .about-content {
   margin-block-start: 17px;
-
-  @media (width < 768px) {
-    display: block grid;
-    place-items: center;
-  }
 }
 
 .about-content-group {
