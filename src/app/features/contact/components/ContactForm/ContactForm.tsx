@@ -67,7 +67,7 @@ const ContactForm = () => {
           <Toaster position="bottom-right" reverseOrder={false} />
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className={`container max-w-(--breakpoint-md) mx-auto flex flex-col gap-5 ${styles["contact-form"]}`}
+            className="container max-w-(--breakpoint-md) mx-auto flex flex-col gap-5"
           >
             <div className="grid grid-cols-2 gap-5">
               <FormField
