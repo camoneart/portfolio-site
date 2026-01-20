@@ -35,26 +35,28 @@ https://github.com/user-attachments/assets/69073e68-0b60-4e6c-b77a-e9e0c31b328f
 
 私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
 
-https://github.com/user-attachments/assets/cca83cd4-c832-4cd6-a3f7-4e8d9653eec6
+https://github.com/user-attachments/assets/ec9862c6-6607-4fbf-903c-400b24d6c47a
 
 ### **スキルページ**
 
 私が独学で培ったWeb開発に必要なスキルセットを一覧形式で紹介しています。
 
-https://github.com/user-attachments/assets/a7654848-143e-4573-9164-ab02b2bf1df4
+https://github.com/user-attachments/assets/8dfb0827-4f55-416b-b88d-b243bb62adba
 
 ### **制作実績ページ**
 
 私がこれまでに制作した作品を一覧で紹介しています。<br />
 作品カードをクリックすることで、作品の詳細を確認できます。
 
-https://github.com/user-attachments/assets/19ff0d0a-576f-4ba2-a8d5-0ec45e22723c
+https://github.com/user-attachments/assets/c6f155f8-299e-4d51-b79a-7f580a4412c8
+
+https://github.com/user-attachments/assets/06ec7526-ba92-475c-8c10-4667bd805ba0
 
 ### **お問い合わせページ**
 
 このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
 
-https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
+https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 
 <h2 id="feature-introduction">機能紹介</h2>
 
