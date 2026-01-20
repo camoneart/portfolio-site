@@ -86,6 +86,7 @@ const ContactForm = () => {
                               placeholder="First & Last Name"
                               {...field}
                               className="px-4 py-7"
+                              disabled={form.formState.isSubmitting}
                             />
                           </TooltipTrigger>
                           <TooltipContent>
@@ -114,6 +115,7 @@ const ContactForm = () => {
                               placeholder="Your email address"
                               {...field}
                               className="px-4 py-7"
+                              disabled={form.formState.isSubmitting}
                             />
                           </TooltipTrigger>
                           <TooltipContent>
@@ -139,7 +141,7 @@ const ContactForm = () => {
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <Input placeholder="Subject" {...field} className="px-4 py-7" />
+                          <Input placeholder="Subject" {...field} className="px-4 py-7" disabled={form.formState.isSubmitting} />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>件名を入力してください</p>
@@ -163,7 +165,7 @@ const ContactForm = () => {
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <Textarea placeholder="Your message here..." {...field} />
+                          <Textarea placeholder="Your message here..." {...field} disabled={form.formState.isSubmitting} />
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>お問い合わせ内容を入力してください</p>
