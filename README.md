@@ -33,7 +33,7 @@ Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしまし
 
 ### **アバウトページ**
 
-私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
+私のプロフィールを紹介しています。Web開発以外の趣味（音楽制作、映像鑑賞、読書）、AIを活用したWeb開発への注力、そして自分の特徴や得意なこと、モノづくりに対する想いやビジョンを5つのセクションで構成しています。
 
 https://github.com/user-attachments/assets/cca83cd4-c832-4cd6-a3f7-4e8d9653eec6
 
@@ -52,7 +52,7 @@ https://github.com/user-attachments/assets/19ff0d0a-576f-4ba2-a8d5-0ec45e22723c
 
 ### **お問い合わせページ**
 
-このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
+お仕事のご依頼やご質問など、お気軽にお問い合わせください。フォームは「React Hook Form」でパフォーマンスを最適化し、「Zod」による入力値検証で堅牢性を高めています。メール送信機能には「Resend」を利用しています。
 
 https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
 
