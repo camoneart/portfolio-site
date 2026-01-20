@@ -1,13 +1,13 @@
 import styles from "./WorkCardList.module.css";
-import * as Work from "..";
-import { worksData } from "@/app/features/works/components/WorksSection/WorksSection";
+import { worksData } from "@/app/features/works/data/works";
+import * as Works from "@/app/features/works/components";
 
 const WorkCardList = () => {
   return (
-    <div className={`${styles["cards-content"]}`}>
+    <div className={styles["cards-content"]}>
       <div className={styles["cards"]}>
         {worksData.map((cardData) => (
-          <Work.WorkCard key={cardData.id} {...cardData} />
+          <Works.WorkCard key={cardData.id} {...cardData} />
         ))}
       </div>
     </div>

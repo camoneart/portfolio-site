@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { worksData } from "../../features/works/components/WorksSection/WorksSection";
+import { worksData } from "@/app/features/works/data/works";
 
 export async function generateWorkMetadata({
   params,

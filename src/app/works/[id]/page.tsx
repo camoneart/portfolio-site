@@ -2,7 +2,7 @@ import { Link } from "next-view-transitions";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import styles from "./WorkDetail.module.css";
-import { worksData } from "../../features/works/components/WorksSection/WorksSection";
+import { worksData } from "@/app/features/works/data/works";
 import { generateWorkMetadata } from "./metadata";
 import HoverMeButton from "@/app/components/elements/HovermeButton/HoverMeButton";
 import type { Route } from "next";
