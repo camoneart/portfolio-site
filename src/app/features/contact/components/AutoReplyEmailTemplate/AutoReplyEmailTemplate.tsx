@@ -3,10 +3,7 @@ interface AutoReplyEmailTemplateProps {
   content: string;
 }
 
-export const AutoReplyEmailTemplate: React.FC<AutoReplyEmailTemplateProps> = ({
-  username,
-  content,
-}) => (
+export const AutoReplyEmailTemplate = ({ username, content }: AutoReplyEmailTemplateProps) => (
   <div>
     <h3>{username} 様</h3>
     <h3>お問い合わせありがとうございます。</h3>

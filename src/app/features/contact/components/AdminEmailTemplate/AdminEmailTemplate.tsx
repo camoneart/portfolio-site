@@ -1,15 +1,10 @@
-import * as React from "react";
-
-interface AdminEmailTemplate {
+interface AdminEmailTemplateProps {
   username: string;
   email: string;
   content: string;
 }
 
-export const AdminEmailTemplate: React.FC<Readonly<AdminEmailTemplate>> = ({
-  username,
-  content,
-}) => (
+export const AdminEmailTemplate = ({ username, content }: AdminEmailTemplateProps) => (
   <div>
     <h3>{username}様から、お問い合わせが届きました。</h3>
     <h3>お問い合わせ内容は以下の通りです。</h3>
