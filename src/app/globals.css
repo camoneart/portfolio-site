@@ -81,7 +81,6 @@
     --color-primary-gray: #262626;
     --color-primary-pink: #ff6b8a;
     --color-primary-light-pink: #ffa8ba;
-    --color-secondary-pink: #e63946;
     --stairs-column-color: #813049;
     --text-gradient-primary: linear-gradient(108deg, #ff6b8a, #e63946 70%, #ff4a5a);
     --label-bg-color: rgb(246 77 90 / 25%);
@@ -177,7 +176,7 @@
   }
 
   :focus-visible {
-    outline: 1px solid var(--color-secondary-pink);
+    outline: 1px solid var(--color-primary-pink);
   }
 
   ::selection {

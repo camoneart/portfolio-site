@@ -24,14 +24,14 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 const notify = () =>
   toast.success("お問い合わせありがとうございます！", {
     style: {
-      border: "2px solid #bd4d0d",
+      border: "2px solid #ff6b8a",
       padding: "16px",
       color: "#000",
       fontSize: "14px",
       fontWeight: "bold",
     },
     iconTheme: {
-      primary: "#bd4d0d",
+      primary: "#ff6b8a",
       secondary: "#FFFAEE",
     },
   });
@@ -177,7 +177,7 @@ const ContactForm = () => {
             />
             <div className={styles["contact-form-send-btn-container"]}>
               {form.formState.isSubmitting ? (
-                <ProgressBar height="100" width="100" barColor="#ca510c99" borderColor="#bd4d0d" />
+                <ProgressBar height="100" width="100" barColor="#f64d5a99" borderColor="#e74f64" />
               ) : (
                 <button
                   type="submit"
