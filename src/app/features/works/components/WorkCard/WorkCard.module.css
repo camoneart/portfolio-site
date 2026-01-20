@@ -102,9 +102,7 @@
 @media screen and (1280px <= width) {
   .card-no-1,
   .card-no-2,
-  .card-no-3,
-  .card-no-4,
-  .card-no-5 {
+  .card-no-3 {
     transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1);
   }
 
@@ -119,19 +117,7 @@
   .card-no-3:hover,
   .card-no-3:active,
   .card-no-3:focus,
-  .card-no-3:focus-visible,
-  .card-no-4:hover,
-  .card-no-4:active,
-  .card-no-4:focus,
-  .card-no-4:focus-visible,
-  .card-no-5:hover,
-  .card-no-5:active,
-  .card-no-5:focus,
-  .card-no-5:focus-visible,
-  .card-no-6:hover,
-  .card-no-6:active,
-  .card-no-6:focus,
-  .card-no-6:focus-visible {
+  .card-no-3:focus-visible {
     transform: translateZ(0) perspective(3000px) rotateX(0deg) rotateY(0deg) scale(1.07);
   }
 }
