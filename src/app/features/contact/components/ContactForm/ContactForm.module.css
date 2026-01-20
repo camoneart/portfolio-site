@@ -67,6 +67,13 @@
   color: var(--color-primary-white);
 }
 
+/* scroll driven animation */
+.scroll-driven-animation {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% entry 100%;
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
