@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { ContactSection } from "@/app/features/contact/components";
 import StairsTransition from "../components/Animation/StairsTransition/StairsTransition";
+import * as Contact from "@/app/features/contact/components";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -11,7 +11,7 @@ const ContactPage = () => {
   return (
     <div className="common-container">
       <StairsTransition>
-        <ContactSection />
+        <Contact.ContactSection />
       </StairsTransition>
     </div>
   );

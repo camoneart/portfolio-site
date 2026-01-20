@@ -3,5 +3,4 @@ import { AutoReplyEmailTemplate } from "./AutoReplyEmailTemplate/AutoReplyEmailT
 import ContactForm from "./ContactForm/ContactForm";
 import ContactSection from "./ContactSection/ContactSection";
 
-export { contactTitle, contactSubTitle } from "./ContactSection/ContactSection";
 export { AdminEmailTemplate, AutoReplyEmailTemplate, ContactForm, ContactSection };
