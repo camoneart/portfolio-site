@@ -9,6 +9,7 @@
   }
 }
 
+/* profile */
 .about-content {
   margin-block-start: 17px;
 }
@@ -97,10 +98,6 @@
 }
 
 /* sns */
-.about-sns {
-  display: block grid;
-}
-
 .about-sns-content {
   margin-block-start: 17px;
   display: block grid;
