@@ -16,11 +16,6 @@
 
 .about-content {
   margin-block-start: 17px;
-
-  @media (width < 768px) {
-    display: block grid;
-    place-items: center;
-  }
 }
 
 .about-profile-list {
@@ -104,19 +99,6 @@
   line-height: var(--leading-normal);
   text-wrap: pretty;
   word-break: auto-phrase;
-
-  & p {
-    margin-block-start: 6px;
-  }
-
-  & em {
-    font-style: normal;
-    font-weight: var(--font-weight-bold);
-    line-height: var(--leading-x-tight);
-    width: fit-content;
-    padding-inline: 4px;
-    background: linear-gradient(transparent 70%, rgb(255 107 138 / 0.75) 70%);
-  }
 }
 
 /* sns */
