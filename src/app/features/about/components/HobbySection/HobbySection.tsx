@@ -8,12 +8,7 @@ import styles from "./HobbySection.module.css";
 const HobbySection = () => {
   return (
     <div className={styles["about-hobby"]}>
-      <SectionHeader
-        title="Hobby"
-        icon={Flame}
-        iconSize={21}
-        iconClassName="about-hobby-icon"
-      />
+      <SectionHeader title="Hobby" icon={Flame} iconSize={21} iconClassName="about-hobby-icon" />
       <div className={styles["about-content"]}>
         <dl className={styles["about-list"]}>
           <HobbyItem title="Web開発">
@@ -44,22 +39,20 @@ const HobbySection = () => {
             </p>
             <p>
               <span className={`font-bold ${styles["light-effect"]}`}>現在の注力</span>
-              ：Next.js / React / TypeScript / Claude Code / Generative AI / Context
-              Engineering / Interaction / Animation / UI / UX
+              ：Next.js / React / TypeScript / Claude Code / Generative AI / Context Engineering /
+              Interaction / Animation / UI / UX
             </p>
           </HobbyItem>
 
           <HobbyItem title="音楽">
             <p>音楽から日々のエネルギーを得ています。</p>
             <p>
-              音楽は僕に
+              音楽は私に
               <em>&quot;現実逃避&quot; ではなく &quot;現実と向き合う力&quot;</em>
               を与えてくれます。
             </p>
             <p>
-              <span className={`font-bold ${styles["light-effect"]}`}>
-                好きなミュージシャン
-              </span>
+              <span className={`font-bold ${styles["light-effect"]}`}>好きなミュージシャン</span>
               ：King Gnu / Saucy Dog / Vaundy / 藤井 風 / SUPER BEAVER etc...
             </p>
           </HobbyItem>
@@ -77,26 +70,16 @@ const HobbySection = () => {
             <p>
               <span className={`font-bold ${styles["light-effect"]}`}>好きな作品</span>
               ：アメイジング・スパイダーマン / マイ・インターン / ワンダー 君は太陽 /
-              最高の人生の見つけ方 / 最高のふたり / The Rookie / 信長協奏曲 /
-              王様ランキング / Dr.Stone etc...
+              最高の人生の見つけ方 / 最高のふたり / The Rookie / 信長協奏曲 / 王様ランキング /
+              Dr.Stone etc...
             </p>
           </HobbyItem>
 
-          <HobbyItem title="読書">
-            <p>ジャンルを問わず気になった書籍を読むのが好きです。</p>
+          <HobbyItem title="ダイエット">
             <p>
-              読書では
-              <em>新たな知識を得たり、著者の考え方や価値観を学ぶことができます。</em>
-            </p>
-            <p>
-              私にとっての書籍は<em>&quot;先人の知恵を学べるアイテム&quot;</em>です。
-            </p>
-            <p>
-              <span className={`font-bold ${styles["light-effect"]}`}>
-                お気に入りの書籍
-              </span>
-              ：クリエイティブの授業 STEAL LIKE AN ARTIST &quot;君がつくるべきもの&quot;
-              をつくれるようになるために
+              私は食べることが大好きで、<em>学生の頃のMAX体重は102kg</em>
+              までありましたが、一念発起して<em>-40kgのダイエットに成功。</em>
+              今ではダイエットも趣味の1つになりました。
             </p>
           </HobbyItem>
         </dl>
