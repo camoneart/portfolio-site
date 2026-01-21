@@ -119,7 +119,7 @@ https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
 
 <h2 id="technology-used">使用技術</h2>
 
-<img src="https://img.shields.io/badge/-node.js-444.svg?logo=node.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-pnpm-444.svg?logo=pnpm&style=for-the-badge"> <img src="https://img.shields.io/badge/-next.js-444.svg?logo=next.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-react-444.svg?logo=react&style=for-the-badge"> <img src="https://img.shields.io/badge/-TypeScript-444.svg?logo=TypeScript&style=for-the-badge"> <img src="https://img.shields.io/badge/-Tailwind%20CSS-444.svg?logo=Tailwind%20CSS&style=for-the-badge"> <img src="https://img.shields.io/badge/-shadcn/ui-444.svg?logo=shadcn/ui&style=for-the-badge"> <img src="https://img.shields.io/badge/-GSAP-444.svg?logo=GSAP&style=for-the-badge"> <img src="https://img.shields.io/badge/-Motion-444.svg?logo=Motion&style=for-the-badge"> <img src="https://img.shields.io/badge/-View%20Transitions%20API-444.svg?logo=View%20Transitions%20API&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Three%20Fiber-444.svg?logo=React%20Three%20Fiber&style=for-the-badge"> <img src="https://img.shields.io/badge/-Drei-444.svg?logo=Drei&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Spring-444.svg?logo=React%20Spring&style=for-the-badge"> <img src="https://img.shields.io/badge/-Howler.js-444.svg?logo=Howler.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Hook%20Form-444.svg?logo=React%20Hook%20Form&style=for-the-badge"> <img src="https://img.shields.io/badge/-Zod-444.svg?logo=Zod&style=for-the-badge"> <img src="https://img.shields.io/badge/-Resend-444.svg?logo=Resend&style=for-the-badge"> <img src="https://img.shields.io/badge/-Vercel-444.svg?logo=Vercel&style=for-the-badge">
+<img src="https://img.shields.io/badge/-node.js-444.svg?logo=node.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-pnpm-444.svg?logo=pnpm&style=for-the-badge"> <img src="https://img.shields.io/badge/-next.js-444.svg?logo=next.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-react-444.svg?logo=react&style=for-the-badge"> <img src="https://img.shields.io/badge/-TypeScript-444.svg?logo=TypeScript&style=for-the-badge"> <img src="https://img.shields.io/badge/-Tailwind%20CSS-444.svg?logo=Tailwind%20CSS&style=for-the-badge"> <img src="https://img.shields.io/badge/-shadcn/ui-444.svg?logo=shadcn/ui&style=for-the-badge"> <img src="https://img.shields.io/badge/-GSAP-444.svg?logo=GSAP&style=for-the-badge"> <img src="https://img.shields.io/badge/-Motion-444.svg?logo=Motion&style=for-the-badge"> <img src="https://img.shields.io/badge/-View%20Transitions%20API-444.svg?logo=View%20Transitions%20API&style=for-the-badge"> <img src="https://img.shields.io/badge/-Three.js-444.svg?logo=Three.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Three%20Fiber-444.svg?logo=React%20Three%20Fiber&style=for-the-badge"> <img src="https://img.shields.io/badge/-Drei-444.svg?logo=Drei&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Spring-444.svg?logo=React%20Spring&style=for-the-badge"> <img src="https://img.shields.io/badge/-Howler.js-444.svg?logo=Howler.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Hook%20Form-444.svg?logo=React%20Hook%20Form&style=for-the-badge"> <img src="https://img.shields.io/badge/-Zod-444.svg?logo=Zod&style=for-the-badge"> <img src="https://img.shields.io/badge/-Resend-444.svg?logo=Resend&style=for-the-badge"> <img src="https://img.shields.io/badge/-Vercel-444.svg?logo=Vercel&style=for-the-badge">
 
 ### nodeバージョン
 
@@ -128,26 +128,27 @@ https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
 
 ### フロント
 
-- [Next.js](https://nextjs.org/)：v14.2.20
-- [React](https://ja.react.dev/)：v18.3.1
-- [TypeScript](https://www.typescriptlang.org/)：v5
+- [Next.js](https://nextjs.org/)：v16.1.3
+- [React](https://ja.react.dev/)：v19.2.3
+- [TypeScript](https://www.typescriptlang.org/)：v5.9.3
 
 ### スタイル・UI
 
-- [Tailwind CSS](https://tailwindcss.com/)：v4.1.8
+- [Tailwind CSS](https://tailwindcss.com/)：v4.1.18
 - [shadcn/ui](https://ui.shadcn.com/)
 
 ### アニメーション
 
-- [GSAP](https://gsap.com/)：v3.12.5
-- [Motion](https://motion.dev/)：v11.12.0
-- [next-view-transitions](https://www.npmjs.com/package/next-view-transitions#disclaimer)：v0.3.4（View Transitions API）
+- [GSAP](https://gsap.com/)：v3.14.2
+- [Motion](https://motion.dev/)：v12.26.2
+- [next-view-transitions](https://www.npmjs.com/package/next-view-transitions#disclaimer)：v0.3.5（View Transitions API）
 
 ### 3Dコンテンツ
 
-- [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction)：v8.17.10
-- [Drei](https://drei.docs.pmnd.rs/getting-started/introduction)：v9.117.3
-- [React Spring](https://www.react-spring.dev/)：v9.7.5
+- [Three.js](https://threejs.org/)：v0.182.0
+- [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction)：v9.5.0
+- [Drei](https://drei.docs.pmnd.rs/getting-started/introduction)：v10.7.7
+- [React Spring](https://www.react-spring.dev/)：v10.0.3
 
 ### オーディオ
 
@@ -155,12 +156,12 @@ https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
 
 ### フォーム・スキーマバリデーション
 
-- [React Hook Form](https://react-hook-form.com/)：v7.54.0（フォーム）
-- [Zod](https://zod.dev/)：v3.23.8（スキーマバリデーション）
+- [React Hook Form](https://react-hook-form.com/)：v7.71.1（フォーム）
+- [Zod](https://zod.dev/)：v4.3.5（スキーマバリデーション）
 
 ### メール送信サービス
 
-- [Resend](https://resend.com/docs/introduction)：v4.0.1
+- [Resend](https://resend.com/docs/introduction)：v6.7.0
 
 ### ホスティング
 
