@@ -1,86 +1,51 @@
-# CLAUDE.md
+# ポートフォリオサイト
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+プロジェクト概要・使用技術・ディレクトリ構造は @README.md を参照。
 
-## Project Overview
+## 開発コマンド
 
-This is a Next.js 14 portfolio website for Kaishu Aoyama, a creative developer. The site showcases interactive 3D elements, animations, and a modern design. It uses TypeScript, Tailwind CSS, and various animation libraries.
+パッケージマネージャー: **pnpm** を使用（npm/yarn禁止）
 
-## Development Commands
+- `pnpm dev` - 開発サーバー起動
+- `pnpm build` - 本番ビルド
+- `pnpm lint:fix` - Lint + フォーマット
 
-**Package Manager**: This project uses `pnpm` exclusively (configured in package.json as `"packageManager": "pnpm@10.11.1"`).
+## コーディング規約
 
-### Core Commands
+### TypeScript
+- `any`は禁止、型を明示する
+- 新規コンポーネントは関数宣言で記述
 
-- `pnpm dev` - Start development server
-- `pnpm build` - Build production bundle
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
-- `pnpm lint:fix` - Run ESLint with auto-fix and format
+### スタイリング
+- CSS Modules（`.module.css`）+ Tailwind CSSを併用
+- コンポーネント固有のスタイルは`.module.css`に記述
+- BEM風のクラス命名（例：`about-content-group`）
 
-### Code Quality
+### アニメーション
+- 新規アニメーションはMotionを優先使用
+- GSAPは既存コードとの一貫性が必要な場合のみ
+- アニメーションのdelayは既存パターンに合わせる
 
-- `pnpm format:write` - Format code with Prettier
-- `pnpm format:check` - Check formatting without changes
+### UIコンポーネント
+- `src/components/ui/`のshadcn/uiは変更禁止
+- 新規UIコンポーネントは`src/app/components/`に配置
 
-## Architecture & Structure
+## アーキテクチャ
 
-### Directory Organization
+```
+src/app/
+├── features/       # 機能別（about, contact, skills, works）
+│   └── {機能名}/
+│       ├── components/
+│       ├── hooks/
+│       └── data/
+├── components/     # 共通（3D, Animation, layouts等）
+└── api/            # APIルート
+```
 
-- **Feature-based structure**: Each major feature has its own directory under `src/app/features/`
-- **Component organization**: Components are organized by type:
-  - `src/app/components/3D/` - Three.js and React Three Fiber components
-  - `src/app/components/Animation/` - Animation components using GSAP and Motion
-  - `src/app/components/elements/` - Basic UI elements
-  - `src/app/components/layouts/` - Layout components
-  - `src/app/features/` - Feature-specific components grouped by domain
+## 重要な注意事項
 
-### Key Technologies
-
-- **Framework**: Next.js 14 with App Router
-- **Styling**: Tailwind CSS + CSS Modules (component-specific styles)
-- **Animation**: GSAP, Motion (Framer Motion successor), next-view-transitions
-- **3D**: React Three Fiber, Drei, Three.js
-- **Forms**: React Hook Form with Zod validation
-- **UI Components**: shadcn/ui components
-- **Audio**: Howler.js for background music
-
-### Core Architecture Patterns
-
-1. **CSS Modules + Tailwind**: Each component has its own `.module.css` file for component-specific styles, combined with Tailwind utilities
-2. **Feature-based organization**: Related components, hooks, and logic are co-located in feature directories
-3. **Custom hooks**: Feature-specific hooks are organized in `hooks/` subdirectories
-4. **Type safety**: Full TypeScript implementation with strict typing
-5. **Responsive design**: Mobile-first approach with Tailwind breakpoints
-
-### Important Implementation Details
-
-- **Font**: Uses Russo One Google Font as primary display font
-- **Animation system**: Complex animation sequences using GSAP and Motion with staggered delays
-- **3D Elements**: Floating cubes animation on homepage using React Three Fiber
-- **Audio Player**: Global audio player component with volume controls
-- **View Transitions**: Smooth page transitions using next-view-transitions
-- **Form handling**: Contact form with email sending via Resend API
-- **Responsive navigation**: Hamburger menu for mobile, full navigation for desktop
-
-### Development Notes
-
-- The site uses Japanese language for content
-- Metadata includes `robots: "noindex, nofollow"` for development
-- All animations have carefully orchestrated timing and delays
-- Component styles follow BEM-like naming conventions in CSS Modules
-- Images are optimized using Next.js Image component
-- External links open in new tabs with security attributes
-
-### Code Style Conventions
-
-- Use TypeScript for all new code
-- Follow existing CSS Modules naming patterns
-- Maintain consistent animation timing patterns
-- Use Motion for new animations where appropriate
-- Keep feature-specific code within feature directories
-- Maintain responsive design patterns established in existing components
-
-## Testing
-
-No specific test setup is currently configured. When adding tests, consider the animation-heavy nature of the codebase and the 3D components that may require special testing approaches.
+- サイトコンテンツは**日本語**
+- 一人称は「**私**」を使用
+- カラーテーマはピンク系（`--color-primary-pink`）
+- 外部リンクは`target="_blank" rel="noopener noreferrer"`を付与
