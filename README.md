@@ -179,12 +179,11 @@ https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 portfolio/
 ├── public/                         # 静的ファイル
 │   ├── audio/                      # BGMファイル
-│   ├── images/                     # 画像ファイル
-│   │   ├── about/                  # アバウトページ用画像
-│   │   ├── gifs/                   # アニメーション画像
-│   │   ├── skills/                 # スキル一覧ページの各スキルのロゴ画像
-│   │   └── works/                  # 制作実績ページ用画像
-│   └── videos/                     # 動画ファイル
+│   └── images/                     # 画像ファイル
+│       ├── about/                  # アバウトページ用画像
+│       ├── gifs/                   # アニメーション画像
+│       ├── skills/                 # スキル一覧ページの各スキルのロゴ画像
+│       └── works/                  # 制作実績ページ用画像
 ├── src/
 │   ├── app/                        # ルートディレクトリ（ルーティング管理）
 │   │   ├── about/                  # アバウトページ
