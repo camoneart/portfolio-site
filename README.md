@@ -33,7 +33,7 @@ https://github.com/user-attachments/assets/69073e68-0b60-4e6c-b77a-e9e0c31b328f
 
 ### **アバウトページ**
 
-私のプロフィール、Web開発やAIへの関心、そしてモノづくりに対する想いやビジョンを紹介しています。
+私のプロフィールを紹介しています。趣味（Web開発、音楽/映像鑑賞、読書）、AIへの注力、自分の特徴や得意/苦手なこと、価値観、モノづくりに対する想いを綴っています。
 
 https://github.com/user-attachments/assets/ec9862c6-6607-4fbf-903c-400b24d6c47a
 
@@ -54,7 +54,7 @@ https://github.com/user-attachments/assets/06ec7526-ba92-475c-8c10-4667bd805ba0
 
 ### **お問い合わせページ**
 
-このページでは、「React Hook Form」でパフォーマンスを最適化したフォームを実装しました。「Zod」による入力値検証（バリデーション）で堅牢性を高め、メール送信機能には「Resend」を利用しています。
+お問い合わせフォームは「React Hook Form」でパフォーマンスを最適化し、「Zod」による入力値検証（バリデーション）で堅牢性を高めています。メール送信機能には「Resend」を利用しています。
 
 https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 
@@ -121,7 +121,7 @@ https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 
 <h2 id="technology-used">使用技術</h2>
 
-<img src="https://img.shields.io/badge/-node.js-444.svg?logo=node.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-pnpm-444.svg?logo=pnpm&style=for-the-badge"> <img src="https://img.shields.io/badge/-next.js-444.svg?logo=next.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-react-444.svg?logo=react&style=for-the-badge"> <img src="https://img.shields.io/badge/-TypeScript-444.svg?logo=TypeScript&style=for-the-badge"> <img src="https://img.shields.io/badge/-Tailwind%20CSS-444.svg?logo=Tailwind%20CSS&style=for-the-badge"> <img src="https://img.shields.io/badge/-shadcn/ui-444.svg?logo=shadcn/ui&style=for-the-badge"> <img src="https://img.shields.io/badge/-GSAP-444.svg?logo=GSAP&style=for-the-badge"> <img src="https://img.shields.io/badge/-Motion-444.svg?logo=Motion&style=for-the-badge"> <img src="https://img.shields.io/badge/-View%20Transitions%20API-444.svg?logo=View%20Transitions%20API&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Three%20Fiber-444.svg?logo=React%20Three%20Fiber&style=for-the-badge"> <img src="https://img.shields.io/badge/-Drei-444.svg?logo=Drei&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Spring-444.svg?logo=React%20Spring&style=for-the-badge"> <img src="https://img.shields.io/badge/-Howler.js-444.svg?logo=Howler.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Hook%20Form-444.svg?logo=React%20Hook%20Form&style=for-the-badge"> <img src="https://img.shields.io/badge/-Zod-444.svg?logo=Zod&style=for-the-badge"> <img src="https://img.shields.io/badge/-Resend-444.svg?logo=Resend&style=for-the-badge"> <img src="https://img.shields.io/badge/-Vercel-444.svg?logo=Vercel&style=for-the-badge">
+<img src="https://img.shields.io/badge/-node.js-444.svg?logo=node.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-pnpm-444.svg?logo=pnpm&style=for-the-badge"> <img src="https://img.shields.io/badge/-next.js-444.svg?logo=next.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-react-444.svg?logo=react&style=for-the-badge"> <img src="https://img.shields.io/badge/-TypeScript-444.svg?logo=TypeScript&style=for-the-badge"> <img src="https://img.shields.io/badge/-Tailwind%20CSS-444.svg?logo=Tailwind%20CSS&style=for-the-badge"> <img src="https://img.shields.io/badge/-shadcn/ui-444.svg?logo=shadcn/ui&style=for-the-badge"> <img src="https://img.shields.io/badge/-GSAP-444.svg?logo=GSAP&style=for-the-badge"> <img src="https://img.shields.io/badge/-Motion-444.svg?logo=Motion&style=for-the-badge"> <img src="https://img.shields.io/badge/-View%20Transitions%20API-444.svg?logo=View%20Transitions%20API&style=for-the-badge"> <img src="https://img.shields.io/badge/-Three.js-444.svg?logo=Three.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Three%20Fiber-444.svg?logo=React%20Three%20Fiber&style=for-the-badge"> <img src="https://img.shields.io/badge/-Drei-444.svg?logo=Drei&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Spring-444.svg?logo=React%20Spring&style=for-the-badge"> <img src="https://img.shields.io/badge/-Howler.js-444.svg?logo=Howler.js&style=for-the-badge"> <img src="https://img.shields.io/badge/-React%20Hook%20Form-444.svg?logo=React%20Hook%20Form&style=for-the-badge"> <img src="https://img.shields.io/badge/-Zod-444.svg?logo=Zod&style=for-the-badge"> <img src="https://img.shields.io/badge/-Resend-444.svg?logo=Resend&style=for-the-badge"> <img src="https://img.shields.io/badge/-Vercel-444.svg?logo=Vercel&style=for-the-badge">
 
 ### nodeバージョン
 
@@ -130,26 +130,27 @@ https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 
 ### フロント
 
-- [Next.js](https://nextjs.org/)：v14.2.20
-- [React](https://ja.react.dev/)：v18.3.1
-- [TypeScript](https://www.typescriptlang.org/)：v5
+- [Next.js](https://nextjs.org/)：v16.1.3
+- [React](https://ja.react.dev/)：v19.2.3
+- [TypeScript](https://www.typescriptlang.org/)：v5.9.3
 
 ### スタイル・UI
 
-- [Tailwind CSS](https://tailwindcss.com/)：v4.1.8
+- [Tailwind CSS](https://tailwindcss.com/)：v4.1.18
 - [shadcn/ui](https://ui.shadcn.com/)
 
 ### アニメーション
 
-- [GSAP](https://gsap.com/)：v3.12.5
-- [Motion](https://motion.dev/)：v11.12.0
-- [next-view-transitions](https://www.npmjs.com/package/next-view-transitions#disclaimer)：v0.3.4（View Transitions API）
+- [GSAP](https://gsap.com/)：v3.14.2
+- [Motion](https://motion.dev/)：v12.26.2
+- [next-view-transitions](https://www.npmjs.com/package/next-view-transitions#disclaimer)：v0.3.5（View Transitions API）
 
 ### 3Dコンテンツ
 
-- [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction)：v8.17.10
-- [Drei](https://drei.docs.pmnd.rs/getting-started/introduction)：v9.117.3
-- [React Spring](https://www.react-spring.dev/)：v9.7.5
+- [Three.js](https://threejs.org/)：v0.182.0
+- [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction)：v9.5.0
+- [Drei](https://drei.docs.pmnd.rs/getting-started/introduction)：v10.7.7
+- [React Spring](https://www.react-spring.dev/)：v10.0.3
 
 ### オーディオ
 
@@ -157,12 +158,12 @@ https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 
 ### フォーム・スキーマバリデーション
 
-- [React Hook Form](https://react-hook-form.com/)：v7.54.0（フォーム）
-- [Zod](https://zod.dev/)：v3.23.8（スキーマバリデーション）
+- [React Hook Form](https://react-hook-form.com/)：v7.71.1（フォーム）
+- [Zod](https://zod.dev/)：v4.3.5（スキーマバリデーション）
 
 ### メール送信サービス
 
-- [Resend](https://resend.com/docs/introduction)：v4.0.1
+- [Resend](https://resend.com/docs/introduction)：v6.7.0
 
 ### ホスティング
 
@@ -178,17 +179,18 @@ https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 portfolio/
 ├── public/                         # 静的ファイル
 │   ├── audio/                      # BGMファイル
-│   └── images/                     # 画像ファイル
-│       ├── about/                  # アバウトページ用画像
-│       ├── gifs/                   # アニメーション画像
-│       ├── skills/                 # スキル一覧ページの各スキルのロゴ画像
-│       └── works/                  # 制作実績ページ用画像
+│   ├── images/                     # 画像ファイル
+│   │   ├── about/                  # アバウトページ用画像
+│   │   ├── gifs/                   # アニメーション画像
+│   │   ├── skills/                 # スキル一覧ページの各スキルのロゴ画像
+│   │   └── works/                  # 制作実績ページ用画像
+│   └── videos/                     # 動画ファイル
 ├── src/
 │   ├── app/                        # ルートディレクトリ（ルーティング管理）
 │   │   ├── about/                  # アバウトページ
 │   │   ├── api/                    # API Routes
 │   │   │   └── send/               # メール送信用APIエンドポイント
-│   │   ├── components/             # コンポーネント
+│   │   ├── components/             # 共通コンポーネント
 │   │   │   ├── 3D/                 # 3Dコンテンツ
 │   │   │   ├── Animation/          # アニメーション
 │   │   │   ├── AudioPlayer/        # サイトのBGM
@@ -196,13 +198,24 @@ portfolio/
 │   │   │   ├── layouts/            # レイアウトコンポーネント
 │   │   │   └── MouseStalker/       # マウスストーカー
 │   │   ├── contact/                # お問い合わせページ
-│   │   ├── features/               # componentsでは共通化が難しい、特定の機能やドメイン固有のコンポーネントを管理するディレクトリ
+│   │   ├── features/               # componentsでは共通化が難しい、特定の機能やドメイン固有のコンポーネントを管理
 │   │   │   ├── about/              # アバウトページ機能
+│   │   │   │   └── components/     # アバウト用コンポーネント
 │   │   │   ├── contact/            # お問い合わせページ機能
+│   │   │   │   ├── components/     # コンタクト用コンポーネント
+│   │   │   │   └── hooks/          # コンタクト用カスタムフック
 │   │   │   ├── skills/             # スキル一覧ページ機能
+│   │   │   │   ├── components/     # スキル用コンポーネント
+│   │   │   │   ├── data/           # スキルデータ
+│   │   │   │   └── hooks/          # スキル用カスタムフック
 │   │   │   └── works/              # 制作実績ページ機能
+│   │   │       ├── components/     # 制作実績用コンポーネント
+│   │   │       ├── data/           # 制作実績データ
+│   │   │       └── hooks/          # 制作実績用カスタムフック
 │   │   ├── skills/                 # スキル一覧ページ
+│   │   │   └── [skill]/            # スキル詳細ページ（動的ルート）
 │   │   ├── works/                  # 制作実績ページ
+│   │   │   └── [id]/               # 制作実績詳細ページ（動的ルート）
 │   │   ├── favicon.ico             # ファビコン
 │   │   ├── globals.css             # アプリケーション全体のグローバルスタイルシート
 │   │   ├── layout.tsx              # アプリケーション全体のルートレイアウトコンポーネント
@@ -212,14 +225,14 @@ portfolio/
 │   ├── lib/                        # ライブラリ・ユーティリティ
 │   └── utils/                      # ユーティリティ関数
 ├── .cursorrules                    # Cursor Rules
-├── .depcheckrc.json                # 依存関係チェックツール depcheck の設定ファイル
+├── .depcheckrc.json                # 依存関係チェックツール depcheckの設定ファイル
 ├── .env                            # 環境変数の設定ファイル
 ├── .eslintrc.json                  # ESLint設定ファイル
 ├── .gitignore                      # GitHubの差分に含まないものを格納
 ├── .npmrc                          # pnpmの設定ファイル
 ├── .prettierrc.json                # Prettierの設定ファイル
 ├── components.json                 # shadcn/ui設定ファイル
-├── next-env.d.ts                   # Next.js の型定義補完ファイル（自動生成）
+├── next-env.d.ts                   # Next.jsの型定義補完ファイル（自動生成）
 ├── next.config.mjs                 # Next.js設定ファイル
 ├── package.json                    # プロジェクトの依存関係・スクリプト定義
 ├── pnpm-lock.yaml                  # pnpmの依存関係ロックファイル
