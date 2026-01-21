@@ -177,17 +177,18 @@ https://github.com/user-attachments/assets/84eb08c8-68f1-430d-9700-0440213204c3
 portfolio/
 ├── public/                         # 静的ファイル
 │   ├── audio/                      # BGMファイル
-│   └── images/                     # 画像ファイル
-│       ├── about/                  # アバウトページ用画像
-│       ├── gifs/                   # アニメーション画像
-│       ├── skills/                 # スキル一覧ページの各スキルのロゴ画像
-│       └── works/                  # 制作実績ページ用画像
+│   ├── images/                     # 画像ファイル
+│   │   ├── about/                  # アバウトページ用画像
+│   │   ├── gifs/                   # アニメーション画像
+│   │   ├── skills/                 # スキル一覧ページの各スキルのロゴ画像
+│   │   └── works/                  # 制作実績ページ用画像
+│   └── videos/                     # 動画ファイル
 ├── src/
 │   ├── app/                        # ルートディレクトリ（ルーティング管理）
 │   │   ├── about/                  # アバウトページ
 │   │   ├── api/                    # API Routes
 │   │   │   └── send/               # メール送信用APIエンドポイント
-│   │   ├── components/             # コンポーネント
+│   │   ├── components/             # 共通コンポーネント
 │   │   │   ├── 3D/                 # 3Dコンテンツ
 │   │   │   ├── Animation/          # アニメーション
 │   │   │   ├── AudioPlayer/        # サイトのBGM
@@ -195,13 +196,24 @@ portfolio/
 │   │   │   ├── layouts/            # レイアウトコンポーネント
 │   │   │   └── MouseStalker/       # マウスストーカー
 │   │   ├── contact/                # お問い合わせページ
-│   │   ├── features/               # componentsでは共通化が難しい、特定の機能やドメイン固有のコンポーネントを管理するディレクトリ
+│   │   ├── features/               # componentsでは共通化が難しい、特定の機能やドメイン固有のコンポーネントを管理
 │   │   │   ├── about/              # アバウトページ機能
+│   │   │   │   └── components/     # アバウト用コンポーネント
 │   │   │   ├── contact/            # お問い合わせページ機能
+│   │   │   │   ├── components/     # コンタクト用コンポーネント
+│   │   │   │   └── hooks/          # コンタクト用カスタムフック
 │   │   │   ├── skills/             # スキル一覧ページ機能
+│   │   │   │   ├── components/     # スキル用コンポーネント
+│   │   │   │   ├── data/           # スキルデータ
+│   │   │   │   └── hooks/          # スキル用カスタムフック
 │   │   │   └── works/              # 制作実績ページ機能
+│   │   │       ├── components/     # 制作実績用コンポーネント
+│   │   │       ├── data/           # 制作実績データ
+│   │   │       └── hooks/          # 制作実績用カスタムフック
 │   │   ├── skills/                 # スキル一覧ページ
+│   │   │   └── [skill]/            # スキル詳細ページ（動的ルート）
 │   │   ├── works/                  # 制作実績ページ
+│   │   │   └── [id]/               # 制作実績詳細ページ（動的ルート）
 │   │   ├── favicon.ico             # ファビコン
 │   │   ├── globals.css             # アプリケーション全体のグローバルスタイルシート
 │   │   ├── layout.tsx              # アプリケーション全体のルートレイアウトコンポーネント
@@ -211,14 +223,14 @@ portfolio/
 │   ├── lib/                        # ライブラリ・ユーティリティ
 │   └── utils/                      # ユーティリティ関数
 ├── .cursorrules                    # Cursor Rules
-├── .depcheckrc.json                # 依存関係チェックツール depcheck の設定ファイル
+├── .depcheckrc.json                # 依存関係チェックツール depcheckの設定ファイル
 ├── .env                            # 環境変数の設定ファイル
 ├── .eslintrc.json                  # ESLint設定ファイル
 ├── .gitignore                      # GitHubの差分に含まないものを格納
 ├── .npmrc                          # pnpmの設定ファイル
 ├── .prettierrc.json                # Prettierの設定ファイル
 ├── components.json                 # shadcn/ui設定ファイル
-├── next-env.d.ts                   # Next.js の型定義補完ファイル（自動生成）
+├── next-env.d.ts                   # Next.jsの型定義補完ファイル（自動生成）
 ├── next.config.mjs                 # Next.js設定ファイル
 ├── package.json                    # プロジェクトの依存関係・スクリプト定義
 ├── pnpm-lock.yaml                  # pnpmの依存関係ロックファイル
