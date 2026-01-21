@@ -78,23 +78,23 @@ const ContactForm = () => {
                     <FormLabel>
                       Username<span className={styles["required"]}>*</span>
                     </FormLabel>
-                    <FormControl>
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <FormControl>
                             <Input
                               placeholder="First & Last Name"
                               {...field}
                               className="px-4 py-7"
                               disabled={form.formState.isSubmitting}
                             />
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p>お名前を入力してください</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </FormControl>
+                          </FormControl>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>お名前を入力してください</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -107,23 +107,23 @@ const ContactForm = () => {
                     <FormLabel>
                       Email<span className={styles["required"]}>*</span>
                     </FormLabel>
-                    <FormControl>
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <FormControl>
                             <Input
                               placeholder="Your email address"
                               {...field}
                               className="px-4 py-7"
                               disabled={form.formState.isSubmitting}
                             />
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p>メールアドレスを入力してください</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </FormControl>
+                          </FormControl>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>メールアドレスを入力してください</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -137,18 +137,18 @@ const ContactForm = () => {
                   <FormLabel>
                     Subject<span className={styles["required"]}>*</span>
                   </FormLabel>
-                  <FormControl>
-                    <TooltipProvider>
-                      <Tooltip>
-                        <TooltipTrigger asChild>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <FormControl>
                           <Input placeholder="Subject" {...field} className="px-4 py-7" disabled={form.formState.isSubmitting} />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>件名を入力してください</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </FormControl>
+                        </FormControl>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>件名を入力してください</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                   <FormMessage />
                 </FormItem>
               )}
@@ -161,18 +161,18 @@ const ContactForm = () => {
                   <FormLabel>
                     Message<span className={styles["required"]}>*</span>
                   </FormLabel>
-                  <FormControl>
-                    <TooltipProvider>
-                      <Tooltip>
-                        <TooltipTrigger asChild>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <FormControl>
                           <Textarea placeholder="Your message here..." {...field} disabled={form.formState.isSubmitting} />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>お問い合わせ内容を入力してください</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </FormControl>
+                        </FormControl>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>お問い合わせ内容を入力してください</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                   <FormMessage />
                 </FormItem>
               )}
