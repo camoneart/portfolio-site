@@ -45,7 +45,6 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement | null>, id:
           scale: 0.8,
           y: 100,
           x: 0,
-          // perspective: 0,
           duration: 0.8,
         },
         animate: {
@@ -55,7 +54,6 @@ export const useWorkCardAnimation = (cardRef: RefObject<HTMLElement | null>, id:
           scale: 1,
           y: 0,
           x: 0,
-          // perspective: 0,
           duration: 0.8,
           clearProps: "transform,perspective", // トランスフォーム関連プロパティをクリア
         },
