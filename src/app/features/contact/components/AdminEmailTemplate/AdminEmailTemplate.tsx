@@ -1,3 +1,5 @@
+import "server-only";
+
 interface AdminEmailTemplateProps {
   username: string;
   email: string;

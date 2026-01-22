@@ -1,3 +1,5 @@
+import "client-only";
+
 import * as THREE from "three";
 import { CUBE_CONFIG, CubeData } from "./constants";
 

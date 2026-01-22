@@ -1,3 +1,5 @@
+import "server-only";
+
 interface AutoReplyEmailTemplateProps {
   username: string;
   content: string;

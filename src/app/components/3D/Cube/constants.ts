@@ -1,3 +1,5 @@
+import "client-only";
+
 import * as THREE from "three";
 
 // 定数を別ファイルに分離
