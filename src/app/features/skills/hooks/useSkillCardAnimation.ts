@@ -1,3 +1,5 @@
+import "client-only";
+
 import { useEffect, useRef } from "react";
 
 interface UseSkillAnimationProps {

@@ -1,3 +1,5 @@
+import "client-only";
+
 import { useEffect, RefObject } from "react";
 import gsap from "gsap";
 
