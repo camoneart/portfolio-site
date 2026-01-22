@@ -189,7 +189,6 @@ const MouseStalker = memo(() => {
   );
 });
 
-// 表示名を設定（デバッグ用）
 MouseStalker.displayName = "MouseStalker";
 
 export default MouseStalker;

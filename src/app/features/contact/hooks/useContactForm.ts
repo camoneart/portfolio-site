@@ -34,7 +34,6 @@ const useContactForm = () => {
           body: formData,
         });
 
-        // レスポンスの詳細を確認するためのデバッグを追加
         if (!response.ok) {
           throw new Error("Failed to send message");
         }

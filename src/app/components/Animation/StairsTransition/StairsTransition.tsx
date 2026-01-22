@@ -71,7 +71,6 @@ const StairColumn = memo(({ custom }: { custom: number }) => (
   />
 ));
 
-// デバッグ用のdisplayName設定
 StairColumn.displayName = "StairColumn";
 
 const StairsTransitionContent = memo(({ children }: { children: React.ReactNode }) => {
@@ -132,7 +131,6 @@ const StairsTransition = memo(({ children }: { children: React.ReactNode }) => (
   <StairsTransitionContent>{children}</StairsTransitionContent>
 ));
 
-// デバッグ用のdisplayName設定
 StairsTransitionContent.displayName = "StairsTransitionContent";
 StairsTransition.displayName = "StairsTransition";
 
