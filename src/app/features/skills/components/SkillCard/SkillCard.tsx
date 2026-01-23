@@ -72,7 +72,7 @@ const SkillCard = ({
                   className={`${styles["skill-logo"]} ${viewTransitionImage}`}
                   width={156}
                   height={156}
-                  priority
+                  preload
                 />
               </div>
             </div>

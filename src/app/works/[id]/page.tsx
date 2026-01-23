@@ -48,7 +48,7 @@ const WorkDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
                       width={1920}
                       height={1080}
                       className={`${styles["work__mv-img"]} ${work.viewTransitionImage}`}
-                      priority
+                      preload
                     />
                   </figure>
                 </div>
@@ -516,7 +516,7 @@ const WorkDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
                             width={800}
                             height={450}
                             className={`${styles["work__sidebar-img"]} ${otherWork.viewTransitionImage}`}
-                            priority
+                            preload
                           />
                         </figure>
                         <h3

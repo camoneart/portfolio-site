@@ -31,7 +31,7 @@ const ProfileSection = () => {
                 width={170}
                 height={170}
                 className={styles["about-profile-img"]}
-                priority
+                preload
               />
             </motion.div>
             <div className={styles["about-profile-info"]}>
@@ -112,7 +112,7 @@ const SnsItem = ({ href, logo, name }: SnsItemProps) => (
         <div className={styles["about-sns-logo-wrapper"]}>
           <div className={styles["about-sns-logo-box"]}>
             <div className={styles["about-sns-logo-bg"]}>
-              <Image src={logo} alt={name} width={20} height={20} priority />
+              <Image src={logo} alt={name} width={20} height={20} preload />
             </div>
           </div>
         </div>
