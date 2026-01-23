@@ -35,7 +35,7 @@ const SkillDetail = async ({ params }: { params: Promise<{ skill: string }> }) =
                   className={`${styles["skill-logo"]} ${skill.viewTransitionImage}`}
                   width={100}
                   height={100}
-                  priority
+                  preload
                 />
               </div>
             </div>

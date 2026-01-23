@@ -51,7 +51,7 @@ const WorkCard = ({
             width={800}
             height={450}
             className={`${styles["card-img"]} ${viewTransitionImage}`}
-            priority
+            preload
           />
         </figure>
         <h2 className={`font-russo ${styles["card-title"]} ${viewTransitionName}`}>{workTitle}</h2>
