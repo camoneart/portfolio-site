@@ -1,53 +1,46 @@
 # ポートフォリオサイト
 
-プロジェクト概要・使用技術・ディレクトリ構造は @README.md を参照。
+aoyamaのポートフォリオ。Motion/GSAP/R3Fで動きと3Dを活かした体験重視サイト。
+スコープ外: CMS機能、ブログ、外部API連携（Resend除く）
 
-## 技術スタック
+## Stack
 
-- Next.js 16（App Router + Turbopack）
-- React 19
-- TypeScript 5.9
+Next.js 16 (App Router + Turbopack) / React 19 / TypeScript 5.9
+Tailwind CSS + CSS Modules / shadcn/ui / Motion + GSAP / R3F + Drei
 
-## 開発コマンド
+## Structure
 
-パッケージマネージャー: **pnpm** を使用（npm/yarn禁止）
+```
+src/app/              -- ページ・ルーティング
+src/app/components/   -- 共通コンポーネント（3D, Animation, layouts等）
+src/app/features/     -- 機能別（about/, contact/, skills/, works/）
+src/app/api/          -- Route Handlers（メール送信）
+src/components/ui/    -- shadcn/ui（変更禁止: 自動生成）
+src/lib/              -- ユーティリティ
+```
 
-- `pnpm dev` - 開発サーバー起動
-- `pnpm build` - 本番ビルド
-- `pnpm lint:fix` - Lint + フォーマット
+## Rules
 
-## 環境変数
+- `any`禁止、型明示（型安全性）
+- 新規コンポーネント: 関数宣言
+- スタイル: CSS Modules + Tailwind。既存パターン準拠
+- アニメーション: Motion優先。GSAP=既存一貫性時のみ
+- `src/components/ui/` 変更禁止（shadcn/ui自動生成）
+- 新規UI -> `src/app/components/`配置
+- 既存コードのパターンに従う
 
-- `RESEND_API_KEY` - Resend APIキー（必須）
-- `RESEND_FROM_EMAIL` - メール送信元アドレス（デフォルト値あり）
+## Env
 
-## コーディング規約
+- `RESEND_API_KEY` -- Resend APIキー（必須）
+- `RESEND_FROM_EMAIL` -- 送信元アドレス（デフォルト値あり）
 
-### TypeScript
+## Commands
 
-- `any`は禁止、型を明示する
-- 新規コンポーネントは関数宣言で記述
+dev: `pnpm dev`
+build: `pnpm build`
+lint: `pnpm lint:fix`
+pkg: pnpm（packageManager設定。npm/yarn不可）
 
-### スタイリング
+## Docs
 
-- CSS Modules（`.module.css`）+ Tailwind CSSを併用
-- コンポーネント固有のスタイルは`.module.css`に記述
-- BEM風のクラス命名（例：`about-content-group`）
-
-### アニメーション
-
-- 新規アニメーションはMotionを優先使用
-- GSAPは既存コードとの一貫性が必要な場合のみ
-- アニメーションのdelayは既存パターンに合わせる
-
-### UIコンポーネント
-
-- `src/components/ui/`のshadcn/uiは変更禁止
-- 新規UIコンポーネントは`src/app/components/`に配置
-
-## 重要な注意事項
-
-- サイトコンテンツは**日本語**
-- 一人称は「**私**」を使用
-- カラーテーマはピンク系（`--color-primary-pink`）
-- 外部リンクは`target="_blank" rel="noopener noreferrer"`を付与
+- `.docs/conventions.md` -- スタイリング・アニメーション・コンテンツ詳細規約
