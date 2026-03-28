@@ -40,7 +40,7 @@ yarn-error.log*
 next-env.d.ts
 
 # log
-_docs/templates/
+.docs/templates/
 
 # serena
 .serena
