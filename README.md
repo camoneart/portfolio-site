@@ -130,9 +130,9 @@ https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 
 ### フロント
 
-- [Next.js](https://nextjs.org/)：v16.1.3
-- [React](https://ja.react.dev/)：v19.2.3
-- [TypeScript](https://www.typescriptlang.org/)：v5.9.3
+- [Next.js](https://nextjs.org/)：v16.2.4
+- [React](https://ja.react.dev/)：v19.2.5
+- [TypeScript](https://www.typescriptlang.org/)：v6.0.3
 
 ### スタイル・UI
 
@@ -142,13 +142,13 @@ https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 ### アニメーション
 
 - [GSAP](https://gsap.com/)：v3.14.2
-- [Motion](https://motion.dev/)：v12.26.2
+- [Motion](https://motion.dev/)：v12.38.0
 - [next-view-transitions](https://www.npmjs.com/package/next-view-transitions#disclaimer)：v0.3.5（View Transitions API）
 
 ### 3Dコンテンツ
 
-- [Three.js](https://threejs.org/)：v0.182.0
-- [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction)：v9.5.0
+- [Three.js](https://threejs.org/)：v0.184.0
+- [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction)：v9.6.0
 - [Drei](https://drei.docs.pmnd.rs/getting-started/introduction)：v10.7.7
 - [React Spring](https://www.react-spring.dev/)：v10.0.3
 
