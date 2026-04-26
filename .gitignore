@@ -39,8 +39,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# log
-.docs/templates/
+# docs (個人作業ドキュメント、 publicリポ非公開)
+.docs/
 
 # serena
 .serena
