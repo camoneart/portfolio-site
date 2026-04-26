@@ -223,11 +223,13 @@ portfolio/
 │   │   └── ui/                     # shadcn/ui コンポーネント
 │   ├── lib/                        # ライブラリ・ユーティリティ
 │   └── utils/                      # ユーティリティ関数
-├── .cursorrules                    # Cursor Rules
+├── .claude/                        # Claude Code 設定（CLAUDE.md + settings.local.json）
 ├── .depcheckrc.json                # 依存関係チェックツール depcheckの設定ファイル
-├── .env                            # 環境変数の設定ファイル
+├── .docs/                          # プロジェクトドキュメント（conventions / plans / security / templates）
 ├── .eslintrc.json                  # ESLint設定ファイル
+├── .github/                        # GitHub設定（dependabot.yml + workflows/ci.yml）
 ├── .gitignore                      # GitHubの差分に含まないものを格納
+├── .mcp.json                       # MCP (Model Context Protocol) サーバー設定
 ├── .npmrc                          # pnpmの設定ファイル
 ├── .prettierrc.json                # Prettierの設定ファイル
 ├── components.json                 # shadcn/ui設定ファイル
