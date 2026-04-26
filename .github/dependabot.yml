@@ -1,0 +1,44 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    versioning-strategy: "increase"
+    groups:
+      next-stack:
+        patterns:
+          - "next"
+          - "eslint-config-next"
+          - "@next/*"
+      react-stack:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react*"
+      r3f-stack:
+        patterns:
+          - "@react-three/*"
+          - "three"
+          - "@types/three"
+      radix:
+        patterns:
+          - "@radix-ui/*"
+      dev-tooling:
+        patterns:
+          - "eslint*"
+          - "prettier*"
+          - "typescript"
+          - "@types/node"
+    commit-message:
+      prefix: "build(deps)"
+      prefix-development: "chore(deps-dev)"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "ci(deps)"
