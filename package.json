@@ -38,7 +38,7 @@
     "clsx": "2.1.1",
     "gsap": "3.14.2",
     "howler": "2.2.4",
-    "lucide-react": "0.562.0",
+    "lucide-react": "1.11.0",
     "motion": "12.38.0",
     "next": "16.2.4",
     "next-view-transitions": "0.3.5",
