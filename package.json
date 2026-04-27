@@ -44,7 +44,7 @@
     "next-view-transitions": "0.3.5",
     "react": "19.2.5",
     "react-dom": "19.2.5",
-    "react-hook-form": "7.71.1",
+    "react-hook-form": "7.74.0",
     "react-hot-toast": "2.6.0",
     "react-loader-spinner": "8.0.2",
     "react-markdown": "10.1.0",
