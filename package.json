@@ -65,7 +65,7 @@
     "eslint-config-next": "16.2.4",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
-    "postcss": "8.5.10",
+    "postcss": "8.5.12",
     "prettier": "3.8.3",
     "tailwindcss": "4.1.18",
     "typescript": "6.0.3"
