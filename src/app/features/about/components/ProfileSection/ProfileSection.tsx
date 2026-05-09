@@ -37,7 +37,7 @@ const ProfileSection = () => {
             <div className={styles["about-profile-info"]}>
               <ProfileItem label="Birthday" value="1999 / 07 / 10" />
               <ProfileItem label="Name" value="Kaishu Aoyama" />
-              <ProfileItem label="Nickname" value="camone - 魁百音" />
+              <ProfileItem label="Nickname" value="camone - かもね" />
             </div>
           </dl>
         </div>
