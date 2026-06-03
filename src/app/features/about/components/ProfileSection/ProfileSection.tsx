@@ -45,17 +45,20 @@ const ProfileSection = () => {
 
       {/* SNS */}
       <div className={styles["about-sns"]}>
-        <SectionHeader
-          title="SNS"
-          icon={AtSign}
-          iconSize={20}
-          iconClassName="about-sns-icon"
-        />
+        <SectionHeader title="SNS" icon={AtSign} iconSize={20} iconClassName="about-sns-icon" />
         <div className={styles["about-sns-content"]}>
           <ul className={styles["about-sns-list"]}>
-            <SnsItem href="https://github.com/camoneart" logo="/images/about/sns/github-logo.svg" name="GitHub" />
-            <SnsItem href="https://x.com/camoneart" logo="/images/about/sns/x-logo.svg" name="X" />
-            <SnsItem href="https://zenn.dev/camoneart" logo="/images/about/sns/zenn-logo.svg" name="Zenn" />
+            <SnsItem
+              href="https://github.com/kaijutale"
+              logo="/images/about/sns/github-logo.svg"
+              name="GitHub"
+            />
+            <SnsItem href="https://x.com/kaijutale" logo="/images/about/sns/x-logo.svg" name="X" />
+            <SnsItem
+              href="https://zenn.dev/camoneart"
+              logo="/images/about/sns/zenn-logo.svg"
+              name="Zenn"
+            />
           </ul>
         </div>
       </div>
@@ -102,12 +105,7 @@ const SnsItem = ({ href, logo, name }: SnsItemProps) => (
     transition={{ delay: 3.4, duration: 0.6, ease: "easeInOut" }}
     className={styles["about-sns-item"]}
   >
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={styles["about-sns-link"]}
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer" className={styles["about-sns-link"]}>
       <div className={styles["about-sns-link-content"]}>
         <div className={styles["about-sns-logo-wrapper"]}>
           <div className={styles["about-sns-logo-box"]}>

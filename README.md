@@ -171,7 +171,7 @@ https://github.com/user-attachments/assets/b618880b-5eb8-4b73-bba4-c3f656179878
 
 <h2 id="development-configuration-diagram">開発構成図</h2>
 
-[開発構成図](https://camoneart.github.io/portfolio-development-configuration-diagram/)はHTMLインフォグラフィックで表現しました。
+[開発構成図](https://kaijutale.github.io/portfolio-development-configuration-diagram/)はHTMLインフォグラフィックで表現しました。
 
 <h2 id="directory-design">ディレクトリ構造</h2>
 

@@ -69,8 +69,7 @@ export const worksData: WorksData[] = [
       "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
     description:
       "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
-    detail01:
-      "　Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしています。",
+    detail01: "　Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしています。",
     detail02:
       "　トップページ：トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「これまでの学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」や「ストーリー」を視覚的に表現しています。",
     detail03:
@@ -86,8 +85,7 @@ export const worksData: WorksData[] = [
       "　カード型UIには「View Transitions API」を利用し、クリック時にスムーズに流れるような遷移アニメーションを実装しています。ユーザーに適切な視線誘導をもたらすアニメーションを実装することで、コンテンツへの没入感を高め、ユーザーの操作を助ける演出でUX向上を目指しました。",
     detail09:
       "　ホバーアニメーションでは、こちらの動作に対してプロダクトが反応を返してくれるような「対話」を意識したアニメーションを実装しています。",
-    detail10:
-      "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
+    detail10: "　オーディオライブラリ「Howler.js」を使用し、BGMを再生できるようにしています。",
     accessDescription:
       "本サイトは転職活動用のポートフォリオとして制作しており、意図した環境で作品を見ていただくため、noindexとnofollowを設定し、検索エンジンのインデックスから除外しています。",
     labels: [{ no: "Card No.", value: "001/003" }],
@@ -106,8 +104,7 @@ export const worksData: WorksData[] = [
       "アウトプットを学びの冒険に変えるRPG風学習支援Webアプリです。勇者と共に学びの冒険をはじめよう！",
     description:
       '「OUTPUT QUEST 叡智の継承者」は、Zennで記事を投稿し、勇者を成長させていく「RPG風学習支援Webアプリ」です。ゲーミフィケーション要素がアウトプットという行為を「学びの冒険」という体験に変え、学習の継続をサポートします。ユーザーが学ぶことを楽しみ、理解を深めることに達成感を覚え、"ユーザーの幸福度に繋がる体験価値" の提供で貢献したいという想いで開発しました。',
-    detail01:
-      "　Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしています。",
+    detail01: "　Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしています。",
     detail02:
       "　トップページ：ゲームのオープニングを彷彿とさせる演出により、冒険のはじまりを視覚的に表現しました。",
     detail03:
@@ -174,12 +171,12 @@ export const worksData: WorksData[] = [
     detail12:
       "　`.maestro.json`でプロジェクトごとに挙動をカスタマイズ可能です。worktreeの保存先、自動セットアップコマンド、同期ファイル、ライフサイクルフック、tmux/GitHub/Claude連携などの柔軟な設定に加え、`postCreate`フックで環境構築の自動化が可能です。",
     detail13:
-      "　必要なのはNode.js 20以上のみです。`brew install camoneart/tap/maestro`または`npm install -g @camoneart/maestro`または`pnpm add -g @camoneart/maestro`ですぐにインストールできます。",
+      "　必要なのはNode.js 20以上のみです。`brew install kaijutale/tap/maestro`または`npm install -g @camoneart/maestro`または`pnpm add -g @camoneart/maestro`ですぐにインストールできます。",
     accessDescription: "",
     labels: [{ no: "Card No.", value: "003/003" }],
     skillsList:
       "TypeScript, commander, simple-git, execa, inquirer, chalk, ora, zod, cli-progress, chokidar, conf, p-limit, open, modelcontextprotocol/sdk, tsup, vitest",
-    siteUrl: "https://github.com/camoneart/maestro",
+    siteUrl: "https://github.com/kaijutale/maestro",
     role: "Design, Coding",
     viewTransitionName: "view-transition-title-work-3",
     viewTransitionImage: "view-transition-img-work-3",
