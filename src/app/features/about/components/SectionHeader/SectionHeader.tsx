@@ -11,12 +11,7 @@ interface SectionHeaderProps {
   iconClassName: string;
 }
 
-const SectionHeader = ({
-  title,
-  icon: Icon,
-  iconSize = 20,
-  iconClassName,
-}: SectionHeaderProps) => {
+const SectionHeader = ({ title, icon: Icon, iconSize = 20, iconClassName }: SectionHeaderProps) => {
   return (
     <div className={styles["about-header"]}>
       <motion.div

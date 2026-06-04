@@ -1,4 +1,3 @@
-
 const Grid = () => {
   return <div>Grid</div>;
 };

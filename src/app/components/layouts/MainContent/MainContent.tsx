@@ -1,4 +1,3 @@
-
 const MainContent = () => {
   return <main>MainContent</main>;
 };
