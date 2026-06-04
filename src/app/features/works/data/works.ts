@@ -64,7 +64,7 @@ export const worksData: WorksData[] = [
   {
     id: 1,
     image: "/images/works/work01.jpg",
-    workTitle: "aoyama｜Web Engineer",
+    workTitle: "kaishu｜AI Engineer",
     cardDesc:
       "私のポートフォリオサイトになります。サイトデザインを自ら考え、コーディングまで行いました。",
     description:
