@@ -4,7 +4,7 @@ import * as Contact from "@/app/features/contact/components";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "このページは、aoyama｜Web Engineerのお問い合わせページになります。",
+  description: "このページは、kaishu｜AI Engineerのお問い合わせページになります。",
 };
 
 const ContactPage = () => {

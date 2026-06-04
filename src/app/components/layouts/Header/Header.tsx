@@ -51,8 +51,8 @@ export default function Header() {
             className={`${styles["header__title-link"]}`}
             onClick={() => isOpen && toggleMenu()}
           >
-            <span className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}>aoyama</span>
-            <span className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}>aoyama</span>
+            <span className={`${styles["text-gradient"]} ${styles["rotate-text01"]}`}>kaishu</span>
+            <span className={`${styles["text-gradient"]} ${styles["rotate-text02"]}`}>kaiju</span>
           </Link>
         </div>
         <div className={styles["header__items"]}>

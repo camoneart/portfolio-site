@@ -1,4 +1,4 @@
-# aoyama｜Web Engineer
+# kaishu｜AI Engineer
 
 https://github.com/user-attachments/assets/61740ac9-1dd2-4931-9fc5-9a23454b0a4f
 

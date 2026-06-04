@@ -4,8 +4,8 @@ import { memo, useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 import { motion } from "motion/react";
 
-const HERO_TITLE = "aoyama";
-const HERO_SUBTITLE = "Web Engineer";
+const HERO_TITLE = "kaishu";
+const HERO_SUBTITLE = "AI Engineer";
 
 // アニメーションのdelay時間を定数として管理
 const ANIMATION_DELAY = {

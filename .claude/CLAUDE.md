@@ -1,6 +1,6 @@
 # ポートフォリオサイト
 
-aoyamaのポートフォリオ。Motion/GSAP/R3Fで動きと3Dを活かした体験重視サイト。
+kaishuのポートフォリオ。Motion/GSAP/R3Fで動きと3Dを活かした体験重視サイト。
 スコープ外: CMS機能、ブログ、外部API連携（Resend除く）
 
 ## Stack
