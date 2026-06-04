@@ -19,6 +19,7 @@
   padding-block: 6px;
   padding-inline: 14px;
   letter-spacing: 0.05em;
+  text-align: center;
 
   @media (768px <= width) {
     overflow: hidden;
