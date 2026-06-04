@@ -4,7 +4,7 @@ import * as THREE from "three";
 
 // 定数を別ファイルに分離
 export const CUBE_CONFIG = {
-  GRID_SIZE: 6, // グリッドの一辺のキューブの数
+  GRID_SIZE: 11, // グリッドの一辺のキューブ数（球の解像度）
   SPACING: 1.2, // キューブ間の間隔
   SCATTER_COUNT: 150, // 散乱させるキューブの数
   SCATTER_RANGE: {

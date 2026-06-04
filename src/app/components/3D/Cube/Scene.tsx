@@ -17,7 +17,7 @@ const Scene: React.FC = () => {
     (pointer: THREE.Vector2) => {
       camera.position.x += (pointer.x * 0.5 - camera.position.x) * 0.015;
       camera.position.y += (-pointer.y * 0.5 - camera.position.y) * 0.015;
-      camera.lookAt(0, 0, 0); // キューブの位置
+      camera.lookAt(0, 0, 0); // クラウドの中心
     },
     [camera]
   );
@@ -25,8 +25,8 @@ const Scene: React.FC = () => {
   // グループの回転更新を最適化
   const updateGroupRotation = useCallback(() => {
     if (groupRef.current) {
-      groupRef.current.rotation.x += 0.001;
-      groupRef.current.rotation.y += -0.001;
+      groupRef.current.rotation.x += 0.0005;
+      groupRef.current.rotation.y += -0.0005;
     }
   }, []);
 
@@ -42,7 +42,7 @@ const Scene: React.FC = () => {
       <directionalLight position={[5, 5, 5]} castShadow intensity={1} />
       <pointLight position={[-3, 2, 3]} color={0xff69b4} intensity={1} distance={10} />
       <pointLight position={[3, -2, -3]} color={0x00ffff} intensity={1} distance={10} />
-      <group ref={groupRef} position={[0, 0, 0]} rotation={[Math.PI / 4, Math.PI / 4, 0]}>
+      <group ref={groupRef} position={[0, 0, -15]} rotation={[Math.PI / 4, Math.PI / 4, 0]}>
         {cubes.map((props, index) => (
           <Cube key={index} {...props} />
         ))}

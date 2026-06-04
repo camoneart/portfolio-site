@@ -5,46 +5,30 @@ import { CUBE_CONFIG, CubeData } from "./constants";
 
 const generateCubes = (): CubeData[] => {
   const cubes: CubeData[] = [];
-  const missingPositions = generateMissingPositions();
 
-  // メインキューブ生成を最適化
-  generateMainCubes(cubes, missingPositions);
-  // 散らばりキューブ生成を最適化
+  // 球状クラウド（蠢く立方体の塊。うねりは Cube.tsx の useFrame が担う）
+  generateCloudCubes(cubes);
+  // 周辺の散らばりキューブ
   generateScatteredCubes(cubes);
 
   return cubes;
 };
 
-// 関数を分割して最適化
-const generateMissingPositions = (): THREE.Vector3[] => {
-  return Array.from(
-    { length: CUBE_CONFIG.SCATTER_COUNT },
-    () =>
-      new THREE.Vector3(
-        Math.floor(Math.random() * CUBE_CONFIG.GRID_SIZE),
-        Math.floor(Math.random() * CUBE_CONFIG.GRID_SIZE),
-        Math.floor(Math.random() * CUBE_CONFIG.GRID_SIZE)
-      )
-  );
-};
+const generateCloudCubes = (cubes: CubeData[]): void => {
+  const { GRID_SIZE, SPACING } = CUBE_CONFIG;
+  const half = (GRID_SIZE - 1) / 2;
 
-const generateMainCubes = (cubes: CubeData[], missingPositions: THREE.Vector3[]): void => {
-  const halfGrid = CUBE_CONFIG.GRID_SIZE / 2;
-
-  for (let x = 0; x < CUBE_CONFIG.GRID_SIZE; x++) {
-    for (let y = 0; y < CUBE_CONFIG.GRID_SIZE; y++) {
-      for (let z = 0; z < CUBE_CONFIG.GRID_SIZE; z++) {
-        if (!isMissingPosition(x, y, z, missingPositions)) {
-          cubes.push(
-            createCube(
-              new THREE.Vector3(
-                (x - halfGrid + 0.5) * CUBE_CONFIG.SPACING,
-                (y - halfGrid + 0.5) * CUBE_CONFIG.SPACING,
-                (z - halfGrid + 0.5) * CUBE_CONFIG.SPACING
-              )
-            )
-          );
-        }
+  for (let i = 0; i < GRID_SIZE; i++) {
+    for (let j = 0; j < GRID_SIZE; j++) {
+      for (let k = 0; k < GRID_SIZE; k++) {
+        const nx = (i - half) / half;
+        const ny = (j - half) / half;
+        const nz = (k - half) / half;
+        // 球をベースに少しハート型へ寄せる（上が膨らみ下が尖る。係数0.4で控えめに）
+        const a = nx * nx + ny * ny + nz * nz - 1;
+        if (a * a * a - nx * nx * ny * ny * ny * 0.4 > 0) continue;
+        const s = SPACING * 0.78; // 中央クラウドのサイズ（散らばりは変えず中央だけ小さく）
+        cubes.push(createCube(new THREE.Vector3((i - half) * s, (j - half) * s, (k - half) * s)));
       }
     }
   }
@@ -69,15 +53,6 @@ const generateScatteredCubes = (cubes: CubeData[]): void => {
       )
     );
   }
-};
-
-const isMissingPosition = (
-  x: number,
-  y: number,
-  z: number,
-  missingPositions: THREE.Vector3[]
-): boolean => {
-  return missingPositions.some((pos) => pos.x === x && pos.y === y && pos.z === z);
 };
 
 // createCubeの最適化
