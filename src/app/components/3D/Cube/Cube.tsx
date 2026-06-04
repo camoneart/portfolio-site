@@ -25,12 +25,15 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
   const velocityRef = useRef(new THREE.Vector3());
   const initialPosition = useMemo(() => position.clone(), [position]);
   const currentHoverValue = useRef(0); // 現在のホバー値を追跡
+  // 中心（原点）からの距離。波紋アニメーションの位相に使う
+  const centerDist = useMemo(() => initialPosition.length(), [initialPosition]);
 
   const material = useMemo(() => {
     return new THREE.ShaderMaterial({
       uniforms: {
         time: { value: 0 },
         hover: { value: 0.0 },
+        uDist: { value: centerDist },
         color1: { value: new THREE.Color(0xff5a78) },
         color2: { value: new THREE.Color(0xff8fa8) },
         color3: { value: new THREE.Color(0xffc8d8) },
@@ -56,6 +59,7 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
       fragmentShader: `
         uniform float time;
         uniform float hover;
+        uniform float uDist;
         uniform vec3 color1;
         uniform vec3 color2;
         uniform vec3 color3;
@@ -69,11 +73,19 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
 
           float fresnel = 0.1 + pow(1.0 + dot(viewDir, normal), 2.0);
 
+          // 立体グラデーション（上が濃く下が淡い陰影。立体感を保つ）
           float gradientFactor = (-vPosition.y + 0.5);
           vec3 gradient = mix(color1, color2, gradientFactor);
           gradient = mix(gradient, color3, gradientFactor * 0.5);
 
-          vec3 color = mix(gradient, gradient * 1.2, fresnel + hover * 0.3);
+          // 中心から外へ広がる波紋。速度はうねり（拡大縮小）と同じ time*0.55 に揃える
+          float wave = sin(uDist * 0.9 - time * 0.55);
+          float pulse = wave * 0.5 + 0.5;
+          vec3 rippled = mix(gradient, color3, pulse * 0.45); // 波の山で淡ピンク白へ
+          float glow = smoothstep(0.6, 1.0, pulse);
+
+          vec3 color = mix(rippled, rippled * 1.3, fresnel + hover * 0.3);
+          color += color3 * glow * 0.25; // 波の山で発光
 
           gl_FragColor = vec4(color, 0.85 + hover * 0.15);
         }
@@ -81,7 +93,7 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
       transparent: true,
       side: THREE.DoubleSide,
     });
-  }, []);
+  }, [centerDist]);
 
   useFrame(({ clock }) => {
     if (!meshRef.current) return;
@@ -93,9 +105,6 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
     const hoverSpeed = 0.1; // キューブが膨らむ速度。この値を小さくすると遅く、大きくすると速くなります
     currentHoverValue.current += (hoverRef.current - currentHoverValue.current) * hoverSpeed;
     material.uniforms.hover.value = currentHoverValue.current;
-
-    const floatOffset = Math.sin(time * float.speed + float.offset) * float.amplitude;
-    const floatPosition = initialPosition.clone().add(new THREE.Vector3(0, floatOffset, 0));
 
     meshRef.current.quaternion.setFromAxisAngle(
       float.rotationAxis,
@@ -127,7 +136,15 @@ const Cube = ({ position, float, scatter }: CubeProps) => {
         velocityRef.current.multiplyScalar(-0.5);
       }
     } else {
-      meshRef.current.position.lerp(floatPosition, 0.01);
+      // ノイズ（波の合成）で中心から外へ脈動・うねる（蠢く立方体クラウド）
+      const ip = initialPosition;
+      const wave =
+        Math.sin(ip.x * 0.4 + time * 0.5) +
+        Math.sin(ip.y * 0.45 + time * 0.65) +
+        Math.sin(ip.z * 0.4 + time * 0.55);
+      const radial = ip.clone().normalize();
+      const target = ip.clone().addScaledVector(radial, wave * 0.7);
+      meshRef.current.position.lerp(target, 0.08);
       velocityRef.current.multiplyScalar(0.95);
     }
   });
