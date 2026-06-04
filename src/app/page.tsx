@@ -1,22 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useClientSnapshot } from "@/lib/useClientSnapshot";
 import LoadingScreen from "./components/elements/LoadingScreen/LoadingScreen";
 import ElegantFloatingCubes from "./components/3D/Cube/ElegantFloatingCubes";
 import Hero from "./components/layouts/Hero/Hero";
 
 export default function Home() {
-  // 初期状態は常にtrueに設定（サーバーサイドレンダリングと一致させる）
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    // クライアントサイドでの初期化
-    const hasVisited = sessionStorage.getItem("hasVisited");
-    setIsLoading(!hasVisited);
-  }, []);
+  // サーバーと初回ハイドレーションでは false (=ローディング表示)、
+  // ハイドレーション後にクライアントの sessionStorage を読む。
+  const hasVisited = useClientSnapshot(() => sessionStorage.getItem("hasVisited") !== null, false);
+  const [loadingComplete, setLoadingComplete] = useState(false);
+  const isLoading = !hasVisited && !loadingComplete;
 
   const handleLoadingComplete = () => {
-    setIsLoading(false);
+    setLoadingComplete(true);
     sessionStorage.setItem("hasVisited", "true");
   };
 
