@@ -8,12 +8,7 @@ import styles from "./FocusSection.module.css";
 const FocusSection = () => {
   return (
     <div className={styles["about-focus"]}>
-      <SectionHeader
-        title="Focus"
-        icon={Focus}
-        iconSize={20}
-        iconClassName="about-focus-icon"
-      />
+      <SectionHeader title="Focus" icon={Focus} iconSize={20} iconClassName="about-focus-icon" />
       <div className={styles["about-content"]}>
         <dl className={styles["about-list"]}>
           <div className={styles["about-content-group"]}>
@@ -34,9 +29,7 @@ const FocusSection = () => {
               <p>
                 LLM / Generative AI / AI Agentに注力し、AIを日常的に活用しています。
                 AIを活用して生産性を上げることで、
-                <em>
-                  人は今まで以上にクリエイティブと向き合う時間に集中できるようになれる
-                </em>
+                <em>人は今まで以上にクリエイティブと向き合う時間に集中できるようになれる</em>
                 と私は考えています。
               </p>
             </motion.dd>

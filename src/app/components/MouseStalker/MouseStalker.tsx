@@ -2,13 +2,28 @@
 
 import { useState, useEffect, useCallback, useMemo, memo } from "react";
 import { useSpring, animated } from "@react-spring/web";
+import { useClientSnapshot } from "@/lib/useClientSnapshot";
+
+type Point = { x: number; y: number };
+
+// SSR/hydration では原点に固定し、ハイドレーション後にウィンドウ中央へ。
+const SERVER_POINT: Point = { x: 0, y: 0 };
+
+// useSyncExternalStore のキャッシュ契約を満たすため、値が変わらない限り同一参照を返す。
+let cachedCenter: Point = SERVER_POINT;
+const getWindowCenter = (): Point => {
+  const x = window.innerWidth / 2;
+  const y = window.innerHeight / 2;
+  if (cachedCenter.x !== x || cachedCenter.y !== y) {
+    cachedCenter = { x, y };
+  }
+  return cachedCenter;
+};
 
 // カスタムフックのメモ化
-const useMousePosition = () => {
-  const [position, setPosition] = useState(() => ({
-    x: 0, // Initialize with a consistent value for SSR
-    y: 0, // Initialize with a consistent value for SSR
-  }));
+const useMousePosition = (): Point => {
+  // null = まだ実際のマウス位置を受け取っていない（中央表示にフォールバック）
+  const [position, setPosition] = useState<Point | null>(null);
 
   // mousemoveハンドラーをメモ化
   const updatePosition = useCallback((e: MouseEvent) => {
@@ -16,17 +31,12 @@ const useMousePosition = () => {
   }, []);
 
   useEffect(() => {
-    // Set initial position once on the client after mount
-    setPosition({
-      x: window.innerWidth / 2,
-      y: window.innerHeight / 2,
-    });
-
     window.addEventListener("mousemove", updatePosition);
     return () => window.removeEventListener("mousemove", updatePosition);
   }, [updatePosition]); // updatePosition は useCallback でメモ化されているので依存配列に含めても問題ない
 
-  return position;
+  const center = useClientSnapshot(getWindowCenter, SERVER_POINT);
+  return position ?? center;
 };
 
 const useInteractiveElementHover = () => {
@@ -124,25 +134,25 @@ const useInteractiveElementHover = () => {
 const MouseStalker = memo(() => {
   const { x, y } = useMousePosition();
   const isInteractiveElementHovered = useInteractiveElementHover();
-  const [isVisible, setIsVisible] = useState(false);
+  // 2回目以降の訪問はハイドレーション後に即 true（即座に表示）
+  const visitedBefore = useClientSnapshot(
+    () => sessionStorage.getItem("mouseStalkerVisited") !== null,
+    false
+  );
+  const [delayElapsed, setDelayElapsed] = useState(false);
+  const isVisible = visitedBefore || delayElapsed;
 
   useEffect(() => {
-    // 初回訪問チェック
-    const hasVisited = sessionStorage.getItem("mouseStalkerVisited");
+    // 初回訪問時のみ5秒遅延してから表示
+    if (visitedBefore) return;
 
-    if (hasVisited) {
-      // 2回目以降は即座に表示
-      setIsVisible(true);
-    } else {
-      // 初回訪問時のみ5秒遅延
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-        sessionStorage.setItem("mouseStalkerVisited", "true");
-      }, 5000);
+    const timer = setTimeout(() => {
+      setDelayElapsed(true);
+      sessionStorage.setItem("mouseStalkerVisited", "true");
+    }, 5000);
 
-      return () => clearTimeout(timer);
-    }
-  }, []);
+    return () => clearTimeout(timer);
+  }, [visitedBefore]);
 
   // spring設定オブジェクトをメモ化
   const springConfig = useMemo(

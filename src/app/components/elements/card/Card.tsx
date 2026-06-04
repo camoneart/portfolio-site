@@ -1,4 +1,3 @@
-
 const Card = () => {
   return <></>;
 };

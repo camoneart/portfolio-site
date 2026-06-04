@@ -141,7 +141,12 @@ const ContactForm = () => {
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <FormControl>
-                          <Input placeholder="Subject" {...field} className="px-4 py-7" disabled={form.formState.isSubmitting} />
+                          <Input
+                            placeholder="Subject"
+                            {...field}
+                            className="px-4 py-7"
+                            disabled={form.formState.isSubmitting}
+                          />
                         </FormControl>
                       </TooltipTrigger>
                       <TooltipContent>
@@ -165,7 +170,11 @@ const ContactForm = () => {
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <FormControl>
-                          <Textarea placeholder="Your message here..." {...field} disabled={form.formState.isSubmitting} />
+                          <Textarea
+                            placeholder="Your message here..."
+                            {...field}
+                            disabled={form.formState.isSubmitting}
+                          />
                         </FormControl>
                       </TooltipTrigger>
                       <TooltipContent>

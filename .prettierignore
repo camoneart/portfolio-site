@@ -1,0 +1,5 @@
+# shadcn/ui auto-generated components (project rule: do not modify)
+src/components/ui/
+
+# Auto-generated lockfile (pnpm regenerates it; formatting would be churn)
+pnpm-lock.yaml
