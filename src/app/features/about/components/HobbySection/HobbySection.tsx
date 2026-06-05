@@ -39,8 +39,8 @@ const HobbySection = () => {
             </p>
             <p>
               <span className={`font-bold ${styles["light-effect"]}`}>現在の注力</span>
-              ：Agentic Engineering / Agent Harness / Multi-Agent Orchestration / Claude Code /
-              Next.js / React / UI / UX
+              ：AI-Driven Development / Agentic Engineering / Agent Harness / Multi-Agent Orchestration / Claude Code /
+              Next.js / React / UI / UX / Interaction
             </p>
           </HobbyItem>
 
