@@ -29,7 +29,7 @@ Next.js + Tailwind CSS + TypeScriptで開発し、Vercelにデプロイしまし
 
 トップページには、キューブ型の3Dコンテンツを配置。散らばるキューブは「創造性」「アイデア」「感情」「学び」といった記憶の断片を表しており、学習初期から今までの私の「プロセス」と「ストーリー」を視覚的に表現しています。
 
-https://github.com/user-attachments/assets/69073e68-0b60-4e6c-b77a-e9e0c31b328f
+https://github.com/user-attachments/assets/c154214d-a108-44f9-ad8c-51c122896fb4
 
 ### **アバウトページ**
 
