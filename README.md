@@ -1,6 +1,6 @@
 # kaishu｜AI Engineer
 
-https://github.com/user-attachments/assets/518c409d-3b4c-41e4-98b2-1ed62ae40382
+https://github.com/user-attachments/assets/c154214d-a108-44f9-ad8c-51c122896fb4
 
 ポートフォリオサイトは以下からアクセスできます。
 
